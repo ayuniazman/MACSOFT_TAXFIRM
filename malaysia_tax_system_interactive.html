@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive guide to Malaysia's tax landscape by L & Co.">
+  <title>Malaysia Tax System | L & Co</title>
+  <style>
+    :root {
+      --ink: #292333;
+      --muted: #6f6a78;
+      --paper: #fff;
+      --canvas: #f7f5fb;
+      --lav: #e4dcf5;
+      --lav2: #cfc1eb;
+      --purple: #76609d;
+      --deep: #443653;
+      --line: #e5e1ec;
+      --coral: #b4a9be;
+      --shadow: 0 18px 55px rgba(49, 37, 65, .10);
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    button,
+    input,
+    select {
+      font: inherit
+    }
+
+    button {
+      cursor: pointer
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 48px));
+      margin: auto
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--purple);
+      font-size: 11px;
+      letter-spacing: .16em;
+      font-weight: 800;
+      text-transform: uppercase
+    }
+
+    .eyebrow:before {
+      content: "";
+      width: 25px;
+      height: 2px;
+      background: var(--coral)
+    }
+
+    .announcement {
+      background: var(--deep);
+      color: #fff;
+      padding: 9px 16px;
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: .04em
+    }
+
+    .announcement a {
+      color: var(--lav);
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 3px
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, .91);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line)
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 850;
+      letter-spacing: -.04em;
+      font-size: 20px;
+      white-space: nowrap
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 11px 11px 11px 3px;
+      background: var(--purple);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 15px
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #514b5b
+    }
+
+    .nav-links a:hover {
+      color: var(--purple)
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--deep);
+      color: #fff;
+      padding: 14px 20px;
+      font-size: 12px;
+      font-weight: 800;
+      transition: transform .2s, background .2s;
+      box-shadow: 0 8px 22px rgba(68, 54, 83, .14)
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: var(--purple)
+    }
+
+    .btn.light {
+      background: #fff;
+      color: var(--deep);
+      box-shadow: none
+    }
+
+    .btn.outline {
+      background: transparent;
+      color: var(--deep);
+      border: 1px solid #cfc7d9;
+      box-shadow: none
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 0;
+      font-size: 25px
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--lav);
+      padding: 72px 0 64px
+    }
+
+    .hero:before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border: 1px solid rgba(118, 96, 157, .22);
+      border-radius: 50%;
+      right: -120px;
+      top: -230px;
+      box-shadow: 0 0 0 45px rgba(118, 96, 157, .045), 0 0 0 95px rgba(118, 96, 157, .035)
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      align-items: center;
+      gap: 56px
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 6.4vw, 78px);
+      line-height: .98;
+      letter-spacing: -.075em;
+      max-width: 680px;
+      margin: 22px 0
+    }
+
+    .hero h1 em {
+      font-family: Georgia, serif;
+      font-weight: 500;
+      color: var(--purple)
+    }
+
+    .hero p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #5f576b;
+      max-width: 540px
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px
+    }
+
+    .hero-note {
+      font-size: 11px !important;
+      color: #726982 !important;
+      margin-top: 18px
+    }
+
+    .visual {
+      min-height: 420px;
+      position: relative;
+      display: grid;
+      place-items: center
+    }
+
+    .visual-orbit {
+      position: absolute;
+      width: min(35vw, 400px);
+      aspect-ratio: 1;
+      border: 1px solid rgba(118, 96, 157, .35);
+      border-radius: 50%;
+      animation: spin 38s linear infinite
+    }
+
+    .visual-orbit:before,
+    .visual-orbit:after {
+      content: "";
+      position: absolute;
+      inset: 10%;
+      border: 1px solid rgba(118, 96, 157, .22);
+      border-radius: 50%
+    }
+
+    .visual-orbit:after {
+      inset: 22%
+    }
+
+    .tax-card {
+      position: relative;
+      width: min(100%, 370px);
+      background: #fff;
+      border: 1px solid rgba(255, 255, 255, .8);
+      border-radius: 25px;
+      padding: 25px;
+      box-shadow: 0 28px 75px rgba(66, 50, 89, .17);
+      transform: rotate(-2deg);
+      animation: float 5s ease-in-out infinite
+    }
+
+    .tax-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      font-size: 11px;
+      font-weight: 850
+    }
+
+    .pill {
+      border-radius: 99px;
+      background: #efe9fa;
+      color: var(--purple);
+      padding: 7px 10px;
+      font-size: 9px;
+      font-weight: 850;
+      letter-spacing: .06em
+    }
+
+    .tax-card h3 {
+      font-size: 22px;
+      letter-spacing: -.05em;
+      margin: 22px 0 6px
+    }
+
+    .tax-card p {
+      font-size: 11px;
+      line-height: 1.6;
+      margin: 0;
+      color: var(--muted)
+    }
+
+    .mini-chart {
+      height: 100px;
+      display: flex;
+      align-items: end;
+      gap: 10px;
+      margin: 22px 0 18px;
+      border-bottom: 1px solid var(--line);
+      padding: 0 8px
+    }
+
+    .mini-chart span {
+      flex: 1;
+      border-radius: 7px 7px 0 0;
+      background: #d9ccef
+    }
+
+    .mini-chart span:nth-child(1) {
+      height: 30%
+    }
+
+    .mini-chart span:nth-child(2) {
+      height: 46%
+    }
+
+    .mini-chart span:nth-child(3) {
+      height: 38%
+    }
+
+    .mini-chart span:nth-child(4) {
+      height: 70%;
+      background: var(--purple)
+    }
+
+    .mini-chart span:nth-child(5) {
+      height: 88%;
+      background: var(--coral)
+    }
+
+    .mini-chart span:nth-child(6) {
+      height: 62%
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      color: var(--muted)
+    }
+
+    .float-chip {
+      position: absolute;
+      z-index: 2;
+      padding: 13px 15px;
+      background: rgba(255, 255, 255, .92);
+      border: 1px solid white;
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      font-size: 11px;
+      font-weight: 800;
+      backdrop-filter: blur(10px)
+    }
+
+    .float-chip small {
+      display: block;
+      font-size: 9px;
+      color: var(--muted);
+      font-weight: 600;
+      margin-top: 4px
+    }
+
+    .chip-a {
+      top: 13%;
+      left: 0
+    }
+
+    .chip-b {
+      bottom: 13%;
+      right: -1%
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    @keyframes float {
+      50% {
+        transform: translateY(-8px) rotate(-1deg)
+      }
+    }
+
+    .quicknav {
+      background: #fff;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .quicknav-inner {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      overflow: auto;
+      padding: 18px 0;
+      white-space: nowrap;
+      font-size: 11px;
+      font-weight: 800;
+      color: #716a7a
+    }
+
+    .quicknav a {
+      padding: 6px 0;
+      border-bottom: 2px solid transparent
+    }
+
+    .quicknav a:hover {
+      color: var(--purple);
+      border-color: var(--coral)
+    }
+
+    section {
+      padding: 88px 0
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 35px;
+      margin-bottom: 34px
+    }
+
+    .section-head h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.05;
+      letter-spacing: -.065em;
+      max-width: 620px;
+      margin: 14px 0 0
+    }
+
+    .section-head p {
+      max-width: 410px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+      margin: 0
+    }
+
+    .tax-types {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px
+    }
+
+    .type-card {
+      min-height: 280px;
+      border-radius: 22px;
+      padding: 28px;
+      background: #fff;
+      border: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+      transition: transform .25s, box-shadow .25s
+    }
+
+    .type-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow)
+    }
+
+    .type-card.dark {
+      background: var(--deep);
+      color: #fff;
+      border-color: var(--deep)
+    }
+
+    .type-card .number {
+      font-size: 11px;
+      letter-spacing: .13em;
+      font-weight: 850;
+      color: var(--purple)
+    }
+
+    .type-card.dark .number {
+      color: var(--lav2)
+    }
+
+    .type-card h3 {
+      font-size: 29px;
+      letter-spacing: -.06em;
+      margin: 18px 0 10px
+    }
+
+    .type-card p {
+      max-width: 400px;
+      font-size: 12px;
+      line-height: 1.8;
+      color: var(--muted)
+    }
+
+    .type-card.dark p {
+      color: #d6cedf
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px
+    }
+
+    .tag {
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      padding: 9px 12px;
+      font-size: 10px;
+      font-weight: 800;
+      background: #faf9fc
+    }
+
+    .dark .tag {
+      border-color: rgba(255, 255, 255, .22);
+      background: rgba(255, 255, 255, .08);
+      color: #fff
+    }
+
+    .type-arrow {
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      font-size: 22px;
+      color: var(--purple)
+    }
+
+    .dark .type-arrow {
+      color: var(--lav)
+    }
+
+    .tax-explorer {
+      background: #fff
+    }
+
+    .explorer-layout {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 36px;
+      align-items: start
+    }
+
+    .explorer-tabs {
+      display: grid;
+      gap: 8px
+    }
+
+    .explorer-tab {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      text-align: left;
+      padding: 16px 18px;
+      border: 1px solid transparent;
+      border-radius: 13px;
+      background: transparent;
+      color: #635c6d;
+      font-size: 12px;
+      font-weight: 800;
+      transition: all .2s
+    }
+
+    .explorer-tab span:last-child {
+      font-size: 18px;
+      font-weight: 500
+    }
+
+    .explorer-tab:hover,
+    .explorer-tab.active {
+      background: #f2edf9;
+      border-color: #e0d5f1;
+      color: var(--deep)
+    }
+
+    .explorer-panel {
+      min-height: 370px;
+      border-radius: 22px;
+      background: var(--canvas);
+      padding: 32px;
+      border: 1px solid var(--line)
+    }
+
+    .panel-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px
+    }
+
+    .panel-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: var(--lav);
+      display: grid;
+      place-items: center;
+      font-size: 21px
+    }
+
+    .explorer-panel h3 {
+      font-size: 30px;
+      letter-spacing: -.06em;
+      margin: 20px 0 10px
+    }
+
+    .explorer-panel p {
+      font-size: 13px;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 650px
+    }
+
+    .panel-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 25px
+    }
+
+    .panel-point {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      padding: 15px;
+      font-size: 11px;
+      font-weight: 750;
+      line-height: 1.6
+    }
+
+    .panel-point:before {
+      content: "↗";
+      display: block;
+      color: var(--purple);
+      font-size: 17px;
+      margin-bottom: 8px
+    }
+
+    .disclaimer {
+      margin-top: 18px;
+      font-size: 10px !important;
+      color: #8a8392 !important
+    }
+
+    .timeline-section {
+      background: var(--deep);
+      color: white;
+      overflow: hidden;
+      position: relative
+    }
+
+    .timeline-section:after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 50%;
+      right: -200px;
+      bottom: -260px;
+      box-shadow: 0 0 0 45px rgba(255, 255, 255, .025), 0 0 0 95px rgba(255, 255, 255, .02)
+    }
+
+    .timeline-section .eyebrow {
+      color: var(--lav2)
+    }
+
+    .timeline-section .section-head p {
+      color: #d3ccdc
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 50px;
+      position: relative
+    }
+
+    .timeline:before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 10px;
+      right: 10px;
+      height: 1px;
+      background: rgba(255, 255, 255, .23)
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 20px 0 0
+    }
+
+    .timeline-dot {
+      width: 31px;
+      height: 31px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, .5);
+      background: var(--deep);
+      display: grid;
+      place-items: center;
+      color: var(--lav);
+      font-size: 11px;
+      position: relative;
+      z-index: 1
+    }
+
+    .timeline-item h3 {
+      font-size: 17px;
+      letter-spacing: -.03em;
+      margin: 22px 0 10px
+    }
+
+    .timeline-item p {
+      font-size: 11px;
+      line-height: 1.8;
+      color: #d3ccdc;
+      max-width: 230px
+    }
+
+    .timeline-item small {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--lav2);
+      font-weight: 800
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 60px
+    }
+
+    .faq-intro h2 {
+      font-size: clamp(34px, 4vw, 49px);
+      line-height: 1.04;
+      letter-spacing: -.065em;
+      margin: 15px 0
+    }
+
+    .faq-intro p {
+      font-size: 13px;
+      line-height: 1.8;
+      color: var(--muted)
+    }
+
+    .faq-list {
+      border-top: 1px solid var(--line)
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--line)
+    }
+
+    .faq-q {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      text-align: left;
+      padding: 21px 0;
+      font-size: 13px;
+      font-weight: 850;
+      color: var(--ink)
+    }
+
+    .faq-q span:last-child {
+      font-size: 20px;
+      color: var(--purple);
+      transition: transform .2s
+    }
+
+    .faq-answer {
+      display: none;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+      max-width: 700px;
+      padding: 0 35px 22px 0
+    }
+
+    .faq-item.open .faq-answer {
+      display: block
+    }
+
+    .faq-item.open .faq-q span:last-child {
+      transform: rotate(45deg)
+    }
+
+    .cta {
+      padding: 0 0 88px
+    }
+
+    .cta-panel {
+      background: var(--lav);
+      border-radius: 26px;
+      padding: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      position: relative;
+      overflow: hidden
+    }
+
+    .cta-panel:after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border: 1px solid rgba(118, 96, 157, .2);
+      border-radius: 50%;
+      right: 20%;
+      top: -200px;
+      box-shadow: 0 0 0 35px rgba(118, 96, 157, .035)
+    }
+
+    .cta-copy {
+      position: relative;
+      z-index: 1
+    }
+
+    .cta-copy h2 {
+      font-size: clamp(30px, 4vw, 44px);
+      letter-spacing: -.065em;
+      line-height: 1.04;
+      margin: 12px 0
+    }
+
+    .cta-copy p {
+      font-size: 12px;
+      line-height: 1.8;
+      color: #62586f;
+      max-width: 520px
+    }
+
+    .cta-panel .btn {
+      position: relative;
+      z-index: 1;
+      white-space: nowrap
+    }
+
+    footer {
+      background: #fff;
+      border-top: 1px solid var(--line);
+      padding: 30px 0
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 10px
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap
+    }
+
+    .footer-links a:hover {
+      color: var(--purple)
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .65s ease, transform .65s ease
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none
+    }
+
+    @media(max-width:850px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px 24px 26px;
+        border-bottom: 1px solid var(--line);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px
+      }
+
+      .nav-links.open {
+        display: flex
+      }
+
+      .menu-toggle {
+        display: block
+      }
+
+      .nav>.btn {
+        display: none
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 20px
+      }
+
+      .hero {
+        padding-top: 55px
+      }
+
+      .visual {
+        min-height: 370px
+      }
+
+      .visual-orbit {
+        width: 320px
+      }
+
+      .section-head {
+        display: block
+      }
+
+      .section-head p {
+        margin-top: 18px
+      }
+
+      .explorer-layout,
+      .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 25px
+      }
+
+      .explorer-tabs {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .timeline {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px
+      }
+
+      .timeline:before {
+        display: none
+      }
+
+      .cta-panel {
+        align-items: flex-start;
+        flex-direction: column
+      }
+
+      .tax-types {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(max-width:560px) {
+      .wrap {
+        width: calc(100% - 34px)
+      }
+
+      .announcement {
+        font-size: 9px
+      }
+
+      .nav {
+        height: 68px
+      }
+
+      .brand {
+        font-size: 18px
+      }
+
+      .nav-links {
+        top: 68px
+      }
+
+      .hero h1 {
+        font-size: clamp(42px, 13vw, 60px)
+      }
+
+      .hero {
+        padding: 43px 0 35px
+      }
+
+      .visual {
+        min-height: 330px;
+        margin: 0 -8px
+      }
+
+      .tax-card {
+        width: 290px;
+        padding: 20px
+      }
+
+      .chip-a {
+        left: 0;
+        top: 7%
+      }
+
+      .chip-b {
+        right: 0;
+        bottom: 6%
+      }
+
+      section {
+        padding: 65px 0
+      }
+
+      .type-card {
+        padding: 23px;
+        min-height: 250px
+      }
+
+      .explorer-tabs {
+        grid-template-columns: 1fr 1fr;
+        gap: 5px
+      }
+
+      .explorer-tab {
+        padding: 13px 11px;
+        font-size: 10px
+      }
+
+      .explorer-panel {
+        padding: 22px;
+        min-height: 0
+      }
+
+      .panel-points {
+        grid-template-columns: 1fr
+      }
+
+      .timeline {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 35px
+      }
+
+      .timeline-item {
+        padding-left: 45px
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: 0;
+        top: 0
+      }
+
+      .timeline-item h3 {
+        margin: 0 0 7px
+      }
+
+      .cta-panel {
+        padding: 27px
+      }
+
+      .footer-row {
+        align-items: flex-start;
+        flex-direction: column
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+
+      *,
+      *:before,
+      *:after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+        transition: none !important
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">Tax landscape changing? <a href="#tax-explorer">Explore the key tax areas →</a></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="L and Co home"><span class="brand-mark">L&amp;</span><span>L &amp; Co
+          <span style="font-weight:500;color:#82798c">/ Tax insights</span></span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#overview">Overview</a><a href="#tax-explorer">Explore tax types</a><a href="#process">How we
+          help</a><a href="#faq">FAQs</a>
+      </nav>
+      <a class="btn" href="#contact">Talk to a tax advisor <span>↗</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">Malaysia tax system · A practical guide</div>
+          <h1>Make sense of tax.<br><em>Move forward</em> with clarity.</h1>
+          <p>From income tax to indirect taxes, understand the moving parts of Malaysia’s tax landscape—and where the
+            right professional guidance can make a difference.</p>
+          <div class="hero-actions"><a class="btn" href="#overview">Explore the system <span>↓</span></a><a
+              class="btn outline" href="#contact">Speak to our team ↗</a></div>
+          <p class="hero-note">A high-level overview for individuals, founders and growing businesses.</p>
+        </div>
+        <div class="visual reveal" aria-label="Illustration of a tax report">
+          <div class="visual-orbit"></div>
+          <div class="float-chip chip-a">01 / Understand<small>Know your tax obligations</small></div>
+          <div class="float-chip chip-b">02 / Plan ahead<small>Make informed decisions</small></div>
+          <div class="tax-card">
+            <div class="tax-card-top"><span>L&amp;CO / TAX INSIGHTS</span><span class="pill">MALAYSIA</span></div>
+            <h3>Your tax picture, in focus.</h3>
+            <p>Different tax types. One clearer view.</p>
+            <div class="mini-chart"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="card-footer"><span>Understand the landscape</span><strong>↗</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="quicknav">
+      <div class="wrap quicknav-inner"><a href="#overview">01 Overview</a><a href="#tax-explorer">02 Tax explorer</a><a
+          href="#process">03 Our approach</a><a href="#faq">04 Common questions</a></div>
+    </div>
+
+    <section id="overview">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">The big picture</div>
+            <h2>Two broad categories.<br>Different responsibilities.</h2>
+          </div>
+          <p>Malaysia’s tax framework includes direct and indirect taxes. The applicable tax, rate and filing
+            obligations depend on the taxpayer, transaction and current rules.</p>
+        </div>
+        <div class="tax-types">
+          <article class="type-card reveal">
+            <span class="number">01 / DIRECT TAXES</span><span class="type-arrow">↗</span>
+            <h3>Tax linked to income, gains or profits.</h3>
+            <p>Direct taxes are generally imposed on a person or entity based on income, profits or certain gains.</p>
+            <div class="tag-list"><span class="tag">Income tax</span><span class="tag">Real Property Gains
+                Tax</span><span class="tag">Petroleum income tax</span></div>
+          </article>
+          <article class="type-card dark reveal">
+            <span class="number">02 / INDIRECT TAXES</span><span class="type-arrow">↗</span>
+            <h3>Tax connected to goods, services and transactions.</h3>
+            <p>Indirect taxes may apply when goods or services are supplied, imported, manufactured or when certain
+              legal instruments are executed.</p>
+            <div class="tag-list"><span class="tag">Sales &amp; Service Tax</span><span class="tag">Customs &amp; excise
+                duties</span><span class="tag">Stamp duty</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="tax-explorer" id="tax-explorer">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">Explore the details</div>
+            <h2>Find the tax area<br>you want to understand.</h2>
+          </div>
+          <p>Select a topic to reveal a concise overview, common considerations and how L &amp; Co may be able to help.
+          </p>
+        </div>
+        <div class="explorer-layout reveal">
+          <div class="explorer-tabs" role="tablist" aria-label="Tax types">
+            <button class="explorer-tab active" role="tab" aria-selected="true" data-tax="income"><span>Income
+                tax</span><span>↗</span></button>
+            <button class="explorer-tab" role="tab" aria-selected="false" data-tax="rpgt"><span>Property gains
+                tax</span><span>↗</span></button>
+            <button class="explorer-tab" role="tab" aria-selected="false" data-tax="petroleum"><span>Petroleum income
+                tax</span><span>↗</span></button>
+            <button class="explorer-tab" role="tab" aria-selected="false" data-tax="sst"><span>Sales &amp; Service
+                Tax</span><span>↗</span></button>
+            <button class="explorer-tab" role="tab" aria-selected="false" data-tax="customs"><span>Customs &amp;
+                excise</span><span>↗</span></button>
+            <button class="explorer-tab" role="tab" aria-selected="false" data-tax="stamp"><span>Stamp
+                duty</span><span>↗</span></button>
+          </div>
+          <article class="explorer-panel" role="tabpanel" aria-live="polite">
+            <div class="panel-top"><span class="panel-icon" id="taxIcon">▤</span><span class="pill"
+                id="taxCategory">DIRECT TAX</span></div>
+            <h3 id="taxTitle">Income tax</h3>
+            <p id="taxDescription">Income tax generally applies to taxable income earned by individuals and entities.
+              The calculation and filing obligations depend on factors such as residency, income source, business
+              structure and available reliefs or deductions.</p>
+            <div class="panel-points" id="taxPoints">
+              <div class="panel-point">Determine the correct tax treatment and basis period.</div>
+              <div class="panel-point">Review allowable deductions, reliefs and incentives.</div>
+              <div class="panel-point">Prepare and submit returns within the applicable timeline.</div>
+              <div class="panel-point">Keep records that support the tax position taken.</div>
+            </div>
+            <p class="disclaimer">This is a general overview, not tax or legal advice. Confirm current rules with the
+              relevant authority or a qualified tax professional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="timeline-section" id="process">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">From complexity to confidence</div>
+            <h2>Good tax support starts with the right questions.</h2>
+          </div>
+          <p>We help clients understand their position, organise the details and navigate compliance with a clearer
+            plan.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot">01</div><small>Understand</small>
+            <h3>Start with your situation</h3>
+            <p>We learn about your business, income sources, transactions and immediate concerns.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot">02</div><small>Assess</small>
+            <h3>Review the obligations</h3>
+            <p>We identify relevant tax areas, deadlines, records and potential issues to address.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot">03</div><small>Support</small>
+            <h3>Prepare with care</h3>
+            <p>Get help with tax computations, returns, documentation and correspondence where engaged.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot">04</div><small>Plan</small>
+            <h3>Look ahead</h3>
+            <p>Explore suitable incentives and practical steps to improve tax readiness for the future.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap faq-grid">
+        <div class="faq-intro reveal">
+          <div class="eyebrow">Questions, answered</div>
+          <h2>A clearer starting point.</h2>
+          <p>Tax rules can change and individual circumstances matter. Here are a few useful starting points before you
+            make a decision.</p><a class="btn outline" href="#contact">Ask us a question ↗</a>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item open"><button class="faq-q" aria-expanded="true"><span>What is the difference between
+                direct and indirect tax?</span><span>＋</span></button>
+            <div class="faq-answer">Direct tax is generally charged on income, profits or certain gains of a taxpayer.
+              Indirect tax is commonly connected to the supply, consumption, import or manufacture of goods and
+              services, or certain transactions.</div>
+          </div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Is GST still the main consumption tax
+                in Malaysia?</span><span>＋</span></button>
+            <div class="faq-answer">Malaysia replaced GST with Sales and Service Tax (SST) in 2018. SST rules and scope
+              have changed over time, so businesses should confirm the current treatment for their goods or services
+              with the Royal Malaysian Customs Department or a tax professional.</div>
+          </div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Do all businesses have the same tax
+                obligations?</span><span>＋</span></button>
+            <div class="faq-answer">No. Obligations can differ based on the business structure, income, industry,
+              transaction type, registration status and applicable thresholds. A tailored review is more reliable than a
+              one-size-fits-all checklist.</div>
+          </div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Can a tax advisor help with incentives
+                and deductions?</span><span>＋</span></button>
+            <div class="faq-answer">A tax advisor can review the facts, explain potentially relevant incentives or
+              deductions and help assess eligibility. Availability and conditions depend on the current legislation and
+              the taxpayer’s circumstances.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="wrap">
+        <div class="cta-panel reveal">
+          <div class="cta-copy">
+            <div class="eyebrow">Let's talk tax</div>
+            <h2>Clarity for your next<br>tax decision.</h2>
+            <p>Whether you need help with compliance, a tax query or understanding your options, start with a
+              conversation with L &amp; Co.</p>
+          </div>
+          <a class="btn" href="https://landco.my/" target="_blank" rel="noopener">Visit L &amp; Co <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap footer-row"><a class="brand" href="#top"><span class="brand-mark">L&amp;</span><span>L &amp;
+          Co</span></a><span>Malaysia Tax System · Informational overview</span>
+      <div class="footer-links"><a href="https://landco.my/malaysia-tax-system/" target="_blank" rel="noopener">Current
+          page</a><a href="https://landco.my/" target="_blank" rel="noopener">L &amp; Co website</a><a href="#top">Back
+          to top ↑</a></div>
+    </div>
+  </footer>
+  <script>
+    const taxData = {
+      income: { icon: "▤", category: "DIRECT TAX", title: "Income tax", description: "Income tax generally applies to taxable income earned by individuals and entities. The calculation and filing obligations depend on factors such as residency, income source, business structure and available reliefs or deductions.", points: ["Determine the correct tax treatment and basis period.", "Review allowable deductions, reliefs and incentives.", "Prepare and submit returns within the applicable timeline.", "Keep records that support the tax position taken."] },
+      rpgt: { icon: "⌂", category: "DIRECT TAX", title: "Real Property Gains Tax (RPGT)", description: "RPGT may apply to gains arising from the disposal of real property in Malaysia and certain shares in real property companies. The applicable treatment can depend on the disposer, asset and holding period.", points: ["Confirm whether the disposal falls within the RPGT rules.", "Review acquisition and disposal dates and supporting costs.", "Check filing requirements and applicable exemptions.", "Plan documentation before completing the transaction."] },
+      petroleum: { icon: "⌁", category: "DIRECT TAX", title: "Petroleum income tax", description: "Petroleum income tax applies to qualifying petroleum operations under the relevant legislation. Specialist record-keeping, profit calculations and reporting requirements may apply.", points: ["Identify the relevant petroleum operations and basis period.", "Maintain appropriate accounts and supporting records.", "Review statutory reporting and submission deadlines.", "Seek specialist advice on sector-specific tax treatment."] },
+      sst: { icon: "◈", category: "INDIRECT TAX", title: "Sales & Service Tax (SST)", description: "Malaysia’s current indirect-tax framework includes Sales Tax and Service Tax. Whether registration or collection is required depends on the type of goods or services, business activity and applicable rules and thresholds.", points: ["Check whether your goods or services are within scope.", "Review registration status and relevant thresholds.", "Confirm the correct tax treatment and invoicing process.", "Monitor changes to scope, rates and compliance guidance."] },
+      customs: { icon: "⇄", category: "INDIRECT TAX", title: "Customs & excise duties", description: "Customs duties may apply to imported or exported goods, while excise duties apply to specified goods. Rates and procedures can depend on product classification, origin and the transaction.", points: ["Confirm the correct tariff or product classification.", "Review import/export documentation and declarations.", "Check applicable rates, exemptions and permits.", "Plan for customs compliance within your supply chain."] },
+      stamp: { icon: "▧", category: "INDIRECT TAX", title: "Stamp duty", description: "Stamp duty can apply to specified instruments and documents, including certain property transfers, financing documents and share transactions. The applicable duty depends on the instrument and current rules.", points: ["Identify the instrument and relevant transaction details.", "Check timing, valuation and applicable duty treatment.", "Review exemptions or reliefs that may be available.", "Keep executed documents and evidence of stamping."] }
+    };
+    const tabs = [...document.querySelectorAll(".explorer-tab")];
+    tabs.forEach(tab => tab.addEventListener("click", () => {
+      tabs.forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false") });
+      tab.classList.add("active"); tab.setAttribute("aria-selected", "true");
+      const d = taxData[tab.dataset.tax];
+      document.getElementById("taxIcon").textContent = d.icon;
+      document.getElementById("taxCategory").textContent = d.category;
+      document.getElementById("taxTitle").textContent = d.title;
+      document.getElementById("taxDescription").textContent = d.description;
+      document.getElementById("taxPoints").innerHTML = d.points.map(p => `<div class="panel-point">${p}</div>`).join("");
+    }));
+    document.querySelectorAll(".faq-q").forEach(q => q.addEventListener("click", () => {
+      const item = q.closest(".faq-item"), open = item.classList.toggle("open");
+      q.setAttribute("aria-expanded", String(open));
+    }));
+    const menuToggle = document.getElementById("menuToggle"), navLinks = document.getElementById("navLinks");
+    menuToggle.addEventListener("click", () => { const open = navLinks.classList.toggle("open"); menuToggle.setAttribute("aria-expanded", String(open)); menuToggle.textContent = open ? "×" : "☰" });
+    navLinks.querySelectorAll("a").forEach(a => a.addEventListener("click", () => { navLinks.classList.remove("open"); menuToggle.setAttribute("aria-expanded", "false"); menuToggle.textContent = "☰" }));
+    const observer = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); observer.unobserve(e.target) } }), { threshold: .12 });
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>
