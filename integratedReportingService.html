@@ -1,0 +1,1230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="L & Co. Integrated Reporting Services — helping businesses organize, edit, translate and manage integrated reporting information.">
+  <title>Integrated Reporting Services | L & Co.</title>
+
+  <style>
+    :root {
+      --ink: #292333;
+      --muted: #6f6a78;
+      --paper: #ffffff;
+      --canvas: #f7f5fb;
+      --lav: #e4dcf5;
+      --lav2: #cfc1eb;
+      --purple: #76609d;
+      --deep: #443653;
+      --line: #e5e1ec;
+      --coral: #e18b70;
+      --shadow: 0 18px 55px rgba(49, 37, 65, .10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--canvas);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .wrap {
+      width: min(1160px, 90%);
+      margin: 0 auto;
+    }
+
+    /* Navigation — consistent with the main website */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 850;
+      letter-spacing: -.04em;
+      font-size: 20px;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 11px 11px 11px 3px;
+      background: var(--purple);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 15px;
+    }
+
+    .brand-subtitle {
+      font-weight: 500;
+      color: #82798c;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #514b5b;
+    }
+
+    .nav-links a {
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--purple);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--deep);
+      color: #fff;
+      padding: 13px 20px;
+      font-size: 12px;
+      font-weight: 800;
+      transition: transform .2s, background .2s;
+      box-shadow: 0 8px 22px rgba(68, 54, 83, .14);
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: var(--purple);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 0;
+      color: var(--deep);
+      font-size: 25px;
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    /* General sections */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--purple);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+      letter-spacing: -.04em;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5.4vw, 65px);
+      max-width: 750px;
+    }
+
+    h2 {
+      font-size: clamp(29px, 3.5vw, 43px);
+    }
+
+    h3 {
+      font-size: 19px;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 38px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin-top: 15px;
+      max-width: 650px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 75px 0 85px;
+      overflow: hidden;
+      position: relative;
+      background:
+        radial-gradient(ellipse at 90% 15%, rgba(207, 193, 235, .58), transparent 36%),
+        linear-gradient(135deg, #fff 0%, #f7f5fb 70%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .hero-copy h1 span {
+      color: var(--purple);
+    }
+
+    .hero-description {
+      max-width: 590px;
+      color: var(--muted);
+      margin: 23px 0 27px;
+      font-size: 16px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 1px solid var(--lav2);
+      border-radius: 999px;
+      padding: 12px 20px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--deep);
+      transition: background .2s, border-color .2s;
+    }
+
+    .btn-outline:hover {
+      background: var(--lav);
+      border-color: var(--purple);
+    }
+
+    .hero-visual {
+      min-height: 370px;
+      border-radius: 30px;
+      background: var(--lav);
+      padding: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-visual::before,
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(118, 96, 157, .2);
+    }
+
+    .hero-visual::before {
+      width: 310px;
+      height: 310px;
+      right: -90px;
+      top: -95px;
+    }
+
+    .hero-visual::after {
+      width: 230px;
+      height: 230px;
+      left: -85px;
+      bottom: -80px;
+    }
+
+    .report-card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 340px;
+      background: white;
+      border: 1px solid rgba(118, 96, 157, .13);
+      border-radius: 18px;
+      padding: 27px;
+      box-shadow: var(--shadow);
+      transform: rotate(-2deg);
+    }
+
+    .report-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+
+    .report-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      background: var(--lav);
+      color: var(--purple);
+      font-size: 23px;
+    }
+
+    .report-label {
+      color: var(--purple);
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .report-card h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .report-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .report-line {
+      height: 7px;
+      background: #eeeaf5;
+      border-radius: 20px;
+      margin-top: 12px;
+    }
+
+    .report-line.short {
+      width: 65%;
+    }
+
+    .report-bottom {
+      display: flex;
+      gap: 9px;
+      margin-top: 24px;
+    }
+
+    .report-chip {
+      padding: 6px 10px;
+      border-radius: 20px;
+      background: #f7f5fb;
+      color: var(--purple);
+      font-size: 10px;
+      font-weight: 750;
+    }
+
+    /* Intro */
+
+    .intro-section {
+      background: white;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 65px;
+      align-items: start;
+    }
+
+    .intro-highlight {
+      border-left: 4px solid var(--purple);
+      padding: 5px 0 5px 24px;
+    }
+
+    .intro-highlight p {
+      font-size: clamp(19px, 2vw, 25px);
+      font-weight: 650;
+      letter-spacing: -.025em;
+      line-height: 1.55;
+      color: var(--deep);
+    }
+
+    .intro-content p {
+      color: var(--muted);
+      margin-bottom: 17px;
+    }
+
+    .intro-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Services */
+
+    .services-section {
+      background: var(--canvas);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 25px 22px;
+      transition: transform .25s, box-shadow .25s, border-color .25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: var(--lav2);
+    }
+
+    .service-icon {
+      display: grid;
+      place-items: center;
+      width: 49px;
+      height: 49px;
+      background: var(--lav);
+      border-radius: 14px;
+      margin-bottom: 21px;
+      color: var(--purple);
+      font-size: 23px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 11px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Reporting callout */
+
+    .callout-section {
+      background: white;
+      padding: 65px 0;
+    }
+
+    .callout {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+      background: var(--lav);
+      border-radius: 24px;
+      padding: 40px 45px;
+    }
+
+    .callout h2 {
+      max-width: 650px;
+      font-size: clamp(25px, 3vw, 35px);
+    }
+
+    .callout p {
+      max-width: 650px;
+      color: #5f566c;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    .callout-mark {
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      width: 80px;
+      height: 80px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, .72);
+      color: var(--purple);
+      font-size: 35px;
+    }
+
+    /* Office directory */
+
+    .offices-section {
+      background: var(--canvas);
+    }
+
+    .offices-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .office-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .office-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .office-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      margin-bottom: 18px;
+    }
+
+    .office-icon {
+      flex-shrink: 0;
+      width: 43px;
+      height: 43px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      background: var(--lav);
+      color: var(--purple);
+      font-size: 20px;
+    }
+
+    .office-card h3 {
+      margin: 2px 0 5px;
+    }
+
+    .office-state {
+      color: var(--purple);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .office-address {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+      margin-bottom: 22px;
+    }
+
+    .office-contact {
+      border-top: 1px solid var(--line);
+      margin-top: auto;
+      padding-top: 16px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--deep);
+      font-size: 13px;
+      font-weight: 650;
+      width: fit-content;
+    }
+
+    .contact-link:hover {
+      color: var(--purple);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .contact-symbol {
+      color: var(--purple);
+      font-size: 16px;
+    }
+
+    /* Footer */
+
+    footer {
+      background: var(--deep);
+      color: white;
+      padding: 35px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 18px;
+      font-weight: 850;
+    }
+
+    .footer-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px 10px 10px 3px;
+      background: var(--lav2);
+      color: var(--deep);
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+    }
+
+    .footer-note {
+      color: #ded6e9;
+      font-size: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: #eee8f5;
+      font-size: 12px;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive design */
+
+    @media (max-width: 1000px) {
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav > .btn {
+        padding: 12px 15px;
+      }
+
+      .hero-grid {
+        gap: 30px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .offices-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        min-height: 70px;
+        gap: 12px;
+      }
+
+      .brand {
+        font-size: 18px;
+      }
+
+      .menu-toggle {
+        display: block;
+        margin-left: auto;
+      }
+
+      .nav > .btn {
+        display: none;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        border-bottom: 1px solid var(--line);
+        padding: 18px 5% 24px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        box-shadow: 0 15px 25px rgba(49, 37, 65, .07);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 13px 0;
+        border-bottom: 1px solid #f0edf5;
+        font-size: 13px;
+      }
+
+      .nav-links a:last-child {
+        border-bottom: 0;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .hero {
+        padding: 55px 0 65px;
+      }
+
+      .hero-grid,
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero-visual {
+        min-height: 330px;
+      }
+
+      .intro-grid {
+        gap: 25px;
+      }
+
+      .callout {
+        padding: 30px;
+      }
+
+      .callout-mark {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .services-grid,
+      .offices-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        padding: 23px;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .hero-actions .btn,
+      .hero-actions .btn-outline {
+        width: 100%;
+      }
+
+      .callout {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 26px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .report-card {
+        padding: 22px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="wrap nav">
+        <a class="brand" href="#home" aria-label="Northstar Tax home"
+          ><span class="brand-mark"><span>✳</span></span> northstar<span
+            style="font-weight: 500; color: var(--green)"
+            >tax</span
+          ></a
+        >
+        <button
+          class="menu-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <nav class="nav-links" aria-label="Main navigation">
+          <details class="nav-services-menu">
+            <summary>Services</summary>
+            <div class="nav-services-dropdown">
+              <a href="malaysiaTax.html">Malaysia tax system</a>
+              <a href="transferPricing.html">Transfer pricing</a>
+              <a href="withholdingTax.html">Withholding tax</a>
+            </div>
+          </details>
+          <a href="#about">Why Northstar</a>
+          <a href="#process">How it works</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="btn" href="#contact">Book a consultation <span>↗</span></a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="overview">
+      <div class="wrap hero-grid">
+
+        <div class="hero-copy">
+          <span class="eyebrow">Our services</span>
+
+          <h1>
+            Integrated Reporting
+            <span>Services.</span>
+          </h1>
+
+          <p class="hero-description">
+            Clearer information. More meaningful communication.
+            We help preparers organize, edit, translate and manage
+            integrated reporting information, particularly the
+            Sustainability Statement.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#services">
+              Explore our services <span aria-hidden="true">↓</span>
+            </a>
+
+            <a class="btn-outline" href="#offices">
+              Find our offices <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Integrated reporting illustration">
+          <div class="report-card">
+
+            <div class="report-top">
+              <div class="report-icon" aria-hidden="true">▤</div>
+              <span class="report-label">Reporting insights</span>
+            </div>
+
+            <h3>Make information meaningful.</h3>
+
+            <p>
+              Well-organized information supports clearer,
+              more effective communication.
+            </p>
+
+            <div class="report-line"></div>
+            <div class="report-line"></div>
+            <div class="report-line short"></div>
+
+            <div class="report-bottom">
+              <span class="report-chip">Clarity</span>
+              <span class="report-chip">Relevance</span>
+              <span class="report-chip">Materiality</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="intro-section" id="introduction">
+      <div class="wrap intro-grid">
+
+        <div>
+          <span class="eyebrow">Introduction</span>
+          <h2>Better reporting starts with better communication.</h2>
+        </div>
+
+        <div class="intro-content">
+          <div class="intro-highlight">
+            <p>
+              Integrated reports should be comprehensive,
+              reader-friendly, material, eloquent, relevant
+              and unambiguous.
+            </p>
+          </div>
+
+          <p style="margin-top: 25px;">
+            To provide better contentment in integrated reports,
+            the data and contents ought to be comprehensively surveyed
+            and presented in a way that readers can understand.
+          </p>
+
+          <p>
+            L&amp;Co can help the preparer to organize, edit, translate
+            and manage the Integrated Reporting information,
+            particularly on the Sustainability Statement, such that
+            human and media communication problems, including
+            communication limitations, are reduced or optimized.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services-section" id="services">
+      <div class="wrap">
+
+        <div class="section-heading">
+          <span class="eyebrow">How we can help</span>
+          <h2>Supporting every stage of your reporting.</h2>
+          <p>
+            Our services focus on organizing and presenting reporting
+            information to help reduce communication limitations.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">▤</div>
+            <h3>Organize</h3>
+            <p>
+              Organize reporting data and content into a clear,
+              structured and coherent presentation.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">✎</div>
+            <h3>Edit</h3>
+            <p>
+              Review and refine reporting content to improve
+              readability, clarity and communication.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">文</div>
+            <h3>Translate</h3>
+            <p>
+              Support communication by translating integrated
+              reporting information where needed.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">▣</div>
+            <h3>Manage</h3>
+            <p>
+              Help coordinate integrated reporting information,
+              particularly the Sustainability Statement.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Reporting callout -->
+    <section class="callout-section">
+      <div class="wrap">
+        <div class="callout">
+
+          <div>
+            <span class="eyebrow">Integrated reporting</span>
+            <h2>Make complex information easier to communicate.</h2>
+            <p>
+              From organizing information to refining its presentation,
+              L&amp;Co supports preparers in communicating integrated
+              reporting content more effectively.
+            </p>
+          </div>
+
+          <div class="callout-mark" aria-hidden="true">✧</div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Offices -->
+    <section class="offices-section" id="offices">
+      <div class="wrap">
+
+        <div class="section-heading">
+          <span class="eyebrow">Contact us</span>
+          <h2>Our offices across Malaysia.</h2>
+          <p>
+            Get in touch with one of our offices for enquiries
+            about our services.
+          </p>
+        </div>
+
+        <div class="offices-grid">
+
+          <!-- Johor Bahru -->
+          <article class="office-card">
+            <div class="office-top">
+              <div class="office-icon" aria-hidden="true">⌖</div>
+              <div>
+                <h3>Johor Bahru</h3>
+                <span class="office-state">Johor</span>
+              </div>
+            </div>
+
+            <p class="office-address">
+              20 &amp; 20A, Jalan Sasa 2,<br>
+              Taman Gaya,<br>
+              81800 Ulu Tiram,<br>
+              Johor.
+            </p>
+
+            <div class="office-contact">
+              <a class="contact-link" href="tel:+60189419800">
+                <span class="contact-symbol" aria-hidden="true">☎</span>
+                +6018-9419800
+              </a>
+              <a class="contact-link" href="tel:+6078590410">
+                <span class="contact-symbol" aria-hidden="true">☎</span>
+                +607-859 0410
+              </a>
+            </div>
+          </article>
+
+          <!-- Iskandar Puteri -->
+          <article class="office-card">
+            <div class="office-top">
+              <div class="office-icon" aria-hidden="true">⌖</div>
+              <div>
+                <h3>Iskandar Puteri</h3>
+                <span class="office-state">Johor</span>
+              </div>
+            </div>
+
+            <p class="office-address">
+              47 &amp; 47A, Jalan Jati 2,<br>
+              Taman Nusa Bestari Jaya,<br>
+              79150 Iskandar Puteri,<br>
+              Johor.
+            </p>
+
+            <div class="office-contact">
+              <a class="contact-link" href="tel:+60189419800">
+                <span class="contact-symbol" aria-hidden="true">☎</span>
+                +6018-9419800
+              </a>
+              <a class="contact-link" href="tel:+6075354021">
+                <span class="contact-symbol" aria-hidden="true">☎</span>
+                +607-535 4021
+              </a>
+            </div>
+          </article>
+
+          <!-- Kuala Lumpur -->
+          <article class="office-card">
+            <div class="office-top">
+              <div class="office-icon" aria-hidden="true">⌖</div>
+              <div>
+                <h3>Kuala Lumpur</h3>
+                <span class="office-state">Wilayah Persekutuan</span>
+              </div>
+            </div>
+
+            <p class="office-address">
+              17-2, Dinasti Sentral,<br>
+              Jalan Kuchai Maju 18,<br>
+              Off Jalan Kuchai Lama,<br>
+              58200 Kuala Lumpur,<br>
+              Wilayah Persekutuan Kuala Lumpur.
+            </p>
+
+            <div class="office-contact">
+              <a class="contact-link" href="tel:+60189419800">
+                <span class="contact-symbol" aria-hidden="true">☎</span>
+                +6018-9419800
+              </a>
+              <a class="contact-link" href="tel:+60327898988">
+                <span class="contact-symbol" aria-hidden="true">☎</span>
+                +603-2789 8988
+              </a>
+            </div>
+          </article>
+
+          <!-- Setia Alam -->
+          <article class="office-card">
+            <div class="office-top">
+              <div class="office-icon" aria-hidden="true">⌖</div>
+              <div>
+                <h3>Setia Alam</h3>
+                <span class="office-state">Selangor</span>
+              </div>
+            </div>
+
+            <p class="office-address">
+              32-2, Jalan Setia Utama AS U13/AS,<br>
+              Setia Alam,<br>
+              40170 Shah Alam,<br>
+              Selangor.
+            </p>
+
+            <div class="office-contact">
+              <a class="contact-link" href="tel:+60189419800">
+                <span class="contact-symbol" aria-hidden="true">☎</span>
+                +6018-9419800
+              </a>
+              <a class="contact-link" href="tel:+60389663588">
+                <span class="contact-symbol" aria-hidden="true">☎</span>
+                +603-8966 3588
+              </a>
+            </div>
+          </article>
+
+          <!-- Penang -->
+          <article class="office-card">
+            <div class="office-top">
+              <div class="office-icon" aria-hidden="true">⌖</div>
+              <div>
+                <h3>Penang</h3>
+                <span class="office-state">Pulau Pinang</span>
+              </div>
+            </div>
+
+            <p class="office-address">
+              No. 188, First Floor,<br>
+              Jalan Tembikai,<br>
+              Taman Padang Lallang,<br>
+              14000 Bukit Mertajam,<br>
+              Penang, Malaysia.
+            </p>
+
+            <div class="office-contact">
+              <a class="contact-link" href="tel:+60189419800">
+                <span class="contact-symbol" aria-hidden="true">☎</span>
+                +6018-941 9800
+              </a>
+              <a class="contact-link" href="tel:+6046042266">
+                <span class="contact-symbol" aria-hidden="true">☎</span>
+                +604-604 2266
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap footer-inner">
+
+      <a class="footer-brand"
+         href="malaysia_tax_system_interactive.html#overview">
+        <span class="footer-mark">L&amp;</span>
+        <span>L &amp; Co</span>
+      </a>
+
+      <p class="footer-note">
+        Integrated Reporting Services
+      </p>
+
+      <div class="footer-links">
+        <a href="malaysia_tax_system_interactive.html#overview">Overview</a>
+        <a href="malaysia_tax_system_interactive.html#tax-explorer">Tax services</a>
+        <a href="#services">Our services</a>
+        <a href="#offices">Contact</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // Responsive mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("active");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+      );
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    // Close the mobile menu after selecting a navigation link
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Close the menu when the screen returns to desktop size
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 760) {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+        menuToggle.textContent = "☰";
+      }
+    });
+  </script>
+
+</body>
+</html>

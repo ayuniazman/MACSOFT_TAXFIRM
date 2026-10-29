@@ -1112,20 +1112,32 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="css/service-nav.css">
 </head>
 
 <body>
-  <div class="announcement">Tax landscape changing? <a href="#tax-explorer">Explore the key tax areas →</a></div>
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="#top" aria-label="L and Co home"><span class="brand-mark">L&amp;</span><span>L &amp; Co
-          <span style="font-weight:500;color:#82798c">/ Tax insights</span></span></a>
-      <nav class="nav-links" id="navLinks">
-        <a href="#overview">Overview</a><a href="#tax-explorer">Explore tax types</a><a href="#process">How we
-          help</a><a href="#faq">FAQs</a>
+  <div class="site-announcement">Tax season doesn't have to be stressful. <strong>Let's make it clearer.</strong></div>
+  <header class="site-header">
+    <div class="site-nav">
+      <a class="site-brand" href="index.html#home" aria-label="Northstar Tax home">
+        <span class="site-brand-mark" aria-hidden="true">✳</span>
+        <span>northstar<span class="site-brand-tax">tax</span></span>
+      </a>
+      <button class="site-menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
+      <nav class="site-nav-links" id="navLinks" aria-label="Main navigation">
+        <details class="site-services">
+          <summary>Services</summary>
+          <div class="site-dropdown">
+            <a href="malaysiaTax.html" aria-current="page">Malaysia tax system</a>
+            <a href="transferPricing.html">Transfer pricing</a>
+            <a href="withholdingTax.html">Withholding tax</a>
+          </div>
+        </details>
+        <a href="index.html#about">Why Northstar</a>
+        <a href="index.html#process">How it works</a>
+        <a href="index.html#contact">Contact</a>
       </nav>
-      <a class="btn" href="#contact">Talk to a tax advisor <span>↗</span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <a class="site-nav-cta" href="index.html#contact">Book a consultation <span aria-hidden="true">↗</span></a>
     </div>
   </header>
   <main id="top">

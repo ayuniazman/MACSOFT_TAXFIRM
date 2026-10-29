@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="css/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -8,11 +9,10 @@
       content="Clear, confident tax support for individuals and businesses."
     />
     <title>Northstar Tax | Clarity for every tax decision</title>
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
   </head>
   <body>
-    <div class="announcement">
+    <div class="announcement">;
       Tax season doesn't have to be stressful.
       <strong>Let's make it clearer.</strong>
     </div>
@@ -32,8 +32,17 @@
           ☰
         </button>
         <nav class="nav-links" aria-label="Main navigation">
-          <a href="#services">Services</a><a href="#about">Why Northstar</a
-          ><a href="#process">How it works</a><a href="#contact">Contact</a>
+          <details class="nav-services-menu">
+            <summary>Services</summary>
+            <div class="nav-services-dropdown">
+              <a href="malaysiaTax.html">Malaysia tax system</a>
+              <a href="transferPricing.html">Transfer pricing</a>
+              <a href="withholdingTax.html">Withholding tax</a>
+            </div>
+          </details>
+          <a href="#about">Why Northstar</a>
+          <a href="#process">How it works</a>
+          <a href="#contact">Contact</a>
         </nav>
         <a class="btn" href="#contact">Book a consultation <span>↗</span></a>
       </div>
@@ -188,7 +197,7 @@
                   Explore service <span>→</span>
                 </button>
                 <div class="service-dropdown-menu" hidden>
-                  <a href="malaysia_tax_system_interactive.html">Malaysia tax system</a>
+                  <a href="malaysiaTax.html">Malaysia tax system</a>
                 </div>
               </div>
             </article>
@@ -204,7 +213,7 @@
                   Explore service <span>→</span>
                 </button>
                 <div class="service-dropdown-menu" hidden>
-                  <a href="malaysia_tax_system_interactive.html">Malaysia tax system</a>
+                  <a href="malaysiaTax.html">Malaysia tax system</a>
                 </div>
               </div>
             </article>
@@ -220,7 +229,7 @@
                   Explore service <span>→</span>
                 </button>
                 <div class="service-dropdown-menu" hidden>
-                  <a href="malaysia_tax_system_interactive.html">Malaysia tax system</a>
+                  <a href="malaysiaTax.html">Malaysia tax system</a>
                 </div>
               </div>
             </article>
