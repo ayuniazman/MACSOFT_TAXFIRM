@@ -91,6 +91,32 @@
       .brand-mark span {
         transform: rotate(4deg);
       }
+      .tax-planning-page .northstar-brand {
+        gap: 9px;
+        color: #292d3a;
+        font-size: 19px;
+        letter-spacing: -0.055em;
+      }
+      .tax-planning-page .northstar-brand .brand-mark {
+        width: 35px;
+        height: 35px;
+        border-radius: 9px 9px 9px 3px;
+        background: #8171bd;
+        color: #f1edff;
+        font-size: 17px;
+        transform: rotate(-4deg);
+      }
+      .tax-planning-page .northstar-brand .brand-mark span {
+        transform: rotate(4deg);
+      }
+      .tax-planning-page .northstar-name {
+        font-weight: 850;
+      }
+      .tax-planning-page .northstar-tax {
+        color: #8171bd;
+        font-weight: 500;
+        letter-spacing: -0.04em;
+      }
       .nav-links {
         display: flex;
         align-items: center;
@@ -1730,4 +1756,446 @@
           opacity: 1;
           transform: none;
         }
+      }
+
+      .tax-planning-page .page-hero {
+        padding: 68px 0 42px;
+        background:
+          linear-gradient(90deg, rgba(17, 26, 29, 0.82), rgba(17, 26, 29, 0.4)),
+          url("../images/tax-planning-hero.jpg") center 48% / cover no-repeat;
+        color: #fff;
+      }
+      .tax-planning-page .crumbs {
+        margin: 0 0 20px;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 25px;
+      }
+      .tax-planning-page .crumbs a {
+        color: #fff;
+      }
+      .tax-planning-page .page-hero h1 {
+        margin: 16px 0;
+      }
+      .tax-planning-page .page-hero > .wrap > p:not(.crumbs) {
+        max-width: 700px;
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.8;
+      }
+      .tax-planning-page .service-switch {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 28px;
+      }
+      .tax-planning-page .service-switch a {
+        padding: 9px 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.72);
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 650;
+      }
+      .tax-planning-page .service-switch a.current,
+      .tax-planning-page .service-switch a:hover {
+        border-color: var(--green);
+        background: var(--green);
+        color: #fff;
+      }
+      .tax-planning-page .section {
+        padding: 76px 0;
+      }
+      .tax-planning-page .section.about {
+        background: rgba(255, 255, 255, 0.52);
+      }
+      .tax-planning-page .feature {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 54px;
+      }
+      .tax-planning-page .feature.flip .feature-text {
+        order: 2;
+      }
+      .tax-planning-page .feature.flip .feature-media {
+        order: 1;
+      }
+      .tax-planning-page .feature-text h2,
+      .tax-planning-page .section-heading h2 {
+        margin: 12px 0;
+        font-size: clamp(30px, 4vw, 46px);
+        line-height: 1.08;
+      }
+      .tax-planning-page .feature-text p,
+      .tax-planning-page .section-heading p {
+        color: var(--muted);
+        line-height: 1.8;
+      }
+      .tax-planning-page .feature-media {
+        position: relative;
+        margin: 0;
+      }
+      .tax-planning-page .tax-illustration {
+        min-height: 310px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 14px;
+        padding: 38px;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background:
+          radial-gradient(circle at 78% 28%, rgba(255, 255, 255, 0.95) 0 11%, transparent 11.5%),
+          linear-gradient(145deg, #f8f6ff, #e6e1f4);
+        box-shadow: var(--shadow);
+      }
+      .tax-planning-page .tax-illustration span {
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .tax-planning-page .tax-illustration strong {
+        max-width: 300px;
+        color: var(--ink);
+        font-size: clamp(26px, 3vw, 38px);
+        line-height: 1.15;
+      }
+      .tax-planning-page .evasion-illustration {
+        background:
+          radial-gradient(circle at 78% 28%, rgba(255, 255, 255, 0.95) 0 11%, transparent 11.5%),
+          linear-gradient(145deg, #f4f3f8, #e1e2ea);
+      }
+      .tax-planning-page .feature-media .badge {
+        position: absolute;
+        left: 18px;
+        bottom: 42px;
+        padding: 6px 56px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.9);
+        font-size: 11px;
+        font-weight: 700;
+      }
+      .tax-planning-page .feature-media figcaption {
+        margin-top: 12px;
+        color: var(--muted);
+        text-align: center;
+        font-size: 12px;
+      }
+      .tax-planning-page .section-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        margin-bottom: 30px;
+      }
+      .tax-planning-page .section-heading p {
+        max-width: 430px;
+        margin: 0;
+      }
+      .tax-planning-page .info-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+      .tax-planning-page .rate-comparison-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .tax-planning-page .info-card {
+        padding: 23px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: var(--shadow);
+      }
+      .tax-planning-page .info-no {
+        color: var(--green);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+      }
+      .tax-planning-page .info-card h3 {
+        margin: 14px 0 8px;
+        font-size: 24px;
+      }
+      .tax-planning-page .info-card p,
+      .tax-planning-page .two-col p {
+        color: var(--muted);
+        line-height: 1.75;
+      }
+      .tax-planning-page .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+      }
+      .tax-planning-page .two-col h2 {
+        font-size: 28px;
+      }
+      .tax-planning-page .tick-list {
+        padding-left: 20px;
+        color: var(--muted);
+        line-height: 1.9;
+      }
+      .tax-planning-page .note {
+        padding: 14px 16px;
+        border-left: 3px solid var(--green);
+        background: rgba(255, 255, 255, 0.72);
+      }
+      .tax-planning-page .dark {
+        background: var(--green-dark);
+        color: #fff;
+      }
+      .tax-planning-page .dark p,
+      .tax-planning-page .dark li {
+        color: rgba(255, 255, 255, 0.82);
+      }
+      .tax-planning-page .dark .info-card {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.18);
+      }
+      .tax-planning-page .cta-band {
+        padding: 70px 0 70px;
+      }
+      .tax-planning-page .cta-panel {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 38px;
+        border-radius: 24px;
+        background: var(--green-dark);
+        color: #fff;
+      }
+      .tax-planning-page .cta-panel h2 {
+        margin-top: 0;
+      }
+      .tax-planning-page .cta-panel p {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .tax-planning-page footer {
+        padding: 48px 0 24px;
+        border-top: 1px solid var(--line);
+      }
+      .tax-planning-page .footer-top,
+      .tax-planning-page .footer-links {
+        display: flex;
+        justify-content: space-between;
+        gap: 36px;
+      }
+      .tax-planning-page .footer-col {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        color: var(--muted);
+      }
+      .tax-planning-page .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 30px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 12px;
+      }
+      @media (max-width: 900px) {
+        .tax-planning-page .feature,
+        .tax-planning-page .two-col {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+        .tax-planning-page .feature.flip .feature-text,
+        .tax-planning-page .feature.flip .feature-media {
+          order: initial;
+        }
+        .tax-planning-page .info-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 600px) {
+        .tax-planning-page .info-grid {
+          grid-template-columns: 1fr;
+        }
+        .tax-planning-page .section-heading,
+        .tax-planning-page .cta-panel,
+        .tax-planning-page .footer-top,
+        .tax-planning-page .footer-links,
+        .tax-planning-page .footer-bottom {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .tax-planning-page .tax-illustration {
+          min-height: 240px;
+        }
+      }
+
+      .tax-planning-page {
+        --ink: #34323f;
+        --muted: #656575;
+        --cream: #f5f3f9;
+        --paper: #ffffff;
+        --green: #9688bb;
+        --green-dark: #817795;
+        --lime: #e9e5f2;
+        --line: #e4e1eb;
+        --orange: #bdb5d0;
+        --shadow: 0 20px 50px rgba(77, 69, 104, 0.1);
+        background: linear-gradient(180deg, #ffffff 0%, #f4f2f8 100%);
+      }
+      .tax-planning-page header {
+        background: rgba(255, 255, 255, 0.94);
+        border-bottom-color: var(--line);
+      }
+      .tax-planning-page .nav-links {
+        color: var(--muted);
+      }
+      .tax-planning-page .nav-links a:hover,
+      .tax-planning-page .footer-col a:hover {
+        color: var(--green-dark);
+      }
+      .tax-planning-page .page-hero {
+        background:
+          radial-gradient(circle at 85% 20%, rgba(183, 170, 214, 0.25), transparent 36%),
+          linear-gradient(135deg, #f1eef8, #faf9fc 72%);
+      }
+      .tax-planning-page .about {
+        background: #eeecf3;
+      }
+      .tax-planning-page .info-card,
+      .tax-planning-page .note {
+        background: #ffffff;
+        border-color: var(--line);
+      }
+      .tax-planning-page .service-switch a {
+        background: rgba(255, 255, 255, 0.85);
+        border-color: var(--line);
+        color: var(--muted);
+      }
+      .tax-planning-page .service-switch a.current,
+      .tax-planning-page .service-switch a:hover {
+        background: var(--green);
+        border-color: var(--green);
+        color: #ffffff;
+      }
+      .tax-planning-page .dark {
+        background: #e9e6f0;
+        color: var(--ink);
+      }
+      .tax-planning-page .dark p,
+      .tax-planning-page .dark li {
+        color: var(--muted);
+      }
+      .tax-planning-page .dark .eyebrow {
+        color: var(--green-dark);
+      }
+      .tax-planning-page .dark .info-card {
+        background: #ffffff;
+        border-color: var(--line);
+      }
+      .tax-planning-page .dark .info-card p {
+        color: var(--muted);
+      }
+      .tax-planning-page .cta-panel {
+        background: linear-gradient(135deg, #dcd6e9, #eeecf3);
+        color: var(--ink);
+        border: 1px solid var(--line);
+      }
+      .tax-planning-page .cta-panel p {
+        color: var(--muted);
+      }
+      .tax-planning-page .cta-panel:after {
+        color: rgba(129, 119, 149, 0.08);
+      }
+      .tax-planning-page footer {
+        background: rgba(255, 255, 255, 0.8);
+      }
+      .tax-planning-page .tax-illustration {
+        position: relative; /* lets the circle sit inside the card */
+      }
+      .tax-planning-page .circle-img {
+        position: absolute;
+        top: 24px;
+        right: 42px;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;   /* makes it a circle */
+        object-fit: cover;    /* crops the image to fill without stretching */
+        border: 4px solid #fff;
+        box-shadow: 0 8px 20px rgba(77, 69, 104, 0.15);
+      }
+      .tax-planning-page .page-hero {
+        background:
+          linear-gradient(90deg, rgba(17, 26, 29, 0.82), rgba(17, 26, 29, 0.4)),
+          url("../images/tax-planning-hero.jpg") center 48% / cover no-repeat;
+        padding: 200px 0 70px;
+      }
+      .tax-planning-page .page-hero {
+        background: linear-gradient(135deg, #f1eef8, #faf9fc 72%);
+        padding: 70px 0;
+      }
+      .tax-planning-page .hero-split {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;   /* text | image */
+        gap: 56px;
+        align-items: center;
+      }
+      .tax-planning-page .hero-text h1 {
+        color: var(--ink);
+        margin: 12px 0 16px;
+      }
+      .tax-planning-page .hero-text p:not(.crumbs) {
+        max-width: 520px;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+      .tax-planning-page .hero-text .crumbs,
+      .tax-planning-page .hero-text .crumbs a {
+        color: var(--muted);
+      }
+      .tax-planning-page .hero-text .crumbs {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 16px;
+        font-size: 14px;
+      }
+      .tax-planning-page .hero-text .crumbs a:hover {
+        color: var(--ink);
+        text-decoration: underline;
+      }
+      .tax-planning-page .hero-text .crumbs [aria-current="page"] {
+        color: var(--ink);
+        font-weight: 600;
+      }
+      .tax-planning-page .hero-image img {
+        display: block;
+        width: 100%;
+        height: 340px;          /* box height */
+        object-fit: cover;      /* crops to fill without stretching */
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+      }
+      @media (max-width: 900px) {
+      .tax-planning-page .hero-split { grid-template-columns: 1fr; gap: 30px; }
+      .tax-planning-page .hero-image img { height: 240px; }
+      }
+      .tax-planning-page .line-title {
+        text-decoration: underline;
+        text-decoration-color: var(--green);
+        text-decoration-thickness: 3px;
+        text-underline-offset: 6px;
+      }
+      .tax-planning-page .feature-img {
+        display: block;
+        width: 100%;
+        height: 340px;          /* picture height */
+        object-fit: cover;      /* fills the box without stretching */
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+      }
+      @media (max-width: 900px) {
+      .tax-planning-page .feature-img { height: 240px; }
       }
