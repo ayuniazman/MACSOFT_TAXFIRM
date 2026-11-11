@@ -1,21 +1,17 @@
 <!doctype html>
 <html lang="en">
   <head>
+<html lang="en">
+</head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tax incentive | Northstar Tax</title>
+    <link rel="stylesheet" href="css/offices.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-      /* Comparison table (move this into css/style.css if you like) */
-      .tax-planning-page .table-wrap { overflow-x: auto; }
-      .tax-planning-page .rate-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow); }
-      .tax-planning-page .rate-table th { background: var(--green-dark); color: #fff; text-align: left; padding: 14px 18px; font-size: 14px; }
-      .tax-planning-page .rate-table td { padding: 14px 18px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 15px; }
-      .tax-planning-page .rate-table td:first-child { color: var(--ink); font-weight: 700; }
-      .tax-planning-page .rate-table tr:last-child td { border-bottom: 0; }
-    </style>
+    <link rel="stylesheet" href="css/tax-incentive.css" />
   </head>
-  <body class="tax-planning-page">
+  <body class="tax-planning-page tax-incentive-page">
     <!-- HEADER -->
     <header>
       <div class="wrap nav">
@@ -26,13 +22,22 @@
         </a>
         <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
         <nav class="nav-links">
-          <a href="index.html#services">Services</a>
-          <a href="malaysia_tax_system_interactive.html">Malaysia tax</a>
+          <a href="index.html">Home</a>
+          <details class="nav-services-menu">
+            <summary>Services</summary>
+            <div class="nav-services-dropdown">
+              <a href="malaysiaTax.html">Malaysia tax system</a>
+              <a href="taxPlanning.html">Tax Planning</a>
+              <a href="tax_audit.html">Income Tax Audit</a>
+              <a href="tax_Incentive.html">Income Tax Incentive</a>
+              <a href="transferPricing.html">Transfer pricing</a>
+              <a href="withholdingTax.html">Withholding tax</a>
+             
+            </div>
+          </details>
           <a href="about.html">About us</a>
-          <a href="index.html#process">How it works</a>
-          <a href="index.html#contact">Contact</a>
+          <a href="contact.html">Contact us</a>
         </nav>
-        <a class="btn" href="index.html#contact">Contact us ↗</a>
       </div>
     </header>
 
@@ -41,12 +46,7 @@
       <section class="page-hero">
         <div class="wrap hero-split">
           <div class="hero-text">
-            <p class="crumbs"><a class="home-btn" href="index.html">Home</a></p>
-            <h1>Tax Incentive</h1>
-            <p>
-              Malaysia offers tax incentives that can lower a company's tax bill.
-              Learn what the major ones are and how they work.
-            </p>
+            <h1>Income Tax Incentive</h1>
             <div class="service-switch"></div>
           </div>
           <div class="hero-image">
@@ -58,6 +58,9 @@
       <!-- INTRO -->
       <section class="section">
         <div class="wrap feature">
+          <figure class="feature-media reveal">
+            <img class="feature-img" src="images/tax4.jpg" alt="Illustration of tax incentives" />
+          </figure>
           <div class="feature-text reveal">
             <span class="eyebrow">Introduction</span>
             <h2>Incentives for every size of company</h2>
@@ -71,9 +74,6 @@
             </p>
             <a class="btn" href="#incentives">See the major incentives →</a>
           </div>
-          <figure class="feature-media reveal">
-            <img class="feature-img" src="images/tax4.jpg" alt="Illustration of tax incentives" />
-          </figure>
         </div>
       </section>
 
@@ -170,27 +170,17 @@
       </section>
 
       <!-- CALL TO ACTION -->
-      <section class="cta-band" id="contact">
-        <div class="wrap">
-          <div class="cta-panel">
-            <div>
-              <h2>Which incentive suits your company?</h2>
-              <p>
-                Contact the nearest office. Details are on
-                <a href="https://landco.my" style="text-decoration: underline">landco.my</a>.
-              </p>
-            </div>
-            <a class="btn light" href="https://landco.my">Visit landco.my ↗</a>
-          </div>
-        </div>
-      </section>
     </main>
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="wrap">
+    <div class="wrap">
         <div class="footer-top">
           <div class="footer-brand">
+    <section id="offices"></section>
+           </div>
+          </div>
+        </div> 
+    <!-- FOOTER -->
+    <!--<footer>
+      
             <a class="brand northstar-brand" href="index.html" aria-label="Northstar Tax home">
               <span class="brand-mark"><span aria-hidden="true">✳</span></span>
               <span class="northstar-name">northstar</span>
@@ -210,15 +200,14 @@
             <div class="footer-col">
               <strong>Offices</strong>
               <span>Johor Bahru</span><span>Kuala Lumpur</span><span>Selangor</span><span>Penang</span>
-            </div>
-          </div>
-        </div>
+            c
         <div class="footer-bottom">
           <span>© <span id="year"></span> Northstar Tax. Content adapted from <a href="https://landco.my">landco.my</a>.</span>
           <span>Tax rules change. Please seek advice for your circumstances.</span>
         </div>
       </div>
-    </footer>
+    </footer>-->
     <script src="script.js"></script>
+    <script src="offices.js"></script>
   </body>
 </html>

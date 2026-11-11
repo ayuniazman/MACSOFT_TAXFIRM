@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Northstar Tax for clear, practical advice on tax planning, compliance and business support."
+    />
+    <title>Contact Northstar Tax</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      :root {
+        --ink: #2b2c31;
+        --muted: #6d7380;
+        --cream: #f4f1f8;
+        --paper: #ffffff;
+        --green: #8171bd;
+        --green-dark: #5f548d;
+        --lime: #ece7ff;
+        --line: #e6e3ef;
+        --shadow: 0 22px 60px rgba(77, 66, 104, 0.12);
+      }
+
+      body.contact-page {
+        background: linear-gradient(180deg, #f7f5fb 0%, #f4f1f8 100%);
+      }
+
+      .contact-hero {
+        padding: 72px 0 48px;
+        background:
+          radial-gradient(circle at top right, rgba(177, 165, 230, 0.35), transparent 28%),
+          linear-gradient(180deg, rgba(255,255,255,0.7), rgba(244,241,248,0.9));
+      }
+
+      .contact-hero-inner {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 34px;
+        align-items: center;
+      }
+
+      .hero-copy h1 {
+        margin: 0 0 18px;
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        line-height: 0.95;
+        letter-spacing: -0.06em;
+      }
+
+      .hero-copy p {
+        max-width: 600px;
+        color: var(--muted);
+        font-size: 1.08rem;
+        line-height: 1.75;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border: 1px solid rgba(129, 113, 189, 0.4);
+        background: rgba(255,255,255,0.5);
+        color: var(--green-dark);
+        border-radius: 999px;
+        padding: 14px 20px;
+        font-size: 13px;
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .btn-outline:hover {
+        background: var(--lime);
+      }
+
+      .contact-summary {
+        display: flex;
+        justify-content: center;
+      }
+
+      .summary-card {
+        width: min(100%, 410px);
+        background: rgba(255,255,255,0.7);
+        border: 1px solid rgba(129,113,189,0.2);
+        backdrop-filter: blur(10px);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+        padding: 28px;
+      }
+
+      .summary-card .mini-label {
+        display: inline-block;
+        color: var(--green);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        margin-bottom: 18px;
+        text-transform: uppercase;
+      }
+
+      .summary-card h3 {
+        margin: 0 0 16px;
+        font-size: 1.9rem;
+        letter-spacing: -0.06em;
+      }
+
+      .meta-list {
+        display: grid;
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .meta-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        color: var(--muted);
+      }
+
+      .meta-badge {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        background: var(--lime);
+        color: var(--green-dark);
+        font-size: 1rem;
+      }
+
+      .meta-item strong {
+        display: block;
+        color: var(--ink);
+        margin-bottom: 3px;
+      }
+
+      .section.contact-layout {
+        padding-top: 30px;
+        padding-bottom: 90px;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 28px;
+      }
+
+      .contact-panel,
+      .contact-form {
+        background: rgba(255,255,255,0.85);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+        padding: 30px;
+      }
+
+      .contact-panel h2,
+      .contact-form h2 {
+        margin: 0 0 20px;
+        font-size: clamp(1.8rem, 2vw, 2.4rem);
+        letter-spacing: -0.06em;
+      }
+
+      .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 18px;
+      }
+
+      .contact-list li {
+        display: grid;
+        gap: 5px;
+        color: var(--muted);
+      }
+
+      .contact-list strong {
+        color: var(--ink);
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .office-grid {
+        margin-top: 28px;
+        display: grid;
+        gap: 16px;
+      }
+
+      .office-card {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: linear-gradient(180deg, #ffffff, #f8f5ff);
+        padding: 18px 18px 16px;
+      }
+
+      .office-card h3 {
+        margin: 0 0 8px;
+        font-size: 1.08rem;
+        letter-spacing: -0.04em;
+      }
+
+      .office-card p,
+      .office-card a {
+        color: var(--muted);
+        margin: 0;
+        font-size: 0.96rem;
+      }
+
+      .contact-form form {
+        display: grid;
+        gap: 18px;
+      }
+
+      .field-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .field {
+        display: grid;
+        gap: 8px;
+      }
+
+      .field label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .field input,
+      .field select,
+      .field textarea {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: #faf9ff;
+        color: var(--ink);
+        padding: 14px 16px;
+        font: inherit;
+        resize: vertical;
+      }
+
+      .field input:focus,
+      .field select:focus,
+      .field textarea:focus {
+        outline: 2px solid rgba(129,113,189,0.2);
+        border-color: rgba(129,113,189,0.65);
+      }
+
+      .submit-row {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 8px;
+      }
+
+      .toast {
+        position: fixed;
+        right: 22px;
+        bottom: 22px;
+        max-width: min(420px, calc(100% - 32px));
+        background: #2f2d3a;
+        color: #fff;
+        border-radius: 14px;
+        padding: 13px 16px;
+        box-shadow: 0 18px 30px rgba(25, 22, 29, 0.2);
+        opacity: 0;
+        transform: translateY(16px);
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 70;
+      }
+
+      .toast.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 900px) {
+        .contact-hero-inner,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .field-row {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body class="contact-page">
+    <header>
+      <div class="wrap nav">
+        <a class="brand northstar-brand" href="index.html" aria-label="Northstar Tax home">
+          <span class="brand-mark"><span aria-hidden="true">✳</span></span>
+          <span class="northstar-name">northstar</span>
+          <span class="northstar-tax">tax</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <details class="nav-services-menu">
+            <summary>Services</summary>
+            <div class="nav-services-dropdown">
+              <a href="malaysiaTax.html">Malaysia tax system</a>
+              <a href="taxPlanning.html">Tax Planning</a>
+              <a href="tax_audit.html">Income Tax Audit</a>
+              <a href="tax_Incentive.html">Income Tax Incentive</a>
+              <a href="transferPricing.html">Transfer pricing</a>
+              <a href="withholdingTax.html">Withholding tax</a>
+            </div>
+          </details>
+          <a href="about.html">About us</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a class="btn site-nav-cta" href="mailto:hello@northstartax.example?subject=Consultation%20enquiry">Book a consultation <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main>
+      <section class="contact-hero">
+        <div class="wrap contact-hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">Contact us</span>
+            <h1>Let’s make your next tax decision clearer.</h1>
+            <p>
+              Whether you need help with planning, compliance, incentives or a broader tax review,
+              our team is here to help you understand the next step with confidence.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="mailto:hello@northstartax.example?subject=Consultation%20enquiry">Email our team <span aria-hidden="true">↗</span></a>
+              <a class="btn-outline" href="tel:+60327898988">Call +60 3 2789 8988</a>
+            </div>
+          </div>
+
+          <div class="contact-summary">
+            <div class="summary-card">
+              <span class="mini-label">Response time</span>
+              <h3>Usually within 1 business day.</h3>
+              <div class="meta-list">
+                <div class="meta-item">
+                  <span class="meta-badge">✉</span>
+                  <div>
+                    <strong>Email</strong>
+                    <a href="mailto:hello@northstartax.example">hello@northstartax.example</a>
+                  </div>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-badge">☎</span>
+                  <div>
+                    <strong>Phone</strong>
+                    <a href="tel:+60327898988">+60 3 2789 8988</a>
+                  </div>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-badge">⏰</span>
+                  <div>
+                    <strong>Hours</strong>
+                    Monday–Friday<br />9:00 AM – 6:00 PM
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-layout">
+        <div class="wrap contact-grid">
+          <aside class="contact-panel" aria-label="Contact details">
+            <h2>Speak with the team</h2>
+            <ul class="contact-list">
+              <li>
+                <strong>Email</strong>
+                <a href="mailto:hello@northstartax.example">hello@northstartax.example</a>
+              </li>
+              <li>
+                <strong>Phone</strong>
+                <a href="tel:+60327898988">+60 3 2789 8988</a>
+              </li>
+              <li>
+                <strong>Address</strong>
+                18-03, Menara Mutiara,<br />Jalan Sultan Ismail,<br />50250 Kuala Lumpur
+              </li>
+              <li>
+                <strong>Office hours</strong>
+                Monday to Friday<br />9:00 AM – 6:00 PM
+              </li>
+            </ul>
+
+            <div class="office-grid">
+              <div class="office-card">
+                <h3>Kuala Lumpur</h3>
+                <p>18-03, Menara Mutiara, Jalan Sultan Ismail</p>
+                <a href="tel:+60327898988">+60 3 2789 8988</a>
+              </div>
+              <div class="office-card">
+                <h3>Johor Bahru</h3>
+                <p>Level 3, Tower A, Taman Perindustrian</p>
+                <a href="tel:+6075354021">+60 7 535 4021</a>
+              </div>
+              <div class="office-card">
+                <h3>Penang</h3>
+                <p>Suite 5A, Harbour View Business Park</p>
+                <a href="tel:+6046042266">+60 4 604 2266</a>
+              </div>
+            </div>
+          </aside>
+
+          <div class="contact-form">
+            <h2>Send an enquiry</h2>
+            <form action="#" method="post">
+              <div class="field-row">
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" placeholder="Your full name" />
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" placeholder="you@example.com" />
+                </div>
+              </div>
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="phone">Phone</label>
+                  <input id="phone" name="phone" type="tel" placeholder="+60 12 345 6789" />
+                </div>
+                <div class="field">
+                  <label for="service">Service</label>
+                  <select id="service" name="service">
+                    <option value="">Select a service</option>
+                    <option>Tax planning</option>
+                    <option>Tax compliance</option>
+                    <option>Income tax audit</option>
+                    <option>Tax incentives</option>
+                    <option>Transfer pricing</option>
+                    <option>Withholding tax</option>
+                    <option>General enquiry</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Tell us about your situation and the type of support you need."></textarea>
+              </div>
+
+              <div class="submit-row">
+                <button class="btn" type="submit">Send enquiry <span aria-hidden="true">↗</span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div class="wrap">
+          <div class="cta-panel reveal">
+            <div>
+              <h2>Need a clear answer, fast?</h2>
+              <p>Start with a friendly conversation and get guidance that fits your circumstances.</p>
+            </div>
+            <a class="btn light" href="mailto:hello@northstartax.example?subject=Consultation%20enquiry">Book a consultation <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="brand" href="index.html">
+              <span class="brand-mark"><span aria-hidden="true">✳</span></span> northstar<span style="font-weight: 500; color: var(--green);">tax</span>
+            </a>
+            <p>Clear tax advice for people building their next chapter.</p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-col">
+              <strong>Explore</strong>
+              <a href="taxPlanning.html">Tax Planning</a>
+              <a href="tax_audit.html">Tax Audit</a>
+              <a href="transferPricing.html">Transfer Pricing</a>
+            </div>
+            <div class="footer-col">
+              <strong>Get in touch</strong>
+              <a href="mailto:hello@northstartax.example">Email us</a>
+              <a href="tel:+60327898988">Call us</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="year"></span> Northstar Tax. All rights reserved.</span>
+          <span>Tax services and requirements vary by jurisdiction. Please seek advice for your circumstances.</span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite">
+      Your enquiry has been drafted. Replace this demo form with your real form endpoint when ready.
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      const enquiryForm = document.querySelector('.contact-form form');
+      const toast = document.querySelector('.toast');
+
+      enquiryForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        toast.classList.add('show');
+        window.setTimeout(() => toast.classList.remove('show'), 3600);
+        enquiryForm.reset();
+      });
+    </script>
+  </body>
+</html>

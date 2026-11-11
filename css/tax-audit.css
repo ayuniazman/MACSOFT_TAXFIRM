@@ -1,0 +1,102 @@
+.tax-audit-page .rate-comparison-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tax-audit-page .external-link {
+  text-decoration: underline;
+}
+
+.nav-services-menu summary::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  margin-top: -3px; /* the rotated square looks low, this lifts it to centre */
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* left | centre | right */
+  align-items: center;
+}
+
+.nav .brand {
+  justify-self: start;
+}
+
+.nav-links {
+  justify-self: center;
+  margin-left: 0; /* remove the margin-left: auto from my last message */
+}
+
+.nav > .btn {
+  justify-self: end; /* only matters if you have a button on the right */
+}
+
+/* Mobile: go back to the normal layout so the menu button isn't centred */
+@media (max-width: 680px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+/* ===== HERO BACKGROUND: soft overlapping circles (title section only) ===== */
+.page-hero,
+.about-hero,
+.service-page .page-hero,
+.tax-planning-page .page-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(120deg, #f3ecfc 0%, #fbf8ff 55%, #ffffff 100%);
+}
+
+/* the circles */
+.page-hero::before,
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    /* small circle, top */
+    radial-gradient(circle clamp(90px, 11vw, 170px) at 28% 8%,
+      rgba(205, 160, 250, .16) 0,
+      rgba(205, 160, 250, .30) calc(100% - 2px),
+      rgba(190, 150, 235, .45) calc(100% - 2px),
+      rgba(190, 150, 235, .45) 100%,
+      transparent 100%),
+    /* big circle, bottom left */
+    radial-gradient(circle clamp(150px, 20vw, 300px) at 12% 105%,
+      rgba(205, 160, 250, .14) 0,
+      rgba(205, 160, 250, .30) calc(100% - 2px),
+      rgba(190, 150, 235, .45) calc(100% - 2px),
+      rgba(190, 150, 235, .45) 100%,
+      transparent 100%),
+    /* huge circle, right */
+    radial-gradient(circle clamp(220px, 32vw, 480px) at 92% 95%,
+      rgba(205, 160, 250, .10) 0,
+      rgba(205, 160, 250, .32) calc(100% - 2px),
+      rgba(190, 150, 235, .45) calc(100% - 2px),
+      rgba(190, 150, 235, .45) 100%,
+      transparent 100%);
+}
+
+/* fine grain texture */
+.page-hero::after,
+.about-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .07;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+}
+
+/* the old circle divs in the About hero are replaced by this */
+.about-hero .circle { display: none; }

@@ -42,11 +42,11 @@
         margin-inline: auto;
       }
       .announcement {
-        background: var(--green-dark);
+        background: #685e96;
         color: #f7f8ef;
         text-align: center;
         padding: 10px 16px;
-        font-size: 12px;
+        font-size: 14px;
         letter-spacing: 0.04em;
       }
       .announcement strong {
@@ -1893,38 +1893,6 @@
         position: relative;
         margin: 0;
       }
-      .tax-planning-page .tax-illustration {
-        min-height: 310px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 14px;
-        padding: 38px;
-        border: 1px solid var(--line);
-        border-radius: 24px;
-        background:
-          radial-gradient(circle at 78% 28%, rgba(255, 255, 255, 0.95) 0 11%, transparent 11.5%),
-          linear-gradient(145deg, #f8f6ff, #e6e1f4);
-        box-shadow: var(--shadow);
-      }
-      .tax-planning-page .tax-illustration span {
-        color: var(--green);
-        font-size: 13px;
-        font-weight: 800;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-      .tax-planning-page .tax-illustration strong {
-        max-width: 300px;
-        color: var(--ink);
-        font-size: clamp(26px, 3vw, 38px);
-        line-height: 1.15;
-      }
-      .tax-planning-page .evasion-illustration {
-        background:
-          radial-gradient(circle at 78% 28%, rgba(255, 255, 255, 0.95) 0 11%, transparent 11.5%),
-          linear-gradient(145deg, #f4f3f8, #e1e2ea);
-      }
       .tax-planning-page .feature-media .badge {
         position: absolute;
         left: 18px;
@@ -1957,9 +1925,6 @@
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 16px;
-      }
-      .tax-planning-page .rate-comparison-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
       .tax-planning-page .info-card {
         padding: 23px;
@@ -2098,8 +2063,8 @@
         --green: #9688bb;
         --green-dark: #817795;
         --lime: #e9e5f2;
-        --line: #e4e1eb;
-        --orange: #bdb5d0;
+        --line: #ada7bc;
+        --orange: #766c8d;
         --shadow: 0 20px 50px rgba(77, 69, 104, 0.1);
         background: linear-gradient(180deg, #ffffff 0%, #f4f2f8 100%);
       }
@@ -2170,20 +2135,6 @@
       .tax-planning-page footer {
         background: rgba(255, 255, 255, 0.8);
       }
-      .tax-planning-page .tax-illustration {
-        position: relative; /* lets the circle sit inside the card */
-      }
-      .tax-planning-page .circle-img {
-        position: absolute;
-        top: 24px;
-        right: 42px;
-        width: 160px;
-        height: 160px;
-        border-radius: 50%;   /* makes it a circle */
-        object-fit: cover;    /* crops the image to fill without stretching */
-        border: 4px solid #fff;
-        box-shadow: 0 8px 20px rgba(77, 69, 104, 0.15);
-      }
       .tax-planning-page .page-hero {
         background:
           linear-gradient(90deg, rgba(17, 26, 29, 0.82), rgba(17, 26, 29, 0.4)),
@@ -2191,8 +2142,8 @@
         padding: 200px 0 70px;
       }
       .tax-planning-page .page-hero {
-        background: linear-gradient(135deg, #f1eef8, #faf9fc 72%);
         padding: 70px 0;
+        background: linear-gradient(135deg, #cfc8e4, #e3def0 72%);
       }
       .tax-planning-page .hero-split {
         display: grid;
@@ -2240,12 +2191,6 @@
       .tax-planning-page .hero-split { grid-template-columns: 1fr; gap: 30px; }
       .tax-planning-page .hero-image img { height: 240px; }
       }
-      .tax-planning-page .line-title {
-        text-decoration: underline;
-        text-decoration-color: var(--green);
-        text-decoration-thickness: 3px;
-        text-underline-offset: 6px;
-      }
       .tax-planning-page .feature-img {
         display: block;
         width: 100%;
@@ -2257,3 +2202,383 @@
       @media (max-width: 900px) {
       .tax-planning-page .feature-img { height: 240px; }
       }
+      
+/* =========================================
+   NORTHSTAR TAX - PURPLE & GREY NAVBAR
+========================================= */
+
+.tax-planning-page header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid #E8E6EE;
+}
+
+.tax-planning-page .nav {
+  min-height: 82px;
+  gap: 25px;
+}
+
+/* LOGO */
+.tax-planning-page .northstar-brand {
+  color: #454251;
+}
+
+.tax-planning-page .northstar-tax {
+  color: #8171BD;
+}
+
+/* NAVIGATION LINKS */
+.tax-planning-page .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  border: 0;
+  color: #555263;
+  font-size: 15px;
+}
+
+.tax-planning-page .nav-links > a,
+.tax-planning-page .nav-services-menu > summary {
+  padding: 8px 0;
+  color: #555263;
+  transition: all 0.3s ease;
+}
+
+.tax-planning-page .nav-links > a:hover,
+.tax-planning-page .nav-services-menu > summary:hover {
+  color: #8171BD;
+}
+
+/* ACTIVE HOME */
+.tax-planning-page .nav-links > a:active {
+  color: #FFFFFF;
+  background: #8171BD;
+  border: 1px solid #8171BD;
+}
+
+/* DROPDOWN ARROW */
+.tax-planning-page .nav-services-menu summary::after {
+  color: #8171BD;
+}
+
+/* DROPDOWN MENU */
+.tax-planning-page .nav-services-dropdown {
+  top: calc(100% + 15px);
+  background: #FFFFFF;
+  border: 1px solid #E8E6EE;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(77, 69, 104, 0.12);
+}
+
+.tax-planning-page .nav-links .nav-services-dropdown a {
+  color: #555263;
+  border-radius: 9px;
+  font-size: 15px;
+}
+
+.tax-planning-page .nav-links .nav-services-dropdown a:hover {
+  color: #8171BD;
+  background: #F2F0F6;
+}
+
+/* CONTACT BUTTON */
+.tax-planning-page .nav > .btn {
+  background: #8171BD;
+  color: #FFFFFF;
+  padding: 14px 24px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 5px 20px rgba(129, 113, 189, 0.18);
+  white-space: nowrap;
+}
+
+.tax-planning-page .nav > .btn:hover {
+  background: #6E5CA9;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* MOBILE MENU */
+.tax-planning-page .menu-toggle {
+  color: #555263;
+}
+
+.tax-avoidance-page .page-hero h1 {
+  color: #000;
+}
+
+.tax-avoidance-page .nav-services-menu summary::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid #8171bd;
+  border-bottom: 2px solid #8171bd;
+  transform: rotate(45deg);
+  margin: -4px 0 0;
+}
+
+.tax-avoidance-page .announcement {
+  padding: 10px 16px;
+  font-size: 13px;
+}
+
+.tax-avoidance-page header {
+  border-top: 0;
+  border-bottom: 0;
+  background: #fff;
+}
+
+.tax-avoidance-page .nav {
+  position: relative;
+  width: min(1176px, calc(100% - 48px));
+  min-height: 78px;
+  justify-content: flex-start;
+  gap: 0;
+}
+
+.tax-avoidance-page .nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 22px;
+  color: #555263;
+  font-size: 14px;
+}
+
+@media (max-width: 680px) {
+  .tax-avoidance-page .nav {
+    width: calc(100% - 34px);
+    min-height: 68px;
+  }
+
+  .tax-avoidance-page .nav-links {
+    left: 0;
+    right: 0;
+    transform: none;
+  }
+
+  .tax-planning-page .nav-links {
+      top: 68px;
+      background: #FFFFFF;
+      border: 1px solid #E8E6EE;
+      border-radius: 0 0 15px 15px;
+      padding: 18px 25px;
+      gap: 0;
+  }
+
+  .tax-planning-page .nav-links > a,
+  .tax-planning-page .nav-services-menu > summary {
+      color: #555263;
+      border-radius: 8px;
+      padding: 13px 10px;
+  }
+
+  .tax-planning-page .nav-links > a:first-child {
+      color: #8171BD;
+      background: #F2F0F6;
+  }
+
+  .tax-planning-page .nav-services-dropdown {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+  }
+
+  .tax-planning-page .nav-links .nav-services-dropdown a {
+      color: #555263;
+  }
+}
+
+/* ABOUT US HERO SECTION */
+.about-hero {
+    position: relative;
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    padding: 70px 7%;
+    overflow: hidden;
+
+    /* Purple gradient background */
+    background: linear-gradient(
+        120deg,
+        #e8e1f5 0%,
+        #f1edf9 45%,
+        #ffffff 100%
+    );
+}
+
+/* Main content */
+.about-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.about-label {
+    display: inline-block;
+    color: #76629c;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.about-content h1 {
+    font-size: 64px;
+    font-weight: 800;
+    color: #292735;
+    margin-bottom: 22px;
+}
+
+.about-content p {
+    max-width: 570px;
+    color: #625d6a;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+/* Discover More button */
+.about-btn {
+    display: inline-block;
+    background: #76629c;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.about-btn:hover {
+    background: #5e4c82;
+    transform: translateY(-3px);
+}
+
+/* Decorative circles */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Large circle */
+.circle-one {
+    width: 280px;
+    height: 280px;
+    background: rgba(174, 151, 218, 0.20);
+    top: -80px;
+    right: 10%;
+}
+
+/* Medium circle */
+.circle-two {
+    width: 180px;
+    height: 180px;
+    background: rgba(197, 181, 229, 0.30);
+    bottom: -50px;
+    right: 25%;
+}
+
+/* Small circle */
+.circle-three {
+    width: 90px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.65);
+    top: 80px;
+    right: 38%;
+}
+
+/* Extra circle */
+.circle-four {
+    width: 130px;
+    height: 130px;
+    background: rgba(210, 198, 235, 0.25);
+    bottom: 40px;
+    right: 5%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-hero {
+        min-height: 420px;
+        padding: 60px 7%;
+    }
+
+    .about-content h1 {
+        font-size: 42px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+    }
+
+    .circle-one {
+        width: 180px;
+        height: 180px;
+    }
+
+    .circle-two {
+        width: 120px;
+        height: 120px;
+    }
+}
+/* ===== PAGE TRANSITION ===== */
+@view-transition { navigation: auto; }
+
+/* keep the navbar still while the page content changes */
+header { view-transition-name: site-header; }
+
+::view-transition-old(root) {
+  animation: pageOut 0.3s ease both;
+}
+::view-transition-new(root) {
+  animation: pageIn 0.5s ease both;
+}
+
+@keyframes pageOut {
+  to { opacity: 0; transform: translateY(-12px); }
+}
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(16px); }
+}
+/* ===== IMAGE BELOW TEXT ===== */
+.tax-planning-page .feature.stack {
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+.feature.stack .feature-text { max-width: none; }
+.feature.stack .feature-text p { max-width: none; }
+
+.feature.stack .feature-img {
+  width: 100%;
+  height: clamp(240px, 36vw, 600px);
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+/* ===== READ MORE LINK ===== */
+.info-card {
+  display: flex;
+  flex-direction: column;
+}
+.read-more {
+  align-self: flex-start;
+  margin-top: auto;          /* pushes it to the bottom of the card */
+  padding-top: 18px;
+  color: var(--green-dark);
+  font-size: 15px;
+  font-weight: 750;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.read-more span { transition: transform 0.2s ease; }
+.read-more:hover { color: var(--green); }
+.read-more:hover span { transform: translateX(4px); }

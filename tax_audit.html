@@ -1,12 +1,14 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="en"></html>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Income tax audit | Northstar Tax</title>
+    <link rel="stylesheet" href="css/offices.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tax-audit.css" />
   </head>
-  <body class="tax-planning-page">
+  <body class="tax-planning-page tax-audit-page">
     <!-- HEADER -->
     <header>
       <div class="wrap nav">
@@ -17,13 +19,22 @@
         </a>
         <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
         <nav class="nav-links">
-          <a href="index.html#services">Services</a>
-          <a href="malaysia_tax_system_interactive.html">Malaysia tax</a>
+          <a href="index.html">Home</a>
+          <details class="nav-services-menu">
+            <summary>Services</summary>
+            <div class="nav-services-dropdown">
+              <a href="malaysiaTax.html">Malaysia tax system</a>
+              <a href="taxPlanning.html">Tax Planning</a>
+              <a href="tax_audit.html">Income Tax Audit</a>
+              <a href="tax_Incentive.html">Income Tax Incentive</a>
+              <a href="transferPricing.html">Transfer pricing</a>
+              <a href="withholdingTax.html">Withholding tax</a>
+              
+            </div>
+          </details>
           <a href="about.html">About us</a>
-          <a href="index.html#process">How it works</a>
-          <a href="index.html#contact">Contact</a>
-        </nav>
-        <a class="btn" href="index.html#contact">Contact us ↗</a>
+        <a href="contact.html">Contact us</a>
+      </nav>
       </div>
     </header>
 
@@ -32,12 +43,7 @@
       <section class="page-hero">
         <div class="wrap hero-split">
           <div class="hero-text">
-            <p class="crumbs"><a class="home-btn" href="index.html">Home</a></p>
             <h1>Income Tax Audit</h1>
-            <p>
-              Know what an IRB audit involves, which type you may face, and how to
-              prepare.
-            </p>
             <div class="service-switch"></div>
           </div>
           <div class="hero-image">
@@ -86,6 +92,19 @@
                 <li>The officer in charge tells you what was found in the documents</li>
                 <li>Some desk audit cases can be referred for field audit</li>
               </ul>
+                <details class="more-details">
+                  <summary class="read-more">Read more <span>→</span></summary>
+                    <p>How a Desk Audit Works
+                      Location: The review happens strictly at the LHDN branch office.
+                      Scope: It usually focuses on specific items, line-by-line disclosures, income vs. expense claims, or specific anomalies in your submitted tax return.
+                      Process:
+	                    1. LHDN issues a written notice selecting your file based on risk assessment or third-party data.
+	                    2. You are typically given 14 calendar days to submit requested supporting documents (such as invoices, receipts, ledgers, or loan agreements) via correspondence or digital submission.
+	                    3. LHDN officers examine the records remotely. If they need clarification, they may call you in for an interview at their office.
+	                    4. Most desk audits conclude within roughly three months.
+                      Escalation: If the desk audit uncovers broader discrepancies, systemic issues, or major irregularities, LHDN can upgrade or refer the case into a full-scale field audit (where officers visit your physical business site)
+                    </p>
+                </details>
             </article>
             <article class="info-card reveal">
               <span class="info-no">02</span>
@@ -100,35 +119,25 @@
                 <li>You will be interviewed by the IRB officer</li>
                 <li>Prepare every document the officer asks for</li>
               </ul>
+                <details class="more-details">
+                <summary class="read-more">Read more <span>→</span></summary>
+                <p>Extra explanation about field audits goes here...</p>
+              </details>
             </article>
           </div>
         </div>
       </section>
 
       <!-- CALL TO ACTION -->
-      <section class="cta-band" id="contact">
-        <div class="wrap">
-          <div class="cta-panel">
-            <div>
-              <h2>Received an IRB audit letter?</h2>
-              <p>
-                Contact the nearest office. Details are on
-                <a href="https://landco.my" style="text-decoration: underline">landco.my</a>.
-              </p>
-            </div>
-            <a class="btn light" href="https://landco.my">Visit landco.my ↗</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
+      <!-- Reporting callout -->
+    <section id="offices"></section>
     <!-- FOOTER -->
     <footer>
       <div class="wrap">
         <div class="footer-top">
           <div class="footer-brand">
             <a class="brand northstar-brand" href="index.html" aria-label="Northstar Tax home">
-              <span class="brand-mark"><span aria-hidden="true">✳</span></span>
+              <!--<span class="brand-mark"><span aria-hidden="true">✳</span></span>
               <span class="northstar-name">northstar</span>
               <span class="northstar-tax">tax</span>
             </a>
@@ -137,23 +146,24 @@
           <div class="footer-links">
             <div class="footer-col">
               <strong>Tax services</strong>
-              <a href="index.html#services">Income tax submission</a>
+              <a href="index.html">Income tax submission</a>
               <a href="taxPlanning.html">Tax planning &amp; incentives</a>
               <a href="taxAudit.html">Income tax audit support</a>
-              <a href="index.html#services">Transfer pricing &amp; withholding tax</a>
+              <a href="index.html">Transfer pricing &amp; withholding tax</a>
             </div>
             <div class="footer-col">
               <strong>Offices</strong>
               <span>Johor Bahru</span><span>Kuala Lumpur</span><span>Selangor</span><span>Penang</span>
             </div>
           </div>
-        </div>
-        <div class="footer-bottom">
+        </div>-->
+        <!--<div class="footer-bottom">
           <span>© <span id="year"></span> Northstar Tax. Content adapted from <a href="https://landco.my">landco.my</a>.</span>
           <span>Tax rules change. Please seek advice for your circumstances.</span>
-        </div>
+        </div>-->
       </div>
     </footer>
     <script src="script.js"></script>
+    <script src="offices.js"></script>
   </body>
 </html>
