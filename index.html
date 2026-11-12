@@ -29,9 +29,10 @@
           aria-label="Toggle navigation"
           aria-expanded="false"
         >
-          
+          ☰
         </button>
         <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html">Home</a>
           <details class="nav-services-menu">
             <summary>Services</summary>
             <div class="nav-services-dropdown">
@@ -40,9 +41,8 @@
               <a href="withholdingTax.html">Withholding tax</a>
             </div>
           </details>
-          <a href="#about">Why Northstar</a>
-          <a href="#process">How it works</a>
-          <a href="#contact">Contact</a>
+          <a href="#about">About Us</a>
+          
         </nav>
         <a class="btn" href="#contact">Book a consultation <span>↗</span></a>
       </div>
@@ -62,13 +62,13 @@
       <div class="video-overlay"></div>
       <div class="wrap video-inner">
         <div class="video-copy">
-          <span class="eyebrow eyebrow-light">A clearer way forward</span>
+          <span class="eyebrow eyebrow-light">Your trusted partner in tax matters</span>
           <h1>
-            Your next chapter<br />starts with <em>clarity.</em>
+            Understand your tax<br/><em>Make better decisions</em>
           </h1>
           <p>
-            Tax is more than numbers. It’s the confidence to make your next
-            move, knowing someone is helping you see the whole picture.
+            Get practical tax solutions, reliable advice and professional support to help you meet your tax obligations,
+            manage your responsibilities and make informed financial decisions.
           </p>
           <div class="story-actions">
             <a class="btn" href="#services"
@@ -78,7 +78,7 @@
         </div>
         <div class="video-cta" aria-label="Watch the Northstar Tax film">
           <button class="video-cta-btn" type="button">Watch film <span>▶</span></button>
-          <span class="video-duration">(00:30)</span>
+          <span class="video-duration">(00:20)</span>
         </div>
       </div>
     </section>
@@ -369,6 +369,21 @@
       Contact details are demo placeholders. Replace them with your firm's real
       contact information.
     </div>
+
+    <div class="video-modal" id="videoModal" aria-hidden="true">
+      <div class="video-modal-backdrop" data-close-video></div>
+      <div class="video-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+        <button class="video-modal-close" type="button" aria-label="Close video">×</button>
+        <div class="video-modal-header">
+          <span class="eyebrow eyebrow-light">Northstar film</span>
+          <h3 id="videoModalTitle">Your next chapter starts with clarity</h3>
+        </div>
+        <video id="watchFilmVideo" controls playsinline preload="metadata">
+          <source src="download.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>

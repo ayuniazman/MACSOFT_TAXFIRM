@@ -258,6 +258,52 @@
             place-items: center
         }
 
+        .hero-photo {
+            position: relative;
+            width: min(100%, 450px);
+            aspect-ratio: 1.45;
+            margin: 0;
+            overflow: hidden;
+            border: 5px solid rgba(255, 255, 255, .72);
+            border-radius: 22px;
+            box-shadow: 0 28px 75px rgba(66, 50, 89, .2)
+        }
+
+        .hero-photo img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .hero-photo:after {
+            content: "";
+            position: absolute;
+            inset: 35% 0 0;
+            background: linear-gradient(transparent, rgba(32, 24, 38, .78))
+        }
+
+        .hero-photo figcaption {
+            position: absolute;
+            z-index: 1;
+            right: 22px;
+            bottom: 20px;
+            left: 22px;
+            color: #fff;
+            font-size: 19px;
+            font-weight: 750;
+            letter-spacing: -.03em
+        }
+
+        .hero-photo figcaption:before {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 3px;
+            margin-bottom: 10px;
+            background: #d04a02
+        }
+
         .visual-orbit {
             position: absolute;
             width: min(35vw, 400px);
@@ -1188,14 +1234,16 @@
 </head>
 
 <body>
-    <div class="site-announcement">Tax season doesn't have to be stressful. <strong>Let's make it clearer.</strong></div>
+    <div class="site-announcement">Tax season doesn't have to be stressful. <strong>Let's make it clearer.</strong>
+    </div>
     <header class="site-header">
         <div class="site-nav">
             <a class="site-brand" href="index.html#home" aria-label="Northstar Tax home">
                 <span class="site-brand-mark" aria-hidden="true">✳</span>
                 <span>northstar<span class="site-brand-tax">tax</span></span>
             </a>
-            <button class="site-menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
+            <button class="site-menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation"
+                aria-expanded="false" aria-controls="navLinks">☰</button>
             <nav class="site-nav-links" id="navLinks" aria-label="Main navigation">
                 <details class="site-services">
                     <summary>Services</summary>
@@ -1221,89 +1269,231 @@
             <div class="wrap hero-grid">
                 <div class="reveal">
                     <div class="eyebrow">Transfer pricing · Malaysia</div>
-                    <h1>Price intercompany deals <em>as independent parties would.</em></h1>
+                    <h1>Transfer <em>Pricing</em></h1>
                     <p>Transfer pricing covers the pricing of goods, services and intangibles between associated
                         persons. Understand what the Inland Revenue Board Malaysia expects, and what you need to
                         document.</p>
                     <div class="hero-actions"><a class="btn" href="#overview">Explore transfer pricing
                             <span>↓</span></a><a class="btn outline" href="#contact">Speak to our team ↗</a></div>
                 </div>
-                <div class="visual reveal" aria-label="Illustration of a controlled transaction">
+                <div class="visual reveal" aria-label="Transfer pricing discussion">
                     <div class="visual-orbit"></div>
                     <div class="float-chip chip-a">Associated persons<small>Controlled transactions</small></div>
                     <div class="float-chip chip-b">Market price<small>The independent benchmark</small></div>
-                    <div class="tax-card">
-                        <div class="tax-card-top"><span>L&amp;CO / TRANSFER PRICING</span><span
-                                class="pill">MALAYSIA</span></div>
-                        <h3>Does the price hold up?</h3>
-                        <p>Compare the transfer price with what independent persons would have agreed.</p>
-                        <div class="flow"><span>Transfer price</span><b>≈</b><span>Market price</span></div>
-                        <div class="card-footer"><span>IRBM Guidelines, 20 July 2012</span><strong>↗</strong></div>
-                    </div>
+                    <figure class="hero-photo">
+                        <img src="images/tax3.jpg"
+                            alt="Business professionals discussing cross-border work in a Kuala Lumpur boardroom">
+                        <figcaption>Business without borders</figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
 
         <div class="interactive-content">
+
             <section id="overview">
-                <div class="wrap intro-grid">
-                    <div class="intro-copy">
-                        <div class="kicker">01 / Introduction</div>
-                        <h2>What is transfer pricing?</h2>
-                        <p>Transfer pricing refers to intercompany pricing arrangements for goods, services and intangibles between associated persons.</p>
-                        <p>Ideally, transfer prices should not differ from prevailing market prices between independent persons. However, business transactions between associated persons may not always reflect market forces.</p>
+                <div class="wrap">
+
+                    <!-- Original introduction content -->
+                    <div class="intro-grid">
+
+                        <div class="intro-copy">
+                            <div class="kicker">01 / Introduction</div>
+                            <h2>What is transfer pricing?</h2>
+
+                            <p>
+                                Transfer pricing refers to intercompany pricing
+                                arrangements for goods, services and intangibles
+                                between associated persons.
+                            </p>
+
+                            <p>
+                                Ideally, transfer prices should not differ from
+                                prevailing market prices between independent
+                                persons. However, business transactions between
+                                associated persons may not always reflect
+                                market forces.
+                            </p>
+                        </div>
+
+                        <aside class="guideline-card">
+                            <div class="kicker">
+                                Malaysia transfer pricing guidelines
+                            </div>
+
+                            <div class="date">20 July 2012</div>
+
+                            <div class="rule-line"></div>
+
+                            <p>
+                                The Inland Revenue Board Malaysia published
+                                Transfer Pricing Guidelines on this date.
+                                The guidelines provide guidance on the law
+                                and rules for controlled transactions, methods
+                                and manner, administrative requirements,
+                                and records and documentation.
+                            </p>
+                        </aside>
+
                     </div>
-                    <aside class="guideline-card">
-                        <div class="kicker">Malaysia transfer pricing guidelines</div>
-                        <div class="date">20 July 2012</div>
-                        <div class="rule-line"></div>
-                        <p>The Inland Revenue Board Malaysia published Transfer Pricing Guidelines on this date. The guidelines provide guidance on the law and rules for controlled transactions, methods and manner, administrative requirements, and records and documentation.</p>
-                    </aside>
+
+                    <!-- NEW: Editorial image section -->
+                    <div class="editorial-split">
+
+                        <img src="review document.jpg"
+                            alt="Business professionals discussing international transactions" loading="lazy">
+
+                        <div class="editorial-copy">
+                            <div class="kicker">Business across borders</div>
+
+                            <h3>
+                                One business. Different markets.
+                                Connected transactions.
+                            </h3>
+
+                            <p>
+                                Businesses operating across different countries
+                                often engage in transactions between associated
+                                companies. Understanding how these transactions
+                                are priced is essential for maintaining
+                                transparency and meeting tax requirements.
+                            </p>
+                        </div>
+
+                    </div>
+
                 </div>
             </section>
+
 
             <section class="cbcr" id="reporting">
                 <div class="wrap">
                     <div class="section-head">
                         <div class="kicker">02 / Reporting requirements</div>
                         <h2>Country-by-country reporting</h2>
-                        <p>Country-by-country reporting (CbCR) is governed by the Income Tax (Country-by-Country Reporting) Rules 2016, effective from 1 January 2017. The conditions below follow the supplied original content.</p>
+                        <p>Country-by-country reporting (CbCR) is governed by the Income Tax (Country-by-Country
+                            Reporting) Rules 2016, effective from 1 January 2017. The conditions below follow the
+                            supplied original content.</p>
                     </div>
                     <div class="threshold">
                         <div class="amount">MYR 3 billion</div>
-                        <p><strong>Consolidated group revenue threshold</strong><br>One of the conditions is that total consolidated group revenue in the preceding financial year is at least MYR 3 billion.</p>
+                        <p><strong>Consolidated group revenue threshold</strong><br>One of the conditions is that total
+                            consolidated group revenue in the preceding financial year is at least MYR 3 billion.</p>
+                    </div>
+                    <div class="editorial-split">
+                        <img src="review document.jpg"
+                            alt="Professional reviewing international financial reporting documents" loading="lazy">
+
+                        <div class="editorial-copy">
+                            <div class="kicker">Understanding the requirements</div>
+
+                            <h3>Transparency across borders</h3>
+
+                            <p>
+                                Country-by-country reporting provides tax authorities
+                                with a clearer picture of how multinational enterprise
+                                groups allocate their income, taxes and economic activities
+                                across different jurisdictions.
+                            </p>
+                        </div>
                     </div>
                     <h3 class="subhead">When do the stated conditions apply?</h3>
                     <div class="condition-grid">
-                        <article class="condition"><div class="number">01</div><div><h3>Cross-border transactions</h3><p>Any constituent entity enters into cross-border transactions with another constituent entity.</p></div></article>
-                        <article class="condition"><div class="number">02</div><div><h3>Group revenue</h3><p>Total consolidated group revenue in the preceding financial year is at least MYR 3 billion.</p></div></article>
-                        <article class="condition"><div class="number">03</div><div><h3>Ultimate holding company</h3><p>The ultimate holding company is incorporated under the Companies Act 1965 or written law and is resident in Malaysia.</p></div></article>
-                        <article class="condition"><div class="number">04</div><div><h3>Constituent entities</h3><p>Constituent entities are incorporated or registered under the Companies Act 1965, any written law, or the laws of a territory outside Malaysia, and are resident in Malaysia.</p></div></article>
+                        <article class="condition">
+                            <div class="number">01</div>
+                            <div>
+                                <h3>Cross-border transactions</h3>
+                                <p>Any constituent entity enters into cross-border transactions with another constituent
+                                    entity.</p>
+                            </div>
+                        </article>
+                        <article class="condition">
+                            <div class="number">02</div>
+                            <div>
+                                <h3>Group revenue</h3>
+                                <p>Total consolidated group revenue in the preceding financial year is at least MYR 3
+                                    billion.</p>
+                            </div>
+                        </article>
+                        <article class="condition">
+                            <div class="number">03</div>
+                            <div>
+                                <h3>Ultimate holding company</h3>
+                                <p>The ultimate holding company is incorporated under the Companies Act 1965 or written
+                                    law and is resident in Malaysia.</p>
+                            </div>
+                        </article>
+                        <article class="condition">
+                            <div class="number">04</div>
+                            <div>
+                                <h3>Constituent entities</h3>
+                                <p>Constituent entities are incorporated or registered under the Companies Act 1965, any
+                                    written law, or the laws of a territory outside Malaysia, and are resident in
+                                    Malaysia.</p>
+                            </div>
+                        </article>
                     </div>
                     <h3 class="subhead">Who must file and notify?</h3>
                     <div class="accordion">
                         <div class="acc-item open">
-                            <button class="acc-trigger" aria-expanded="true"><span>Ultimate holding company (UHC)</span><span class="plus">+</span></button>
-                            <div class="acc-panel">The ultimate holding company of a multinational enterprise (MNC) group that is resident in Malaysia must file the CbC report with the Director General of Inland Revenue. The report must comply with the Rules and cover the reporting financial year on or before the specified date.</div>
+                            <button class="acc-trigger" aria-expanded="true"><span>Ultimate holding company
+                                    (UHC)</span><span class="plus">+</span></button>
+                            <div class="acc-panel">The ultimate holding company of a multinational enterprise (MNC)
+                                group that is resident in Malaysia must file the CbC report with the Director General of
+                                Inland Revenue. The report must comply with the Rules and cover the reporting financial
+                                year on or before the specified date.</div>
                         </div>
                         <div class="acc-item">
-                            <button class="acc-trigger" aria-expanded="false"><span>When does a surrogate holding company file?</span><span class="plus">+</span></button>
-                            <div class="acc-panel">A surrogate holding company files instead if any of the following circumstances applies:<ol><li>The UHC is not resident in Malaysia and is not required to file a CbC report in its jurisdiction.</li><li>The UHC's jurisdiction of tax residence has an international agreement with Malaysia but is not a party to the Multilateral Competent Authority Agreement on Exchange of CbC Reports at the time of filing.</li><li>There is a systemic failure of the UHC's jurisdiction of tax residence, and the Director General has notified the Malaysian constituent entity of that failure.</li></ol></div>
+                            <button class="acc-trigger" aria-expanded="false"><span>When does a surrogate holding
+                                    company file?</span><span class="plus">+</span></button>
+                            <div class="acc-panel">A surrogate holding company files instead if any of the following
+                                circumstances applies:<ol>
+                                    <li>The UHC is not resident in Malaysia and is not required to file a CbC report in
+                                        its jurisdiction.</li>
+                                    <li>The UHC's jurisdiction of tax residence has an international agreement with
+                                        Malaysia but is not a party to the Multilateral Competent Authority Agreement on
+                                        Exchange of CbC Reports at the time of filing.</li>
+                                    <li>There is a systemic failure of the UHC's jurisdiction of tax residence, and the
+                                        Director General has notified the Malaysian constituent entity of that failure.
+                                    </li>
+                                </ol>
+                            </div>
                         </div>
                         <div class="acc-item">
-                            <button class="acc-trigger" aria-expanded="false"><span>Notification if the entity is the UHC or surrogate holding company</span><span class="plus">+</span></button>
-                            <div class="acc-panel">On or before the last day of the reporting financial year, a Malaysian constituent entity must notify the Director General in writing if it is the UHC or surrogate holding company.</div>
+                            <button class="acc-trigger" aria-expanded="false"><span>Notification if the entity is the
+                                    UHC or surrogate holding company</span><span class="plus">+</span></button>
+                            <div class="acc-panel">On or before the last day of the reporting financial year, a
+                                Malaysian constituent entity must notify the Director General in writing if it is the
+                                UHC or surrogate holding company.</div>
                         </div>
                         <div class="acc-item">
-                            <button class="acc-trigger" aria-expanded="false"><span>Notification if the entity is not the reporting entity</span><span class="plus">+</span></button>
-                            <div class="acc-panel">If a constituent entity is not the reporting entity, it must notify the Director General in writing of the identity and tax residence of the reporting entity on or before the last day of the reporting financial year.</div>
+                            <button class="acc-trigger" aria-expanded="false"><span>Notification if the entity is not
+                                    the reporting entity</span><span class="plus">+</span></button>
+                            <div class="acc-panel">If a constituent entity is not the reporting entity, it must notify
+                                the Director General in writing of the identity and tax residence of the reporting
+                                entity on or before the last day of the reporting financial year.</div>
                         </div>
                     </div>
                     <h3 class="subhead">Key reporting timeline</h3>
                     <div class="timeline">
-                        <article class="time-card"><div class="step">Notification 01</div><h3>By financial year-end</h3><p>The Malaysian constituent entity provides written notification of its status or of the reporting entity's identity and tax residence, as applicable, on or before the last day of the reporting financial year.</p></article>
-                        <article class="time-card"><div class="step">Filing 02</div><h3>Within 12 months</h3><p>The CbC report is due no later than 12 months after the last day of the reporting financial year.</p></article>
-                        <article class="time-card"><div class="step">Report 03</div><h3>Reporting financial year</h3><p>The report must comply with the Rules and cover the reporting financial year.</p></article>
+                        <article class="time-card">
+                            <div class="step">Notification 01</div>
+                            <h3>By financial year-end</h3>
+                            <p>The Malaysian constituent entity provides written notification of its status or of the
+                                reporting entity's identity and tax residence, as applicable, on or before the last day
+                                of the reporting financial year.</p>
+                        </article>
+                        <article class="time-card">
+                            <div class="step">Filing 02</div>
+                            <h3>Within 12 months</h3>
+                            <p>The CbC report is due no later than 12 months after the last day of the reporting
+                                financial year.</p>
+                        </article>
+                        <article class="time-card">
+                            <div class="step">Report 03</div>
+                            <h3>Reporting financial year</h3>
+                            <p>The report must comply with the Rules and cover the reporting financial year.</p>
+                        </article>
                     </div>
                 </div>
             </section>
@@ -1313,25 +1503,36 @@
                     <div class="section-head">
                         <div class="kicker">03 / Transfer pricing methods</div>
                         <h2>Five methods, two categories.</h2>
-                        <p>The original content lists three transaction-based methods and two profit-based methods. Select a method to view its name and category.</p>
+                        <p>The original content lists three transaction-based methods and two profit-based methods.
+                            Select a method to view its name and category.</p>
                     </div>
                     <div class="method-layout">
                         <div class="method-tabs" role="tablist" aria-label="Transfer pricing methods">
-                            <button class="method-tab active" role="tab" aria-selected="true" data-method="cup"><strong>Comparable Uncontrolled Price (CUP)</strong><span>Transaction-based method</span></button>
-                            <button class="method-tab" role="tab" aria-selected="false" data-method="rpm"><strong>Resale Price Method (RPM)</strong><span>Transaction-based method</span></button>
-                            <button class="method-tab" role="tab" aria-selected="false" data-method="cpm"><strong>Cost Plus Method (CPM)</strong><span>Transaction-based method</span></button>
-                            <button class="method-tab" role="tab" aria-selected="false" data-method="psm"><strong>Profit Split Method</strong><span>Profit-based method</span></button>
-                            <button class="method-tab" role="tab" aria-selected="false" data-method="tnmm"><strong>Transactional Net Margin Method (TNMM)</strong><span>Profit-based method</span></button>
+                            <button class="method-tab active" role="tab" aria-selected="true"
+                                data-method="cup"><strong>Comparable Uncontrolled Price
+                                    (CUP)</strong><span>Transaction-based method</span></button>
+                            <button class="method-tab" role="tab" aria-selected="false" data-method="rpm"><strong>Resale
+                                    Price Method (RPM)</strong><span>Transaction-based method</span></button>
+                            <button class="method-tab" role="tab" aria-selected="false" data-method="cpm"><strong>Cost
+                                    Plus Method (CPM)</strong><span>Transaction-based method</span></button>
+                            <button class="method-tab" role="tab" aria-selected="false" data-method="psm"><strong>Profit
+                                    Split Method</strong><span>Profit-based method</span></button>
+                            <button class="method-tab" role="tab" aria-selected="false"
+                                data-method="tnmm"><strong>Transactional Net Margin Method
+                                    (TNMM)</strong><span>Profit-based method</span></button>
                         </div>
                         <div class="method-detail" id="method-detail" role="tabpanel" aria-live="polite">
                             <span class="method-type">Transaction-based method</span>
                             <h3>Comparable Uncontrolled Price (CUP)</h3>
-                            <p>Listed in the supplied original content as one of the transaction-based transfer pricing methods.</p>
+                            <p>Listed in the supplied original content as one of the transaction-based transfer pricing
+                                methods.</p>
                         </div>
                     </div>
                     <div class="method-list">
-                        <div class="mini"><b>Transaction-based</b><small>Comparable Uncontrolled Price (CUP), Resale Price Method (RPM), Cost Plus Method (CPM)</small></div>
-                        <div class="mini"><b>Profit-based</b><small>Profit Split Method, Transactional Net Margin Method (TNMM)</small></div>
+                        <div class="mini"><b>Transaction-based</b><small>Comparable Uncontrolled Price (CUP), Resale
+                                Price Method (RPM), Cost Plus Method (CPM)</small></div>
+                        <div class="mini"><b>Profit-based</b><small>Profit Split Method, Transactional Net Margin Method
+                                (TNMM)</small></div>
                     </div>
                 </div>
             </section>
