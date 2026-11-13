@@ -28,6 +28,14 @@ body {
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+p,
+li,
+ul,
+ol {
+  font-size: 1em;
 }
 a {
   color: inherit;
@@ -74,7 +82,7 @@ header {
   gap: 11px;
   font-weight: 800;
   letter-spacing: -0.045em;
-  font-size: 20px;
+  font-size: 19px;
   white-space: nowrap;
 }
 .brand-mark {
@@ -91,6 +99,64 @@ header {
 .brand-mark span {
   transform: rotate(4deg);
 }
+body,
+button,
+a,
+summary,
+input,
+textarea,
+select {
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.brand,
+.nav-links,
+.nav-services-menu summary,
+.nav-services-dropdown a,
+.site-nav-links,
+.site-nav-links a,
+.nav-link,
+.nav-link a {
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.brand {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+}
+
+.nav-links,
+.site-nav-links,
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #555263;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.nav-services-dropdown a,
+.site-nav-links a,
+.nav-link a {
+  font-size: 15px;
+}
+
 .tax-planning-page .northstar-brand {
   gap: 9px;
   color: #292d3a;
@@ -120,9 +186,9 @@ header {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 30px;
-  color: #52615c;
-  font-size: 13px;
+  gap: 20px;
+  color: #555263;
+  font-size: 15px;
   font-weight: 600;
 }
 .nav-links a:hover {
@@ -169,7 +235,7 @@ header {
   padding: 11px 12px;
   border: 0;
   color: var(--ink);
-  font-size: 12px;
+  font-size: 15px;
 }
 .nav-links .nav-services-dropdown a:hover {
   background: var(--cream);
@@ -328,7 +394,7 @@ header {
         align-items: center;
         gap: 30px;
         color: #52615c;
-        font-size: 13px;
+        font-size: 15px;
         font-weight: 600;
       }
       .nav-links a:hover {
@@ -372,7 +438,7 @@ header {
         padding: 11px 12px;
         border: 0;
         color: var(--ink);
-        font-size: 12px;
+        font-size: 14px;
       }
       .nav-links .nav-services-dropdown a:hover {
         background: var(--cream);
@@ -497,7 +563,7 @@ header {
 }
 .story-copy h1 em {
   color: var(--lime);
-  font-family: Georgia, serif;
+  font-family: inherit;
   font-weight: 500;
 }
 .story-copy p {
@@ -1028,7 +1094,7 @@ header {
 }
 .video-copy h1 em {
   color: #e3def9;
-  font-family: Georgia, serif;
+  font-family: inherit;
   font-weight: 500;
 }
 .video-copy p {
@@ -1192,7 +1258,7 @@ h1 {
 }
 h1 em {
   color: var(--green);
-  font-family: Georgia, serif;
+  font-family: inherit;
   font-weight: 500;
 }
 .hero-copy {
@@ -1679,7 +1745,7 @@ h2 {
 }
 .art-big em {
   color: var(--lime);
-  font-family: Georgia, serif;
+  font-family: inherit;
   font-weight: 400;
 }
 .about-copy h2 {
@@ -1719,7 +1785,7 @@ h2 {
   padding-top: 22px;
 }
 .step-no {
-  font-family: Georgia, serif;
+  font-family: inherit;
   color: #a2b18e;
   font-size: 33px;
 }

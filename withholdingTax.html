@@ -1,10 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Understand Malaysian withholding tax, payment categories and compliance obligations.">
+  <meta name="description"
+    content="Understand Malaysian withholding tax, payment categories and compliance obligations.">
   <title>Withholding Tax | Northstar Tax</title>
 
   <style>
@@ -18,21 +19,32 @@
       --white: #ffffff;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
       background: var(--white);
       line-height: 1.7;
+      font-size: 16px;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-    button, input { font: inherit; }
+    button,
+    input {
+      font: inherit;
+    }
 
     .container {
       width: min(1160px, 90%);
@@ -55,12 +67,15 @@
     }
 
     .brand {
-      font-size: 23px;
+      font-size: 19px;
       font-weight: 800;
-      letter-spacing: -1px;
+      letter-spacing: -0.055em;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
-    .brand span { color: var(--orange); }
+    .brand span {
+      color: var(--orange);
+    }
 
     .nav-label {
       color: var(--muted);
@@ -70,11 +85,14 @@
     }
 
     .nav-link {
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 600;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
-    .nav-link:hover { color: var(--orange); }
+    .nav-link:hover {
+      color: var(--orange);
+    }
 
     /* Hero */
 
@@ -150,7 +168,9 @@
 
     /* Section layout */
 
-    section { padding: 82px 0; }
+    section {
+      padding: 82px 0;
+    }
 
     .section-heading {
       max-width: 720px;
@@ -178,7 +198,9 @@
       align-items: start;
     }
 
-    .intro-copy p { color: var(--muted); }
+    .intro-copy p {
+      color: var(--muted);
+    }
 
     .definition-card {
       border-top: 4px solid var(--orange);
@@ -208,11 +230,18 @@
 
     /* Compliance timeline */
 
-    .timeline-section { background: var(--orange-dark); color: white; }
+    .timeline-section {
+      background: var(--orange-dark);
+      color: white;
+    }
 
-    .timeline-section .eyebrow { color: var(--lime); }
+    .timeline-section .eyebrow {
+      color: var(--lime);
+    }
 
-    .timeline-section .section-intro { color: #e1deea; }
+    .timeline-section .section-intro {
+      color: #e1deea;
+    }
 
     .timeline {
       display: grid;
@@ -245,7 +274,9 @@
       font-weight: 700;
     }
 
-    .timeline-item h3 { font-size: 20px; }
+    .timeline-item h3 {
+      font-size: 20px;
+    }
 
     .timeline-item p {
       color: #e1deea;
@@ -259,11 +290,15 @@
       background: #514878;
     }
 
-    .deadline strong { color: var(--lime); }
+    .deadline strong {
+      color: var(--lime);
+    }
 
     /* Payment categories */
 
-    .payments-section { background: #fff; }
+    .payments-section {
+      background: #fff;
+    }
 
     .payment-toolbar {
       display: flex;
@@ -364,7 +399,9 @@
       font-weight: 700;
     }
 
-    .expand-btn:hover { color: var(--ink); }
+    .expand-btn:hover {
+      color: var(--ink);
+    }
 
     .expand-icon {
       font-size: 20px;
@@ -381,7 +418,9 @@
       font-size: 13px;
     }
 
-    .payment-detail[hidden] { display: none; }
+    .payment-detail[hidden] {
+      display: none;
+    }
 
     .payment-detail ul {
       padding-left: 18px;
@@ -407,7 +446,9 @@
       margin-bottom: 12px;
     }
 
-    .subsection p { color: var(--muted); }
+    .subsection p {
+      color: var(--muted);
+    }
 
     .tag-list {
       display: flex;
@@ -425,7 +466,9 @@
 
     /* Closing call to action */
 
-    .cta-section { padding-top: 0; }
+    .cta-section {
+      padding-top: 0;
+    }
 
     .cta {
       padding: 44px;
@@ -461,30 +504,78 @@
       flex-wrap: wrap;
     }
 
-    footer p { color: #e1deea; }
+    footer p {
+      color: #e1deea;
+    }
 
     @media (max-width: 850px) {
-      .intro-grid { grid-template-columns: 1fr; gap: 25px; }
-      .payment-grid { grid-template-columns: repeat(2, 1fr); }
-      .timeline { grid-template-columns: 1fr; }
-      .timeline-item { margin-left: 5px; }
-      .cta { align-items: flex-start; flex-direction: column; }
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .payment-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item {
+        margin-left: 5px;
+      }
+
+      .cta {
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
 
     @media (max-width: 560px) {
-      .nav-inner { min-height: 68px; }
-      .nav-label { display: none; }
-      .hero { padding: 48px 0; }
-      h1 { letter-spacing: -2px; }
-      section { padding: 56px 0; }
-      .payment-grid { grid-template-columns: 1fr; }
-      .payment-toolbar { align-items: stretch; flex-direction: column; }
-      .search-wrap { max-width: none; }
-      .cta { padding: 26px; }
+      .nav-inner {
+        min-height: 68px;
+      }
+
+      .nav-label {
+        display: none;
+      }
+
+      .hero {
+        padding: 48px 0;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      section {
+        padding: 56px 0;
+      }
+
+      .payment-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .payment-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .search-wrap {
+        max-width: none;
+      }
+
+      .cta {
+        padding: 26px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
+
+      *,
+      *::before,
+      *::after {
         scroll-behavior: auto !important;
         transition: none !important;
       }
@@ -501,21 +592,26 @@
         <span class="site-brand-mark" aria-hidden="true">✳</span>
         <span>northstar<span class="site-brand-tax">tax</span></span>
       </a>
-      <button class="site-menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
+      <button class="site-menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation"
+        aria-expanded="false" aria-controls="navLinks">☰</button>
       <nav class="site-nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="index.html">Home</a>
         <details class="site-services">
           <summary>Services</summary>
           <div class="site-dropdown">
             <a href="malaysiaTax.html">Malaysia tax system</a>
+            <a href="taxPlanning.html">Tax Planning</a>
+            <a href="tax_audit.html">Income Tax Audit</a>
+            <a href="tax_Incentive.html">Income Tax Incentive</a>
             <a href="transferPricing.html">Transfer pricing</a>
-            <a href="withholdingTax.html" aria-current="page">Withholding tax</a>
+            <a href="withholdingTax.html">Withholding tax</a>
+            <a href="integratedReportingService.html">Integrated Reporting Services</a>
           </div>
         </details>
-        <a href="index.html#about">Why Northstar</a>
-        <a href="index.html#process">How it works</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="about.html">About us</a>
+        <a href="contact.html">Contact us</a>
       </nav>
-      <a class="site-nav-cta" href="index.html#contact">Book a consultation <span aria-hidden="true">↗</span></a>
+      <a class="site-nav-cta" href="contact.html">Book a consultation <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
@@ -649,12 +745,8 @@
         <div class="payment-toolbar">
           <label class="search-wrap">
             <span class="search-icon" aria-hidden="true">⌕</span>
-            <input
-              type="search"
-              id="paymentSearch"
-              placeholder="Search payment categories..."
-              aria-label="Search payment categories"
-            >
+            <input type="search" id="paymentSearch" placeholder="Search payment categories..."
+              aria-label="Search payment categories">
           </label>
           <span class="result-count" id="resultCount" aria-live="polite">
             9 categories
@@ -766,7 +858,8 @@
             </div>
           </article>
 
-          <article class="payment-card" data-search="reit real estate investment trust resident company non resident company foreign investment institution">
+          <article class="payment-card"
+            data-search="reit real estate investment trust resident company non resident company foreign investment institution">
             <div class="card-number">07 / INVESTMENTS</div>
             <h3>Real Estate Investment Trusts (REITs)</h3>
             <p>
@@ -785,7 +878,8 @@
             </div>
           </article>
 
-          <article class="payment-card" data-search="family fund takaful family fund dana am individual non resident company">
+          <article class="payment-card"
+            data-search="family fund takaful family fund dana am individual non resident company">
             <div class="card-number">08 / FUNDS & TAKAFUL</div>
             <h3>Family Funds, Takaful Family Funds & Dana Am</h3>
             <p>
@@ -930,4 +1024,5 @@
     });
   </script>
 </body>
+
 </html>
