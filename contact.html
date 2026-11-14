@@ -3,305 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Contact Northstar Tax for clear, practical advice on tax planning, compliance and business support."
-    />
-    <title>Contact Northstar Tax</title>
+    <title>Contact us | Northstar Tax</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tax-planning.css" />
+    <link rel="stylesheet" href="css/offices.css" />
+
     <style>
-      :root {
-        --ink: #2b2c31;
-        --muted: #6d7380;
-        --cream: #f4f1f8;
-        --paper: #ffffff;
-        --green: #8171bd;
-        --green-dark: #5f548d;
-        --lime: #ece7ff;
-        --line: #e6e3ef;
-        --shadow: 0 22px 60px rgba(77, 66, 104, 0.12);
+      /* ===== CONTACT PAGE (all rules start with .ct- so nothing else is affected) ===== */
+      .tax-planning-page .page-hero { color: var(--ink); }
+      .tax-planning-page .page-hero h1 { color: var(--ink); margin: 12px 0 16px; }
+      .tax-planning-page .page-hero .crumbs,
+      .tax-planning-page .page-hero .crumbs a {
+        color: var(--muted);
+        font-size: 14px;
       }
-
-      body.contact-page {
-        background: linear-gradient(180deg, #f7f5fb 0%, #f4f1f8 100%);
+      .tax-planning-page .page-hero .crumbs { margin: 0 0 16px; }
+      .tax-planning-page .page-hero .crumbs [aria-current="page"] {
+        color: var(--ink);
+        font-weight: 600;
       }
-
-      .contact-hero {
-        padding: 72px 0 48px;
-        background:
-          radial-gradient(circle at top right, rgba(177, 165, 230, 0.35), transparent 28%),
-          linear-gradient(180deg, rgba(255,255,255,0.7), rgba(244,241,248,0.9));
-      }
-
-      .contact-hero-inner {
+      .ct-layout {
         display: grid;
         grid-template-columns: 1.15fr 0.85fr;
-        gap: 34px;
-        align-items: center;
+        gap: 40px;
+        align-items: start;
       }
 
-      .hero-copy h1 {
-        margin: 0 0 18px;
-        font-size: clamp(2.5rem, 5vw, 4.5rem);
-        line-height: 0.95;
-        letter-spacing: -0.06em;
-      }
-
-      .hero-copy p {
-        max-width: 600px;
-        color: var(--muted);
-        font-size: 1.08rem;
-        line-height: 1.75;
-      }
-
-      .hero-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 14px;
-        margin-top: 28px;
-      }
-
-      .btn-outline {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        border: 1px solid rgba(129, 113, 189, 0.4);
-        background: rgba(255,255,255,0.5);
-        color: var(--green-dark);
-        border-radius: 999px;
-        padding: 14px 20px;
-        font-size: 13px;
-        font-weight: 800;
-        cursor: pointer;
-      }
-
-      .btn-outline:hover {
-        background: var(--lime);
-      }
-
-      .contact-summary {
-        display: flex;
-        justify-content: center;
-      }
-
-      .summary-card {
-        width: min(100%, 410px);
-        background: rgba(255,255,255,0.7);
-        border: 1px solid rgba(129,113,189,0.2);
-        backdrop-filter: blur(10px);
-        border-radius: 28px;
+      .ct-form {
+        padding: 34px;
+        background: #fff;
+        border: 1px solid var(--line, #d9d4e8);
+        border-radius: 24px;
         box-shadow: var(--shadow);
-        padding: 28px;
       }
+      .ct-form h2 { margin: 0 0 6px; font-size: 28px; letter-spacing: -0.04em; }
+      .ct-form > p  { margin: 0 0 24px; color: var(--muted); line-height: 1.7; }
 
-      .summary-card .mini-label {
-        display: inline-block;
-        color: var(--green);
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: 0.14em;
-        margin-bottom: 18px;
-        text-transform: uppercase;
-      }
+      .ct-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      .ct-field { display: flex; flex-direction: column; gap: 7px; margin-bottom: 16px; }
+      .ct-field label { font-size: 13px; font-weight: 700; color: var(--ink); }
 
-      .summary-card h3 {
-        margin: 0 0 16px;
-        font-size: 1.9rem;
-        letter-spacing: -0.06em;
-      }
-
-      .meta-list {
-        display: grid;
-        gap: 14px;
-        margin-top: 18px;
-      }
-
-      .meta-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
-        color: var(--muted);
-      }
-
-      .meta-badge {
-        width: 34px;
-        height: 34px;
-        border-radius: 12px;
-        display: grid;
-        place-items: center;
-        background: var(--lime);
-        color: var(--green-dark);
-        font-size: 1rem;
-      }
-
-      .meta-item strong {
-        display: block;
-        color: var(--ink);
-        margin-bottom: 3px;
-      }
-
-      .section.contact-layout {
-        padding-top: 30px;
-        padding-bottom: 90px;
-      }
-
-      .contact-grid {
-        display: grid;
-        grid-template-columns: 0.9fr 1.1fr;
-        gap: 28px;
-      }
-
-      .contact-panel,
-      .contact-form {
-        background: rgba(255,255,255,0.85);
-        border: 1px solid var(--line);
-        border-radius: 28px;
-        box-shadow: var(--shadow);
-        padding: 30px;
-      }
-
-      .contact-panel h2,
-      .contact-form h2 {
-        margin: 0 0 20px;
-        font-size: clamp(1.8rem, 2vw, 2.4rem);
-        letter-spacing: -0.06em;
-      }
-
-      .contact-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: grid;
-        gap: 18px;
-      }
-
-      .contact-list li {
-        display: grid;
-        gap: 5px;
-        color: var(--muted);
-      }
-
-      .contact-list strong {
-        color: var(--ink);
-        font-size: 0.9rem;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-      }
-
-      .office-grid {
-        margin-top: 28px;
-        display: grid;
-        gap: 16px;
-      }
-
-      .office-card {
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        background: linear-gradient(180deg, #ffffff, #f8f5ff);
-        padding: 18px 18px 16px;
-      }
-
-      .office-card h3 {
-        margin: 0 0 8px;
-        font-size: 1.08rem;
-        letter-spacing: -0.04em;
-      }
-
-      .office-card p,
-      .office-card a {
-        color: var(--muted);
-        margin: 0;
-        font-size: 0.96rem;
-      }
-
-      .contact-form form {
-        display: grid;
-        gap: 18px;
-      }
-
-      .field-row {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
-      }
-
-      .field {
-        display: grid;
-        gap: 8px;
-      }
-
-      .field label {
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 0.09em;
-        color: var(--muted);
-        font-weight: 700;
-      }
-
-      .field input,
-      .field select,
-      .field textarea {
+      .ct-field input,
+      .ct-field select,
+      .ct-field textarea {
         width: 100%;
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        background: #faf9ff;
+        padding: 13px 14px;
+        border: 1px solid #cfc9e0;
+        border-radius: 12px;
+        background: #fbfaff;
         color: var(--ink);
-        padding: 14px 16px;
         font: inherit;
-        resize: vertical;
+        font-size: 14px;
+        transition: border-color 0.2s, box-shadow 0.2s;
+      }
+      .ct-field textarea { min-height: 140px; resize: vertical; }
+      .ct-field input:focus,
+      .ct-field select:focus,
+      .ct-field textarea:focus {
+        outline: none;
+        border-color: #8171bd;
+        box-shadow: 0 0 0 3px rgba(129, 113, 189, 0.18);
       }
 
-      .field input:focus,
-      .field select:focus,
-      .field textarea:focus {
-        outline: 2px solid rgba(129,113,189,0.2);
-        border-color: rgba(129,113,189,0.65);
-      }
+      .ct-submit { width: 100%; margin-top: 6px; padding: 15px; font-size: 14px; }
+      .ct-status { margin: 14px 0 0; font-size: 13px; color: var(--muted); min-height: 20px; }
 
-      .submit-row {
-        display: flex;
-        justify-content: flex-start;
-        margin-top: 8px;
+      .ct-side { display: grid; gap: 16px; }
+      .ct-card {
+        padding: 24px;
+        background: #fff;
+        border: 1px solid var(--line, #d9d4e8);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
       }
-
-      .toast {
-        position: fixed;
-        right: 22px;
-        bottom: 22px;
-        max-width: min(420px, calc(100% - 32px));
-        background: #2f2d3a;
-        color: #fff;
-        border-radius: 14px;
-        padding: 13px 16px;
-        box-shadow: 0 18px 30px rgba(25, 22, 29, 0.2);
-        opacity: 0;
-        transform: translateY(16px);
-        pointer-events: none;
-        transition: opacity 0.2s ease, transform 0.2s ease;
-        z-index: 70;
-      }
-
-      .toast.show {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      .ct-card h3 { margin: 0 0 8px; font-size: 18px; letter-spacing: -0.03em; }
+      .ct-card p  { margin: 0 0 12px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+      .ct-card a.ct-link { color: var(--green-dark); font-weight: 700; font-size: 15px; }
+      .ct-card a.ct-link:hover { text-decoration: underline; }
 
       @media (max-width: 900px) {
-        .contact-hero-inner,
-        .contact-grid {
-          grid-template-columns: 1fr;
-        }
+        .ct-layout { grid-template-columns: 1fr; }
       }
-
-      @media (max-width: 720px) {
-        .field-row {
-          grid-template-columns: 1fr;
-        }
+      @media (max-width: 600px) {
+        .ct-row { grid-template-columns: 1fr; }
+        .ct-form { padding: 24px; }
       }
     </style>
   </head>
-  <body class="contact-page">
+
+  <body class="tax-planning-page tax-planning-detail">
+
+    <!-- HEADER -->
     <header>
       <div class="wrap nav">
         <a class="brand northstar-brand" href="index.html" aria-label="Northstar Tax home">
@@ -310,7 +102,7 @@
           <span class="northstar-tax">tax</span>
         </a>
         <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-        <nav class="nav-links" aria-label="Main navigation">
+        <nav class="nav-links">
           <a href="index.html">Home</a>
           <details class="nav-services-menu">
             <summary>Services</summary>
@@ -324,206 +116,172 @@
             </div>
           </details>
           <a href="about.html">About us</a>
-          <a href="contact.html">Contact</a>
+          <a href="contact.html">Contact us</a>
         </nav>
-        <a class="btn site-nav-cta" href="mailto:hello@northstartax.example?subject=Consultation%20enquiry">Book a consultation <span aria-hidden="true">↗</span></a>
       </div>
     </header>
 
     <main>
-      <section class="contact-hero">
-        <div class="wrap contact-hero-inner">
-          <div class="hero-copy">
-            <span class="eyebrow">Contact us</span>
-            <h1>Let’s make your next tax decision clearer.</h1>
-            <p>
-              Whether you need help with planning, compliance, incentives or a broader tax review,
-              our team is here to help you understand the next step with confidence.
-            </p>
-            <div class="hero-actions">
-              <a class="btn" href="mailto:hello@northstartax.example?subject=Consultation%20enquiry">Email our team <span aria-hidden="true">↗</span></a>
-              <a class="btn-outline" href="tel:+60327898988">Call +60 3 2789 8988</a>
-            </div>
-          </div>
-
-          <div class="contact-summary">
-            <div class="summary-card">
-              <span class="mini-label">Response time</span>
-              <h3>Usually within 1 business day.</h3>
-              <div class="meta-list">
-                <div class="meta-item">
-                  <span class="meta-badge">✉</span>
-                  <div>
-                    <strong>Email</strong>
-                    <a href="mailto:hello@northstartax.example">hello@northstartax.example</a>
-                  </div>
-                </div>
-                <div class="meta-item">
-                  <span class="meta-badge">☎</span>
-                  <div>
-                    <strong>Phone</strong>
-                    <a href="tel:+60327898988">+60 3 2789 8988</a>
-                  </div>
-                </div>
-                <div class="meta-item">
-                  <span class="meta-badge">⏰</span>
-                  <div>
-                    <strong>Hours</strong>
-                    Monday–Friday<br />9:00 AM – 6:00 PM
-                  </div>
-                </div>
-              </div>
-            </div>
+      <!-- PAGE TITLE -->
+      <section class="page-hero">
+        <div class="wrap">
+          <p class="crumbs">
+          <h1>Let's talk about your tax.</h1>
+          <p style="max-width: 620px; color: var(--muted); line-height: 1.8;">
+            Have a question about tax planning, an audit letter or incentives?
+            Send us a message or contact the office nearest to you, and we will
+            get back to you.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 13px; margin-top: 26px;">
+            <a class="btn" href="#message">Send a message →</a>
+            <a class="btn light" href="#offices">View our offices</a>
           </div>
         </div>
       </section>
 
-      <section class="section contact-layout">
-        <div class="wrap contact-grid">
-          <aside class="contact-panel" aria-label="Contact details">
-            <h2>Speak with the team</h2>
-            <ul class="contact-list">
-              <li>
-                <strong>Email</strong>
-                <a href="mailto:hello@northstartax.example">hello@northstartax.example</a>
-              </li>
-              <li>
-                <strong>Phone</strong>
-                <a href="tel:+60327898988">+60 3 2789 8988</a>
-              </li>
-              <li>
-                <strong>Address</strong>
-                18-03, Menara Mutiara,<br />Jalan Sultan Ismail,<br />50250 Kuala Lumpur
-              </li>
-              <li>
-                <strong>Office hours</strong>
-                Monday to Friday<br />9:00 AM – 6:00 PM
-              </li>
-            </ul>
+      <!-- FORM + QUICK CONTACT -->
+      <section class="section" id="message">
+        <div class="wrap ct-layout">
 
-            <div class="office-grid">
-              <div class="office-card">
-                <h3>Kuala Lumpur</h3>
-                <p>18-03, Menara Mutiara, Jalan Sultan Ismail</p>
-                <a href="tel:+60327898988">+60 3 2789 8988</a>
+          <form class="ct-form reveal" id="contactForm" novalidate>
+            <h2>Send us a message</h2>
+            <p>Fill in the form and your email app will open with your message ready to send.</p>
+
+            <div class="ct-row">
+              <div class="ct-field">
+                <label for="ctName">Full name *</label>
+                <input id="ctName" name="name" type="text" autocomplete="name" required />
               </div>
-              <div class="office-card">
-                <h3>Johor Bahru</h3>
-                <p>Level 3, Tower A, Taman Perindustrian</p>
-                <a href="tel:+6075354021">+60 7 535 4021</a>
+              <div class="ct-field">
+                <label for="ctPhone">Phone number</label>
+                <input id="ctPhone" name="phone" type="tel" autocomplete="tel" placeholder="+60..." />
               </div>
-              <div class="office-card">
-                <h3>Penang</h3>
-                <p>Suite 5A, Harbour View Business Park</p>
-                <a href="tel:+6046042266">+60 4 604 2266</a>
+            </div>
+
+            <div class="ct-field">
+              <label for="ctEmail">Email *</label>
+              <input id="ctEmail" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="ct-row">
+              <div class="ct-field">
+                <label for="ctService">I need help with</label>
+                <select id="ctService" name="service">
+                  <option>Tax planning</option>
+                  <option>Income tax audit</option>
+                  <option>Income tax incentive</option>
+                  <option>Transfer pricing</option>
+                  <option>Withholding tax</option>
+                  <option>Malaysia tax system</option>
+                  <option>Other</option>
+                </select>
               </div>
+              <div class="ct-field">
+                <label for="ctOffice">Nearest office</label>
+                <select id="ctOffice" name="office">
+                  <option>Johor Bahru</option>
+                  <option>Iskandar Puteri</option>
+                  <option>Kuala Lumpur</option>
+                  <option>Setia Alam</option>
+                  <option>Penang</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="ct-field">
+              <label for="ctMessage">Message *</label>
+              <textarea id="ctMessage" name="message" required></textarea>
+            </div>
+
+            <button class="btn ct-submit" type="submit">Send message →</button>
+            <p class="ct-status" id="ctStatus" role="status" aria-live="polite"></p>
+          </form>
+
+          <aside class="ct-side">
+            <div class="ct-card reveal">
+              <h3>Call us</h3>
+              <p>Speak to our team during office hours.</p>
+              <a class="ct-link" href="tel:+60189419800">+6018-9419800</a>
+            </div>
+            <div class="ct-card reveal">
+              <h3>Email us</h3>
+              <p>Send your questions and documents by email.</p>
+              <a class="ct-link" id="ctEmailLink" href="#">your-email@example.com</a>
+            </div>
+            <div class="ct-card reveal">
+              <h3>Visit an office</h3>
+              <p>We have five offices across Malaysia. Find the nearest one below.</p>
+              <a class="ct-link" href="#offices">See all offices ↓</a>
             </div>
           </aside>
 
-          <div class="contact-form">
-            <h2>Send an enquiry</h2>
-            <form action="#" method="post">
-              <div class="field-row">
-                <div class="field">
-                  <label for="name">Name</label>
-                  <input id="name" name="name" type="text" placeholder="Your full name" />
-                </div>
-                <div class="field">
-                  <label for="email">Email</label>
-                  <input id="email" name="email" type="email" placeholder="you@example.com" />
-                </div>
-              </div>
-
-              <div class="field-row">
-                <div class="field">
-                  <label for="phone">Phone</label>
-                  <input id="phone" name="phone" type="tel" placeholder="+60 12 345 6789" />
-                </div>
-                <div class="field">
-                  <label for="service">Service</label>
-                  <select id="service" name="service">
-                    <option value="">Select a service</option>
-                    <option>Tax planning</option>
-                    <option>Tax compliance</option>
-                    <option>Income tax audit</option>
-                    <option>Tax incentives</option>
-                    <option>Transfer pricing</option>
-                    <option>Withholding tax</option>
-                    <option>General enquiry</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="field">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6" placeholder="Tell us about your situation and the type of support you need."></textarea>
-              </div>
-
-              <div class="submit-row">
-                <button class="btn" type="submit">Send enquiry <span aria-hidden="true">↗</span></button>
-              </div>
-            </form>
-          </div>
         </div>
       </section>
 
-      <section class="cta-band">
-        <div class="wrap">
-          <div class="cta-panel reveal">
-            <div>
-              <h2>Need a clear answer, fast?</h2>
-              <p>Start with a friendly conversation and get guidance that fits your circumstances.</p>
-            </div>
-            <a class="btn light" href="mailto:hello@northstartax.example?subject=Consultation%20enquiry">Book a consultation <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </section>
+      <!-- OFFICES (filled in by offices.js) -->
+      <section id="offices"></section>
     </main>
 
-    <footer>
+    <!-- FOOTER -->
+    <!--<footer>
       <div class="wrap">
         <div class="footer-top">
           <div class="footer-brand">
-            <a class="brand" href="index.html">
-              <span class="brand-mark"><span aria-hidden="true">✳</span></span> northstar<span style="font-weight: 500; color: var(--green);">tax</span>
+            <a class="brand northstar-brand" href="index.html" aria-label="Northstar Tax home">
+              <span class="brand-mark"><span aria-hidden="true">✳</span></span>
+              <span class="northstar-name">northstar</span>
+              <span class="northstar-tax">tax</span>
             </a>
-            <p>Clear tax advice for people building their next chapter.</p>
+            <p>Clear tax advice for people and businesses.</p>
           </div>
           <div class="footer-links">
             <div class="footer-col">
-              <strong>Explore</strong>
-              <a href="taxPlanning.html">Tax Planning</a>
-              <a href="tax_audit.html">Tax Audit</a>
-              <a href="transferPricing.html">Transfer Pricing</a>
+              <strong>Tax services</strong>
+              <a href="taxPlanning.html">Tax planning &amp; incentives</a>
+              <a href="tax_Incentive.html">Tax incentive</a>
+              <a href="tax_audit.html">Income tax audit support</a>
+              <a href="transferPricing.html">Transfer pricing</a>
+              <a href="withholdingTax.html">Withholding tax</a>
             </div>
-            <div class="footer-col">
-              <strong>Get in touch</strong>
-              <a href="mailto:hello@northstartax.example">Email us</a>
-              <a href="tel:+60327898988">Call us</a>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <span>© <span id="year"></span> Northstar Tax. All rights reserved.</span>
-          <span>Tax services and requirements vary by jurisdiction. Please seek advice for your circumstances.</span>
-        </div>
-      </div>
-    </footer>
-
-    <div class="toast" role="status" aria-live="polite">
-      Your enquiry has been drafted. Replace this demo form with your real form endpoint when ready.
-    </div>
+    </footer>-->
 
     <script src="script.js"></script>
+    <script src="offices.js"></script>
     <script>
-      const enquiryForm = document.querySelector('.contact-form form');
-      const toast = document.querySelector('.toast');
+      /* ===== CHANGE THIS to your real email address ===== */
+      var CONTACT_EMAIL = "your-email@example.com";
 
-      enquiryForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        toast.classList.add('show');
-        window.setTimeout(() => toast.classList.remove('show'), 3600);
-        enquiryForm.reset();
+      document.getElementById("ctEmailLink").textContent = CONTACT_EMAIL;
+      document.getElementById("ctEmailLink").href = "mailto:" + CONTACT_EMAIL;
+
+      document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var f = e.target;
+        var status = document.getElementById("ctStatus");
+
+        if (!f.name.value.trim() || !f.email.value.trim() || !f.message.value.trim()) {
+          status.textContent = "Please fill in your name, email and message.";
+          return;
+        }
+        if (!f.email.checkValidity()) {
+          status.textContent = "Please enter a valid email address.";
+          return;
+        }
+
+        var subject = "Enquiry: " + f.service.value + " (" + f.office.value + ")";
+        var body =
+          "Name: " + f.name.value.trim() + "\n" +
+          "Email: " + f.email.value.trim() + "\n" +
+          "Phone: " + (f.phone.value.trim() || "-") + "\n" +
+          "Nearest office: " + f.office.value + "\n\n" +
+          f.message.value.trim();
+
+        window.location.href =
+          "mailto:" + CONTACT_EMAIL +
+          "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(body);
+
+        status.textContent = "Opening your email app. If nothing opens, email us at " + CONTACT_EMAIL + ".";
       });
     </script>
   </body>
