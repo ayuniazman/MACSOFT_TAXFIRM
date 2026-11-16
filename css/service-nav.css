@@ -1,24 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
-.site-announcement {
-  background: #685e96;
-  color: #fff;
-  padding: 10px 16px;
-  text-align: center;
-  font-size: 12px;
-  letter-spacing: 0.04em;
-}
-
-.site-announcement strong {
-  color: #e3def9;
-  font-weight: 700;
-}
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(247, 246, 240, 0.94);
+  background:#fff;
   backdrop-filter: blur(16px);
   border-bottom: 1px solid #e7e6ee;
 }
@@ -234,10 +221,6 @@
 }
 
 @media (max-width: 560px) {
-  .site-announcement {
-    padding: 9px 12px;
-    font-size: 10px;
-  }
 
   .site-nav {
     width: min(calc(100% - 34px), 520px);

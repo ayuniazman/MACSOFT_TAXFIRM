@@ -102,6 +102,74 @@
       overflow: hidden;
     }
 
+    .withholding-page .hero {
+      position: relative;
+      isolation: isolate;
+      padding: 70px 0;
+      background: linear-gradient(120deg, #f3ecfc 0%, #fbf8ff 55%, #ffffff 100%);
+    }
+
+    .withholding-page .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      background:
+        radial-gradient(circle clamp(90px, 11vw, 170px) at 28% 8%,
+          rgba(205, 160, 250, .16) 0,
+          rgba(205, 160, 250, .30) calc(100% - 2px),
+          rgba(190, 150, 235, .45) calc(100% - 2px),
+          rgba(190, 150, 235, .45) 100%,
+          transparent 100%),
+        radial-gradient(circle clamp(150px, 20vw, 300px) at 12% 105%,
+          rgba(205, 160, 250, .14) 0,
+          rgba(205, 160, 250, .30) calc(100% - 2px),
+          rgba(190, 150, 235, .45) calc(100% - 2px),
+          rgba(190, 150, 235, .45) 100%,
+          transparent 100%),
+        radial-gradient(circle clamp(220px, 32vw, 480px) at 92% 95%,
+          rgba(205, 160, 250, .10) 0,
+          rgba(205, 160, 250, .32) calc(100% - 2px),
+          rgba(190, 150, 235, .45) calc(100% - 2px),
+          rgba(190, 150, 235, .45) 100%,
+          transparent 100%);
+    }
+
+    .withholding-page .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: .07;
+      mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+    }
+
+    .withholding-page .hero-split {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .withholding-page .hero h1 {
+      font-size: clamp(38px, 5.4vw, 65px);
+      letter-spacing: -0.04em;
+      line-height: 1.2;
+      margin: 12px 0 16px;
+    }
+
+    .withholding-page .hero-image img {
+      display: block;
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 24px 70px rgba(77, 69, 104, 0.12);
+    }
+
     .breadcrumb {
       font-size: 12px;
       color: var(--muted);
@@ -545,6 +613,19 @@
         padding: 48px 0;
       }
 
+      .withholding-page .hero-split {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .withholding-page .hero-image img {
+        height: 240px;
+      }
+
+      .withholding-page .hero {
+        padding: 70px 0;
+      }
+
       h1 {
         letter-spacing: -2px;
       }
@@ -584,8 +665,7 @@
   <link rel="stylesheet" href="css/service-nav.css">
 </head>
 
-<body>
-  <div class="site-announcement">Tax season doesn't have to be stressful. <strong>Let's make it clearer.</strong></div>
+<body class="withholding-page">
   <header class="site-header">
     <div class="site-nav">
       <a class="site-brand" href="index.html#home" aria-label="Northstar Tax home">
@@ -611,26 +691,17 @@
         <a href="about.html">About us</a>
         <a href="contact.html">Contact us</a>
       </nav>
-      <a class="site-nav-cta" href="contact.html">Book a consultation <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="container">
-        <div class="breadcrumb">Home / Tax Services / Withholding Tax</div>
-        <div class="eyebrow">International tax</div>
-        <h1>Withholding<br>Tax.</h1>
-        <p class="hero-description">
-          Clarity on tax obligations when making payments to
-          non-residents — helping your business navigate Malaysian
-          withholding tax requirements with confidence.
-        </p>
-        <a href="#payment-types" class="button">
-          Explore payment categories <span aria-hidden="true">↘</span>
-        </a>
-        <div class="hero-note">
-          An overview of withholding tax under Malaysia's Income Tax Act 1967
+      <div class="container hero-split">
+        <div class="hero-text">
+          <h1>Withholding Tax</h1>
+        </div>
+        <div class="hero-image">
+          <img src="images/tax-planning-hero.jpg" alt="Next steps written in a planning notebook">
         </div>
       </div>
     </section>
