@@ -13,17 +13,23 @@
   <link rel="stylesheet" href="css/service-nav.css">
 </head>
 
-<body class="integrated-reporting-page">
+<body class="integrated-reporting-page about-page">
 
-  <!-- Navigation -->
+    <!-- Navigation -->
   <header>
     <div class="wrap nav">
-      <a class="brand" href="#home" aria-label="Northstar Tax home"><span class="brand-mark"><span>✳</span></span>
-        northstar<span style="font-weight: 500; color: var(--green)">tax</span></a>
-      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <!-- LOGO W&C BARU -->
+      <a class="brand northstar-brand" href="index.html" aria-label="W&C home">
+        <span class="brand-mark">W&C</span>
+        <span class="northstar-name">W&C</span>
+        <span class="northstar-tax">TAX SERVICES</span>
+      </a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
         ☰
       </button>
-      <nav class="nav-links" aria-label="Main navigation">
+      
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <details class="nav-services-menu">
           <summary>Services</summary>
@@ -40,7 +46,6 @@
         <a href="about.html">About us</a>
         <a href="contact.html">Contact us</a>
       </nav>
-      
     </div>
   </header>
 
@@ -169,233 +174,91 @@
         </div>
       </div>
     </section>
-
-    <!-- Offices -->
-    <section class="offices-section" id="offices">
-      <div class="wrap">
-
-        <div class="section-heading">
-          <span class="eyebrow">Contact us</span>
-          <h2>Our offices across Malaysia.</h2>
-          <p>
-            Get in touch with one of our offices for enquiries
-            about our services.
-          </p>
-        </div>
-
-        <div class="offices-grid">
-
-          <!-- Johor Bahru -->
-          <article class="office-card">
-            <div class="office-top">
-              <div class="office-icon" aria-hidden="true">⌖</div>
-              <div>
-                <h3>Johor Bahru</h3>
-                <span class="office-state">Johor</span>
-              </div>
-            </div>
-
-            <p class="office-address">
-              20 &amp; 20A, Jalan Sasa 2,<br>
-              Taman Gaya,<br>
-              81800 Ulu Tiram,<br>
-              Johor.
-            </p>
-
-            <div class="office-contact">
-              <a class="contact-link" href="tel:+60189419800">
-                <span class="contact-symbol" aria-hidden="true">☎</span>
-                +6018-9419800
-              </a>
-              <a class="contact-link" href="tel:+6078590410">
-                <span class="contact-symbol" aria-hidden="true">☎</span>
-                +607-859 0410
-              </a>
-            </div>
-          </article>
-
-          <!-- Iskandar Puteri -->
-          <article class="office-card">
-            <div class="office-top">
-              <div class="office-icon" aria-hidden="true">⌖</div>
-              <div>
-                <h3>Iskandar Puteri</h3>
-                <span class="office-state">Johor</span>
-              </div>
-            </div>
-
-            <p class="office-address">
-              47 &amp; 47A, Jalan Jati 2,<br>
-              Taman Nusa Bestari Jaya,<br>
-              79150 Iskandar Puteri,<br>
-              Johor.
-            </p>
-
-            <div class="office-contact">
-              <a class="contact-link" href="tel:+60189419800">
-                <span class="contact-symbol" aria-hidden="true">☎</span>
-                +6018-9419800
-              </a>
-              <a class="contact-link" href="tel:+6075354021">
-                <span class="contact-symbol" aria-hidden="true">☎</span>
-                +607-535 4021
-              </a>
-            </div>
-          </article>
-
-          <!-- Kuala Lumpur -->
-          <article class="office-card">
-            <div class="office-top">
-              <div class="office-icon" aria-hidden="true">⌖</div>
-              <div>
-                <h3>Kuala Lumpur</h3>
-                <span class="office-state">Wilayah Persekutuan</span>
-              </div>
-            </div>
-
-            <p class="office-address">
-              17-2, Dinasti Sentral,<br>
-              Jalan Kuchai Maju 18,<br>
-              Off Jalan Kuchai Lama,<br>
-              58200 Kuala Lumpur,<br>
-              Wilayah Persekutuan Kuala Lumpur.
-            </p>
-
-            <div class="office-contact">
-              <a class="contact-link" href="tel:+60189419800">
-                <span class="contact-symbol" aria-hidden="true">☎</span>
-                +6018-9419800
-              </a>
-              <a class="contact-link" href="tel:+60327898988">
-                <span class="contact-symbol" aria-hidden="true">☎</span>
-                +603-2789 8988
-              </a>
-            </div>
-          </article>
-
-          <!-- Setia Alam -->
-          <article class="office-card">
-            <div class="office-top">
-              <div class="office-icon" aria-hidden="true">⌖</div>
-              <div>
-                <h3>Setia Alam</h3>
-                <span class="office-state">Selangor</span>
-              </div>
-            </div>
-
-            <p class="office-address">
-              32-2, Jalan Setia Utama AS U13/AS,<br>
-              Setia Alam,<br>
-              40170 Shah Alam,<br>
-              Selangor.
-            </p>
-
-            <div class="office-contact">
-              <a class="contact-link" href="tel:+60189419800">
-                <span class="contact-symbol" aria-hidden="true">☎</span>
-                +6018-9419800
-              </a>
-              <a class="contact-link" href="tel:+60389663588">
-                <span class="contact-symbol" aria-hidden="true">☎</span>
-                +603-8966 3588
-              </a>
-            </div>
-          </article>
-
-          <!-- Penang -->
-          <article class="office-card">
-            <div class="office-top">
-              <div class="office-icon" aria-hidden="true">⌖</div>
-              <div>
-                <h3>Penang</h3>
-                <span class="office-state">Pulau Pinang</span>
-              </div>
-            </div>
-
-            <p class="office-address">
-              No. 188, First Floor,<br>
-              Jalan Tembikai,<br>
-              Taman Padang Lallang,<br>
-              14000 Bukit Mertajam,<br>
-              Penang, Malaysia.
-            </p>
-
-            <div class="office-contact">
-              <a class="contact-link" href="tel:+60189419800">
-                <span class="contact-symbol" aria-hidden="true">☎</span>
-                +6018-941 9800
-              </a>
-              <a class="contact-link" href="tel:+6046042266">
-                <span class="contact-symbol" aria-hidden="true">☎</span>
-                +604-604 2266
-              </a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="wrap footer-inner">
+    <!-- ===== MEGA FOOTER (PwC Style) ===== -->
+  <footer class="mega-footer">
+    <div class="wrap">
+      
+      <div class="footer-mega-grid">
+        
+        <!-- Column 1 -->
+        <div class="footer-col">
+          <b>Services</b>
+          <a href="malaysiaTax.html">Malaysia Tax System</a>
+          <a href="taxPlanning.html">Tax Planning</a>
+          <a href="tax_audit.html">Income Tax Audit</a>
+          <a href="tax_Incentive.html">Income Tax Incentive</a>
+          <a href="transferPricing.html">Transfer Pricing</a>
+          <a href="withholdingTax.html">Withholding Tax</a>
+          <a href="integratedReportingService.html">Integrated Reporting</a>
+        </div>
 
-      <a class="footer-brand" href="malaysia_tax_system_interactive.html#overview">
-        <span class="footer-mark">L&amp;</span>
-        <span>L &amp; Co</span>
-      </a>
+        <!-- Column 2 -->
+        <div class="footer-col">
+          <b>Company</b>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
 
-      <p class="footer-note">
-        Integrated Reporting Services
-      </p>
+        <!-- Column 3 -->
+        <div class="footer-col">
+          <b>Connect</b>
+          <a href="#">LinkedIn</a>
+          <a href="#">Facebook</a>
+          <a href="mailto:info@wctax.com">Email Us</a>
+        </div>
 
-      <div class="footer-links">
-        <a href="malaysia_tax_system_interactive.html#overview">Overview</a>
-        <a href="malaysia_tax_system_interactive.html#tax-explorer">Tax services</a>
-        <a href="#services">Our services</a>
-        <a href="#offices">Contact</a>
+      </div>
+
+      <!-- BOTTOM: Legal & Logo -->
+      <div class="footer-legal-section">
+        
+        <div class="footer-legal-top">
+          
+          <!-- Logo W&C -->
+          <div class="footer-logo">
+            <span class="brand-mark">W&amp;C</span>
+            <span class="northstar-name">W&amp;C</span>
+            <span class="northstar-tax">TAX SERVICES</span>
+          </div>
+          
+          <!-- Copyright Text -->
+          <div class="footer-legal-text">
+            <p>
+              © <span id="year">2026</span> W&amp;C Tax Services Sdn. Bhd. All rights reserved. 
+            </p>
+          </div>
+
+        </div>
       </div>
 
     </div>
   </footer>
 
-  <script>
+    <script>
     // Responsive mobile navigation
     const menuToggle = document.getElementById("menuToggle");
     const navLinks = document.getElementById("navLinks");
 
-    menuToggle.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("active");
-
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-      menuToggle.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation" : "Open navigation"
-      );
-      menuToggle.textContent = isOpen ? "✕" : "☰";
-    });
-
-    // Close the mobile menu after selecting a navigation link
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation");
-        menuToggle.textContent = "☰";
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open"); // Tukar dari "active" ke "open" supaya match dengan CSS korang
+        
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.textContent = isOpen ? "✕" : "☰";
       });
-    });
 
-    // Close the menu when the screen returns to desktop size
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 760) {
-        navLinks.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation");
-        menuToggle.textContent = "☰";
-      }
-    });
+      // Close the mobile menu after selecting a navigation link
+      navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.textContent = "☰";
+        });
+      });
+    }
   </script>
 
 </body>

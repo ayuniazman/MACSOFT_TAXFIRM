@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="An overview of Malaysia's tax system, including direct and indirect taxes." />
-  <title>Malaysia Tax System | Northstar Tax</title>
+  <title>W&C | Malaysia Tax System</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -14,20 +14,24 @@
   <link rel="stylesheet" href="css/malaysia-tax.css" />
 </head>
 
-<body class="malaysia-tax-page">
-  <header>
+<body class="malaysia-tax-page about-page">
+    <header>
     <div class="wrap nav">
-      <a class="brand" href="index.html" aria-label="Northstar Tax home">
-        <span class="brand-mark"><span>✳</span></span> northstar<span
-          style="font-weight:500;color:var(--green)">tax</span>
+      <!-- Logo W&C -->
+      <a class="brand northstar-brand" href="index.html" aria-label="W&C home">
+        <span class="brand-mark">W&C</span>
+        <span class="northstar-name">W&C</span>
+        <span class="northstar-tax">TAX SERVICES</span>
       </a>
+      
       <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      
       <nav class="nav-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <details class="nav-services-menu">
           <summary>Services</summary>
           <div class="nav-services-dropdown">
-            <a href="malaysiaTax.html">Malaysia tax system</a>
+            <a href="malaysiaTax.html" aria-current="page">Malaysia tax system</a>
             <a href="taxPlanning.html">Tax Planning</a>
             <a href="tax_audit.html">Income Tax Audit</a>
             <a href="tax_Incentive.html">Income Tax Incentive</a>
@@ -39,7 +43,6 @@
         <a href="about.html">About us</a>
         <a href="contact.html">Contact us</a>
       </nav>
-      <a class="btn" href="contact.html">Book a consultation <span>↗</span></a>
     </div>
   </header>
 
@@ -342,23 +345,57 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="mega-footer">
     <div class="wrap">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a class="brand" href="index.html"><span class="brand-mark"><span>✳</span></span> northstar<span
-              style="font-weight:500;color:var(--green)">tax</span></a>
-          <p>Clear tax advice for people building their next chapter.</p>
+      
+      <div class="footer-mega-grid">
+        
+           <div class="footer-col">
+          <b>Services</b>
+          <a href="malaysiaTax.html">Malaysia Tax System</a>
+          <a href="taxPlanning.html">Tax Planning</a>
+          <a href="tax_audit.html">Income Tax Audit</a>
+          <a href="tax_Incentive.html">Income Tax Incentive</a>
+          <a href="transferPricing.html">Transfer Pricing</a>
+          <a href="withholdingTax.html">Withholding Tax</a>
+          <a href="integratedReportingService.html">Integrated Reporting</a>
         </div>
-        <div class="footer-links">
-          <div class="footer-col"><strong>Explore</strong><a href="index.html#services">Services</a><a
-              href="about.html">About us</a><a href="contact.html">Contact us</a></div>
-          <div class="footer-col"><strong>Tax system</strong><a href="#direct-tax">Direct tax</a><a
-              href="#indirect-tax">Indirect tax</a><a href="#overview">Introduction</a></div>
+
+        <div class="footer-col">
+          <b>Company</b>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+
+              <div class="footer-col">
+          <b>Connect</b>
+          <a href="#">LinkedIn</a>
+          <a href="#">Facebook</a>
+          <a href="mailto:info@wctax.com">Email Us</a>
+        </div>
+
+      </div>
+
+      <div class="footer-legal-section">
+        
+        <div class="footer-legal-top">
+          
+          <div class="footer-logo">
+            <span class="brand-mark">W&amp;C</span>
+            <span class="northstar-name">W&amp;C</span>
+            <span class="northstar-tax">TAX SERVICES</span>
+          </div>
+          
+          <div class="footer-legal-text">
+            <p>
+              © <span id="year">2026</span> W&amp;C Tax Services Sdn. Bhd. All rights reserved. 
+            </p>
+          </div>
+
         </div>
       </div>
-      <div class="footer-bottom"><span>© <span id="year"></span> Northstar Tax. All rights
-          reserved.</span><span>Malaysia tax system</span></div>
+
     </div>
   </footer>
 

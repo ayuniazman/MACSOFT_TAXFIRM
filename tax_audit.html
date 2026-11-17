@@ -9,16 +9,20 @@
     <link rel="stylesheet" href="css/tax-audit.css" />
     <link rel="stylesheet" href="css/service-nav.css">
 </head>
-  <body class="tax-planning-page tax-audit-page">
+  <body class="tax-planning-page tax-audit-page about-page">
+   
     <!-- HEADER -->
     <header>
       <div class="wrap nav">
-        <a class="brand northstar-brand" href="index.html" aria-label="Northstar Tax home">
-          <span class="brand-mark"><span aria-hidden="true">✳</span></span>
-          <span class="northstar-name">northstar</span>
-          <span class="northstar-tax">tax</span>
+        <!-- LOGO W&C BARU -->
+        <a class="brand northstar-brand" href="index.html" aria-label="W&C home">
+          <span class="brand-mark">W&C</span>
+          <span class="northstar-name">W&C</span>
+          <span class="northstar-tax">TAX SERVICES</span>
         </a>
+        
         <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        
         <nav class="nav-links">
           <a href="index.html">Home</a>
           <details class="nav-services-menu">
@@ -26,17 +30,16 @@
             <div class="nav-services-dropdown">
               <a href="malaysiaTax.html">Malaysia tax system</a>
               <a href="taxPlanning.html">Tax Planning</a>
-              <a href="tax_audit.html">Income Tax Audit</a>
+              <a href="tax_audit.html" aria-current="page">Income Tax Audit</a>
               <a href="tax_Incentive.html">Income Tax Incentive</a>
               <a href="transferPricing.html">Transfer pricing</a>
               <a href="withholdingTax.html">Withholding tax</a>
               <a href="integratedReportingService.html">Integrated Reporting Services</a>
-              
             </div>
           </details>
           <a href="about.html">About us</a>
-        <a href="contact.html">Contact us</a>
-      </nav>
+          <a href="contact.html">Contact us</a>
+        </nav>
       </div>
     </header>
 
@@ -130,42 +133,69 @@
         </div>
       </section>
 
-      <!-- CALL TO ACTION -->
-      <!-- Reporting callout -->
-    <section id="offices"></section>
-    <!-- FOOTER -->
-    <footer>
+          <!-- ===== MEGA FOOTER (PwC Style) ===== -->
+    <footer class="mega-footer">
       <div class="wrap">
-        <div class="footer-top">
-          <div class="footer-brand">
-            <a class="brand northstar-brand" href="index.html" aria-label="Northstar Tax home">
-              <!--<span class="brand-mark"><span aria-hidden="true">✳</span></span>
-              <span class="northstar-name">northstar</span>
-              <span class="northstar-tax">tax</span>
-            </a>
-            <p>Clear tax advice for people and businesses.</p>
+        
+        <div class="footer-mega-grid">
+          
+          <!-- Column 1 -->
+          <div class="footer-col">
+            <b>Services</b>
+            <a href="malaysiaTax.html">Malaysia Tax System</a>
+            <a href="taxPlanning.html">Tax Planning</a>
+            <a href="tax_audit.html">Income Tax Audit</a>
+            <a href="tax_Incentive.html">Income Tax Incentive</a>
+            <a href="transferPricing.html">Transfer Pricing</a>
+            <a href="withholdingTax.html">Withholding Tax</a>
+            <a href="integratedReportingService.html">Integrated Reporting</a>
           </div>
-          <div class="footer-links">
-            <div class="footer-col">
-              <strong>Tax services</strong>
-              <a href="index.html">Income tax submission</a>
-              <a href="taxPlanning.html">Tax planning &amp; incentives</a>
-              <a href="taxAudit.html">Income tax audit support</a>
-              <a href="index.html">Transfer pricing &amp; withholding tax</a>
-            </div>
-            <div class="footer-col">
-              <strong>Offices</strong>
-              <span>Johor Bahru</span><span>Kuala Lumpur</span><span>Selangor</span><span>Penang</span>
-            </div>
+
+          <!-- Column 2 -->
+          <div class="footer-col">
+            <b>Company</b>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
           </div>
-        </div>-->
-        <!--<div class="footer-bottom">
-          <span>© <span id="year"></span> Northstar Tax. Content adapted from <a href="https://landco.my">landco.my</a>.</span>
-          <span>Tax rules change. Please seek advice for your circumstances.</span>
-        </div>-->
+
+          <!-- Column 3 -->
+          <div class="footer-col">
+            <b>Connect</b>
+            <a href="#">LinkedIn</a>
+            <a href="#">Facebook</a>
+            <a href="mailto:info@wctax.com">Email Us</a>
+          </div>
+
+        </div>
+
+        <!-- BOTTOM: Legal & Logo -->
+        <div class="footer-legal-section">
+          
+          <div class="footer-legal-top">
+            
+            <!-- Logo W&C -->
+            <div class="footer-logo">
+              <span class="brand-mark">W&amp;C</span>
+              <span class="northstar-name">W&amp;C</span>
+              <span class="northstar-tax">TAX SERVICES</span>
+            </div>
+            
+            <!-- Copyright Text -->
+            <div class="footer-legal-text">
+              <p>
+                © <span id="year">2026</span> W&amp;C Tax Services Sdn. Bhd. All rights reserved. 
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  
       </div>
     </footer>
     <script src="script.js"></script>
-    <script src="offices.js"></script>
   </body>
 </html>
