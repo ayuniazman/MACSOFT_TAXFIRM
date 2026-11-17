@@ -39,7 +39,9 @@ h2 { margin: 12px 0 0; font-size: clamp(30px, 4vw, 46px); line-height: 1.08; let
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   padding: 14px 22px; border: 0; border-radius: 999px;
-  background: var(--green-dark); color: #fff;
+   background: var(--paper);
+  color: var(--green);
+  box-shadow: none;
   font: 700 13px Inter, sans-serif; cursor: pointer;
   transition: transform .2s, background .2s;
 }
@@ -72,7 +74,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 
 .nav {
   display: flex; align-items: center; gap: 4px; margin: 0; padding: 6px;
-  list-style: none; background: var(--cream); border: 1px solid #ddd8ea; border-radius: 999px;
+  list-style: none; background: var(--cream); border: 1px solid #f1edff; border-radius: 999px;
 }
 .nav > li { position: relative; }
 .nav a,
@@ -193,9 +195,9 @@ footer { padding: 48px 0 24px; background: rgba(255, 255, 255, 0.8); border-top:
 .service-page .faq p { margin: 12px 0 0; color: var(--muted); line-height: 1.8; }
 
 .service-page .cta-band { padding: 70px 0; }
-.service-page .cta-panel { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 38px; border: 1px solid var(--line); border-radius: 24px; background: linear-gradient(135deg, #dcd6e9, #eeecf3); }
-.service-page .cta-panel h2 { margin: 0; }
-.service-page .cta-panel p { margin: 10px 0 0; color: var(--muted); }
+.service-page .cta-panel { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 38px; border: 1px solid var(--line); border-radius: 24px; background: linear-gradient(135deg, #5f548d, #5f548d); }
+.service-page .cta-panel h2 { margin: 0; font-size: 45px }
+.service-page .cta-panel p { margin: 10px 0 0; color: #fff; }
 
 @media (max-width: 900px) {
   .service-page .hero-split, .service-page .feature, .service-page .two-col { grid-template-columns: 1fr; gap: 30px; }
@@ -370,5 +372,220 @@ footer { padding: 48px 0 24px; background: rgba(255, 255, 255, 0.8); border-top:
     border-radius: 0;
     box-shadow: none;
     background: transparent;
+  }
+}
+
+/* ============================================================
+   ABOUT PAGE — TEAM & COMPANY FACTS (additive)
+   ============================================================ */
+
+.service-page .team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.service-page .team-card {
+  padding: 26px 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.service-page .team-card h3 {
+  margin: 14px 0 4px;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+
+.service-page .team-card .role {
+  margin: 0 0 12px;
+  color: var(--green-dark);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.service-page .team-card p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.service-page .company-facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 12px 24px;
+  margin: 0;
+  padding: 24px 26px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.service-page .company-facts dt {
+  color: var(--green-dark);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.service-page .company-facts dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .service-page .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .service-page .team-grid { grid-template-columns: 1fr; }
+  .service-page .company-facts { grid-template-columns: 1fr; gap: 4px 0; }
+  .service-page .company-facts dt { margin-top: 12px; }
+  .service-page .company-facts dt:first-child { margin-top: 0; }
+}
+
+/* ============================================================
+   MEGA FOOTER (PwC Style)
+   ============================================================ */
+
+.mega-footer {
+  background: #ffffff; /* White background for that editorial look */
+  padding: 60px 0 40px;
+  color: var(--ink);
+  font-family: inherit;
+  border-top: 1px solid var(--line);
+}
+
+.footer-mega-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 40px; /* Consistent gap */
+  margin-bottom: 60px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* The thin black line above the heading */
+.footer-col h4 {
+  margin: 0 0 24px 0;
+  padding-top: 16px;
+  border-top: 1px solid #111; 
+  font-size: 18px;
+  font-weight: 400; 
+  color: #222;
+}
+
+/* The bold links */
+.footer-col a {
+  font-size: 14px;
+  font-weight: 600; 
+  color: #111;
+  margin-bottom: 16px;
+  text-decoration: none;
+  transition: color 0.2s;
+  line-height: 1.4;
+}
+
+.footer-col a:hover {
+  color: var(--green-dark); /* Purple hover */
+  text-decoration: underline;
+}
+
+/* --- Bottom Legal Section --- */
+.footer-legal-section {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 30px;
+}
+
+.footer-legal-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  letter-spacing: -0.04em;
+}
+
+.footer-logo .brand-mark {
+  width: 32px; height: 32px;
+  display: grid; place-items: center;
+  background: var(--green); color: #fff;
+  border-radius: 8px 8px 8px 2px;
+  font-size: 15px;
+  transform: rotate(-4deg);
+}
+
+.footer-legal-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 900px;
+}
+
+.footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-left: 110px; /* Aligns links with the text block above */
+}
+
+.footer-legal-links a {
+  font-size: 14px;
+  color: #111;
+  text-decoration: none;
+}
+
+.footer-legal-links a:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+  .footer-mega-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    gap: 40px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-mega-grid {
+    grid-template-columns: 1fr; /* Stack everything on mobile */
+  }
+  
+  .footer-col h4 {
+    margin: 0 0 24px 0;
+  padding-top: 16px;
+  border-top: 1px solid #111; 
+  font-size: 18px;
+  font-weight: 400; /* Makes it lighter */
+  color: #666;
+  }
+
+  .footer-legal-top {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-legal-links {
+    padding-left: 0;
+    gap: 15px;
+    flex-direction: column;
   }
 }
