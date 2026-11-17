@@ -1,14 +1,24 @@
 .interactive-content h2 {
   max-width: 760px;
   color: var(--deep);
+  font-size: clamp(32px, 3vw, 36px);
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+  font-weight: 700;
 }
 
 .interactive-content h3 {
   color: var(--deep);
+  font-size: clamp(24px, 2.2vw, 28px);
+  line-height: 1.25;
+  letter-spacing: -0.04em;
+  font-weight: 600;
 }
 
 .interactive-content p {
   color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .interactive-content .kicker {
@@ -367,4 +377,129 @@
   .method-list {
     grid-template-columns: 1fr;
   }
+}
+
+
+/* =========================================
+   EDITORIAL IMAGE SECTIONS
+========================================= */
+
+.editorial-image {
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+.editorial-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+    margin-top: 55px;
+}
+
+.editorial-split img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+}
+
+.editorial-copy {
+    max-width: 520px;
+}
+
+.editorial-copy h3 {
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    margin: 15px 0;
+}
+
+.editorial-copy p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.image-banner {
+    position: relative;
+    min-height: 320px;
+    margin: 55px 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: var(--deep);
+}
+
+.image-banner img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(68, 54, 83, .92),
+        rgba(68, 54, 83, .35)
+    );
+}
+
+.image-banner-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    padding: 45px;
+    color: white;
+}
+
+.image-banner-content h3 {
+    font-size: clamp(28px, 4vw, 42px);
+    margin: 12px 0;
+}
+
+.image-banner-content p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #eee9f5;
+}
+
+@media (max-width: 768px) {
+    .editorial-split {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .editorial-split img {
+        height: 280px;
+    }
+
+    .editorial-image {
+        min-height: 260px;
+    }
+
+    .image-banner-content {
+        padding: 28px;
+    }
+}
+
+.editorial-split img {
+    border-radius: 4px;
+    box-shadow: 0 15px 40px rgba(49, 37, 65, .10);
+}
+
+.editorial-copy h3 {
+    color: var(--deep);
+}
+
+.editorial-copy .kicker {
+    color: var(--purple);
 }

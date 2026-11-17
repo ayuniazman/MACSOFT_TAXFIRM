@@ -1,18 +1,56 @@
 // Mobile navigation
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
-menuToggle.addEventListener("click", () => {
-    const isOpen = navLinks.classList.toggle("open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-    menuToggle.textContent = isOpen ? "×" : "☰";
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+    navLinks.querySelectorAll("a").forEach((link) =>
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.textContent = "☰";
+        }),
+    );
+}
+
+// Video modal
+const videoModal = document.getElementById("videoModal");
+const watchFilmButton = document.querySelector(".video-cta-btn");
+const modalVideo = document.getElementById("watchFilmVideo");
+const closeVideoModalButton = document.querySelector(".video-modal-close");
+const closeVideoBackdrop = document.querySelector("[data-close-video]");
+
+const closeVideoModal = () => {
+    if (!videoModal) return;
+
+    if (modalVideo) {
+        modalVideo.pause();
+        modalVideo.currentTime = 0;
+    }
+
+    videoModal.classList.remove("open");
+    videoModal.setAttribute("aria-hidden", "true");
+};
+
+if (watchFilmButton && videoModal && modalVideo) {
+    watchFilmButton.addEventListener("click", () => {
+        videoModal.classList.add("open");
+        videoModal.setAttribute("aria-hidden", "false");
+        modalVideo.currentTime = 0;
+        modalVideo.play();
+    });
+}
+
+closeVideoModalButton?.addEventListener("click", closeVideoModal);
+closeVideoBackdrop?.addEventListener("click", closeVideoModal);
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && videoModal?.classList.contains("open")) {
+        closeVideoModal();
+    }
 });
-navLinks.querySelectorAll("a").forEach((link) =>
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.textContent = "☰";
-    }),
-);
 
 // Reveal content as it enters the viewport
 const revealObserver = new IntersectionObserver(

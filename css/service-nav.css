@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
 .site-announcement {
   background: #685e96;
   color: #fff;
@@ -22,8 +24,8 @@
 }
 
 .site-nav {
-  width: min(1440px, calc(100% - 48px));
-  min-height: 78px;
+  width: min(1160px, calc(100% - 48px));
+  min-height: 82px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -238,7 +240,7 @@
   }
 
   .site-nav {
-    width: calc(100% - 34px);
+    width: min(calc(100% - 34px), 520px);
   }
 
   .site-brand {
@@ -251,5 +253,143 @@
   .site-services summary,
   .site-nav-cta {
     transition: none;
+  }
+}
+
+body[class] header .nav-links {
+  gap: 20px;
+  color: #555263;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+body[class] header .nav-links > a,
+body[class] header .nav-services-menu > summary {
+  color: #555263;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+body[class] header .nav-links .nav-services-dropdown a {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+body[class] header .nav > .btn {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  body.about-page header .nav-links {
+    gap: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  body[class] header .nav-links {
+    gap: 0;
+  }
+}
+
+/* Keep every page's navigation aligned with the About page. */
+header .nav,
+.site-header .site-nav,
+.navbar .nav-inner {
+  min-height: 82px;
+}
+
+header .brand,
+.site-header .site-brand,
+.navbar .brand {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+header .brand-mark,
+.site-header .site-brand-mark,
+.navbar .brand-mark {
+  width: 35px;
+  height: 35px;
+  font-size: 17px;
+}
+
+header .nav-links,
+.site-header .site-nav-links,
+.navbar .nav-links {
+  align-items: center;
+  gap: 20px;
+  color: #555263;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+header .nav-links > a,
+header .nav-services-menu > summary,
+.site-header .site-nav-links > a,
+.site-header .site-services > summary,
+.navbar .nav-links > a {
+  color: #555263;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+header .nav-links .nav-services-dropdown a,
+.site-header .site-dropdown a,
+.navbar .nav-links .nav-services-dropdown a {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.site-nav-cta,
+.navbar .nav > .btn {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .site-header .site-nav-links {
+    gap: 0;
+    font-size: 14px;
+  }
+
+  .site-header .site-nav-links > a,
+  .site-header .site-services > summary {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .site-header .site-dropdown a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 680px) {
+  header .nav-links,
+  .navbar .nav-links {
+    gap: 0;
+    font-size: 14px;
+  }
+
+  header .nav-links > a,
+  header .nav-services-menu > summary,
+  .navbar .nav-links > a {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  header .nav-links .nav-services-dropdown a,
+  .navbar .nav-links .nav-services-dropdown a {
+    font-size: 14px;
   }
 }
