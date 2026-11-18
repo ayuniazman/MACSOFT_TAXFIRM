@@ -3367,6 +3367,28 @@ header { view-transition-name: site-header; }
 .read-more:hover { color: var(--green); }
 .read-more:hover span { transform: translateX(4px); }
 
+/* Keep the tax-evasion image within its feature column. */
+.tax-planning-page .feature.flip {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tax-planning-page .feature.flip > * {
+  min-width: 0;
+}
+
+.tax-planning-page .feature.flip .feature-media img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .tax-planning-page .feature.flip {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 /* Homepage sections below the video hero */
 .home-page {
   background: #fff;

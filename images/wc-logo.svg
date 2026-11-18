@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 100" role="img" aria-labelledby="title">
   <title id="title">W and C logo</title>
-  <text x="0" y="82" fill="#A993D5" font-family="Arial, Helvetica, sans-serif" font-size="82" font-style="italic" font-weight="900" letter-spacing="-8">W</text>
-  <text x="91" y="82" fill="#77757E" font-family="Arial, Helvetica, sans-serif" font-size="76" font-style="italic" font-weight="900">&amp;</text>
-  <text x="163" y="82" fill="#A993D5" font-family="Arial, Helvetica, sans-serif" font-size="82" font-style="italic" font-weight="900">C</text>
-  <rect x="273" y="10" width="24" height="24" rx="2" fill="#FFFFFF" stroke="#B8B5C0" stroke-width="2"/>
-  <rect x="249" y="34" width="24" height="24" rx="2" fill="#A993D5"/>
-  <rect x="225" y="58" width="24" height="24" rx="2" fill="#77757E"/>
+  <text x="0" y="82" fill="#203889" font-family="Arial, Helvetica, sans-serif" font-size="82" font-style="italic" font-weight="900" letter-spacing="-8">W</text>
+  <text x="91" y="82" fill="#203889" font-family="Arial, Helvetica, sans-serif" font-size="76" font-style="italic" font-weight="900">&amp;</text>
+  <text x="163" y="82" fill="#203889" font-family="Arial, Helvetica, sans-serif" font-size="82" font-style="italic" font-weight="900">C</text>
+  <rect x="273" y="10" width="24" height="24" rx="2" fill="#40B2F1"/>
+  <rect x="249" y="34" width="24" height="24" rx="2" fill="#0876D1"/>
+  <rect x="225" y="58" width="24" height="24" rx="2" fill="#1238C7"/>
 </svg>
