@@ -16,12 +16,27 @@ if (menuToggle && navLinks) {
     );
 }
 
+const toast = document.querySelector(".toast");
+let toastTimeout;
+const showToast = (message) => {
+    if (!toast) return;
+
+    toast.textContent = message;
+    toast.classList.add("show");
+    window.clearTimeout(toastTimeout);
+    toastTimeout = window.setTimeout(() => toast.classList.remove("show"), 3600);
+};
+
 // Video modal
 const videoModal = document.getElementById("videoModal");
 const watchFilmButton = document.querySelector(".video-cta-btn");
 const modalVideo = document.getElementById("watchFilmVideo");
 const closeVideoModalButton = document.querySelector(".video-modal-close");
 const closeVideoBackdrop = document.querySelector("[data-close-video]");
+let videoPlaybackCheck;
+const showVideoPlaybackError = () => {
+    showToast("The film could not be played. Try opening the site through a local web server.");
+};
 
 const closeVideoModal = () => {
     if (!videoModal) return;
@@ -41,10 +56,18 @@ if (watchFilmButton && videoModal && modalVideo) {
         videoModal.classList.add("open");
         videoModal.setAttribute("aria-hidden", "false");
         modalVideo.currentTime = 0;
-        modalVideo.play();
+        modalVideo.play().catch(showVideoPlaybackError);
+        window.clearTimeout(videoPlaybackCheck);
+        videoPlaybackCheck = window.setTimeout(() => {
+            if (modalVideo.error || modalVideo.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) {
+                showVideoPlaybackError();
+            }
+        }, 3000);
     });
 }
 
+modalVideo?.addEventListener("playing", () => window.clearTimeout(videoPlaybackCheck));
+modalVideo?.addEventListener("error", showVideoPlaybackError);
 closeVideoModalButton?.addEventListener("click", closeVideoModal);
 closeVideoBackdrop?.addEventListener("click", closeVideoModal);
 document.addEventListener("keydown", (event) => {
@@ -73,16 +96,6 @@ const yearElement = document.getElementById("year");
 if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
 }
-const toast = document.querySelector(".toast");
-let toastTimeout;
-const showToast = (message) => {
-    if (!toast) return;
-
-    toast.textContent = message;
-    toast.classList.add("show");
-    window.clearTimeout(toastTimeout);
-    toastTimeout = window.setTimeout(() => toast.classList.remove("show"), 3600);
-};
 
 document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
     link.addEventListener("click", (event) => {

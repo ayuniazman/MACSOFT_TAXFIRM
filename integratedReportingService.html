@@ -15,7 +15,7 @@
 
 <body class="integrated-reporting-page about-page">
 
-    <!-- Navigation -->
+  <!-- Navigation -->
   <header>
     <div class="wrap nav">
  <a class="brand northstar-brand" href="index.html" aria-label="W&C home">
@@ -173,7 +173,7 @@
 
  <footer class="mega-footer">
     <div class="wrap">
-      
+
       <div class="footer-mega-grid">
    
         <div class="footer-col">
@@ -225,7 +225,7 @@
     </div>
   </footer>
 
-    <script>
+  <script>
     // Responsive mobile navigation
     const menuToggle = document.getElementById("menuToggle");
     const navLinks = document.getElementById("navLinks");
@@ -233,7 +233,7 @@
     if (menuToggle && navLinks) {
       menuToggle.addEventListener("click", () => {
         const isOpen = navLinks.classList.toggle("open"); // Tukar dari "active" ke "open" supaya match dengan CSS korang
-        
+
         menuToggle.setAttribute("aria-expanded", String(isOpen));
         menuToggle.textContent = isOpen ? "✕" : "☰";
       });

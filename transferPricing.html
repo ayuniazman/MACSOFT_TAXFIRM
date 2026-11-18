@@ -5,1222 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Transfer pricing in Malaysia: IRBM guidelines, country-by-country reporting and the main transfer pricing methods, by L & Co.">
-    <title>Transfer Pricing | L & Co</title>
-    <style>
-        :root {
-            --ink: #292333;
-            --muted: #6f6a78;
-            --paper: #fff;
-            --canvas: #f7f5fb;
-            --lav: #e4dcf5;
-            --lav2: #cfc1eb;
-            --purple: #76609d;
-            --deep: #443653;
-            --line: #e5e1ec;
-            --coral: #b4a9be;
-            --shadow: 0 18px 55px rgba(49, 37, 65, .10)
-        }
+        content="Transfer pricing in Malaysia: arm’s length principle, CbCR, documentation, methods and latest HASiL guidance.">
+    <title>W&C | Transfer Pricing</title>
 
-        * {
-            box-sizing: border-box
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 100px
-        }
-
-        body {
-            margin: 0;
-            background: var(--canvas);
-            color: var(--ink);
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none
-        }
-
-        button {
-            font: inherit;
-            cursor: pointer
-        }
-
-        :focus-visible {
-            outline: 3px solid var(--purple);
-            outline-offset: 3px
-        }
-
-        .wrap {
-            width: min(1180px, calc(100% - 48px));
-            margin: auto
-        }
-
-        .eyebrow {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--purple);
-            font-size: 11px;
-            letter-spacing: .16em;
-            font-weight: 800;
-            text-transform: uppercase
-        }
-
-        .eyebrow:before {
-            content: "";
-            width: 25px;
-            height: 2px;
-            background: var(--coral)
-        }
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 20;
-            background: rgba(255, 255, 255, .91);
-            backdrop-filter: blur(18px);
-            border-bottom: 1px solid var(--line)
-        }
-
-        .nav {
-            height: 76px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 28px
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 800;
-            letter-spacing: -.055em;
-            font-size: 19px;
-            white-space: nowrap;
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        }
-
-        .brand-mark {
-            width: 34px;
-            height: 34px;
-            border-radius: 11px 11px 11px 3px;
-            background: var(--purple);
-            color: #fff;
-            display: grid;
-            place-items: center;
-            font-size: 17px;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            font-size: 15px;
-            font-weight: 600;
-            color: #555263;
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        }
-
-        .nav-links a:hover {
-            color: var(--purple)
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            border: 0;
-            border-radius: 999px;
-            background: var(--deep);
-            color: #fff;
-            padding: 14px 20px;
-            font-size: 12px;
-            font-weight: 800;
-            transition: transform .2s, background .2s;
-            box-shadow: 0 8px 22px rgba(68, 54, 83, .14)
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            background: var(--purple)
-        }
-
-        .btn.light {
-            background: #fff;
-            color: var(--deep);
-            box-shadow: none
-        }
-
-        .btn.outline {
-            background: transparent;
-            color: var(--deep);
-            border: 1px solid #cfc7d9;
-            box-shadow: none
-        }
-
-        .menu-toggle {
-            display: none;
-            background: transparent;
-            border: 0;
-            font-size: 25px
-        }
-
-        .crumbs {
-            font-size: 11px;
-            color: var(--muted);
-            padding: 20px 0 0;
-            font-weight: 600
-        }
-
-        .crumbs a:hover {
-            color: var(--purple)
-        }
-
-        .hero {
-            position: relative;
-            overflow: hidden;
-            background: var(--lav);
-            padding: 72px 0 64px;
-            margin-top: 20px
-        }
-
-        .hero:before {
-            content: "";
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            border: 1px solid rgba(118, 96, 157, .22);
-            border-radius: 50%;
-            right: -120px;
-            top: -230px;
-            box-shadow: 0 0 0 45px rgba(118, 96, 157, .045), 0 0 0 95px rgba(118, 96, 157, .035)
-        }
-
-        .hero-grid {
-            position: relative;
-            display: grid;
-            grid-template-columns: 1.02fr .98fr;
-            align-items: center;
-            gap: 56px
-        }
-
-        .hero h1 {
-            font-size: clamp(44px, 6.4vw, 78px);
-            line-height: .98;
-            letter-spacing: -.075em;
-            max-width: 680px;
-            margin: 22px 0
-        }
-
-        .hero h1 em {
-            font-family: Georgia, serif;
-            font-weight: 500;
-            color: var(--purple)
-        }
-
-        .hero p {
-            font-size: 15px;
-            line-height: 1.8;
-            color: #5f576b;
-            max-width: 540px
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 28px
-        }
-
-        .visual {
-            min-height: 420px;
-            position: relative;
-            display: grid;
-            place-items: center
-        }
-
-        .hero-photo {
-            position: relative;
-            width: min(100%, 450px);
-            aspect-ratio: 1.45;
-            margin: 0;
-            overflow: hidden;
-            border: 5px solid rgba(255, 255, 255, .72);
-            border-radius: 22px;
-            box-shadow: 0 28px 75px rgba(66, 50, 89, .2)
-        }
-
-        .hero-photo img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover
-        }
-
-        .hero-photo:after {
-            content: "";
-            position: absolute;
-            inset: 35% 0 0;
-            background: linear-gradient(transparent, rgba(32, 24, 38, .78))
-        }
-
-        .hero-photo figcaption {
-            position: absolute;
-            z-index: 1;
-            right: 22px;
-            bottom: 20px;
-            left: 22px;
-            color: #fff;
-            font-size: 19px;
-            font-weight: 750;
-            letter-spacing: -.03em
-        }
-
-        .hero-photo figcaption:before {
-            content: "";
-            display: block;
-            width: 30px;
-            height: 3px;
-            margin-bottom: 10px;
-            background: #d04a02
-        }
-
-        .visual-orbit {
-            position: absolute;
-            width: min(35vw, 400px);
-            aspect-ratio: 1;
-            border: 1px solid rgba(118, 96, 157, .35);
-            border-radius: 50%;
-            animation: spin 38s linear infinite
-        }
-
-        .visual-orbit:before,
-        .visual-orbit:after {
-            content: "";
-            position: absolute;
-            inset: 10%;
-            border: 1px solid rgba(118, 96, 157, .22);
-            border-radius: 50%
-        }
-
-        .visual-orbit:after {
-            inset: 22%
-        }
-
-        .tax-card {
-            position: relative;
-            width: min(100%, 370px);
-            background: #fff;
-            border-radius: 25px;
-            padding: 25px;
-            box-shadow: 0 28px 75px rgba(66, 50, 89, .17);
-            transform: rotate(-2deg);
-            animation: float 5s ease-in-out infinite
-        }
-
-        .tax-card-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 18px;
-            border-bottom: 1px solid var(--line);
-            font-size: 11px;
-            font-weight: 850
-        }
-
-        .pill {
-            border-radius: 99px;
-            background: #efe9fa;
-            color: var(--purple);
-            padding: 7px 10px;
-            font-size: 9px;
-            font-weight: 850;
-            letter-spacing: .06em
-        }
-
-        .tax-card h3 {
-            font-size: 22px;
-            letter-spacing: -.05em;
-            margin: 22px 0 6px
-        }
-
-        .tax-card p {
-            font-size: 11px;
-            line-height: 1.6;
-            margin: 0;
-            color: var(--muted)
-        }
-
-        .flow {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            align-items: center;
-            gap: 10px;
-            margin: 22px 0 18px;
-            padding: 18px 0;
-            border-top: 1px solid var(--line);
-            border-bottom: 1px solid var(--line);
-            text-align: center;
-            font-size: 11px;
-            font-weight: 850
-        }
-
-        .flow span {
-            background: #efe9fa;
-            border-radius: 12px;
-            padding: 14px 6px
-        }
-
-        .flow b {
-            color: var(--purple);
-            font-size: 20px
-        }
-
-        .card-footer {
-            display: flex;
-            justify-content: space-between;
-            font-size: 10px;
-            color: var(--muted)
-        }
-
-        .float-chip {
-            position: absolute;
-            z-index: 2;
-            padding: 13px 15px;
-            background: rgba(255, 255, 255, .92);
-            border: 1px solid #fff;
-            border-radius: 14px;
-            box-shadow: var(--shadow);
-            font-size: 11px;
-            font-weight: 800
-        }
-
-        .float-chip small {
-            display: block;
-            font-size: 9px;
-            color: var(--muted);
-            font-weight: 600;
-            margin-top: 4px
-        }
-
-        .chip-a {
-            top: 13%;
-            left: 0
-        }
-
-        .chip-b {
-            bottom: 13%;
-            right: -1%
-        }
-
-        @keyframes spin {
-            to {
-                transform: rotate(360deg)
-            }
-        }
-
-        @keyframes float {
-            50% {
-                transform: translateY(-8px) rotate(-1deg)
-            }
-        }
-
-        .facts {
-            background: #fff;
-            border-bottom: 1px solid var(--line)
-        }
-
-        .facts-in {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr)
-        }
-
-        .fact {
-            padding: 34px 28px 34px 0;
-            border-right: 1px solid var(--line)
-        }
-
-        .fact+.fact {
-            padding-left: 28px
-        }
-
-        .fact:last-child {
-            border: 0
-        }
-
-        .fact b {
-            display: block;
-            font-size: 46px;
-            line-height: 1;
-            letter-spacing: -.06em;
-            color: var(--purple);
-            margin-bottom: 10px
-        }
-
-        .fact span {
-            font-size: 12px;
-            color: var(--muted);
-            line-height: 1.6
-        }
-
-        .quicknav {
-            background: #fff;
-            border-bottom: 1px solid var(--line)
-        }
-
-        .quicknav-inner {
-            display: flex;
-            align-items: center;
-            gap: 26px;
-            overflow: auto;
-            padding: 18px 0;
-            white-space: nowrap;
-            font-size: 11px;
-            font-weight: 800;
-            color: #716a7a
-        }
-
-        .quicknav a {
-            padding: 6px 0;
-            border-bottom: 2px solid transparent
-        }
-
-        .quicknav a:hover {
-            color: var(--purple);
-            border-color: var(--coral)
-        }
-
-        section {
-            padding: 88px 0
-        }
-
-        .section-head {
-            display: flex;
-            justify-content: space-between;
-            align-items: end;
-            gap: 35px;
-            margin-bottom: 34px
-        }
-
-        .section-head h2 {
-            font-size: clamp(32px, 4vw, 48px);
-            line-height: 1.05;
-            letter-spacing: -.065em;
-            max-width: 620px;
-            margin: 14px 0 0
-        }
-
-        .section-head p {
-            max-width: 410px;
-            color: var(--muted);
-            font-size: 13px;
-            line-height: 1.8;
-            margin: 0
-        }
-
-        .tax-types {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 18px
-        }
-
-        .type-card {
-            min-height: 280px;
-            border-radius: 22px;
-            padding: 28px;
-            background: #fff;
-            border: 1px solid var(--line);
-            position: relative;
-            overflow: hidden;
-            transition: transform .25s, box-shadow .25s
-        }
-
-        .type-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow)
-        }
-
-        .type-card.dark {
-            background: var(--deep);
-            color: #fff;
-            border-color: var(--deep)
-        }
-
-        .type-card .number {
-            font-size: 11px;
-            letter-spacing: .13em;
-            font-weight: 850;
-            color: var(--purple)
-        }
-
-        .type-card.dark .number {
-            color: var(--lav2)
-        }
-
-        .type-card h3 {
-            font-size: 29px;
-            letter-spacing: -.06em;
-            margin: 18px 0 10px
-        }
-
-        .type-card p {
-            max-width: 430px;
-            font-size: 12px;
-            line-height: 1.8;
-            color: var(--muted)
-        }
-
-        .type-card.dark p {
-            color: #d6cedf
-        }
-
-        .type-arrow {
-            position: absolute;
-            right: 25px;
-            top: 25px;
-            font-size: 22px;
-            color: var(--purple)
-        }
-
-        .dark .type-arrow {
-            color: var(--lav)
-        }
-
-        .tag-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 24px
-        }
-
-        .tag {
-            border: 1px solid var(--line);
-            border-radius: 99px;
-            padding: 9px 12px;
-            font-size: 10px;
-            font-weight: 800;
-            background: #faf9fc
-        }
-
-        .dark .tag {
-            border-color: rgba(255, 255, 255, .22);
-            background: rgba(255, 255, 255, .08);
-            color: #fff
-        }
-
-        .callout {
-            margin-top: 18px;
-            border-radius: 22px;
-            background: var(--lav);
-            padding: 28px 32px;
-            font-size: 15px;
-            font-weight: 700;
-            letter-spacing: -.02em;
-            line-height: 1.6
-        }
-
-        .tax-explorer {
-            background: #fff
-        }
-
-        .explorer-layout {
-            display: grid;
-            grid-template-columns: .7fr 1.3fr;
-            gap: 36px;
-            align-items: start
-        }
-
-        .explorer-tabs {
-            display: grid;
-            gap: 8px
-        }
-
-        .explorer-tab {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            text-align: left;
-            padding: 16px 18px;
-            border: 1px solid transparent;
-            border-radius: 13px;
-            background: transparent;
-            color: #635c6d;
-            font-size: 12px;
-            font-weight: 800;
-            transition: all .2s
-        }
-
-        .explorer-tab span:last-child {
-            font-size: 18px;
-            font-weight: 500
-        }
-
-        .explorer-tab:hover,
-        .explorer-tab.active {
-            background: #f2edf9;
-            border-color: #e0d5f1;
-            color: var(--deep)
-        }
-
-        .explorer-panel {
-            min-height: 370px;
-            border-radius: 22px;
-            background: var(--canvas);
-            padding: 32px;
-            border: 1px solid var(--line)
-        }
-
-        .panel-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 15px
-        }
-
-        .panel-icon {
-            width: 46px;
-            height: 46px;
-            border-radius: 14px;
-            background: var(--lav);
-            display: grid;
-            place-items: center;
-            font-size: 21px
-        }
-
-        .explorer-panel h3 {
-            font-size: 30px;
-            letter-spacing: -.06em;
-            margin: 20px 0 10px
-        }
-
-        .explorer-panel p {
-            font-size: 13px;
-            line-height: 1.8;
-            color: var(--muted);
-            max-width: 650px
-        }
-
-        .panel-points {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-top: 25px
-        }
-
-        .panel-point {
-            background: #fff;
-            border: 1px solid var(--line);
-            border-radius: 13px;
-            padding: 15px;
-            font-size: 11px;
-            font-weight: 750;
-            line-height: 1.6
-        }
-
-        .panel-point:before {
-            content: "↗";
-            display: block;
-            color: var(--purple);
-            font-size: 17px;
-            margin-bottom: 8px
-        }
-
-        .panel-meta {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-top: 25px
-        }
-
-        .panel-meta div {
-            background: #fff;
-            border: 1px solid var(--line);
-            border-radius: 13px;
-            padding: 15px;
-            font-size: 12px;
-            font-weight: 750;
-            line-height: 1.6
-        }
-
-        .panel-meta small {
-            display: block;
-            font-size: 9px;
-            letter-spacing: .12em;
-            text-transform: uppercase;
-            color: var(--purple);
-            margin-bottom: 6px
-        }
-
-        .disclaimer {
-            margin-top: 18px;
-            font-size: 10px !important;
-            color: #8a8392 !important
-        }
-
-        .timeline-section {
-            background: var(--deep);
-            color: #fff;
-            overflow: hidden;
-            position: relative
-        }
-
-        .timeline-section:after {
-            content: "";
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            border: 1px solid rgba(255, 255, 255, .12);
-            border-radius: 50%;
-            right: -200px;
-            bottom: -260px;
-            box-shadow: 0 0 0 45px rgba(255, 255, 255, .025), 0 0 0 95px rgba(255, 255, 255, .02)
-        }
-
-        .timeline-section .eyebrow {
-            color: var(--lav2)
-        }
-
-        .timeline-section .section-head p {
-            color: #d3ccdc
-        }
-
-        .timeline {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            margin-top: 50px;
-            position: relative
-        }
-
-        .timeline:before {
-            content: "";
-            position: absolute;
-            top: 15px;
-            left: 10px;
-            right: 10px;
-            height: 1px;
-            background: rgba(255, 255, 255, .23)
-        }
-
-        .timeline-item {
-            position: relative;
-            padding: 0 20px 0 0
-        }
-
-        .timeline-dot {
-            width: 31px;
-            height: 31px;
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, .5);
-            background: var(--deep);
-            display: grid;
-            place-items: center;
-            color: var(--lav);
-            font-size: 11px;
-            position: relative;
-            z-index: 1
-        }
-
-        .timeline-item h3 {
-            font-size: 17px;
-            letter-spacing: -.03em;
-            margin: 22px 0 10px
-        }
-
-        .timeline-item p {
-            font-size: 11px;
-            line-height: 1.8;
-            color: #d3ccdc;
-            max-width: 230px
-        }
-
-        .timeline-item small {
-            font-size: 9px;
-            text-transform: uppercase;
-            letter-spacing: .12em;
-            color: var(--lav2);
-            font-weight: 800
-        }
-
-        .faq-grid {
-            display: grid;
-            grid-template-columns: .7fr 1.3fr;
-            gap: 60px
-        }
-
-        .faq-intro h2 {
-            font-size: clamp(34px, 4vw, 49px);
-            line-height: 1.04;
-            letter-spacing: -.065em;
-            margin: 15px 0
-        }
-
-        .faq-intro p {
-            font-size: 13px;
-            line-height: 1.8;
-            color: var(--muted)
-        }
-
-        .faq-list {
-            border-top: 1px solid var(--line)
-        }
-
-        .faq-item {
-            border-bottom: 1px solid var(--line)
-        }
-
-        .faq-q {
-            width: 100%;
-            border: 0;
-            background: transparent;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 18px;
-            text-align: left;
-            padding: 21px 0;
-            font-size: 13px;
-            font-weight: 850;
-            color: var(--ink)
-        }
-
-        .faq-q span:last-child {
-            font-size: 20px;
-            color: var(--purple);
-            transition: transform .2s
-        }
-
-        .faq-answer {
-            display: none;
-            color: var(--muted);
-            font-size: 12px;
-            line-height: 1.8;
-            max-width: 700px;
-            padding: 0 35px 22px 0
-        }
-
-        .faq-item.open .faq-answer {
-            display: block
-        }
-
-        .faq-item.open .faq-q span:last-child {
-            transform: rotate(45deg)
-        }
-
-        .cta {
-            padding: 0 0 88px
-        }
-
-        .cta-panel {
-            background: var(--lav);
-            border-radius: 26px;
-            padding: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-            position: relative;
-            overflow: hidden
-        }
-
-        .cta-panel:after {
-            content: "";
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            border: 1px solid rgba(118, 96, 157, .2);
-            border-radius: 50%;
-            right: 20%;
-            top: -200px;
-            box-shadow: 0 0 0 35px rgba(118, 96, 157, .035)
-        }
-
-        .cta-copy {
-            position: relative;
-            z-index: 1
-        }
-
-        .cta-copy h2 {
-            font-size: clamp(30px, 4vw, 44px);
-            letter-spacing: -.065em;
-            line-height: 1.04;
-            margin: 12px 0
-        }
-
-        .cta-copy p {
-            font-size: 12px;
-            line-height: 1.8;
-            color: #62586f;
-            max-width: 520px
-        }
-
-        .cta-panel .btn {
-            position: relative;
-            z-index: 1;
-            white-space: nowrap
-        }
-
-        footer {
-            background: #fff;
-            border-top: 1px solid var(--line);
-            padding: 30px 0
-        }
-
-        .footer-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            align-items: center;
-            color: var(--muted);
-            font-size: 10px
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 18px;
-            flex-wrap: wrap
-        }
-
-        .footer-links a:hover {
-            color: var(--purple)
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(18px);
-            transition: opacity .65s ease, transform .65s ease
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: none
-        }
-
-        @media(max-width:850px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 76px;
-                left: 0;
-                right: 0;
-                background: #fff;
-                padding: 20px 24px 26px;
-                border-bottom: 1px solid var(--line);
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 18px
-            }
-
-            .nav-links.open {
-                display: flex
-            }
-
-            .menu-toggle {
-                display: block
-            }
-
-            .nav>.btn {
-                display: none
-            }
-
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 20px
-            }
-
-            .hero {
-                padding-top: 55px
-            }
-
-            .visual {
-                min-height: 370px
-            }
-
-            .visual-orbit {
-                width: 320px
-            }
-
-            .section-head {
-                display: block
-            }
-
-            .section-head p {
-                margin-top: 18px
-            }
-
-            .explorer-layout,
-            .faq-grid {
-                grid-template-columns: 1fr;
-                gap: 25px
-            }
-
-            .explorer-tabs {
-                grid-template-columns: 1fr 1fr
-            }
-
-            .timeline {
-                grid-template-columns: 1fr 1fr;
-                gap: 30px
-            }
-
-            .timeline:before {
-                display: none
-            }
-
-            .cta-panel {
-                align-items: flex-start;
-                flex-direction: column
-            }
-
-            .tax-types {
-                grid-template-columns: 1fr
-            }
-
-            .facts-in {
-                grid-template-columns: 1fr
-            }
-
-            .fact,
-            .fact+.fact {
-                padding: 24px 0;
-                border-right: 0;
-                border-bottom: 1px solid var(--line)
-            }
-        }
-
-        @media(max-width:560px) {
-            .wrap {
-                width: calc(100% - 34px)
-            }
-
-            .nav {
-                height: 68px
-            }
-
-            .brand {
-                font-size: 18px
-            }
-
-            .nav-links {
-                top: 68px
-            }
-
-            .hero h1 {
-                font-size: clamp(42px, 13vw, 60px)
-            }
-
-            .hero {
-                padding: 43px 0 35px
-            }
-
-            .visual {
-                min-height: 330px
-            }
-
-            .tax-card {
-                width: 290px;
-                padding: 20px
-            }
-
-            .chip-a {
-                left: 0;
-                top: 7%
-            }
-
-            .chip-b {
-                right: 0;
-                bottom: 6%
-            }
-
-            section {
-                padding: 65px 0
-            }
-
-            .type-card {
-                padding: 23px;
-                min-height: 250px
-            }
-
-            .explorer-tabs {
-                gap: 5px
-            }
-
-            .explorer-tab {
-                padding: 13px 11px;
-                font-size: 10px
-            }
-
-            .explorer-panel {
-                padding: 22px;
-                min-height: 0
-            }
-
-            .panel-points,
-            .panel-meta {
-                grid-template-columns: 1fr
-            }
-
-            .timeline {
-                grid-template-columns: 1fr;
-                gap: 25px;
-                margin-top: 35px
-            }
-
-            .timeline-item {
-                padding-left: 45px
-            }
-
-            .timeline-dot {
-                position: absolute;
-                left: 0;
-                top: 0
-            }
-
-            .timeline-item h3 {
-                margin: 0 0 7px
-            }
-
-            .cta-panel {
-                padding: 27px
-            }
-
-            .footer-row {
-                align-items: flex-start;
-                flex-direction: column
-            }
-        }
-
-        @media(prefers-reduced-motion:reduce) {
-
-            *,
-            *:before,
-            *:after {
-                animation: none !important;
-                scroll-behavior: auto !important;
-                transition: none !important
-            }
-
-            .reveal {
-                opacity: 1;
-                transform: none
-            }
-        }
-    </style>
     <link rel="stylesheet" href="css/service-nav.css">
     <link rel="stylesheet" href="css/transfer-pricing-content.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="transfer-pricing-page">
     <header class="site-header">
         <div class="site-nav">
-            <a class="site-brand" href="index.html" aria-label="Northstar Tax home">
-                <span class="site-brand-mark" aria-hidden="true">✳</span>
-                <span>northstar<span class="site-brand-tax">tax</span></span>
+            <a class="brand northstar-brand" href="index.html" aria-label="W&C home">
+                <img class="site-logo" src="images/wandclogo.svg" alt="W&amp;C" width="180" height="53">
             </a>
             <button class="site-menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation"
                 aria-expanded="false" aria-controls="navLinks">☰</button>
@@ -1241,357 +38,510 @@
                 <a href="about.html">About us</a>
                 <a href="contact.html">Contact us</a>
             </nav>
-           
+
         </div>
     </header>
 
     <main id="top">
-        <div class="wrap crumbs"><a href="https://landco.my/">Home</a> / <a
-                href="https://landco.my/malaysia-tax-system/">Malaysia tax system</a> / Transfer pricing</div>
-
-        <section class="hero" style="padding:72px 0 64px">
-            <div class="wrap hero-grid">
-                <div class="reveal">
-                    <div class="eyebrow">Transfer pricing · Malaysia</div>
-                    <h1>Transfer <em>Pricing</em></h1>
-                    <p>Transfer pricing covers the pricing of goods, services and intangibles between associated
-                        persons. Understand what the Inland Revenue Board Malaysia expects, and what you need to
-                        document.</p>
-                    <div class="hero-actions"><a class="btn" href="#overview">Explore transfer pricing
-                            <span>↓</span></a><a class="btn outline" href="#contact">Speak to our team ↗</a></div>
+        <section class="page-hero">
+            <div class="wrap hero-split">
+                <div class="hero-text">
+                    <h1>Transfer Pricing</h1>
                 </div>
-                <div class="visual reveal" aria-label="Transfer pricing discussion">
-                    <div class="visual-orbit"></div>
-                    <div class="float-chip chip-a">Associated persons<small>Controlled transactions</small></div>
-                    <div class="float-chip chip-b">Market price<small>The independent benchmark</small></div>
-                    <figure class="hero-photo">
-                        <img src="images/tax3.jpg"
-                            alt="Business professionals discussing cross-border work in a Kuala Lumpur boardroom">
-                        <figcaption>Business without borders</figcaption>
-                    </figure>
+                <div class="hero-image">
+                    <img src="images/tax-planning-hero.jpg" alt="Business and international tax planning" />
                 </div>
             </div>
         </section>
 
         <div class="interactive-content">
-
             <section id="overview">
                 <div class="wrap">
-
-                    <!-- Original introduction content -->
                     <div class="intro-grid">
-
                         <div class="intro-copy">
                             <div class="kicker">01 / Introduction</div>
-                            <h2>What is transfer pricing?</h2>
-
-                            <p>
-                                Transfer pricing refers to intercompany pricing
-                                arrangements for goods, services and intangibles
-                                between associated persons.
+                            <h2>What is<em> transfer pricing?</em></h2>
+                            <p>Transfer pricing refers to the pricing of transactions involving goods, services,
+                                intangible assets and financial arrangements between associated persons or related
+                                companies within the same group.</p>
+                            <p>Under Malaysia’s transfer pricing framework, controlled transactions must comply with the
+                                <strong>Arm’s Length Principle (ALP)</strong>. This means that the prices and conditions
+                                should be consistent with those that independent parties would have agreed under
+                                comparable circumstances.
                             </p>
-
-                            <p>
-                                Ideally, transfer prices should not differ from
-                                prevailing market prices between independent
-                                persons. However, business transactions between
-                                associated persons may not always reflect
-                                market forces.
-                            </p>
+                            <p>The principle helps prevent profits from being artificially shifted between related
+                                companies or tax jurisdictions through non-market pricing.</p>
                         </div>
-
                         <aside class="guideline-card">
-                            <div class="kicker">
-                                Malaysia transfer pricing guidelines
-                            </div>
-
-                            <div class="date">20 July 2012</div>
-
+                            <div class="kicker">Current Malaysian framework</div>
+                            <div class="date">2023 – 2026</div>
                             <div class="rule-line"></div>
-
-                            <p>
-                                The Inland Revenue Board Malaysia published
-                                Transfer Pricing Guidelines on this date.
-                                The guidelines provide guidance on the law
-                                and rules for controlled transactions, methods
-                                and manner, administrative requirements,
-                                and records and documentation.
-                            </p>
+                            <p>Malaysia’s transfer pricing rules are principally supported by Section 140A of the Income
+                                Tax Act 1967, the Income Tax (Transfer Pricing) Rules 2023 and the Malaysia Transfer
+                                Pricing Guidelines 2024.</p>
                         </aside>
-
                     </div>
-
-                    <!-- NEW: Editorial image section -->
-                    <div class="editorial-split">
-
-                        <img src="review document.jpg"
-                            alt="Business professionals discussing international transactions" loading="lazy">
-
-                        <div class="editorial-copy">
-                            <div class="kicker">Business across borders</div>
-
-                            <h3>
-                                One business. Different markets.
-                                Connected transactions.
-                            </h3>
-
-                            <p>
-                                Businesses operating across different countries
-                                often engage in transactions between associated
-                                companies. Understanding how these transactions
-                                are priced is essential for maintaining
-                                transparency and meeting tax requirements.
-                            </p>
-                        </div>
-
-                    </div>
-
                 </div>
             </section>
 
-
-            <section class="cbcr" id="reporting">
+            <section class="cbcr" id="framework">
                 <div class="wrap">
                     <div class="section-head">
-                        <div class="kicker">02 / Reporting requirements</div>
-                        <h2>Country-by-country reporting</h2>
-                        <p>Country-by-country reporting (CbCR) is governed by the Income Tax (Country-by-Country
-                            Reporting) Rules 2016, effective from 1 January 2017. The conditions below follow the
-                            supplied original content.</p>
+                        <div class="kicker">02 / Malaysian legal framework</div>
+                        <h2>How transfer pricing <br><em>is regulated in Malaysia</em></h2>
+                        <p>Malaysia’s transfer pricing framework has developed through legislation, rules, guidelines
+                            and tax audit guidance.</p>
+                    </div>
+                    <div class="framework-grid">
+                        <article class="framework-card">
+                            <span class="framework-number">01</span>
+                            <h3>Income Tax Act 1967</h3>
+                            <p><strong>Section 140A</strong> requires transactions between persons who are associated to
+                                be conducted at arm’s length. It gives the Director General of Inland Revenue powers to
+                                make adjustments where the conditions of a controlled transaction are not arm’s length.
+                            </p>
+                        </article>
+                        <article class="framework-card">
+                            <span class="framework-number">02</span>
+                            <h3>Transfer Pricing Rules 2023</h3>
+                            <p>The Income Tax (Transfer Pricing) Rules 2023 set out requirements for applying the arm’s
+                                length principle, including comparability analysis, transfer pricing methods and
+                                contemporaneous documentation.</p>
+                        </article>
+                        <article class="framework-card">
+                            <span class="framework-number">03</span>
+                            <h3>Malaysia TP Guidelines 2024</h3>
+                            <p>The Malaysia Transfer Pricing Guidelines 2024 explain how taxpayers should apply the
+                                rules in practice, including delineating controlled transactions, selecting methods and
+                                preparing documentation.</p>
+                        </article>
+                        <article class="framework-card">
+                            <span class="framework-number">04</span>
+                            <h3>Audit Framework 2025</h3>
+                            <p>The Transfer Pricing Tax Audit Framework 2025 provides the current administrative
+                                framework for HASiL transfer pricing audits and replaces the 2024 audit framework.</p>
+                        </article>
+                    </div>
+                    <div class="notice-strip">
+                        <strong>Important:</strong> The Malaysia Transfer Pricing Guidelines 2012 are no longer the
+                        current principal guideline. Use the 2024 Guidelines together with the 2023 Rules and subsequent
+                        amendments.
+                    </div>
+                </div>
+            </section>
+
+            <section id="reporting">
+                <div class="wrap">
+                    <div class="section-head">
+                        <div class="kicker">03 / International tax transparency</div>
+                        <h2>Country-by-country<br><em>reporting (CbCR)</em></h2>
+                        <p>CbCR requires certain large multinational enterprise (MNE) groups to report information about
+                            their income, taxes paid and indicators of economic activity across the jurisdictions in
+                            which they operate.</p>
                     </div>
                     <div class="threshold">
-                        <div class="amount">MYR 3 billion</div>
-                        <p><strong>Consolidated group revenue threshold</strong><br>One of the conditions is that total
-                            consolidated group revenue in the preceding financial year is at least MYR 3 billion.</p>
+                        <div class="amount">RM 3 billion</div>
+                        <p><strong>Consolidated group revenue threshold</strong><br>Malaysia’s CbCR requirements
+                            generally apply to an MNE group where its consolidated group revenue in the financial year
+                            preceding the reporting financial year is at least RM3 billion, subject to the Malaysian
+                            entity and reporting-entity conditions in the Rules.</p>
                     </div>
                     <div class="editorial-split">
-                        <img src="review document.jpg"
-                            alt="Professional reviewing international financial reporting documents" loading="lazy">
-
                         <div class="editorial-copy">
-                            <div class="kicker">Understanding the requirements</div>
-
-                            <h3>Transparency across borders</h3>
-
-                            <p>
-                                Country-by-country reporting provides tax authorities
-                                with a clearer picture of how multinational enterprise
-                                groups allocate their income, taxes and economic activities
-                                across different jurisdictions.
-                            </p>
+                            <div class="kicker">Who may be required to report?</div>
+                            <h3>Not every company is required to file a CbC report.</h3>
+                            <p>The rules apply to qualifying MNE groups with a Malaysian reporting entity or other
+                                Malaysian constituent entity/establishment within the scope of the CbCR legislation. The
+                                reporting entity is generally the ultimate holding entity (UHE), or a surrogate holding
+                                entity in specified circumstances.</p>
+                            <p>For the precise tests, including the treatment of permanent establishments and Labuan
+                                entities, refer to the current HASiL CbCR guidance and the Income Tax
+                                (Country-by-Country Reporting) Rules 2016, as amended.</p>
+                        </div>
+                        <div class="cbcr-facts">
+                            <div class="fact-row"><span>Threshold</span><strong>RM3 billion</strong></div>
+                            <div class="fact-row"><span>Notification</span><strong>On or before reporting
+                                    FY-end</strong></div>
+                            <div class="fact-row"><span>CbC report filing</span><strong>Within 12 months after
+                                    FY-end</strong></div>
                         </div>
                     </div>
-                    <h3 class="subhead">When do the stated conditions apply?</h3>
-                    <div class="condition-grid">
-                        <article class="condition">
-                            <div class="number">01</div>
-                            <div>
-                                <h3>Cross-border transactions</h3>
-                                <p>Any constituent entity enters into cross-border transactions with another constituent
-                                    entity.</p>
-                            </div>
-                        </article>
-                        <article class="condition">
-                            <div class="number">02</div>
-                            <div>
-                                <h3>Group revenue</h3>
-                                <p>Total consolidated group revenue in the preceding financial year is at least MYR 3
-                                    billion.</p>
-                            </div>
-                        </article>
-                        <article class="condition">
-                            <div class="number">03</div>
-                            <div>
-                                <h3>Ultimate holding company</h3>
-                                <p>The ultimate holding company is incorporated under the Companies Act 1965 or written
-                                    law and is resident in Malaysia.</p>
-                            </div>
-                        </article>
-                        <article class="condition">
-                            <div class="number">04</div>
-                            <div>
-                                <h3>Constituent entities</h3>
-                                <p>Constituent entities are incorporated or registered under the Companies Act 1965, any
-                                    written law, or the laws of a territory outside Malaysia, and are resident in
-                                    Malaysia.</p>
-                            </div>
-                        </article>
-                    </div>
-                    <h3 class="subhead">Who must file and notify?</h3>
-                    <div class="accordion">
-                        <div class="acc-item open">
-                            <button class="acc-trigger" aria-expanded="true"><span>Ultimate holding company
-                                    (UHC)</span><span class="plus">+</span></button>
-                            <div class="acc-panel">The ultimate holding company of a multinational enterprise (MNC)
-                                group that is resident in Malaysia must file the CbC report with the Director General of
-                                Inland Revenue. The report must comply with the Rules and cover the reporting financial
-                                year on or before the specified date.</div>
-                        </div>
-                        <div class="acc-item">
-                            <button class="acc-trigger" aria-expanded="false"><span>When does a surrogate holding
-                                    company file?</span><span class="plus">+</span></button>
-                            <div class="acc-panel">A surrogate holding company files instead if any of the following
-                                circumstances applies:<ol>
-                                    <li>The UHC is not resident in Malaysia and is not required to file a CbC report in
-                                        its jurisdiction.</li>
-                                    <li>The UHC's jurisdiction of tax residence has an international agreement with
-                                        Malaysia but is not a party to the Multilateral Competent Authority Agreement on
-                                        Exchange of CbC Reports at the time of filing.</li>
-                                    <li>There is a systemic failure of the UHC's jurisdiction of tax residence, and the
-                                        Director General has notified the Malaysian constituent entity of that failure.
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
-                        <div class="acc-item">
-                            <button class="acc-trigger" aria-expanded="false"><span>Notification if the entity is the
-                                    UHC or surrogate holding company</span><span class="plus">+</span></button>
-                            <div class="acc-panel">On or before the last day of the reporting financial year, a
-                                Malaysian constituent entity must notify the Director General in writing if it is the
-                                UHC or surrogate holding company.</div>
-                        </div>
-                        <div class="acc-item">
-                            <button class="acc-trigger" aria-expanded="false"><span>Notification if the entity is not
-                                    the reporting entity</span><span class="plus">+</span></button>
-                            <div class="acc-panel">If a constituent entity is not the reporting entity, it must notify
-                                the Director General in writing of the identity and tax residence of the reporting
-                                entity on or before the last day of the reporting financial year.</div>
-                        </div>
-                    </div>
-                    <h3 class="subhead">Key reporting timeline</h3>
+                    <h3 class="subhead">Key CbCR timeline</h3>
                     <div class="timeline">
                         <article class="time-card">
-                            <div class="step">Notification 01</div>
+                            <div class="step">01 / Notification</div>
                             <h3>By financial year-end</h3>
-                            <p>The Malaysian constituent entity provides written notification of its status or of the
-                                reporting entity's identity and tax residence, as applicable, on or before the last day
-                                of the reporting financial year.</p>
+                            <p>A Malaysian constituent entity must provide the required notification, including the
+                                identity and tax residence of the reporting entity where applicable, on or before the
+                                last day of the reporting financial year.</p>
                         </article>
                         <article class="time-card">
-                            <div class="step">Filing 02</div>
-                            <h3>Within 12 months</h3>
-                            <p>The CbC report is due no later than 12 months after the last day of the reporting
-                                financial year.</p>
-                        </article>
-                        <article class="time-card">
-                            <div class="step">Report 03</div>
+                            <div class="step">02 / Preparation</div>
                             <h3>Reporting financial year</h3>
-                            <p>The report must comply with the Rules and cover the reporting financial year.</p>
+                            <p>The reporting entity prepares the CbC report for the relevant reporting financial year in
+                                accordance with the CbCR Rules.</p>
+                        </article>
+                        <article class="time-card">
+                            <div class="step">03 / Filing</div>
+                            <h3>Within 12 months</h3>
+                            <p>The CbC report is generally due no later than 12 months after the last day of the
+                                reporting financial year.</p>
                         </article>
                     </div>
+                    <p class="disclaimer">CbCR is a separate reporting obligation from transfer pricing documentation.
+                        The RM3 billion threshold relates to CbCR and should not be treated as a general exemption from
+                        transfer pricing requirements.</p>
                 </div>
             </section>
 
             <section id="methods">
                 <div class="wrap">
                     <div class="section-head">
-                        <div class="kicker">03 / Transfer pricing methods</div>
-                        <h2>Five methods, two categories.</h2>
-                        <p>The original content lists three transaction-based methods and two profit-based methods.
-                            Select a method to view its name and category.</p>
+                        <div class="kicker">04 / Transfer pricing methods</div>
+                        <h2>Five recognised<br><em>methods.</em></h2>
+                        <p>The method selected should be the most appropriate method for the controlled transaction,
+                            taking into account the facts, functions performed, assets used, risks assumed and
+                            availability of reliable comparable data.</p>
                     </div>
                     <div class="method-layout">
                         <div class="method-tabs" role="tablist" aria-label="Transfer pricing methods">
                             <button class="method-tab active" role="tab" aria-selected="true"
-                                data-method="cup"><strong>Comparable Uncontrolled Price
-                                    (CUP)</strong><span>Transaction-based method</span></button>
+                                data-method="cup"><strong>Comparable Uncontrolled Price (CUP)</strong><span>Traditional
+                                    transaction method</span></button>
                             <button class="method-tab" role="tab" aria-selected="false" data-method="rpm"><strong>Resale
-                                    Price Method (RPM)</strong><span>Transaction-based method</span></button>
+                                    Price Method (RPM)</strong><span>Traditional transaction method</span></button>
                             <button class="method-tab" role="tab" aria-selected="false" data-method="cpm"><strong>Cost
-                                    Plus Method (CPM)</strong><span>Transaction-based method</span></button>
+                                    Plus Method (CPM)</strong><span>Traditional transaction method</span></button>
                             <button class="method-tab" role="tab" aria-selected="false" data-method="psm"><strong>Profit
-                                    Split Method</strong><span>Profit-based method</span></button>
+                                    Split Method</strong><span>Transactional profit method</span></button>
                             <button class="method-tab" role="tab" aria-selected="false"
                                 data-method="tnmm"><strong>Transactional Net Margin Method
-                                    (TNMM)</strong><span>Profit-based method</span></button>
+                                    (TNMM)</strong><span>Transactional profit method</span></button>
                         </div>
                         <div class="method-detail" id="method-detail" role="tabpanel" aria-live="polite">
-                            <span class="method-type">Transaction-based method</span>
+                            <span class="method-type">Traditional transaction method</span>
                             <h3>Comparable Uncontrolled Price (CUP)</h3>
-                            <p>Listed in the supplied original content as one of the transaction-based transfer pricing
-                                methods.</p>
+                            <p>Compares the price charged in a controlled transaction with the price charged in a
+                                comparable transaction between independent parties.</p>
+                            <div class="method-example"><strong>Simple example</strong><span>A company sells the same
+                                    product to both a related company and an independent customer. The independent-party
+                                    price may provide a direct comparison, after appropriate adjustments for
+                                    differences.</span></div>
                         </div>
                     </div>
                     <div class="method-list">
-                        <div class="mini"><b>Transaction-based</b><small>Comparable Uncontrolled Price (CUP), Resale
-                                Price Method (RPM), Cost Plus Method (CPM)</small></div>
-                        <div class="mini"><b>Profit-based</b><small>Profit Split Method, Transactional Net Margin Method
-                                (TNMM)</small></div>
+                        <div class="mini"><b>Traditional transaction methods</b><small>CUP, RPM and CPM</small></div>
+                        <div class="mini"><b>Transactional profit methods</b><small>Profit Split Method and TNMM</small>
+                        </div>
                     </div>
                 </div>
             </section>
+
+            <section id="documentation">
+                <div class="wrap">
+                    <div class="section-head">
+                        <div class="kicker">05 / Compliance</div>
+                        <h2>Transfer pricing<br><em>documentation</em></h2>
+                        <p>Documentation helps a taxpayer demonstrate that its controlled transactions comply with the
+                            arm’s length principle.</p>
+                    </div>
+                    <div class="documentation-grid">
+                        <article class="documentation-card">
+                            <div class="doc-tag">FULL DOCUMENTATION</div>
+                            <h3>Contemporaneous Transfer Pricing Documentation (CTPD)</h3>
+                            <p>Where the full documentation requirements apply, the file generally includes information
+                                about the group and taxpayer, business and industry, controlled transactions, functional
+                                analysis, comparability analysis, selected method and supporting financial information.
+                            </p>
+                        </article>
+                        <article class="documentation-card">
+                            <div class="doc-tag">SIMPLIFIED REQUIREMENTS</div>
+                            <h3>Minimum documentation</h3>
+                            <p>Taxpayers who qualify under the relevant provisions may prepare minimum documentation
+                                rather than the full documentation. The applicable conditions and required contents must
+                                be checked against the current Rules and Guidelines.</p>
+                        </article>
+                        <article class="documentation-card">
+                            <div class="doc-tag">EXEMPTIONS</div>
+                            <h3>Check the applicable exemption</h3>
+                            <p>Specific categories of transactions or taxpayers may qualify for exemptions from
+                                preparing full CTPD, subject to the conditions in the Rules. Exemptions are not
+                                automatic and should be assessed against the relevant criteria.</p>
+                        </article>
+                    </div>
+                    <div class="notice-strip">
+                        <strong>14-day furnishing requirement:</strong> If HASiL issues a written notice requesting
+                        CTPD, the taxpayer must furnish the documentation within 14 days. Failure to comply may lead to
+                        action under Section 113B of the Income Tax Act 1967.
+                    </div>
+                </div>
+            </section>
+
+            <section id="audit" class="timeline-section">
+                <div class="wrap">
+                    <div class="section-head">
+                        <div class="eyebrow">06 / Tax administration</div>
+                        <h2>Transfer pricing audits<br><em>and consequences</em></h2>
+                        <p>HASiL may review controlled transactions and make adjustments where the pricing or conditions
+                            are not consistent with the arm’s length principle.</p>
+                    </div>
+                    <div class="audit-grid">
+                        <article class="audit-card">
+                            <span>01</span>
+                            <h3>Review and information request</h3>
+                            <p>During an audit, HASiL may request records, explanations, agreements, calculations and
+                                transfer pricing documentation relevant to the controlled transactions.</p>
+                        </article>
+                        <article class="audit-card">
+                            <span>02</span>
+                            <h3>Transfer pricing adjustment</h3>
+                            <p>Where the controlled transaction is not arm’s length, the Director General may make an
+                                adjustment under Section 140A to reflect an arm’s length outcome.</p>
+                        </article>
+                        <article class="audit-card">
+                            <span>03</span>
+                            <h3>Surcharge and penalties</h3>
+                            <p>A surcharge of up to 5% may be imposed on the amount of transfer pricing adjustment under
+                                Section 140A(3C). Separate penalties may apply for failure to comply with documentation
+                                requirements, including Section 113B.</p>
+                        </article>
+                    </div>
+                    <p class="audit-note">The actual tax consequences depend on the facts, applicable legislation and
+                        current HASiL audit guidance. The surcharge is not necessarily 5% in every case.</p>
+                </div>
+            </section>
+
+            <section id="updates">
+                <div class="wrap">
+                    <div class="section-head">
+                        <div class="kicker">07 / Latest developments</div>
+                        <h2>Recent Malaysian<br><em>transfer pricing updates</em></h2>
+                        <p>Key developments to reflect in a current overview of Malaysia’s transfer pricing regime.</p>
+                    </div>
+                    <div class="updates-list">
+                        <article class="update-item">
+                            <div class="update-date">24 DEC 2024</div>
+                            <div>
+                                <h3>Malaysia Transfer Pricing Guidelines 2024</h3>
+                                <p>The 2024 Guidelines replaced the 2012 Guidelines and apply from Year of Assessment
+                                    2023 onwards.</p>
+                            </div>
+                        </article>
+                        <article class="update-item">
+                            <div class="update-date">31 JUL 2025</div>
+                            <div>
+                                <h3>Transfer Pricing Tax Audit Framework 2025</h3>
+                                <p>HASiL published the 2025 audit framework, which supersedes the 2024 framework and
+                                    updates the administrative approach to transfer pricing audits.</p>
+                            </div>
+                        </article>
+                        <article class="update-item">
+                            <div class="update-date">30 JUL 2026</div>
+                            <div>
+                                <h3>Guidelines on controlled financial transactions: intra-group loans</h3>
+                                <p>HASiL published guidance addressing controlled financial transactions involving
+                                    intra-group loans, including the analysis of debt characteristics and arm’s length
+                                    interest.</p>
+                            </div>
+                        </article>
+                        <article class="update-item">
+                            <div class="update-date">27 AUG 2026</div>
+                            <div>
+                                <h3>Transfer Pricing (Amendment) Rules 2026</h3>
+                                <p>The amendment includes changes to the definition of an MNE Group and provides for an
+                                    offsetting adjustment mechanism, subject to a request and the Director General’s
+                                    approval. It is deemed effective from Year of Assessment 2023.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="notice-strip">
+                        <strong>For businesses with intercompany loans:</strong> Review the 2026 guidance on controlled
+                        financial transactions and assess whether existing loan arrangements and interest terms are
+                        supported by an appropriate arm’s length analysis.
+                    </div>
+                </div>
+            </section>
+
+            <section id="faq">
+                <div class="wrap faq-grid">
+                    <div class="faq-intro">
+                        <div class="kicker">08 / Common questions</div>
+                        <h2>Transfer pricing,<br><em>explained.</em></h2>
+                        <p>Quick answers to common questions about Malaysia’s transfer pricing requirements.</p>
+                    </div>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-q" aria-expanded="false"><span>Does transfer pricing only apply to
+                                    multinational companies?</span><span>+</span></button>
+                            <div class="faq-answer">No. Transfer pricing rules can apply to controlled transactions
+                                between associated persons even where the parties are in Malaysia. The relevant
+                                documentation requirements and exemptions depend on the transaction and taxpayer
+                                circumstances.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-q" aria-expanded="false"><span>Is the RM3 billion threshold an exemption
+                                    from transfer pricing documentation?</span><span>+</span></button>
+                            <div class="faq-answer">No. The RM3 billion threshold is associated with Country-by-Country
+                                Reporting. It is not a general threshold for exemption from transfer pricing rules or
+                                CTPD requirements.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-q" aria-expanded="false"><span>When must CTPD be submitted to
+                                    HASiL?</span><span>+</span></button>
+                            <div class="faq-answer">CTPD should be prepared contemporaneously where required and must be
+                                furnished within 14 days after a written request from the Director General.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-q" aria-expanded="false"><span>Which guideline should businesses refer
+                                    to?</span><span>+</span></button>
+                            <div class="faq-answer">Refer to the Malaysia Transfer Pricing Guidelines 2024, the Transfer
+                                Pricing Rules 2023, relevant amendments and the current HASiL audit framework. For
+                                controlled financial transactions, also review the 2026 intra-group loans guidance.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </main>
 
-    <footer id="contact">
-        <div class="wrap footer-row"><a class="brand" href="#top"><span class="brand-mark">L&amp;</span><span>L &amp;
-                    Co</span></a><span>Transfer Pricing · Informational overview</span>
-            <div class="footer-links"><a href="https://landco.my/malaysia-tax-system/" target="_blank"
-                    rel="noopener">Malaysia tax system</a><a href="https://landco.my/" target="_blank" rel="noopener">L
-                    &amp; Co website</a><a href="#top">Back to top ↑</a></div>
+    <footer class="mega-footer">
+        <div class="wrap">
+
+            <div class="footer-mega-grid">
+
+                <div class="footer-col">
+                    <b>Services</b>
+                    <a href="malaysiaTax.html">Malaysia Tax System</a>
+                    <a href="taxPlanning.html">Tax Planning</a>
+                    <a href="tax_audit.html">Income Tax Audit</a>
+                    <a href="tax_Incentive.html">Income Tax Incentive</a>
+                    <a href="transferPricing.html">Transfer Pricing</a>
+                    <a href="withholdingTax.html">Withholding Tax</a>
+                    <a href="integratedReportingService.html">Integrated Reporting</a>
+                </div>
+
+                <div class="footer-col">
+                    <b>Company</b>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+
+                <div class="footer-col">
+                    <b>Connect</b>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Facebook</a>
+                    <a href="mailto:info@wctax.com">Email Us</a>
+                </div>
+
+            </div>
+
+            <!-- BOTTOM: Legal & Logo -->
+            <div class="footer-legal-section">
+
+                <div class="footer-legal-top">
+
+                    <!-- Logo W&C -->
+                    <div class="footer-logo">
+                        <a class="brand" href="index.html" aria-label="W&C home">
+                            <!-- Korang guna logo SVG, so kita kekalkan macam tu -->
+                            <img class="site-logo" src="images/wandclogo.svg" alt="W&C" width="180" height="53">
+                        </a>
+                    </div>
+
+                    <!-- Copyright Text -->
+                    <div class="footer-legal-text">
+                        <p>
+                            © <span id="year">2026</span> W&C Tax Services Sdn. Bhd. All rights reserved.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </footer>
 
     <script>
-        document.querySelectorAll(".acc-trigger").forEach(button => {
-            button.addEventListener("click", () => {
-                const item = button.closest(".acc-item");
-                const isOpen = item.classList.toggle("open");
-                button.setAttribute("aria-expanded", String(isOpen));
+        // Mobile navigation
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener("click", () => {
+                const isOpen = navLinks.classList.toggle("open");
+                menuToggle.setAttribute("aria-expanded", String(isOpen));
+                menuToggle.textContent = isOpen ? "×" : "☰";
             });
-        });
+            navLinks.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => {
+                    navLinks.classList.remove("open");
+                    menuToggle.setAttribute("aria-expanded", "false");
+                    menuToggle.textContent = "☰";
+                });
+            });
+        }
 
+        // Transfer pricing method explorer
         const methodInfo = {
-            cup: { name: "Comparable Uncontrolled Price (CUP)", type: "Transaction-based method" },
-            rpm: { name: "Resale Price Method (RPM)", type: "Transaction-based method" },
-            cpm: { name: "Cost Plus Method (CPM)", type: "Transaction-based method" },
-            psm: { name: "Profit Split Method", type: "Profit-based method" },
-            tnmm: { name: "Transactional Net Margin Method (TNMM)", type: "Profit-based method" }
+            cup: {
+                name: "Comparable Uncontrolled Price (CUP)",
+                type: "Traditional transaction method",
+                description: "Compares the price charged in a controlled transaction with the price charged in a comparable transaction between independent parties. It is most useful where reliable product or service price comparisons are available.",
+                example: "A company sells the same product to a related company and an independent customer. The independent-party price may be a direct comparable, subject to adjustments for differences."
+            },
+            rpm: {
+                name: "Resale Price Method (RPM)",
+                type: "Traditional transaction method",
+                description: "Starts with the price at which a product purchased from an associated enterprise is resold to an independent customer. An appropriate gross resale margin is deducted to determine an arm’s length purchase price.",
+                example: "A related distributor buys goods from its group company and resells them to external customers. The distributor’s gross margin is compared with margins earned by independent distributors."
+            },
+            cpm: {
+                name: "Cost Plus Method (CPM)",
+                type: "Traditional transaction method",
+                description: "Starts with the supplier’s costs of providing goods or services in a controlled transaction. An appropriate mark-up is added to those costs to determine an arm’s length price.",
+                example: "A related manufacturer supplies products to a group company. Its relevant production costs are identified and an appropriate comparable mark-up is applied."
+            },
+            psm: {
+                name: "Profit Split Method",
+                type: "Transactional profit method",
+                description: "Identifies the combined operating profit from the controlled transactions and splits that profit between the associated enterprises on an economically valid basis that reflects their respective contributions.",
+                example: "Two group companies jointly develop and exploit valuable intangibles. Their combined profit may be divided based on each company’s functions, assets, risks and contributions."
+            },
+            tnmm: {
+                name: "Transactional Net Margin Method (TNMM)",
+                type: "Transactional profit method",
+                description: "Examines the net profit margin earned by a taxpayer from a controlled transaction relative to an appropriate base, such as costs, sales or assets, and compares it with comparable independent businesses or transactions.",
+                example: "A related service provider’s operating margin on its costs is compared with the margins earned by independent service providers performing similar functions."
+            }
         };
         const methodDetail = document.getElementById("method-detail");
-
         document.querySelectorAll(".method-tab").forEach(tab => {
             tab.addEventListener("click", () => {
                 document.querySelectorAll(".method-tab").forEach(other => {
                     other.classList.remove("active");
                     other.setAttribute("aria-selected", "false");
                 });
-
                 tab.classList.add("active");
                 tab.setAttribute("aria-selected", "true");
-
                 const method = methodInfo[tab.dataset.method];
                 methodDetail.querySelector(".method-type").textContent = method.type;
                 methodDetail.querySelector("h3").textContent = method.name;
-                methodDetail.querySelector("p").textContent =
-                    `Listed in the supplied original content as one of the ${method.type.toLowerCase()}s.`;
+                methodDetail.querySelector("p").textContent = method.description;
+                const example = methodDetail.querySelector(".method-example");
+                example.querySelector("span").textContent = method.example;
             });
         });
 
-        const menuToggle = document.getElementById("menuToggle");
-        const navLinks = document.getElementById("navLinks");
-        menuToggle.addEventListener("click", () => {
-            const isOpen = navLinks.classList.toggle("open");
-            menuToggle.setAttribute("aria-expanded", String(isOpen));
-            menuToggle.textContent = isOpen ? "×" : "☰";
-        });
-        navLinks.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", () => {
-                navLinks.classList.remove("open");
-                menuToggle.setAttribute("aria-expanded", "false");
-                menuToggle.textContent = "☰";
+        // FAQ accordion
+        document.querySelectorAll(".faq-q").forEach(button => {
+            button.addEventListener("click", () => {
+                const item = button.closest(".faq-item");
+                const isOpen = item.classList.toggle("open");
+                button.setAttribute("aria-expanded", String(isOpen));
             });
         });
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.12 });
-        document.querySelectorAll(".reveal").forEach(element => observer.observe(element));
     </script>
 </body>
 

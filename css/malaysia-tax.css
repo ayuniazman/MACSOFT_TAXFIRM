@@ -595,6 +595,19 @@
 .malaysia-tax-page .mt-accordion-body p {
   margin: 0 0 12px;
 }
+.malaysia-tax-page .mt-accordion-body ul {
+  margin: 0 0 12px;
+  padding-left: 20px;
+  color: #656575;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.malaysia-tax-page .mt-accordion-body li {
+  margin: 0;
+  color: #656575;
+  font-size: 13px;
+  line-height: 1.9;
+}
 .malaysia-tax-page .mt-goods-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
