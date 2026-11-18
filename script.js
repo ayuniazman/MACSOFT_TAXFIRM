@@ -32,6 +32,7 @@ const closeVideoModal = () => {
     }
 
     videoModal.classList.remove("open");
+    watchFilmButton?.focus();
     videoModal.setAttribute("aria-hidden", "true");
 };
 
@@ -68,40 +69,32 @@ const revealObserver = new IntersectionObserver(
 document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
 
 // Footer year and demo contact feedback
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearElement = document.getElementById("year");
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
 const toast = document.querySelector(".toast");
+let toastTimeout;
+const showToast = (message) => {
+    if (!toast) return;
+
+    toast.textContent = message;
+    toast.classList.add("show");
+    window.clearTimeout(toastTimeout);
+    toastTimeout = window.setTimeout(() => toast.classList.remove("show"), 3600);
+};
+
 document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
     link.addEventListener("click", (event) => {
         if (link.href.includes(".example")) {
             event.preventDefault();
-            toast.classList.add("show");
-            window.setTimeout(() => toast.classList.remove("show"), 3600);
+            showToast("Contact details are demo placeholders. Please use the contact page.");
         }
     });
 });
 
-// Service dropdown on homepage
-const serviceCards = document.querySelectorAll('.service-dropdown');
-serviceCards.forEach((card) => {
-    const toggle = card.querySelector('.service-toggle');
-    const menu = card.querySelector('.service-dropdown-menu');
-
-    toggle.addEventListener('click', (event) => {
-        event.stopPropagation();
-        const isOpen = card.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', String(isOpen));
-        menu.hidden = !isOpen;
-    });
-});
-
-document.addEventListener('click', (event) => {
-    serviceCards.forEach((card) => {
-        const toggle = card.querySelector('.service-toggle');
-        const menu = card.querySelector('.service-dropdown-menu');
-        if (!card.contains(event.target)) {
-            card.classList.remove('open');
-            toggle.setAttribute('aria-expanded', 'false');
-            menu.hidden = true;
-        }
+document.querySelectorAll("[data-demo-message]").forEach((button) => {
+    button.addEventListener("click", () => {
+        showToast(button.dataset.demoMessage);
     });
 });
