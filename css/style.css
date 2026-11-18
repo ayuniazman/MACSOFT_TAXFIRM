@@ -189,7 +189,7 @@ select {
 .nav-services-menu summary {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   cursor: pointer;
   list-style: none;
 }
@@ -197,12 +197,13 @@ select {
   display: none;
 }
 .nav-services-menu summary::after {
-  content: "⌄";
-  display: inline-block;
-  font-size: 18px;
-  line-height: 1;
-  position: relative;
-  top: -7px;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid #8171bd;
+  border-bottom: 2px solid #8171bd;
+  transform: rotate(45deg);
+  margin-top: -4px;
 }
 .nav-services-menu summary:hover {
   color: var(--green);
@@ -384,17 +385,12 @@ select {
       .nav-services-menu summary {
         display: flex;
         align-items: center;
-        gap: 7px;
+        gap: 8px;
         cursor: pointer;
         list-style: none;
       }
       .nav-services-menu summary::-webkit-details-marker {
         display: none;
-      }
-      .nav-services-menu summary::after {
-        content: "⌄";
-        font-size: 16px;
-        line-height: 1;
       }
       .nav-services-menu summary:hover {
         color: var(--green);
@@ -3370,6 +3366,28 @@ header { view-transition-name: site-header; }
 .read-more span { transition: transform 0.2s ease; }
 .read-more:hover { color: var(--green); }
 .read-more:hover span { transform: translateX(4px); }
+
+/* Keep the tax-evasion image within its feature column. */
+.tax-planning-page .feature.flip {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tax-planning-page .feature.flip > * {
+  min-width: 0;
+}
+
+.tax-planning-page .feature.flip .feature-media img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .tax-planning-page .feature.flip {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 
 /* Homepage sections below the video hero */
 .home-page {
