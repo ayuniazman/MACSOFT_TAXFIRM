@@ -145,3 +145,16 @@
 
 /* the old circle divs in the About hero are replaced by this */
 .about-hero .circle { display: none; }
+
+.individual-tax-page .page-hero {
+  background: linear-gradient(180deg, #f3ecfc 0%, #ffffff 100%);
+}
+
+.individual-tax-page .page-hero::after {
+  display: none;
+}
+
+.individual-tax-page .page-hero::before {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 72%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 72%, transparent 100%);
+}

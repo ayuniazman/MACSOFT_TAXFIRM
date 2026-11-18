@@ -31,6 +31,12 @@
   white-space: nowrap;
 }
 
+.site-logo {
+  display: block;
+  width: 180px;
+  height: auto;
+}
+
 .site-brand-mark {
   width: 34px;
   height: 34px;
