@@ -438,3 +438,16 @@
     padding: 20px 24px;
   }
 }
+
+.tax-audit-page .feature-media {
+  border-radius: 20px; 
+  overflow: hidden; 
+}
+
+.tax-audit-page .feature-media img {
+  border-radius: 20px; 
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
