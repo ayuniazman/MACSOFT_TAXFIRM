@@ -8,38 +8,39 @@
         content="Transfer pricing in Malaysia: arm’s length principle, CbCR, documentation, methods and latest HASiL guidance.">
     <title>W&C | Transfer Pricing</title>
 
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/service-nav.css">
     <link rel="stylesheet" href="css/transfer-pricing-content.css">
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="transfer-pricing-page">
-    <header class="site-header">
-        <div class="site-nav">
-            <a class="brand northstar-brand" href="index.html" aria-label="W&C home">
-                <img class="site-logo" src="images/wandclogo.svg" alt="W&amp;C" width="180" height="53">
-            </a>
-            <button class="site-menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation"
-                aria-expanded="false" aria-controls="navLinks">☰</button>
-            <nav class="site-nav-links" id="navLinks" aria-label="Main navigation">
-                <a href="index.html">Home</a>
-                <details class="site-services">
-                    <summary>Services</summary>
-                    <div class="site-dropdown">
-                        <a href="malaysiaTax.html">Malaysia tax system</a>
-                        <a href="taxPlanning.html">Tax Planning</a>
-                        <a href="tax_audit.html">Income Tax Audit</a>
-                        <a href="tax_Incentive.html">Income Tax Incentive</a>
-                        <a href="transferPricing.html">Transfer pricing</a>
-                        <a href="withholdingTax.html">Withholding tax</a>
-                        <a href="integratedReportingService.html">Integrated Reporting Services</a>
-                    </div>
-                </details>
-                <a href="about.html">About us</a>
-                <a href="contact.html">Contact us</a>
-            </nav>
+    <header>
+      <div class="wrap nav">
 
-        </div>
+      <a class="brand northstar-brand" href="index.html" aria-label="W&C home">
+        <img class="site-logo" src="images/wandclogo.svg" alt="W&amp;C" width="180" height="53">
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <details class="nav-services-menu">
+          <summary>Services</summary>
+          <div class="nav-services-dropdown">
+            <a href="malaysiaTax.html">Malaysia tax system</a>
+            <a href="taxPlanning.html">Tax Planning</a>
+            <a href="tax_audit.html">Income Tax Audit</a>
+            <a href="tax_Incentive.html">Income Tax Incentive</a>
+            <a href="transferPricing.html" aria-current="page">Transfer pricing</a>
+            <a href="withholdingTax.html">Withholding tax</a>
+            <a href="integratedReportingService.html">Integrated Reporting Services</a>
+          </div>
+        </details>
+        <a href="about.html">About us</a>
+        <a href="contact.html">Contact us</a>
+      </nav>
+    </div>
     </header>
 
     <main id="top">
@@ -464,25 +465,8 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
     <script>
-        // Mobile navigation
-        const menuToggle = document.getElementById("menuToggle");
-        const navLinks = document.getElementById("navLinks");
-        if (menuToggle && navLinks) {
-            menuToggle.addEventListener("click", () => {
-                const isOpen = navLinks.classList.toggle("open");
-                menuToggle.setAttribute("aria-expanded", String(isOpen));
-                menuToggle.textContent = isOpen ? "×" : "☰";
-            });
-            navLinks.querySelectorAll("a").forEach(link => {
-                link.addEventListener("click", () => {
-                    navLinks.classList.remove("open");
-                    menuToggle.setAttribute("aria-expanded", "false");
-                    menuToggle.textContent = "☰";
-                });
-            });
-        }
-
         // Transfer pricing method explorer
         const methodInfo = {
             cup: {

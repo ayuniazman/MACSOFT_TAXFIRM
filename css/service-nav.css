@@ -34,7 +34,8 @@
 .site-logo {
   display: block;
   width: 180px;
-  height: auto;
+  height: 53px;
+  object-fit: contain;
 }
 
 .site-brand-mark {
