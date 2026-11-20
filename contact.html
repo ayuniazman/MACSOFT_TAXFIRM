@@ -186,26 +186,7 @@
     </div>
   </footer>
 
-    <script src="script.js"></script>
-    <script>
-      document.getElementById("contactForm").addEventListener("submit", function (event) {
-        event.preventDefault();
-        const formData = new FormData(event.currentTarget);
-        const fullName = [formData.get("fname"), formData.get("lname")].join(" ").trim();
-        const subject = "Website enquiry from " + fullName;
-        const body = [
-          "Name: " + fullName,
-          "Email: " + formData.get("email"),
-          "Phone: " + formData.get("phone"),
-          "",
-          formData.get("message"),
-        ].join("\n");
+    <script src="js/script.js"></script>
 
-        document.getElementById("formStatus").textContent =
-          "Opening your email app. If it does not open, email info@northstartax.my.";
-        window.location.href = "mailto:info@northstartax.my?subject=" +
-          encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-      });
-    </script>
   </body>
 </html>
