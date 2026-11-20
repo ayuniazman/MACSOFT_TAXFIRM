@@ -2396,6 +2396,45 @@ footer {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+  .tax-audit-page .feature,
+  .tax-audit-page .feature-media,
+  .tax-audit-page .feature-text {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .tax-audit-page .feature {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .tax-audit-page .feature-media img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .tax-planning-page .feature {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+  }
+  .tax-planning-page .feature-media,
+  .tax-planning-page .feature-text {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .tax-planning-page .feature-media img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .tax-planning-page .feature-media,
+  .tax-planning-page .feature-text {
+    width: 100%;
+    min-width: 0;
+  }
+  .tax-planning-page .feature-media img {
+    width: 100%;
+    max-width: 100%;
+  }
   .tax-planning-page .feature.flip .feature-text,
   .tax-planning-page .feature.flip .feature-media {
     order: initial;
@@ -3558,10 +3597,20 @@ header { view-transition-name: site-header; }
 }
 .home-page .about-art {
   background: linear-gradient(145deg, #8171b5, #5f548d);
+  padding: 0;
 }
 .home-page .about-art::before,
 .home-page .about-art::after {
-  border-color: rgba(235, 230, 247, .48);
+  display: none;
+}
+.home-page .about-art-image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .home-page .art-big {
   color: #fff;
