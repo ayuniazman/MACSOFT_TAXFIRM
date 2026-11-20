@@ -288,9 +288,9 @@ document.querySelectorAll(".mt-accordion-trigger").forEach((trigger) => {
 });
 
 // contact form submission script
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", function (event) {
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const fullName = [formData.get("fname"), formData.get("lname")]
@@ -313,3 +313,4 @@ document
       "&body=" +
       encodeURIComponent(body);
   });
+}
