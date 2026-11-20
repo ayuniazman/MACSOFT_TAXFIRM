@@ -409,67 +409,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Transfer pricing method explorer
-        const methodInfo = {
-            cup: {
-                name: "Comparable Uncontrolled Price (CUP)",
-                type: "Traditional transaction method",
-                description: "Compares the price charged in a controlled transaction with the price charged in a comparable transaction between independent parties. It is most useful where reliable product or service price comparisons are available.",
-                example: "A company sells the same product to a related company and an independent customer. The independent-party price may be a direct comparable, subject to adjustments for differences."
-            },
-            rpm: {
-                name: "Resale Price Method (RPM)",
-                type: "Traditional transaction method",
-                description: "Starts with the price at which a product purchased from an associated enterprise is resold to an independent customer. An appropriate gross resale margin is deducted to determine an arm’s length purchase price.",
-                example: "A related distributor buys goods from its group company and resells them to external customers. The distributor’s gross margin is compared with margins earned by independent distributors."
-            },
-            cpm: {
-                name: "Cost Plus Method (CPM)",
-                type: "Traditional transaction method",
-                description: "Starts with the supplier’s costs of providing goods or services in a controlled transaction. An appropriate mark-up is added to those costs to determine an arm’s length price.",
-                example: "A related manufacturer supplies products to a group company. Its relevant production costs are identified and an appropriate comparable mark-up is applied."
-            },
-            psm: {
-                name: "Profit Split Method",
-                type: "Transactional profit method",
-                description: "Identifies the combined operating profit from the controlled transactions and splits that profit between the associated enterprises on an economically valid basis that reflects their respective contributions.",
-                example: "Two group companies jointly develop and exploit valuable intangibles. Their combined profit may be divided based on each company’s functions, assets, risks and contributions."
-            },
-            tnmm: {
-                name: "Transactional Net Margin Method (TNMM)",
-                type: "Transactional profit method",
-                description: "Examines the net profit margin earned by a taxpayer from a controlled transaction relative to an appropriate base, such as costs, sales or assets, and compares it with comparable independent businesses or transactions.",
-                example: "A related service provider’s operating margin on its costs is compared with the margins earned by independent service providers performing similar functions."
-            }
-        };
-        const methodDetail = document.getElementById("method-detail");
-        document.querySelectorAll(".method-tab").forEach(tab => {
-            tab.addEventListener("click", () => {
-                document.querySelectorAll(".method-tab").forEach(other => {
-                    other.classList.remove("active");
-                    other.setAttribute("aria-selected", "false");
-                });
-                tab.classList.add("active");
-                tab.setAttribute("aria-selected", "true");
-                const method = methodInfo[tab.dataset.method];
-                methodDetail.querySelector(".method-type").textContent = method.type;
-                methodDetail.querySelector("h3").textContent = method.name;
-                methodDetail.querySelector("p").textContent = method.description;
-                const example = methodDetail.querySelector(".method-example");
-                example.querySelector("span").textContent = method.example;
-            });
-        });
-
-        // FAQ
-        document.querySelectorAll(".faq-q").forEach(button => {
-            button.addEventListener("click", () => {
-                const item = button.closest(".faq-item");
-                const isOpen = item.classList.toggle("open");
-                button.setAttribute("aria-expanded", String(isOpen));
-            });
-        });
-    </script>
 </body>
 
 </html>
