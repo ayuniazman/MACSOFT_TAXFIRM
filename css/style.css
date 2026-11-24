@@ -50,6 +50,25 @@ a {
   margin-inline: auto;
 }
 
+/*LOGO (all pages)*/
+.site-logo {
+  width: 170px !important;     
+  height: auto !important;     
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .site-logo {
+    width: 190px !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .site-logo {
+    width: 160px !important;
+  }
+}
+
 header {
   position: sticky;
   top: 0;
