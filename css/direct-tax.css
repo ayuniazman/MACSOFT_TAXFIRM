@@ -1,0 +1,548 @@
+.direct-tax-page {
+  background: #fff;
+  color: #2d2f38;
+}
+
+.direct-tax-page .dt-hero {
+  overflow: hidden;
+  background: #f3f1f7;
+}
+
+.direct-tax-page .dt-hero-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: clamp(35px, 6vw, 90px);
+  padding-top: 78px;
+  padding-bottom: 78px;
+}
+
+.direct-tax-page .dt-eyebrow,
+.direct-tax-page .dt-kicker {
+  margin: 0 0 17px;
+  color: #7567a8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.direct-tax-page .dt-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.direct-tax-page .dt-eyebrow::before {
+  width: 27px;
+  height: 2px;
+  background: #7567a8;
+  content: "";
+}
+
+.direct-tax-page .dt-hero h1 {
+  max-width: 650px;
+  margin: 0 0 18px;
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 1.04;
+  letter-spacing: -0.065em;
+}
+
+.direct-tax-page .dt-hero-subtitle {
+  margin-bottom: 20px;
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.04em;
+}
+
+.direct-tax-page .dt-hero-description {
+  max-width: 545px;
+  margin-bottom: 28px;
+  color: #6a6f7b;
+}
+
+.direct-tax-page .dt-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 14px 20px;
+  border-radius: 9px;
+  background: #7a6bb2;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.direct-tax-page .dt-button:hover {
+  transform: translateY(-2px);
+  background: #5f548d;
+}
+
+.direct-tax-page .dt-hero-media {
+  position: relative;
+}
+
+.direct-tax-page .dt-hero-media::after {
+  position: absolute;
+  right: -15px;
+  bottom: -15px;
+  z-index: 0;
+  width: 42%;
+  height: 42%;
+  border: 1px solid #c9c3dc;
+  border-radius: 18px;
+  content: "";
+}
+
+.direct-tax-page .dt-hero-media img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 440px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.direct-tax-page .dt-image-caption {
+  position: absolute;
+  bottom: 17px;
+  left: 17px;
+  z-index: 2;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.96);
+  color: #62558f;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.direct-tax-page .dt-local-nav {
+  position: sticky;
+  top: 82px;
+  z-index: 10;
+  border-bottom: 1px solid #e7e6ee;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+}
+
+.direct-tax-page .dt-local-nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.direct-tax-page .dt-local-nav a {
+  display: inline-block;
+  padding: 16px 0;
+  border-bottom: 2px solid transparent;
+  color: #6a6f7b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.direct-tax-page .dt-local-nav a:hover,
+.direct-tax-page .dt-local-nav a:focus-visible {
+  border-bottom-color: #7a6bb2;
+  color: #5f548d;
+}
+
+.direct-tax-page [id] {
+  scroll-margin-top: 150px;
+}
+
+.direct-tax-page .dt-intro {
+  padding: 92px 0 88px;
+}
+
+.direct-tax-page .dt-intro-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 90px;
+}
+
+.direct-tax-page .dt-intro h2,
+.direct-tax-page .dt-section-heading h2,
+.direct-tax-page .dt-details-heading h2,
+.direct-tax-page .dt-cta h2 {
+  margin: 0 0 20px;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.14;
+  letter-spacing: -0.055em;
+}
+
+.direct-tax-page .dt-intro-copy {
+  max-width: 690px;
+  color: #555b66;
+  font-size: 17px;
+}
+
+.direct-tax-page .dt-intro-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.direct-tax-page .dt-map-section {
+  padding: 82px 0 90px;
+  background: #f3f1f7;
+}
+
+.direct-tax-page .dt-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 32px;
+}
+
+.direct-tax-page .dt-section-heading p:last-child {
+  max-width: 365px;
+  margin-bottom: 4px;
+  color: #6a6f7b;
+  font-size: 14px;
+}
+
+.direct-tax-page .dt-tax-map {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.direct-tax-page .dt-map-card {
+  display: flex;
+  min-height: 205px;
+  flex-direction: column;
+  padding: 22px 18px;
+  border: 1px solid #e7e6ee;
+  border-radius: 12px;
+  background: #fff;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.direct-tax-page .dt-map-card:hover {
+  transform: translateY(-4px);
+  border-color: #bdb4d8;
+  box-shadow: 0 12px 30px rgba(77, 69, 104, 0.1);
+}
+
+.direct-tax-page .dt-number {
+  margin-bottom: 25px;
+  color: #7567a8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.direct-tax-page .dt-map-card strong {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+}
+
+.direct-tax-page .dt-map-desc {
+  color: #6a6f7b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.direct-tax-page .dt-arrow {
+  align-self: flex-end;
+  margin-top: auto;
+  color: #7567a8;
+}
+
+.direct-tax-page .dt-details-section {
+  padding: 96px 0;
+}
+
+.direct-tax-page .dt-details-heading {
+  max-width: 680px;
+  margin-bottom: 38px;
+}
+
+.direct-tax-page .dt-details-heading p:last-child {
+  margin-bottom: 0;
+  color: #6a6f7b;
+}
+
+.direct-tax-page .dt-tax-card {
+  display: grid;
+  grid-template-columns: 265px minmax(0, 1fr);
+  gap: 48px;
+  padding: 40px 0;
+  border-top: 1px solid #e7e6ee;
+}
+
+.direct-tax-page .dt-tax-card:last-child {
+  border-bottom: 1px solid #e7e6ee;
+}
+
+.direct-tax-page .dt-tax-card-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.direct-tax-page .dt-card-index {
+  margin-bottom: 25px;
+  color: #7567a8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.direct-tax-page .dt-card-symbol {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border-radius: 14px;
+  background: #f0eef6;
+  color: #7567a8;
+  font-size: 27px;
+}
+
+.direct-tax-page .dt-tax-card h3 {
+  margin: 0 0 9px;
+  font-size: clamp(27px, 3vw, 37px);
+  line-height: 1.17;
+  letter-spacing: -0.045em;
+}
+
+.direct-tax-page .dt-legislation {
+  margin-bottom: 20px;
+  color: #7567a8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.direct-tax-page .dt-card-summary {
+  max-width: 750px;
+  margin-bottom: 20px;
+  color: #555b66;
+}
+
+.direct-tax-page .dt-figures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 21px;
+}
+
+.direct-tax-page .dt-figures span {
+  padding: 8px 11px;
+  border-radius: 7px;
+  background: #f0eef6;
+  color: #5f548d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.direct-tax-page .dt-key-point {
+  margin: 0 0 22px;
+  padding: 16px 19px;
+  border-left: 3px solid #7a6bb2;
+  border-radius: 0 8px 8px 0;
+  background: #f6f5f9;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.direct-tax-page .dt-key-point strong {
+  color: #5f548d;
+}
+
+.direct-tax-page .dt-accordions {
+  border-top: 1px solid #e7e6ee;
+}
+
+.direct-tax-page .dt-accordions details {
+  border-bottom: 1px solid #e7e6ee;
+}
+
+.direct-tax-page .dt-accordions summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 2px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  list-style: none;
+}
+
+.direct-tax-page .dt-accordions summary::-webkit-details-marker {
+  display: none;
+}
+
+.direct-tax-page .dt-accordions summary::after {
+  color: #7567a8;
+  content: "+";
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.direct-tax-page .dt-accordions details[open] summary::after {
+  content: "−";
+}
+
+.direct-tax-page .dt-accordion-body {
+  padding: 0 20px 18px 2px;
+  color: #626875;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.direct-tax-page .dt-accordion-body p {
+  margin-bottom: 12px;
+}
+
+.direct-tax-page .dt-accordion-body p:last-child {
+  margin-bottom: 0;
+}
+
+.direct-tax-page .dt-cta {
+  padding: 68px 0;
+  background: #eeebf5;
+}
+
+.direct-tax-page .dt-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.direct-tax-page .dt-cta h2 {
+  max-width: 620px;
+  margin-bottom: 13px;
+  font-size: clamp(30px, 3.5vw, 44px);
+}
+
+.direct-tax-page .dt-cta-inner > div > p:last-child {
+  margin-bottom: 0;
+  color: #626875;
+}
+
+.direct-tax-page .dt-disclaimer {
+  padding: 20px 0;
+  background: #f8f8fa;
+  color: #6a6f7b;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.direct-tax-page .dt-disclaimer strong {
+  color: #2d2f38;
+}
+
+@media (max-width: 900px) {
+  .direct-tax-page .dt-tax-map {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .direct-tax-page .dt-map-card:last-child {
+    grid-column: span 2;
+  }
+
+  .direct-tax-page .dt-tax-card {
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .direct-tax-page .dt-intro-grid {
+    gap: 45px;
+  }
+}
+
+@media (max-width: 680px) {
+  .direct-tax-page .dt-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-top: 54px;
+    padding-bottom: 55px;
+  }
+
+  .direct-tax-page .dt-hero-media img {
+    height: 320px;
+  }
+
+  .direct-tax-page .dt-local-nav {
+    top: 68px;
+  }
+
+  .direct-tax-page .dt-local-nav-inner {
+    gap: 23px;
+  }
+
+  .direct-tax-page .dt-intro {
+    padding: 66px 0;
+  }
+
+  .direct-tax-page .dt-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .direct-tax-page .dt-map-section,
+  .direct-tax-page .dt-details-section {
+    padding: 66px 0;
+  }
+
+  .direct-tax-page .dt-section-heading {
+    display: block;
+  }
+
+  .direct-tax-page .dt-tax-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px 0;
+  }
+
+  .direct-tax-page .dt-tax-card-side {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .direct-tax-page .dt-card-index {
+    margin-bottom: 0;
+  }
+
+  .direct-tax-page .dt-card-symbol {
+    width: 42px;
+    height: 42px;
+    font-size: 21px;
+  }
+
+  .direct-tax-page .dt-cta-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .direct-tax-page .dt-tax-map {
+    grid-template-columns: 1fr;
+  }
+
+  .direct-tax-page .dt-map-card:last-child {
+    grid-column: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .direct-tax-page .dt-button,
+  .direct-tax-page .dt-map-card {
+    transition: none;
+  }
+}
