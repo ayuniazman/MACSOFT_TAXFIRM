@@ -73,7 +73,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(247, 246, 240, 0.91);
+  background: #ffff;
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(232, 223, 230, 0.8);
 }
@@ -327,7 +327,7 @@ select {
         position: sticky;
         top: 0;
         z-index: 20;
-        background: rgba(247, 246, 240, 0.91);
+        background: #ffff;
         backdrop-filter: blur(16px);
         border-bottom: 1px solid rgba(232, 223, 230, 0.8);
       }
