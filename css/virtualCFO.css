@@ -1,0 +1,597 @@
+/* =========================================================
+   W&C VIRTUAL CFO PAGE
+   File: css/virtualCFO.css
+   Page-specific styles only. Shared navigation, buttons,
+   typography and footer styles remain in the global files.
+   ========================================================= */
+
+.virtual-cfo-page {
+    background: #fff;
+    color: #2d2f38;
+}
+
+/* ---------- Shared section spacing ---------- */
+
+.virtual-cfo-page .section {
+    padding: 88px 0;
+}
+
+.virtual-cfo-page .eyebrow {
+    display: inline-block;
+    color: #7567a8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .13em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+/* ---------- Hero ---------- */
+
+.virtual-cfo-page .page-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 76px 0;
+    background-color: #f8f6fb;
+    background-image:
+        radial-gradient(
+            circle clamp(150px, 22vw, 220px) at 28% 8%,
+            rgba(225, 199, 249, 0.5) 0 calc(100% - 2px),
+            rgba(199, 166, 235, 0.58) calc(100% - 2px) 100%,
+            transparent calc(100% + 1px)
+        ),
+        radial-gradient(
+            circle clamp(260px, 32vw, 320px) at 4% 112%,
+            rgba(225, 199, 249, 0.46) 0 calc(100% - 2px),
+            rgba(199, 166, 235, 0.54) calc(100% - 2px) 100%,
+            transparent calc(100% + 1px)
+        ),
+        radial-gradient(
+            circle clamp(350px, 51vw, 480px) at 99% 112%,
+            rgba(225, 199, 249, 0.4) 0 calc(100% - 2px),
+            rgba(199, 166, 235, 0.5) calc(100% - 2px) 100%,
+            transparent calc(100% + 1px)
+        ),
+        linear-gradient(115deg, #f3eefa 0%, #fbfaff 52%, #f7f3fb 100%);
+}
+
+.virtual-cfo-page .virtual-cfo-hero {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    align-items: center;
+    gap: 58px;
+}
+
+.virtual-cfo-page .hero-text h1 {
+    margin: 13px 0 18px;
+    color: #2d2f38;
+    font-size: clamp(42px, 5vw, 66px);
+    font-weight: 800;
+    line-height: 1.06;
+    letter-spacing: -.06em;
+}
+
+.virtual-cfo-page .hero-text > p {
+    max-width: 550px;
+    margin: 0 0 18px;
+    color: #6a6f7b;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.virtual-cfo-page .hero-text .virtual-cfo-hero-lead {
+    margin-bottom: 10px;
+    color: #454250;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.55;
+}
+
+.virtual-cfo-page .hero-text .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 9px;
+}
+
+.virtual-cfo-page .hero-image img {
+    display: block;
+    width: 100%;
+    height: 370px;
+    border-radius: 20px;
+    box-shadow: 0 24px 70px rgba(77, 69, 104, .12);
+    object-fit: cover;
+}
+
+/* ---------- Introduction ---------- */
+
+.virtual-cfo-page .virtual-cfo-intro {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    align-items: start;
+    gap: 72px;
+}
+
+.virtual-cfo-page .virtual-cfo-intro h2,
+.virtual-cfo-page .section-heading h2,
+.virtual-cfo-page .virtual-cfo-why h2,
+.virtual-cfo-page .virtual-cfo-faq h2,
+.virtual-cfo-page .virtual-cfo-cta h2 {
+    margin: 13px 0 18px;
+    color: #2d2f38;
+    font-size: clamp(31px, 3.7vw, 46px);
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: -.05em;
+}
+
+.virtual-cfo-page .virtual-cfo-copy {
+    color: #626875;
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.virtual-cfo-page .virtual-cfo-copy p {
+    margin: 0 0 17px;
+}
+
+.virtual-cfo-page .virtual-cfo-copy p:last-child {
+    margin-bottom: 0;
+}
+
+/* ---------- Section headings ---------- */
+
+.virtual-cfo-page .section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 36px;
+    margin-bottom: 34px;
+}
+
+.virtual-cfo-page .section-heading > div {
+    max-width: 650px;
+}
+
+.virtual-cfo-page .section-heading h2 {
+    margin-bottom: 0;
+}
+
+.virtual-cfo-page .section-heading > p {
+    max-width: 420px;
+    margin: 0 0 4px;
+    color: #6a6f7b;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* ---------- Services ---------- */
+
+.virtual-cfo-page .virtual-cfo-services {
+    background: #f5f3f8;
+}
+
+.virtual-cfo-page .virtual-cfo-service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.virtual-cfo-page .virtual-cfo-card {
+    position: relative;
+    min-height: 270px;
+    padding: 25px;
+    overflow: hidden;
+    border: 1px solid #e7e4ee;
+    border-radius: 14px;
+    background: #fff;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.virtual-cfo-page .virtual-cfo-card:hover {
+    transform: translateY(-4px);
+    border-color: #d5cde7;
+    box-shadow: 0 16px 36px rgba(54, 45, 83, .08);
+}
+
+.virtual-cfo-page .virtual-cfo-card-number {
+    color: #7567a8;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .13em;
+}
+
+.virtual-cfo-page .virtual-cfo-card-icon {
+    display: grid;
+    width: 43px;
+    height: 43px;
+    margin: 22px 0 16px;
+    place-items: center;
+    border-radius: 12px;
+    background: #f0edf7;
+    color: #7567a8;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.virtual-cfo-page .virtual-cfo-card h3 {
+    margin: 0 0 10px;
+    color: #2d2f38;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.virtual-cfo-page .virtual-cfo-card p {
+    margin: 0;
+    color: #6a6f7b;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.virtual-cfo-page .virtual-cfo-disclaimer {
+    max-width: 850px;
+    margin: 22px 0 0;
+    color: #777985;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* ---------- Who we support ---------- */
+
+.virtual-cfo-page .virtual-cfo-centered-heading {
+    display: block;
+    max-width: 760px;
+    margin: 0 auto 36px;
+    text-align: center;
+}
+
+.virtual-cfo-page .virtual-cfo-centered-heading > p {
+    max-width: 650px;
+    margin: 16px auto 0;
+}
+
+.virtual-cfo-page .virtual-cfo-audience-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.virtual-cfo-page .virtual-cfo-audience-card {
+    padding: 24px 21px;
+    border: 1px solid #e8e6ed;
+    border-radius: 13px;
+    background: #fff;
+}
+
+.virtual-cfo-page .virtual-cfo-audience-card > span {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: #7567a8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.virtual-cfo-page .virtual-cfo-audience-card h3 {
+    margin: 0 0 10px;
+    color: #2d2f38;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.virtual-cfo-page .virtual-cfo-audience-card p {
+    margin: 0;
+    color: #6a6f7b;
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+/* ---------- Why W&C ---------- */
+
+.virtual-cfo-page .virtual-cfo-why {
+    background: #f8f7fa;
+}
+
+.virtual-cfo-page .virtual-cfo-why-layout {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    align-items: start;
+    gap: 76px;
+}
+
+.virtual-cfo-page .virtual-cfo-why-intro h2 {
+    margin-bottom: 18px;
+}
+
+.virtual-cfo-page .virtual-cfo-why-intro > p,
+.virtual-cfo-page .virtual-cfo-faq-intro > p {
+    color: #6a6f7b;
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+.virtual-cfo-page .text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 12px;
+    color: #66568f;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.virtual-cfo-page .text-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.virtual-cfo-page .virtual-cfo-benefits {
+    border-top: 1px solid #e4e1e9;
+}
+
+.virtual-cfo-page .virtual-cfo-benefits article {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 17px;
+    padding: 23px 0;
+    border-bottom: 1px solid #e4e1e9;
+}
+
+.virtual-cfo-page .virtual-cfo-benefit-number {
+    padding-top: 3px;
+    color: #7567a8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .1em;
+}
+
+.virtual-cfo-page .virtual-cfo-benefits h3 {
+    margin: 0 0 7px;
+    color: #2d2f38;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.virtual-cfo-page .virtual-cfo-benefits p {
+    margin: 0;
+    color: #6a6f7b;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+/* ---------- Process ---------- */
+
+.virtual-cfo-page .virtual-cfo-steps {
+    border-top: 1px solid #e7e6ee;
+}
+
+.virtual-cfo-page .virtual-cfo-steps article {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 20px;
+    padding: 25px 0;
+    border-bottom: 1px solid #e7e6ee;
+}
+
+.virtual-cfo-page .virtual-cfo-step-number {
+    color: #7567a8;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.virtual-cfo-page .virtual-cfo-steps h3 {
+    margin: 0 0 8px;
+    color: #2d2f38;
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.virtual-cfo-page .virtual-cfo-steps p {
+    max-width: 780px;
+    margin: 0;
+    color: #6a6f7b;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ---------- FAQ ---------- */
+
+.virtual-cfo-page .virtual-cfo-faq {
+    background: #f8f7fa;
+}
+
+.virtual-cfo-page .virtual-cfo-faq-layout {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    align-items: start;
+    gap: 72px;
+}
+
+.virtual-cfo-page .virtual-cfo-faq-intro h2 {
+    margin-bottom: 16px;
+}
+
+.virtual-cfo-page .virtual-cfo-faq-list {
+    border-top: 1px solid #e2dfe9;
+}
+
+.virtual-cfo-page .virtual-cfo-faq-list details {
+    border-bottom: 1px solid #e2dfe9;
+}
+
+.virtual-cfo-page .virtual-cfo-faq-list summary {
+    position: relative;
+    padding: 21px 38px 21px 0;
+    color: #30313a;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+    list-style: none;
+}
+
+.virtual-cfo-page .virtual-cfo-faq-list summary::-webkit-details-marker {
+    display: none;
+}
+
+.virtual-cfo-page .virtual-cfo-faq-list summary::after {
+    position: absolute;
+    top: 18px;
+    right: 4px;
+    color: #7567a8;
+    content: "+";
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.virtual-cfo-page .virtual-cfo-faq-list details[open] summary::after {
+    content: "−";
+}
+
+.virtual-cfo-page .virtual-cfo-faq-list details p {
+    max-width: 720px;
+    margin: -3px 35px 21px 0;
+    color: #6a6f7b;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ---------- CTA ---------- */
+
+.virtual-cfo-page .virtual-cfo-cta {
+    padding: 70px 0;
+    background: #eeebf5;
+}
+
+.virtual-cfo-page .virtual-cfo-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.virtual-cfo-page .virtual-cfo-cta h2 {
+    max-width: 690px;
+    margin-bottom: 13px;
+}
+
+.virtual-cfo-page .virtual-cfo-cta p {
+    margin: 0;
+    color: #626875;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.virtual-cfo-page .virtual-cfo-cta .btn {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ---------- Responsive: tablet ---------- */
+
+@media (max-width: 1000px) {
+    .virtual-cfo-page .virtual-cfo-audience-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .virtual-cfo-page .virtual-cfo-why-layout,
+    .virtual-cfo-page .virtual-cfo-faq-layout {
+        gap: 42px;
+    }
+
+    .virtual-cfo-page .virtual-cfo-service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ---------- Responsive: mobile ---------- */
+
+@media (max-width: 680px) {
+    .virtual-cfo-page .section {
+        padding: 60px 0;
+    }
+
+    .virtual-cfo-page .page-hero {
+        padding: 52px 0;
+    }
+
+    .virtual-cfo-page .virtual-cfo-hero,
+    .virtual-cfo-page .virtual-cfo-intro,
+    .virtual-cfo-page .virtual-cfo-why-layout,
+    .virtual-cfo-page .virtual-cfo-faq-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .virtual-cfo-page .hero-text h1 {
+        font-size: clamp(39px, 11vw, 54px);
+    }
+
+    .virtual-cfo-page .hero-image img {
+        height: 245px;
+        border-radius: 15px;
+    }
+
+    .virtual-cfo-page .section-heading {
+        display: block;
+        margin-bottom: 27px;
+    }
+
+    .virtual-cfo-page .section-heading > p {
+        margin-top: 15px;
+    }
+
+    .virtual-cfo-page .virtual-cfo-service-grid,
+    .virtual-cfo-page .virtual-cfo-audience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .virtual-cfo-page .virtual-cfo-card {
+        min-height: 0;
+    }
+
+    .virtual-cfo-page .virtual-cfo-card-icon {
+        margin-top: 17px;
+    }
+
+    .virtual-cfo-page .virtual-cfo-audience-card > span {
+        margin-bottom: 15px;
+    }
+
+    .virtual-cfo-page .virtual-cfo-steps article {
+        grid-template-columns: 42px 1fr;
+        gap: 12px;
+        padding: 21px 0;
+    }
+
+    .virtual-cfo-page .virtual-cfo-benefits article {
+        grid-template-columns: 36px 1fr;
+        gap: 12px;
+    }
+
+    .virtual-cfo-page .virtual-cfo-cta {
+        padding: 55px 0;
+    }
+
+    .virtual-cfo-page .virtual-cfo-cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 23px;
+    }
+}
+
+/* ---------- Reduced motion accessibility ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .virtual-cfo-page .virtual-cfo-card {
+        transition: none;
+    }
+
+    .virtual-cfo-page .virtual-cfo-card:hover {
+        transform: none;
+    }
+}
