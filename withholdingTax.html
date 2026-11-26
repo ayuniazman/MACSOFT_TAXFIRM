@@ -27,17 +27,19 @@
         <details class="nav-services-menu">
           <summary>Services</summary>
           <div class="nav-services-dropdown">
-            <a href="malaysiaTax.html">Malaysia tax system</a>
+             <a href="malaysiaTax.html">Malaysia Tax System</a>
             <a href="taxPlanning.html">Tax Planning</a>
             <a href="tax_audit.html">Income Tax Audit and Investigation</a>
             <a href="tax_Incentive.html">Income Tax Incentive</a>
             <a href="individualtaxcompliance_advisory.html">Individual Tax Compliance and Advisory</a>
-            <a href="transferPricing.html">Transfer pricing</a>
-            <a href="withholdingTax.html" aria-current="page">Withholding tax</a>
+            <a href="transferPricing.html">Transfer Pricing</a>
+            <a href="withholdingTax.html">Withholding Tax</a>
+            <a href="dueDiligence.html">Due Diligence</a>
           </div>
         </details>
-        <a href="about.html">About us</a>
-        <a href="contact.html">Contact us</a>
+        <a href="about.html">About Us</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact Us</a>
       </nav>
     </div>
   </header>
@@ -399,19 +401,23 @@
 
                 <div class="footer-col">
                     <b>Services</b>
-                    <a href="malaysiaTax.html">Malaysia Tax System</a>
+                     <a href="malaysiaTax.html">Malaysia Tax System</a>
                     <a href="taxPlanning.html">Tax Planning</a>
-                    <a href="tax_audit.html">Income Tax Audit</a>
+                    <a href="tax_audit.html">Income Tax Audit and Investigation</a>
                     <a href="tax_Incentive.html">Income Tax Incentive</a>
+                    <a href="individualtaxcompliance_advisory.html">Individual Tax Compliance and Advisory</a>
                     <a href="transferPricing.html">Transfer Pricing</a>
                     <a href="withholdingTax.html">Withholding Tax</a>
+                    <a href="dueDiligence.html">Due Diligence</a>
                 </div>
 
                 <div class="footer-col">
                     <b>Company</b>
                     <a href="index.html">Home</a>
                     <a href="about.html">About Us</a>
+                    <a href="careers.html">Careers</a>
                     <a href="contact.html">Contact Us</a>
+                    <a href="contact.html#find-us">Find Us →</a>
                 </div>
 
                 <div class="footer-col">
@@ -445,71 +451,7 @@
         </div>
     </footer>
 
-  <script>
-    const navMenuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
-
-    navMenuToggle.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("open");
-      navMenuToggle.setAttribute("aria-expanded", String(isOpen));
-      navMenuToggle.textContent = isOpen ? "×" : "☰";
-    });
-
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        navMenuToggle.setAttribute("aria-expanded", "false");
-        navMenuToggle.textContent = "☰";
-      });
-    });
-
-    // Expand or collapse payment category details.
-    document.querySelectorAll(".expand-btn").forEach(button => {
-      button.addEventListener("click", () => {
-        const detail = button.nextElementSibling;
-        const expanded = button.getAttribute("aria-expanded") === "true";
-
-        button.setAttribute("aria-expanded", String(!expanded));
-        detail.hidden = expanded;
-
-        button.querySelector("span:first-child").textContent =
-          expanded ? "Explore category" : "Close details";
-      });
-    });
-
-    // Live search across payment categories.
-    const searchInput = document.getElementById("paymentSearch");
-    const cards = [...document.querySelectorAll(".payment-card")];
-    const resultCount = document.getElementById("resultCount");
-    const paymentGrid = document.getElementById("paymentGrid");
-
-    const noResults = document.createElement("div");
-    noResults.className = "no-results";
-    noResults.textContent =
-      "No matching categories found. Try another search term.";
-    noResults.hidden = true;
-    paymentGrid.appendChild(noResults);
-
-    searchInput.addEventListener("input", () => {
-      const query = searchInput.value.trim().toLowerCase();
-      let visible = 0;
-
-      cards.forEach(card => {
-        const searchableText =
-          (card.innerText + " " + card.dataset.search).toLowerCase();
-
-        const matches = searchableText.includes(query);
-        card.hidden = !matches;
-
-        if (matches) visible++;
-      });
-
-      resultCount.textContent =
-        `${visible} categor${visible === 1 ? "y" : "ies"}`;
-
-      noResults.hidden = visible !== 0;
-    });
-  </script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

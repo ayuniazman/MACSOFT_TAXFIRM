@@ -30,16 +30,19 @@
           <details class="nav-services-menu">
             <summary>Services</summary>
             <div class="nav-services-dropdown">
-              <a href="malaysiaTax.html">Malaysia tax system</a>
-              <a href="taxPlanning.html">Tax Planning</a>
-              <a href="tax_audit.html">Income Tax Audit</a>
-              <a href="tax_Incentive.html">Income Tax Incentive</a>
-              <a href="transferPricing.html">Transfer pricing</a>
-              <a href="withholdingTax.html">Withholding tax</a>
+               <a href="malaysiaTax.html">Malaysia Tax System</a>
+            <a href="taxPlanning.html">Tax Planning</a>
+            <a href="tax_audit.html">Income Tax Audit and Investigation</a>
+            <a href="tax_Incentive.html">Income Tax Incentive</a>
+            <a href="individualtaxcompliance_advisory.html">Individual Tax Compliance and Advisory</a>
+            <a href="transferPricing.html">Transfer Pricing</a>
+            <a href="withholdingTax.html">Withholding Tax</a>
+            <a href="dueDiligence.html">Due Diligence</a>
             </div>
           </details>
-          <a href="about.html">About us</a>
-          <a href="contact.html">Contact us</a>
+          <a href="about.html">About Us</a>
+          <a href="careers.html">Careers</a>
+          <a href="contact.html">Contact Us</a>
         </nav>
       </div>
     </header>
@@ -131,6 +134,48 @@
 
         </div>
       </section>
+
+      <!--GOOGLE MAPS + WAZE-->
+      <section class="section map-section" id="find-us">
+        <div class="wrap">
+          <div class="section-heading">
+            <span class="eyebrow">Find Us</span>
+            <h2>Visit Our Office</h2>
+            <p>
+              Use Google Maps for directions, or tap Waze to open
+              the route directly in the app.
+            </p>
+          </div>
+
+          <div class="map-embed">
+            <!--letak yang betul-->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.7882323529856!2d101.6868473!3d3.139003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zV0MmQyBUYXggU2VydmljZXM!5e0!3m2!1sen!2smy!4v1700000000000"
+              width="100%"
+              height="420"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="W&C Tax Services office location on Google Maps">
+            </iframe>
+          </div>
+
+          <div class="map-actions">
+            <a class="btn map-btn"
+               href="https://www.google.com/maps/dir/?api=1&destination=3.139003,101.6868473"
+               target="_blank" rel="noopener">
+              Open in Google Maps →
+            </a>
+            <a class="btn waze-btn"
+               href="https://waze.com/ul?ll=3.139003,101.6868473&navigate=yes"
+               target="_blank" rel="noopener">
+              Open in Waze →
+            </a>
+          </div>
+        </div>
+      </section>
+
     </main>
 
 <footer class="mega-footer">
@@ -140,12 +185,14 @@
 
         <div class="footer-col">
           <b>Services</b>
-          <a href="malaysiaTax.html">Malaysia Tax System</a>
-          <a href="taxPlanning.html">Tax Planning</a>
-          <a href="tax_audit.html">Income Tax Audit</a>
-          <a href="tax_Incentive.html">Income Tax Incentive</a>
-          <a href="transferPricing.html">Transfer Pricing</a>
-          <a href="withholdingTax.html">Withholding Tax</a>
+            <a href="malaysiaTax.html">Malaysia Tax System</a>
+            <a href="taxPlanning.html">Tax Planning</a>
+            <a href="tax_audit.html">Income Tax Audit and Investigation</a>
+            <a href="tax_Incentive.html">Income Tax Incentive</a>
+            <a href="individualtaxcompliance_advisory.html">Individual Tax Compliance and Advisory</a>
+            <a href="transferPricing.html">Transfer Pricing</a>
+            <a href="withholdingTax.html">Withholding Tax</a>
+            <a href="dueDiligence.html">Due Diligence</a>
         </div>
 
         <div class="footer-col">
@@ -153,6 +200,7 @@
           <a href="index.html">Home</a>
           <a href="about.html">About Us</a>
           <a href="contact.html">Contact Us</a>
+          <a href="contact.html#find-us">Find Us →</a>
         </div>
 
         <div class="footer-col">
@@ -186,26 +234,7 @@
     </div>
   </footer>
 
-    <script src="script.js"></script>
-    <script>
-      document.getElementById("contactForm").addEventListener("submit", function (event) {
-        event.preventDefault();
-        const formData = new FormData(event.currentTarget);
-        const fullName = [formData.get("fname"), formData.get("lname")].join(" ").trim();
-        const subject = "Website enquiry from " + fullName;
-        const body = [
-          "Name: " + fullName,
-          "Email: " + formData.get("email"),
-          "Phone: " + formData.get("phone"),
-          "",
-          formData.get("message"),
-        ].join("\n");
+    <script src="js/script.js"></script>
 
-        document.getElementById("formStatus").textContent =
-          "Opening your email app. If it does not open, email info@northstartax.my.";
-        window.location.href = "mailto:info@northstartax.my?subject=" +
-          encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-      });
-    </script>
   </body>
 </html>
