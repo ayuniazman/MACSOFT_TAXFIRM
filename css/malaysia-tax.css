@@ -1,894 +1,64 @@
-/* Malaysia tax system page — scoped styles; shared site colours come from style.css */
+/* Malaysia Tax System page
+   Page-specific styles only. Shared typography, buttons, navigation and footer
+   remain in style.css and service-nav.css. */
+
 .malaysia-tax-page {
   background: #fff;
 }
-.malaysia-tax-page > header {
+
+.malaysia-tax-page > header,
+.malaysia-tax-page footer {
   background: #fff;
 }
-.malaysia-tax-page .mt-hero {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  color: #fff;
-  background: linear-gradient(115deg, #292735 0%, #49435f 56%, #766a9d 100%);
-}
-.malaysia-tax-page .mt-hero-pattern {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  opacity: 0.2;
-  background-image:
-    linear-gradient(
-      30deg,
-      transparent 49.7%,
-      rgba(255, 255, 255, 0.16) 50%,
-      transparent 50.3%
-    ),
-    linear-gradient(
-      120deg,
-      transparent 49.7%,
-      rgba(255, 255, 255, 0.12) 50%,
-      transparent 50.3%
-    );
-  background-size: 90px 90px;
-}
-.malaysia-tax-page .mt-hero-inner {
-  min-height: 610px;
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  align-items: center;
-  gap: 40px;
-  padding-top: 55px;
-  padding-bottom: 76px;
-  position: relative;
-}
-.malaysia-tax-page .mt-breadcrumb {
-  position: absolute;
-  top: 27px;
-  left: 0;
-  display: flex;
-  gap: 12px;
-  color: #fff;
-  font-size: 11px;
-}
-.malaysia-tax-page .mt-breadcrumb a {
-  color: #fff;
-}
-.malaysia-tax-page .mt-hero-copy {
-  padding-top: 30px;
-  position: relative;
-  z-index: 2;
-}
-.malaysia-tax-page .mt-kicker,
-.malaysia-tax-page .mt-mini-label {
-  color: #d9d1ee;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-}
-.malaysia-tax-page .mt-hero h1 {
-  max-width: 680px;
-  margin: 20px 0 24px;
-  color: #fff;
-  font-size: clamp(48px, 6.1vw, 82px);
-  line-height: 0.98;
-  letter-spacing: -0.075em;
-}
-.malaysia-tax-page .mt-hero h1 em,
-.malaysia-tax-page .mt-section-intro h2 em,
-.malaysia-tax-page .mt-detail-heading h2 em,
-.malaysia-tax-page .mt-end-section h2 em {
-  color: #cfc5e8;
-  font-style: normal;
-  font-weight: 500;
-}
-.malaysia-tax-page .mt-hero-copy p {
-  max-width: 550px;
-  color: #fff;
-  font-size: 15px;
-  line-height: 1.9;
-}
-.malaysia-tax-page .mt-hero-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  margin-top: 22px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  color: #fff;
-  font-size: 13px;
-  font-weight: 700;
-}
-.malaysia-tax-page .mt-hero-link span {
-  font-size: 19px;
-}
-.malaysia-tax-page .mt-hero-art {
-  min-height: 420px;
-  display: grid;
-  place-items: center;
-  position: relative;
-}
-.malaysia-tax-page .mt-orbit {
-  position: absolute;
-  width: 390px;
-  aspect-ratio: 1;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 50%;
-}
-.malaysia-tax-page .mt-orbit-a {
-  transform: rotate(25deg) scaleX(1.2);
-}
-.malaysia-tax-page .mt-orbit-b {
-  transform: rotate(-35deg) scaleX(1.2);
-  width: 310px;
-}
-.malaysia-tax-page .mt-art-card {
-  position: relative;
-  width: min(390px, 90%);
-  padding: 29px;
-  background: rgba(250, 249, 253, 0.96);
-  color: #302d3b;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 4px;
-  box-shadow: 0 30px 80px rgba(16, 13, 28, 0.3);
-  transform: rotate(2deg);
-}
-.malaysia-tax-page .mt-art-label {
-  color: #142E87;
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-}
-.malaysia-tax-page .mt-art-title {
-  margin: 28px 0 25px;
-  font-size: 46px;
-  line-height: 0.88;
-  font-weight: 800;
-  letter-spacing: -0.08em;
-}
-.malaysia-tax-page .mt-art-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  padding-top: 18px;
-  border-top: 1px solid #e6e2ee;
-}
-.malaysia-tax-page .mt-art-split > div {
-  display: grid;
-  grid-template-columns: 12px 1fr;
-  align-items: center;
-  gap: 7px;
-}
-.malaysia-tax-page .mt-art-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #7a6bb2;
-}
-.malaysia-tax-page .mt-art-dot.indirect {
-  background: #b9a9d7;
-}
-.malaysia-tax-page .mt-art-split b {
-  font-size: 10px;
-  letter-spacing: 0.08em;
-}
-.malaysia-tax-page .mt-art-split small {
-  grid-column: 2;
-  color: #777282;
-  font-size: 9px;
-  line-height: 1.5;
-}
-.malaysia-tax-page .mt-art-foot {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 28px;
-  color: #8d8798;
-  font-size: 8px;
-  letter-spacing: 0.12em;
-}
-.malaysia-tax-page .mt-art-note {
-  position: absolute;
-  z-index: 2;
-  padding: 10px 14px;
-  background: #fff;
-  color: #51496a;
-  border-radius: 3px;
-  box-shadow: 0 10px 30px #17132135;
-  font-size: 10px;
-  font-weight: 750;
-}
-.malaysia-tax-page .note-top {
-  top: 52px;
-  right: -3px;
-}
-.malaysia-tax-page .note-bottom {
-  bottom: 46px;
-  left: -8px;
-}
-.malaysia-tax-page .mt-hero-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.17);
-}
-.malaysia-tax-page .mt-hero-bottom .wrap {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 0;
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-.malaysia-tax-page .mt-section-nav {
-  position: sticky;
-  top: 78px;
-  z-index: 10;
-  background: rgba(255, 255, 255, 0.94);
-  border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(14px);
-}
-.malaysia-tax-page .mt-section-nav .wrap {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  min-height: 58px;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-.malaysia-tax-page .mt-section-nav span {
-  color: #958ba9;
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-}
-.malaysia-tax-page .mt-section-nav a {
-  color: #595565;
-  font-size: 11px;
-  font-weight: 650;
-}
-.malaysia-tax-page .mt-section-nav a:hover {
-  color: #142E87;
-}
+
+/* Shared section layout */
 .malaysia-tax-page .section {
   padding: 88px 0;
 }
-.malaysia-tax-page .mt-section-intro,
-.malaysia-tax-page .mt-detail-heading {
+
+.malaysia-tax-page .mt-section-intro {
   display: flex;
   justify-content: space-between;
   align-items: end;
   gap: 40px;
   margin-bottom: 44px;
 }
+
 .malaysia-tax-page .mt-section-intro h2,
-.malaysia-tax-page .mt-detail-heading h2 {
+.malaysia-tax-page .mt-insights-heading h2,
+.malaysia-tax-page .mt-end-section h2 {
   margin: 14px 0 0;
   font-size: clamp(34px, 4.2vw, 54px);
   line-height: 1.04;
   letter-spacing: -0.07em;
 }
+
 .malaysia-tax-page .mt-section-intro h2 em,
-.malaysia-tax-page .mt-detail-heading h2 em {
-  color: #142E87;
+.malaysia-tax-page .mt-insights-heading h2 em,
+.malaysia-tax-page .mt-end-section h2 em {
+  color: #142e87;
+  font-style: normal;
+  font-weight: 500;
 }
-.malaysia-tax-page .mt-section-intro > p,
-.malaysia-tax-page .mt-detail-heading > p {
-  max-width: 390px;
+
+.malaysia-tax-page .mt-section-intro > p {
+  max-width: 420px;
   margin: 0 0 4px;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.85;
 }
-.malaysia-tax-page .mt-principles {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-.malaysia-tax-page .mt-principle {
+
+/* Hero */
+.malaysia-tax-page .mt-hero {
   position: relative;
-  min-height: 230px;
-  padding: 27px 30px 30px 0;
-}
-.malaysia-tax-page .mt-principle + .mt-principle {
-  padding-left: 30px;
-  border-left: 1px solid var(--line);
-}
-.malaysia-tax-page .mt-principle-no {
-  color: #a59bb9;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-}
-.malaysia-tax-page .mt-principle-icon {
-  display: grid;
-  place-items: center;
-  width: 43px;
-  height: 43px;
-  margin: 22px 0 14px;
-  border-radius: 13px 13px 13px 3px;
-  background: #e9e5f2;
-  color: #142E87;
-  font-size: 21px;
-}
-.malaysia-tax-page .mt-principle h3 {
-  margin: 0 0 7px;
-  font-size: 18px;
-  letter-spacing: -0.04em;
-}
-.malaysia-tax-page .mt-principle p {
-  max-width: 260px;
-  margin: 0;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.8;
-}
-.malaysia-tax-page .mt-territorial {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 25px;
-  align-items: start;
-  margin-top: 34px;
-  padding: 30px;
-  background: #eeecf3;
-  border: 1px solid #e4e0eb;
-}
-.malaysia-tax-page .mt-territorial-mark {
-  display: grid;
-  place-items: center;
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  background: #7a6bb2;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-}
-.malaysia-tax-page .mt-territorial h3 {
-  margin: 7px 0 8px;
-  font-size: 22px;
-  letter-spacing: -0.05em;
-}
-.malaysia-tax-page .mt-territorial p {
-  max-width: 850px;
-  margin: 0;
-  color: #656170;
-  font-size: 13px;
-  line-height: 1.85;
-}
-.malaysia-tax-page .mt-tax-types {
-  background: #fff;
-}
-.malaysia-tax-page .mt-type-switch {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-bottom: 1px solid var(--line);
-}
-.malaysia-tax-page .mt-category-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 22px;
-}
-.malaysia-tax-page .mt-category-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 11px 15px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  color: #142E87;
-  font-size: 12px;
-  font-weight: 700;
-  transition: background 0.2s ease, border-color 0.2s ease;
-}
-.malaysia-tax-page .mt-category-links a:hover {
-  border-color: #bdb4d8;
-  background: #f3f1f7;
-}
-.malaysia-tax-page .mt-type-tab {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 20px 18px;
-  border: 0;
-  border-bottom: 3px solid transparent;
-  background: transparent;
-  color: #777282;
-  text-align: left;
-  font: inherit;
-  font-size: 17px;
-  font-weight: 700;
-  cursor: pointer;
-}
-.malaysia-tax-page .mt-type-tab span {
-  color: #a49bb5;
-  font-size: 10px;
-}
-.malaysia-tax-page .mt-type-tab b {
-  margin-left: auto;
-  display: grid;
-  place-items: center;
-  width: 27px;
-  height: 27px;
-  border-radius: 50%;
-  background: #f0eef4;
-  color: #142E87;
-  font-size: 10px;
-}
-.malaysia-tax-page .mt-type-tab.active {
-  border-bottom-color: var(--green);
-  color: var(--ink);
-}
-.malaysia-tax-page .mt-type-tab.active b {
-  background: #e9e5f2;
-  color: #142E87;
-}
-.malaysia-tax-page .mt-type-panel {
-  padding: 27px 0 0;
-}
-.malaysia-tax-page .mt-type-panel[hidden] {
-  display: none;
-}
-.malaysia-tax-page .mt-panel-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
-}
-.malaysia-tax-page .mt-panel-heading span {
-  color: #142E87;
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-}
-.malaysia-tax-page .mt-panel-heading p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 11px;
-}
-.malaysia-tax-page .mt-tax-list {
-  border-top: 1px solid var(--line);
-}
-.malaysia-tax-page .mt-tax-list a {
-  display: grid;
-  grid-template-columns: 60px 1fr 30px;
-  align-items: center;
-  gap: 15px;
-  padding: 18px 10px;
-  border-bottom: 1px solid var(--line);
-  transition:
-    background 0.2s ease,
-    padding 0.2s ease;
-}
-.malaysia-tax-page .mt-tax-list a:hover {
-  padding-left: 17px;
-  background: #f8f7fb;
-}
-.malaysia-tax-page .mt-tax-index {
-  color: #a79db8;
-  font-size: 10px;
-  font-weight: 800;
-}
-.malaysia-tax-page .mt-tax-list b {
-  display: block;
-  font-size: 14px;
-}
-.malaysia-tax-page .mt-tax-list small {
-  display: block;
-  margin-top: 3px;
-  color: var(--muted);
-  font-size: 10px;
-}
-.malaysia-tax-page .mt-arrow {
-  color: #142E87;
-  font-size: 19px;
-}
-.malaysia-tax-page .mt-detail-section {
-  background: #fff;
-}
-.malaysia-tax-page .mt-detail-heading {
-  margin-bottom: 38px;
-}
-.malaysia-tax-page .mt-detail-card {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  margin-bottom: 20px;
-  background: #fff;
-  border: 1px solid var(--line);
-  box-shadow: 0 12px 35px rgba(77, 69, 104, 0.045);
-  scroll-margin-top: 155px;
-}
-.malaysia-tax-page .mt-detail-side {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 27px;
-  background: #eeecf3;
-  border-right: 1px solid var(--line);
-}
-.malaysia-tax-page .mt-detail-side > span {
-  color: #8d82a9;
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-}
-.malaysia-tax-page .mt-detail-symbol {
-  display: grid;
-  place-items: center;
-  width: 58px;
-  height: 58px;
-  margin: 32px 0 17px;
-  border-radius: 17px 17px 17px 4px;
-  background: #7a6bb2;
-  color: #fff;
-  font-size: 27px;
-}
-.malaysia-tax-page .mt-detail-side small {
-  color: #777082;
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-}
-.malaysia-tax-page .mt-detail-content {
-  padding: 30px 38px 34px;
-}
-.malaysia-tax-page .mt-detail-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 18px;
-}
-.malaysia-tax-page .mt-detail-title h3 {
-  margin: 0;
-  font-size: 25px;
-  line-height: 1.2;
-  letter-spacing: -0.055em;
-}
-.malaysia-tax-page .mt-law {
-  flex-shrink: 0;
-  padding: 7px 10px;
-  border-radius: 2px;
-  background: #f2f0f6;
-  color: #142E87;
-  font-size: 9px;
-  font-weight: 700;
-}
-.malaysia-tax-page .mt-detail-content > p,
-.malaysia-tax-page .mt-accordion-body p {
-  color: #656575;
-  font-size: 13px;
-  line-height: 1.9;
-}
-.malaysia-tax-page .mt-detail-content > p {
-  margin: 0 0 15px;
-}
-.malaysia-tax-page .mt-highlight {
-  margin: 20px 0;
-  padding: 19px 22px;
-  border-left: 3px solid var(--green);
-  background: #f5f3f9;
-}
-.malaysia-tax-page .mt-highlight b {
-  font-size: 12px;
-}
-.malaysia-tax-page .mt-highlight p {
-  margin: 6px 0 0;
-  color: #656575;
-  font-size: 12px;
-  line-height: 1.8;
-}
-.malaysia-tax-page .mt-accordion {
-  margin-top: 20px;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-.malaysia-tax-page .mt-accordion-trigger {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 16px 0;
-  border: 0;
-  background: transparent;
-  color: #494555;
-  text-align: left;
-  font: inherit;
-  font-size: 12px;
-  font-weight: 750;
-  cursor: pointer;
-}
-.malaysia-tax-page .mt-accordion-trigger span {
-  color: #142E87;
-  font-size: 20px;
-  font-weight: 400;
-  transition: transform 0.2s;
-}
-.malaysia-tax-page .mt-accordion-trigger[aria-expanded="true"] span {
-  transform: rotate(45deg);
-}
-.malaysia-tax-page .mt-accordion-body {
-  padding: 0 0 12px;
-}
-.malaysia-tax-page .mt-accordion-body[hidden] {
-  display: none;
-}
-.malaysia-tax-page .mt-accordion-body p {
-  margin: 0 0 12px;
-}
-.malaysia-tax-page .mt-accordion-body ul {
-  margin: 0 0 12px;
-  padding-left: 20px;
-  color: #656575;
-  font-size: 13px;
-  line-height: 1.9;
-}
-.malaysia-tax-page .mt-accordion-body li {
-  margin: 0;
-  color: #656575;
-  font-size: 13px;
-  line-height: 1.9;
-}
-.malaysia-tax-page .mt-goods-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
-  margin: 20px 0;
-}
-.malaysia-tax-page .mt-goods-grid div {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-height: 54px;
-  padding: 12px;
-  background: #f5f3f9;
-  color: #464351;
-  font-size: 11px;
-  font-weight: 650;
-}
-.malaysia-tax-page .mt-goods-grid span {
-  color: #9488b0;
-  font-size: 9px;
-  font-weight: 800;
-}
-.malaysia-tax-page .mt-duty-types {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 20px 0;
-  border: 1px solid var(--line);
-}
-.malaysia-tax-page .mt-duty-types div {
-  padding: 16px;
-}
-.malaysia-tax-page .mt-duty-types div + div {
-  border-left: 1px solid var(--line);
-}
-.malaysia-tax-page .mt-duty-types b,
-.malaysia-tax-page .mt-duty-types span {
-  display: block;
-}
-.malaysia-tax-page .mt-duty-types b {
-  font-size: 12px;
-}
-.malaysia-tax-page .mt-duty-types span {
-  margin-top: 5px;
-  color: var(--muted);
-  font-size: 10px;
-}
-.malaysia-tax-page .mt-rate-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin: 22px 0;
-}
-.malaysia-tax-page .mt-rate-grid div {
-  padding: 20px;
-  background: #f0edf6;
-}
-.malaysia-tax-page .mt-rate-grid strong {
-  display: block;
-  color: #142E87;
-  font-size: 34px;
-  letter-spacing: -0.06em;
-}
-.malaysia-tax-page .mt-rate-grid span {
-  color: #6b6676;
-  font-size: 10px;
-}
-.malaysia-tax-page .mt-indirect-section {
-  background: #fff;
-}
-.malaysia-tax-page .mt-end-section {
+  overflow: hidden;
+  isolation: isolate;
   padding: 70px 0;
-  background: #eeecf3;
-}
-.malaysia-tax-page .mt-end-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-}
-.malaysia-tax-page .mt-end-section h2 {
-  margin: 13px 0 0;
-  font-size: clamp(32px, 4vw, 48px);
-  line-height: 1.05;
-  letter-spacing: -0.07em;
-}
-.malaysia-tax-page .mt-end-section h2 em {
-  color: #142E87;
-}
-.malaysia-tax-page footer {
-  background: #fff;
-}
-.malaysia-tax-page a:focus-visible,
-.malaysia-tax-page button:focus-visible {
-  outline: 3px solid #8d7cbd;
-  outline-offset: 4px;
-}
-@media (max-width: 850px) {
-  .malaysia-tax-page .mt-hero-inner {
-    grid-template-columns: 1fr;
-    gap: 0;
-    padding-top: 85px;
-  }
-  .malaysia-tax-page .mt-hero-art {
-    min-height: 390px;
-  }
-  .malaysia-tax-page .mt-section-nav {
-    top: 68px;
-  }
-  .malaysia-tax-page .mt-detail-card {
-    grid-template-columns: 165px 1fr;
-  }
-  .malaysia-tax-page .mt-detail-side {
-    padding: 22px;
-  }
-  .malaysia-tax-page .mt-detail-content {
-    padding: 26px;
-  }
-}
-@media (max-width: 620px) {
-  .malaysia-tax-page .mt-hero-inner {
-    width: calc(100% - 36px);
-    padding-bottom: 48px;
-  }
-  .malaysia-tax-page .mt-hero h1 {
-    font-size: clamp(44px, 13vw, 62px);
-  }
-  .malaysia-tax-page .mt-hero-art {
-    min-height: 340px;
-  }
-  .malaysia-tax-page .mt-orbit {
-    width: 280px;
-  }
-  .malaysia-tax-page .mt-orbit-b {
-    width: 230px;
-  }
-  .malaysia-tax-page .mt-art-card {
-    padding: 22px;
-  }
-  .malaysia-tax-page .mt-art-title {
-    font-size: 38px;
-  }
-  .malaysia-tax-page .mt-art-note {
-    font-size: 9px;
-  }
-  .malaysia-tax-page .mt-hero-bottom .wrap {
-    gap: 12px;
-    font-size: 8px;
-  }
-  .malaysia-tax-page .mt-hero-bottom .wrap span:nth-child(2) {
-    display: none;
-  }
-  .malaysia-tax-page .mt-section-nav .wrap {
-    gap: 20px;
-    width: calc(100% - 36px);
-  }
-  .malaysia-tax-page .section {
-    padding: 62px 0;
-  }
-  .malaysia-tax-page .mt-section-intro,
-  .malaysia-tax-page .mt-detail-heading {
-    display: block;
-  }
-  .malaysia-tax-page .mt-section-intro > p,
-  .malaysia-tax-page .mt-detail-heading > p {
-    margin-top: 18px;
-  }
-  .malaysia-tax-page .mt-principles {
-    grid-template-columns: 1fr;
-  }
-  .malaysia-tax-page .mt-principle,
-  .malaysia-tax-page .mt-principle + .mt-principle {
-    min-height: auto;
-    padding: 22px 0;
-    border-left: 0;
-    border-bottom: 1px solid var(--line);
-  }
-  .malaysia-tax-page .mt-principle-icon {
-    margin: 14px 0 10px;
-  }
-  .malaysia-tax-page .mt-territorial {
-    grid-template-columns: 1fr;
-    padding: 22px;
-  }
-  .malaysia-tax-page .mt-type-tab {
-    padding: 16px 8px;
-    gap: 8px;
-    font-size: 13px;
-  }
-  .malaysia-tax-page .mt-panel-heading {
-    align-items: flex-start;
-    gap: 10px;
-    flex-direction: column;
-  }
-  .malaysia-tax-page .mt-tax-list a {
-    grid-template-columns: 34px 1fr 20px;
-    gap: 9px;
-  }
-  .malaysia-tax-page .mt-detail-card {
-    grid-template-columns: 1fr;
-  }
-  .malaysia-tax-page .mt-detail-side {
-    flex-direction: row;
-    align-items: center;
-    gap: 13px;
-    padding: 14px 18px;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-  }
-  .malaysia-tax-page .mt-detail-symbol {
-    width: 35px;
-    height: 35px;
-    margin: 0;
-    border-radius: 10px 10px 10px 3px;
-    font-size: 18px;
-  }
-  .malaysia-tax-page .mt-detail-side small {
-    margin-left: auto;
-  }
-  .malaysia-tax-page .mt-detail-content {
-    padding: 22px 18px 25px;
-  }
-  .malaysia-tax-page .mt-detail-title {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 9px;
-  }
-  .malaysia-tax-page .mt-detail-title h3 {
-    font-size: 23px;
-  }
-  .malaysia-tax-page .mt-goods-grid {
-    grid-template-columns: 1fr;
-  }
-  .malaysia-tax-page .mt-duty-types {
-    grid-template-columns: 1fr;
-  }
-  .malaysia-tax-page .mt-duty-types div + div {
-    border-left: 0;
-    border-top: 1px solid var(--line);
-  }
-  .malaysia-tax-page .mt-end-inner {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .malaysia-tax-page *,
-  .malaysia-tax-page *::before,
-  .malaysia-tax-page *::after {
-    scroll-behavior: auto !important;
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-  }
+  color: var(--ink);
+  background: linear-gradient(120deg, #f3ecfc 0%, #fbf8ff 55%, #fff 100%);
 }
 
-.malaysia-tax-page .mt-hero {
-  padding: 70px 0;
-  color: var(--ink);
-  background: linear-gradient(120deg, #f3ecfc 0%, #fbf8ff 55%, #ffffff 100%);
-}
 .malaysia-tax-page .mt-hero::before {
   content: "";
   position: absolute;
@@ -915,6 +85,7 @@
       rgba(190, 150, 235, .45) 100%,
       transparent 100%);
 }
+
 .malaysia-tax-page .mt-hero::after {
   content: "";
   position: absolute;
@@ -925,43 +96,698 @@
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
 }
+
 .malaysia-tax-page .mt-hero-inner {
   min-height: 0;
+  display: grid;
   grid-template-columns: 1.1fr 1fr;
+  align-items: center;
   gap: 56px;
   padding: 0;
 }
+
 .malaysia-tax-page .mt-hero .hero-text h1 {
   max-width: 750px;
   margin: 12px 0 16px;
   color: var(--ink);
   font-size: clamp(38px, 5.4vw, 65px);
-  line-height: 1.2;
-  letter-spacing: -0.04em;
+  line-height: 1.1;
+  letter-spacing: -0.055em;
 }
+
+.malaysia-tax-page .mt-hero-description {
+  max-width: 540px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
 .malaysia-tax-page .hero-image img {
   display: block;
   width: 100%;
   height: 340px;
   object-fit: cover;
   border-radius: 20px;
-  box-shadow: 0 24px 70px rgba(77, 69, 104, 0.12);
+  box-shadow: 0 24px 70px rgba(77, 69, 104, .12);
 }
+
+.malaysia-tax-page .mt-text-link,
+.malaysia-tax-page .mt-category-footer a,
+.malaysia-tax-page .mt-authority-card > a,
+.malaysia-tax-page .mt-read-link,
+.malaysia-tax-page .mt-insights-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #142e87;
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.malaysia-tax-page .mt-text-link {
+  margin-top: 18px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #bcb1d5;
+}
+
+/* Tax fundamentals */
+.malaysia-tax-page .mt-principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.malaysia-tax-page .mt-principle {
+  min-height: 230px;
+  padding: 27px 30px 30px 0;
+}
+
+.malaysia-tax-page .mt-principle + .mt-principle {
+  padding-left: 30px;
+  border-left: 1px solid var(--line);
+}
+
+.malaysia-tax-page .mt-principle-no,
+.malaysia-tax-page .mt-business-index,
+.malaysia-tax-page .mt-category-number {
+  color: #a59bb9;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.malaysia-tax-page .mt-principle-icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  margin: 22px 0 14px;
+  border-radius: 13px 13px 13px 3px;
+  background: #e9e5f2;
+  color: #142e87;
+  font-size: 21px;
+}
+
+.malaysia-tax-page .mt-principle h3,
+.malaysia-tax-page .mt-business-card h3 {
+  margin: 0 0 7px;
+  font-size: 18px;
+  letter-spacing: -.04em;
+}
+
+.malaysia-tax-page .mt-principle p,
+.malaysia-tax-page .mt-business-card p {
+  max-width: 290px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.malaysia-tax-page .mt-territorial {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 25px;
+  align-items: start;
+  margin-top: 34px;
+  padding: 30px;
+  background: #eeecf3;
+  border: 1px solid #e4e0eb;
+}
+
+.malaysia-tax-page .mt-territorial-mark {
+  display: grid;
+  place-items: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #7a6bb2;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.malaysia-tax-page .mt-mini-label {
+  color: #81749f;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.malaysia-tax-page .mt-territorial h3,
+.malaysia-tax-page .mt-business-note h3 {
+  margin: 7px 0 8px;
+  font-size: 22px;
+  letter-spacing: -.05em;
+}
+
+.malaysia-tax-page .mt-territorial p {
+  max-width: 900px;
+  margin: 0 0 10px;
+  color: #656170;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.malaysia-tax-page .mt-territorial p:last-child {
+  margin-bottom: 0;
+}
+
+/* Direct and indirect tax cards */
+.malaysia-tax-page .mt-tax-types {
+  background: #faf9fc;
+}
+
+.malaysia-tax-page .mt-tax-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.malaysia-tax-page .mt-category-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 30px;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 35px rgba(77, 69, 104, .045);
+}
+
+.malaysia-tax-page .mt-category-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.malaysia-tax-page .mt-category-label {
+  color: #81749f;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.malaysia-tax-page .mt-category-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  margin: 28px 0 18px;
+  border-radius: 16px 16px 16px 4px;
+  background: #e9e5f2;
+  color: #66558f;
+  font-size: 25px;
+}
+
+.malaysia-tax-page .mt-category-icon-alt {
+  background: #f1eafa;
+  color: #8a68ad;
+}
+
+.malaysia-tax-page .mt-category-card h3 {
+  margin: 0 0 12px;
+  font-size: 25px;
+  letter-spacing: -.055em;
+}
+
+.malaysia-tax-page .mt-category-card > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.malaysia-tax-page .mt-example-group {
+  margin-top: 24px;
+}
+
+.malaysia-tax-page .mt-example-group > span {
+  color: #817b8d;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.malaysia-tax-page .mt-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 11px;
+}
+
+.malaysia-tax-page .mt-tags span {
+  padding: 8px 10px;
+  background: #f4f2f8;
+  color: #5f586e;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.malaysia-tax-page .mt-category-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+  margin-top: auto;
+  padding-top: 25px;
+}
+
+.malaysia-tax-page .mt-category-footer > span {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.malaysia-tax-page .mt-category-footer a {
+  padding-top: 15px;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+}
+
+.malaysia-tax-page .mt-framework-note {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* Tax authorities */
+.malaysia-tax-page .mt-authority-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.malaysia-tax-page .mt-authority-card {
+  padding: 30px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.malaysia-tax-page .mt-authority-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 23px;
+}
+
+.malaysia-tax-page .mt-authority-symbol {
+  display: grid;
+  place-items: center;
+  flex: 0 0 43px;
+  width: 43px;
+  height: 43px;
+  border-radius: 12px 12px 12px 3px;
+  background: #e9e5f2;
+  color: #66558f;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.malaysia-tax-page .mt-authority-symbol-alt {
+  background: #f1eafa;
+  color: #8a68ad;
+}
+
+.malaysia-tax-page .mt-authority-type {
+  color: #81749f;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.malaysia-tax-page .mt-authority-card h3 {
+  margin: 0 0 12px;
+  font-size: 21px;
+  line-height: 1.3;
+  letter-spacing: -.045em;
+}
+
+.malaysia-tax-page .mt-authority-card p {
+  min-height: 76px;
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* Business considerations */
+.malaysia-tax-page .mt-business {
+  background: #faf9fc;
+}
+
+.malaysia-tax-page .mt-business-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.malaysia-tax-page .mt-business-card {
+  min-height: 230px;
+  padding: 23px 20px 25px 0;
+}
+
+.malaysia-tax-page .mt-business-card + .mt-business-card {
+  padding-left: 20px;
+  border-left: 1px solid var(--line);
+}
+
+.malaysia-tax-page .mt-business-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 18px 0 14px;
+  border-radius: 12px 12px 12px 3px;
+  background: #e9e5f2;
+  color: #66558f;
+  font-size: 20px;
+}
+
+.malaysia-tax-page .mt-business-card h3 {
+  font-size: 16px;
+}
+
+.malaysia-tax-page .mt-business-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-top: 28px;
+  padding: 27px 30px;
+  background: #eeecf3;
+}
+
+.malaysia-tax-page .mt-business-note h3 {
+  font-size: 19px;
+}
+
+.malaysia-tax-page .mt-business-note p {
+  max-width: 680px;
+  margin: 0;
+  color: #656170;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.malaysia-tax-page .mt-outline-link {
+  flex-shrink: 0;
+  padding: 12px 15px;
+  border: 1px solid #c9c1d9;
+  color: #51466f;
+  font-size: 11px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+/* Tax insights */
+.malaysia-tax-page .mt-insights {
+  background: #fff;
+}
+
+.malaysia-tax-page .mt-insights-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 35px;
+  margin-bottom: 38px;
+}
+
+.malaysia-tax-page .mt-insights-heading > div {
+  max-width: 600px;
+}
+
+.malaysia-tax-page .mt-insights-heading p {
+  max-width: 510px;
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.malaysia-tax-page .mt-insights-all {
+  flex-shrink: 0;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #c9c1d9;
+}
+
+.malaysia-tax-page .mt-insights-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: 20px;
+}
+
+.malaysia-tax-page .mt-insight-card {
+  min-width: 0;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.malaysia-tax-page .mt-insight-image {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: #eeecf3;
+}
+
+.malaysia-tax-page .mt-insight-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.malaysia-tax-page .mt-insight-card:hover .mt-insight-image img {
+  transform: scale(1.04);
+}
+
+.malaysia-tax-page .mt-insight-image > span {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  padding: 7px 9px;
+  background: #fff;
+  color: #66558f;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.malaysia-tax-page .mt-insight-content {
+  padding: 21px;
+}
+
+.malaysia-tax-page .mt-insight-category {
+  color: #81749f;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .13em;
+}
+
+.malaysia-tax-page .mt-insight-content h3 {
+  margin: 10px 0 9px;
+  font-size: 17px;
+  line-height: 1.4;
+  letter-spacing: -.035em;
+}
+
+.malaysia-tax-page .mt-insight-content h3 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.malaysia-tax-page .mt-insight-content h3 a:hover {
+  color: #66558f;
+}
+
+.malaysia-tax-page .mt-insight-content p {
+  margin: 0 0 17px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.malaysia-tax-page .mt-read-link {
+  font-size: 11px;
+}
+
+.malaysia-tax-page .mt-insights-disclaimer {
+  margin: 17px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+/* Closing CTA */
+.malaysia-tax-page .mt-end-section {
+  padding: 70px 0;
+  background: #eeecf3;
+}
+
+.malaysia-tax-page .mt-end-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.malaysia-tax-page .mt-end-section h2 {
+  margin: 13px 0 12px;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -.07em;
+}
+
+.malaysia-tax-page .mt-end-section p {
+  max-width: 540px;
+  margin: 0;
+  color: #656170;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* Keyboard focus */
+.malaysia-tax-page a:focus-visible,
+.malaysia-tax-page button:focus-visible {
+  outline: 3px solid #8d7cbd;
+  outline-offset: 4px;
+}
+
+/* Responsive layouts */
+@media (max-width: 950px) {
+  .malaysia-tax-page .mt-business-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .malaysia-tax-page .mt-business-card:nth-child(3) {
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .malaysia-tax-page .mt-business-card:nth-child(4) {
+    border-top: 1px solid var(--line);
+  }
+
+  .malaysia-tax-page .mt-insights-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .malaysia-tax-page .mt-insight-featured {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 850px) {
   .malaysia-tax-page .mt-hero-inner {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-}
-@media (max-width: 620px) {
-  .malaysia-tax-page .mt-hero {
-    padding: 70px 0;
+
+  .malaysia-tax-page .mt-section-intro {
+    display: block;
   }
+
+  .malaysia-tax-page .mt-section-intro > p {
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 620px) {
+  .malaysia-tax-page .section {
+    padding: 62px 0;
+  }
+
+  .malaysia-tax-page .mt-hero {
+    padding: 58px 0;
+  }
+
   .malaysia-tax-page .mt-hero-inner {
     width: min(1160px, 90%);
-    padding: 0;
   }
+
+  .malaysia-tax-page .mt-hero .hero-text h1 {
+    font-size: clamp(38px, 11vw, 54px);
+  }
+
   .malaysia-tax-page .hero-image img {
     height: 240px;
+    border-radius: 14px;
+  }
+
+  .malaysia-tax-page .mt-principles,
+  .malaysia-tax-page .mt-tax-category-grid,
+  .malaysia-tax-page .mt-authority-grid,
+  .malaysia-tax-page .mt-business-grid,
+  .malaysia-tax-page .mt-insights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .malaysia-tax-page .mt-principle,
+  .malaysia-tax-page .mt-principle + .mt-principle {
+    min-height: auto;
+    padding: 22px 0;
+    border-left: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .malaysia-tax-page .mt-principle-icon {
+    margin: 14px 0 10px;
+  }
+
+  .malaysia-tax-page .mt-territorial {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  .malaysia-tax-page .mt-category-card,
+  .malaysia-tax-page .mt-authority-card {
+    padding: 23px;
+  }
+
+  .malaysia-tax-page .mt-business-card,
+  .malaysia-tax-page .mt-business-card + .mt-business-card,
+  .malaysia-tax-page .mt-business-card:nth-child(3),
+  .malaysia-tax-page .mt-business-card:nth-child(4) {
+    min-height: auto;
+    padding: 22px 0;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .malaysia-tax-page .mt-business-note,
+  .malaysia-tax-page .mt-insights-heading,
+  .malaysia-tax-page .mt-end-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .malaysia-tax-page .mt-insight-featured {
+    grid-column: auto;
+  }
+
+  .malaysia-tax-page .mt-insight-content {
+    padding: 18px;
+  }
+
+  .malaysia-tax-page .mt-end-section {
+    padding: 58px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .malaysia-tax-page *,
+  .malaysia-tax-page *::before,
+  .malaysia-tax-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
   }
 }

@@ -4,41 +4,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="An overview of Malaysia's tax system, with details on indirect taxes." />
+  <meta name="description" content="Understand Malaysia's tax system, its key tax categories, tax authorities and important considerations for businesses." />
   <title>W&C | Malaysia Tax System</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/service-nav.css" />
   <link rel="stylesheet" href="css/malaysia-tax.css" />
 </head>
 
 <body class="malaysia-tax-page about-page">
-    <header>
+  <header>
     <div class="wrap nav">
       <a class="brand northstar-brand" href="index.html" aria-label="W&C home">
-          <img class="site-logo" src="images/wclogo.svg" alt="W&amp;C" width="180" height="53">
+        <img class="site-logo" src="images/wclogo.svg" alt="W&amp;C" width="180" height="53">
       </a>
-      
+
       <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-      
+
       <nav class="nav-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <details class="nav-services-menu">
           <summary>Services</summary>
           <div class="nav-services-dropdown">
-          <a href="malaysiaTax.html" aria-current="page">Malaysia tax system</a>
-          <a href="directTax.html">Direct Tax</a>
-          <a href="taxPlanning.html">Tax Planning</a>
-          <a href="tax_audit.html">Income Tax Audit and Investigation</a>
-          <a href="tax_Incentive.html">Income Tax Incentive</a>
-          <a href="individualtaxcompliance_advisory.html">Individual Tax Compliance and Advisory</a>
-          <a href="transferPricing.html">Transfer Pricing</a>
-          <a href="withholdingTax.html">Withholding Tax</a>
-          <a href="dueDiligence.html">Due Diligence</a>
-          <a href="accountingService.html" aria-current="page">Accounting Services</a>
-          <a href="virtualCFO.html">Virtual CFO</a>
+            <a href="malaysiaTax.html" aria-current="page">Malaysia Tax System</a>
+            <a href="directTax.html">Direct Tax</a>
+            <a href="indirectTax.html">Indirect Tax</a>
+            <a href="taxPlanning.html">Tax Planning</a>
+            <a href="tax_audit.html">Income Tax Audit and Investigation</a>
+            <a href="tax_Incentive.html">Income Tax Incentive</a>
+            <a href="individualtaxcompliance_advisory.html">Individual Tax Compliance and Advisory</a>
+            <a href="transferPricing.html">Transfer Pricing</a>
+            <a href="withholdingTax.html">Withholding Tax</a>
+            <a href="dueDiligence.html">Due Diligence</a>
+            <a href="accountingService.html">Accounting Services</a>
+            <a href="virtualCFO.html">Virtual CFO</a>
           </div>
         </details>
         <a href="about.html">About Us</a>
@@ -49,310 +52,342 @@
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="mt-hero">
       <div class="wrap mt-hero-inner hero-split">
         <div class="hero-text">
-          <h1>Malaysia Tax System</h1>
+          <span class="eyebrow">MALAYSIA TAX OVERVIEW</span>
+          <h1>Understanding Malaysia's tax system.</h1>
+          <p class="mt-hero-description">
+            A practical introduction to Malaysia's tax framework, the authorities behind it
+            and the considerations that matter to individuals and businesses.
+          </p>
+          <a class="mt-text-link" href="#tax-framework">Explore the tax framework <span aria-hidden="true">↓</span></a>
         </div>
         <div class="hero-image">
-          <img src="images/malaysiataxsystem.jpg" alt="Next steps written in a planning notebook" />
+          <img src="images/malaysiataxsystem.jpg" alt="Notebook and planning materials representing tax planning" />
         </div>
       </div>
     </section>
 
+    <!-- TAX FUNDAMENTALS -->
     <section class="mt-overview section" id="overview">
       <div class="wrap">
         <div class="mt-section-intro">
-          <div><span class="eyebrow">01 — The fundamentals</span>
-            <h2>Understanding<br><em>Malaysia's tax system.</em></h2>
+          <div>
+            <span class="eyebrow">01 — THE FUNDAMENTALS</span>
+            <h2>Understanding<br><em>how taxation works.</em></h2>
           </div>
-          <p>Malaysia's tax administration follows several key principles that determine how income is assessed and how
-            taxpayers fulfil their tax responsibilities.</p>
+          <p>
+            Malaysia's tax framework sets out how income and transactions are taxed,
+            how tax obligations are administered and what taxpayers need to do to remain compliant.
+          </p>
         </div>
-        <div class="mt-principles">
-          <article class="mt-principle"><span class="mt-principle-no">01</span><span class="mt-principle-icon">◷</span>
-            <h3>Current year basis</h3>
-            <p>Tax is based on income earned during the current year.</p>
-          </article>
-          <article class="mt-principle"><span class="mt-principle-no">02</span><span class="mt-principle-icon">↗</span>
-            <h3>Self-assessment</h3>
-            <p>Taxpayers are responsible for calculating and reporting their own taxes.</p>
-          </article>
-          <article class="mt-principle"><span class="mt-principle-no">03</span><span class="mt-principle-icon">◎</span>
-            <h3>Territorial scope</h3>
-            <p>The source of income determines whether it is taxable in Malaysia.</p>
-          </article>
-        </div>
-        <div class="mt-territorial">
-          <div class="mt-territorial-mark">MY</div>
-          <div><span class="mt-mini-label">TERRITORIAL SCOPE</span>
-            <h3>Where income is derived matters.</h3>
-            <p>Malaysia generally taxes income originating from Malaysian sources. However,
-              certain foreign-sourced income received in Malaysia may be exempt from tax under specific provisions.</p>
 
-            <p>For example, a Malaysian resident who earns rental income from a property located overseas may qualify
-              for an exemption when bringing that income into Malaysia, provided the relevant conditions are met.</p>
+        <div class="mt-principles">
+          <article class="mt-principle">
+            <span class="mt-principle-no">01</span>
+            <span class="mt-principle-icon" aria-hidden="true">◷</span>
+            <h3>Current year basis</h3>
+            <p>For income tax purposes, income is generally assessed by reference to the year in which it is earned.</p>
+          </article>
+
+          <article class="mt-principle">
+            <span class="mt-principle-no">02</span>
+            <span class="mt-principle-icon" aria-hidden="true">↗</span>
+            <h3>Self-assessment</h3>
+            <p>Taxpayers are responsible for determining their tax liability, submitting the relevant returns and paying tax due.</p>
+          </article>
+
+          <article class="mt-principle">
+            <span class="mt-principle-no">03</span>
+            <span class="mt-principle-icon" aria-hidden="true">◎</span>
+            <h3>Territorial scope</h3>
+            <p>The source of income and the applicable tax rules help determine whether income is taxable in Malaysia.</p>
+          </article>
+        </div>
+
+        <div class="mt-territorial">
+          <div class="mt-territorial-mark" aria-hidden="true">MY</div>
+          <div>
+            <span class="mt-mini-label">TERRITORIAL SCOPE</span>
+            <h3>Where income is derived matters.</h3>
+            <p>
+              Malaysia generally taxes income accruing in or derived from Malaysia, subject to
+              specific rules and exemptions. The treatment of foreign-sourced income received
+              in Malaysia depends on the taxpayer, type of income and conditions under the
+              applicable legislation.
+            </p>
+            <p>
+              Cross-border income can involve additional considerations. Taxpayers should
+              review the relevant rules before determining whether an exemption or other
+              tax treatment applies.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="mt-tax-types section" id="tax-types">
+    <!-- TAX FRAMEWORK -->
+    <section class="mt-tax-types section" id="tax-framework">
       <div class="wrap">
         <div class="mt-section-intro">
-          <div><span class="eyebrow">02 — The tax framework</span>
-            <h2>Explore the<br><em>tax framework.</em></h2>
+          <div>
+            <span class="eyebrow">02 — THE TAX FRAMEWORK</span>
+            <h2>Two broad categories.<br><em>One tax landscape.</em></h2>
           </div>
-          <p>Browse indirect taxes below, or visit our dedicated guide to Malaysia's direct taxes.</p>
+          <p>
+            Malaysia's taxes can broadly be grouped into direct and indirect taxes.
+            Each category works differently and may create different responsibilities for taxpayers and businesses.
+          </p>
         </div>
-        <nav class="mt-category-links" aria-label="Tax categories">
-          <a href="directTax.html">Explore Direct Tax <span aria-hidden="true">↗</span></a>
-          <a href="#indirect-tax">Explore Indirect Tax <span aria-hidden="true">↓</span></a>
-        </nav>
-        <div class="mt-type-panel active" id="indirect-panel">
-          <div class="mt-panel-heading"><span>INDIRECT TAX</span>
-            <p>Taxes listed under the indirect tax category.</p>
-          </div>
-          <div class="mt-tax-list">
-            <a href="#sst"><span class="mt-tax-index">01</span><span><b>Goods &amp; Services Tax</b><small>Multi-stage
-                  consumption tax</small></span><span class="mt-arrow">↗</span></a>
-            <a href="#excise"><span class="mt-tax-index">02</span><span><b>Excise Duty</b><small>Selected
-                  goods</small></span><span class="mt-arrow">↗</span></a>
-            <a href="#customs"><span class="mt-tax-index">03</span><span><b>Customs Duty</b><small>Imports and
-                  exports</small></span><span class="mt-arrow">↗</span></a>
-            <a href="#digital-services"><span class="mt-tax-index">04</span><span><b>Digital Services
-                  Tax</b><small>Digital services provided by non-resident companies</small></span><span class="mt-arrow">↗</span></a>
-          </div>
+
+        <div class="mt-tax-category-grid">
+          <article class="mt-category-card">
+            <div class="mt-category-topline">
+              <span class="mt-category-number">01</span>
+              <span class="mt-category-label">DIRECT TAX</span>
+            </div>
+            <div class="mt-category-icon" aria-hidden="true">▤</div>
+            <h3>Tax on income and gains.</h3>
+            <p>
+              Direct taxes are imposed directly on a person's or entity's income, profits
+              or certain gains. The person or entity liable for the tax is generally
+              responsible for reporting and paying it.
+            </p>
+            <div class="mt-example-group">
+              <span>Common examples</span>
+              <div class="mt-tags">
+                <span>Corporate income tax</span>
+                <span>Individual income tax</span>
+                <span>Real Property Gains Tax</span>
+              </div>
+            </div>
+            <div class="mt-category-footer">
+              <span>Primarily administered by LHDN / IRBM</span>
+              <a href="directTax.html">Explore Direct Tax <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="mt-category-card">
+            <div class="mt-category-topline">
+              <span class="mt-category-number">02</span>
+              <span class="mt-category-label">INDIRECT TAX</span>
+            </div>
+            <div class="mt-category-icon mt-category-icon-alt" aria-hidden="true">⇄</div>
+            <h3>Tax on goods and services.</h3>
+            <p>
+              Indirect taxes apply to specified goods, services or transactions.
+              They are commonly collected by businesses from customers and remitted
+              to the relevant authority, where the law requires.
+            </p>
+            <div class="mt-example-group">
+              <span>Common examples</span>
+              <div class="mt-tags">
+                <span>Sales and Service Tax</span>
+                <span>Excise Duty</span>
+                <span>Customs Duty</span>
+              </div>
+            </div>
+            <div class="mt-category-footer">
+              <span>Primarily administered by RMCD</span>
+              <a href="indirectTax.html">Explore Indirect Tax <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
         </div>
+        <p class="mt-framework-note">
+          The examples above are introductory and not an exhaustive list. The tax treatment of a
+          particular transaction depends on the relevant legislation and circumstances.
+        </p>
       </div>
     </section>
 
-    <section class="mt-detail-section mt-indirect-section section" id="indirect-tax">
+    <!-- TAX AUTHORITIES -->
+    <section class="mt-authorities section" id="tax-authorities">
       <div class="wrap">
-        <div class="mt-detail-heading">
-          <div><span class="eyebrow">04 — Indirect tax</span>
-            <h2>Taxes on goods,<br><em>services and instruments.</em></h2>
+        <div class="mt-section-intro">
+          <div>
+            <span class="eyebrow">03 — TAX ADMINISTRATION</span>
+            <h2>Know the authorities<br><em>behind the system.</em></h2>
           </div>
-          <p>Explore the indirect taxes included in the framework.</p>
+          <p>
+            Different government agencies administer different areas of taxation.
+            Understanding their roles can help taxpayers identify where their obligations sit.
+          </p>
         </div>
 
-        <article class="mt-detail-card" id="sst">
-          <div class="mt-detail-side"><span>INDIRECT TAX / 01</span>
-            <div class="mt-detail-symbol">▤</div><small>SALES &amp; SERVICES</small>
-          </div>
-          <div class="mt-detail-content">
-
-            <div class="mt-detail-title">
-              <h3>Sales and Service Tax (SST)</h3>
-              <span class="mt-law">Consumption tax</span>
+        <div class="mt-authority-grid">
+          <article class="mt-authority-card">
+            <div class="mt-authority-heading">
+              <span class="mt-authority-symbol" aria-hidden="true">L</span>
+              <span class="mt-authority-type">DIRECT TAX ADMINISTRATION</span>
             </div>
-
+            <h3>Inland Revenue Board of Malaysia (LHDN / IRBM)</h3>
             <p>
-              Sales and Service Tax (SST) is an indirect tax system implemented in
-              Malaysia on 1 September 2018, replacing the Goods and Services Tax (GST).
-              It consists of two separate taxes: Sales Tax and Service Tax, each governed
-              by its respective legislation under the Sales Tax Act 2018 and Service Tax
-              Act 2018.
+              The Inland Revenue Board of Malaysia administers direct taxes, including
+              income tax and Real Property Gains Tax, in accordance with the relevant laws.
             </p>
+            <a href="https://www.hasil.gov.my/" target="_blank" rel="noopener noreferrer">
+              Visit LHDN's official website <span aria-hidden="true">↗</span>
+            </a>
+          </article>
 
+          <article class="mt-authority-card">
+            <div class="mt-authority-heading">
+              <span class="mt-authority-symbol mt-authority-symbol-alt" aria-hidden="true">C</span>
+              <span class="mt-authority-type">INDIRECT TAX ADMINISTRATION</span>
+            </div>
+            <h3>Royal Malaysian Customs Department (RMCD)</h3>
             <p>
-              Sales Tax is a single-stage tax imposed on taxable goods manufactured
-              in Malaysia and taxable goods imported into the country. Service Tax,
-              on the other hand, applies to prescribed taxable services provided by
-              registered persons in the course of business. Service tax also include
-              imported taxable services by any person into Malaysia for the purpose of business.
+              The Royal Malaysian Customs Department administers customs matters and
+              indirect taxes such as Sales Tax, Service Tax, Customs Duty and Excise Duty.
             </p>
-
-            <div class="mt-accordion">
-              <button class="mt-accordion-trigger" aria-expanded="false">
-                Registration and threshold
-                <span>+</span>
-              </button>
-              <div class="mt-accordion-body" hidden>
-                <p>
-                  Businesses must register for SST when they meet the prescribed
-                  registration requirements under the relevant legislation.
-                  For Sales Tax, manufacturers of taxable goods generally have
-                  a registration threshold of RM500,000 in sales value over a
-                  12-month period, subject to applicable conditions and exemptions.
-                </p>
-                <p>
-                  For Service Tax, registration thresholds vary depending on
-                  the category of taxable services provided. Businesses exceeding
-                  the applicable threshold are required to register with the
-                  Royal Malaysian Customs Department (RMCD).
-                </p>
-                <p>
-                  Registered businesses must comply with SST requirements,
-                  including issuing appropriate invoices, maintaining records,
-                  submitting tax returns and making payments within the
-                  prescribed periods.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </article>
-
-        <article class="mt-detail-card" id="excise">
-          <div class="mt-detail-side"><span>INDIRECT TAX / 02</span>
-            <div class="mt-detail-symbol">◈</div><small>SELECTED GOODS</small>
-          </div>
-          <div class="mt-detail-content">
-            <div class="mt-detail-title">
-              <h3>Excise Duty</h3><span class="mt-law">Goods imported or manufactured</span>
-            </div>
-            <p>Excise duty is a type of tax imposed on certain goods imported into or manufactured in Malaysia. The
-              goods subjected to excise duty are:</p>
-            <div class="mt-goods-grid">
-              <div><span>01</span>Liquor</div>
-              <div><span>02</span>Cigarettes, tobacco and tobacco products</div>
-              <div><span>03</span>Motor Vehicles</div>
-              <div><span>04</span>Playing cards (Playing Cards)</div>
-              <div><span>05</span>Mahjong tiles</div>
-            </div>
-            <p>All above goods have to be declared in customs import declaration Form No. 1 and the duty / tax assessed
-              paid to the customs office where goods are released from customs control.</p>
-          </div>
-        </article>
-
-        <article class="mt-detail-card" id="customs">
-          <div class="mt-detail-side"><span>INDIRECT TAX / 03</span>
-            <div class="mt-detail-symbol">⇄</div><small>CUSTOMS</small>
-          </div>
-          <div class="mt-detail-content">
-            <div class="mt-detail-title">
-              <h3>Customs Duty</h3><span class="mt-law">Customs Duties Order, 1996</span>
-            </div>
-            <p>Customs duty is a tax levied on imports by the customs authorities of a country to raise state revenue,
-              and/or to protect domestic industries from more efficient competitors from abroad.</p>
-            <p>In Malaysia, all goods dutiable on import are put through customs duty according to Customs Duties Order,
-              1996.</p>
-            <div class="mt-duty-types">
-              <div><b>Import duty</b><span>Goods imported</span></div>
-              <div><b>Sales tax</b><span>Type of duty listed</span></div>
-              <div><b>Export duty</b><span>Goods exported</span></div>
-            </div>
-            <p>The duty rates depend on the types of goods imported or exported.</p>
-          </div>
-        </article>
-
-
-        <article class="mt-detail-card" id="digital-services">
-          <div class="mt-detail-side">
-            <span>INDIRECT TAX / 04</span>
-            <div class="mt-detail-symbol">⌘</div>
-            <small>DIGITAL SERVICES</small>
-          </div>
-
-          <div class="mt-detail-content">
-            <div class="mt-detail-title">
-              <h3>Service Tax on Digital Services (SToDS)</h3>
-              <span class="mt-law">Service Tax Act 2018</span>
-            </div>
-
-            <p>
-              Service Tax on Digital Services (SToDS) is an indirect tax imposed
-              on digital services provided by foreign service providers to
-              consumers in Malaysia. Introduced on 1 January 2020, it applies
-              to services delivered or subscribed through the internet or
-              electronic networks, where the delivery is essentially automated
-              and requires information technology.
-            </p>
-
-            <p>
-              Examples of digital services include online streaming platforms,
-              software subscriptions, mobile applications, digital advertising
-              and online platforms. The applicable service tax rate is 8%,
-              effective from 1 March 2024.
-            </p>
-
-            <div class="mt-duty-types">
-              <div>
-                <b>8%</b>
-                <span>Service Tax Rate</span>
-              </div>
-              <div>
-                <b>RM500,000</b>
-                <span>Registration Threshold</span>
-              </div>
-              <div>
-                <b>Quarterly</b>
-                <span>Taxable Period</span>
-              </div>
-            </div>
-
-            <div class="mt-accordion">
-              <button class="mt-accordion-trigger" aria-expanded="false">
-                Registration and threshold
-                <span>+</span>
-              </button>
-              <div class="mt-accordion-body" hidden>
-                <p>
-                  Foreign service providers are required to register with the
-                  Royal Malaysian Customs Department (RMCD) as Foreign
-                  Registered Persons (FRPs) when the total value of digital
-                  services provided to consumers in Malaysia exceeds or is
-                  expected to exceed RM500,000 within a 12-month period.
-                </p>
-                <p>
-                  A consumer is considered to be in Malaysia when they fulfil
-                  at least two of the following conditions:
-                </p>
-                <ul>
-                  <li>Payment is made using a credit or debit facility provided
-                    by a Malaysian financial institution or company.</li>
-                  <li>The digital service is accessed using a Malaysian IP
-                    address or Malaysian international mobile country code.</li>
-                  <li>The consumer resides in Malaysia.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="mt-accordion">
-              <button class="mt-accordion-trigger" aria-expanded="false">
-                Taxable period and payment
-                <span>+</span>
-              </button>
-              <div class="mt-accordion-body" hidden>
-                <p>
-                  The taxable period for a Foreign Registered Person is three
-                  months (quarterly). Service tax becomes due when payment
-                  for the digital service is received, unless approval has
-                  been obtained from the Director General to account for
-                  tax based on the invoice date.
-                </p>
-                <p>
-                  The service tax return and payment must be submitted to
-                  RMCD by the last day of the month following the end of
-                  the taxable period.
-                </p>
-              </div>
-            </div>
-          </div>
-        </article>
-
+            <a href="https://www.customs.gov.my/" target="_blank" rel="noopener noreferrer">
+              Visit RMCD's official website <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+        </div>
       </div>
     </section>
 
+    <!-- BUSINESS CONSIDERATIONS -->
+    <section class="mt-business section" id="business-tax">
+      <div class="wrap">
+        <div class="mt-section-intro">
+          <div>
+            <span class="eyebrow">04 — FOR BUSINESSES</span>
+            <h2>Tax considerations<br><em>for every business.</em></h2>
+          </div>
+          <p>
+            Tax responsibilities go beyond submitting a return. Businesses should understand
+            the requirements that apply to their operations and keep their records in order.
+          </p>
+        </div>
+
+        <div class="mt-business-grid">
+          <article class="mt-business-card">
+            <span class="mt-business-index">01</span>
+            <span class="mt-business-icon" aria-hidden="true">＋</span>
+            <h3>Tax registration</h3>
+            <p>Identify whether the business needs to register for income tax, Sales Tax, Service Tax or other applicable taxes.</p>
+          </article>
+
+          <article class="mt-business-card">
+            <span class="mt-business-index">02</span>
+            <span class="mt-business-icon" aria-hidden="true">▣</span>
+            <h3>Filing and payment</h3>
+            <p>Understand the relevant submission requirements, taxable periods and payment deadlines that apply to the business.</p>
+          </article>
+
+          <article class="mt-business-card">
+            <span class="mt-business-index">03</span>
+            <span class="mt-business-icon" aria-hidden="true">≡</span>
+            <h3>Record keeping</h3>
+            <p>Maintain accurate accounting records, invoices and supporting documents to support tax reporting and reviews.</p>
+          </article>
+
+          <article class="mt-business-card">
+            <span class="mt-business-index">04</span>
+            <span class="mt-business-icon" aria-hidden="true">↗</span>
+            <h3>Regulatory changes</h3>
+            <p>Monitor changes to tax laws, policies and administrative requirements that may affect business operations.</p>
+          </article>
+        </div>
+
+        <div class="mt-business-note">
+          <div>
+            <span class="mt-mini-label">A PRACTICAL REMINDER</span>
+            <h3>Tax obligations differ from one business to another.</h3>
+            <p>
+              The applicable requirements may depend on business activities, turnover,
+              transaction type and other statutory conditions.
+            </p>
+          </div>
+      </div>
+    </section>
+
+    <!-- TAX INSIGHTS
+    <section class="mt-insights section" id="tax-insights">
+      <div class="wrap">
+        <div class="mt-insights-heading">
+          <div>
+            <span class="eyebrow">05 — INSIGHTS & RESOURCES</span>
+            <h2>Stay informed.<br><em>Stay ahead.</em></h2>
+            <p>
+              Explore tax developments, practical guidance and perspectives to help
+              you better understand Malaysia's changing tax landscape.
+            </p>
+          </div>
+          <a class="mt-insights-all" href="taxInsights.html">Explore all insights <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="mt-insights-grid">
+          <article class="mt-insight-card mt-insight-featured">
+            <a class="mt-insight-image" href="taxInsights.html" aria-label="Read Malaysia tax developments insight">
+              <img src="images/tax-insights-featured.jpg" alt="Business professionals reviewing documents during a meeting" loading="lazy">
+              <span>FEATURED</span>
+            </a>
+            <div class="mt-insight-content">
+              <span class="mt-insight-category">TAX UPDATES</span>
+              <h3><a href="taxInsights.html">Understanding Malaysia's Latest Tax Developments</a></h3>
+              <p>An overview of tax developments and the potential considerations for businesses operating in Malaysia.</p>
+              <a class="mt-read-link" href="taxInsights.html">Read insight <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="mt-insight-card">
+            <a class="mt-insight-image" href="taxInsights.html" aria-label="Read corporate income tax guide">
+              <img src="images/tax-insights-corporate-tax.jpg" alt="Calculator and financial documents on an office desk" loading="lazy">
+            </a>
+            <div class="mt-insight-content">
+              <span class="mt-insight-category">TAX GUIDE</span>
+              <h3><a href="taxInsights.html">A Guide to Corporate Income Tax in Malaysia</a></h3>
+              <p>Key concepts businesses should understand when navigating corporate income tax.</p>
+              <a class="mt-read-link" href="taxInsights.html">Read insight <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="mt-insight-card">
+            <a class="mt-insight-image" href="taxInsights.html" aria-label="Read e-Invoicing requirements guide">
+              <img src="images/tax-insights-einvoice.jpg" alt="Laptop displaying a digital invoice and business records" loading="lazy">
+            </a>
+            <div class="mt-insight-content">
+              <span class="mt-insight-category">BUSINESS COMPLIANCE</span>
+              <h3><a href="taxInsights.html">Understanding e-Invoicing Requirements</a></h3>
+              <p>An introduction to e-Invoicing and the importance of preparing business processes.</p>
+              <a class="mt-read-link" href="taxInsights.html">Read insight <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+
+        <p class="mt-insights-disclaimer">
+          Article titles shown are proposed content ideas. Publish only after the articles have
+          been written, reviewed and linked to their individual pages.
+        </p>
+      </div>
+    </section>-->
+
+    <!-- CONTACT CTA -->
     <section class="mt-end-section">
       <div class="wrap mt-end-inner">
-        <div><span class="eyebrow">MALAYSIA TAX SYSTEM</span>
-          <h2>Explore the tax<br><em>at your own pace.</em></h2>
-        </div><a class="btn" href="#overview">Back to overview <span>↑</span></a>
+        <div>
+          <span class="eyebrow">HOW CAN W&C HELP?</span>
+          <h2>Clear guidance on your tax<br><em>obligations.</em></h2>
+          <p>Talk to our team about your tax requirements and the support your business may need.</p>
+        </div>
+        <a class="btn" href="contact.html">Get in touch <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
 
   <footer class="mega-footer">
     <div class="wrap">
-      
       <div class="footer-mega-grid">
-   
         <div class="footer-col">
           <b>Services</b>
           <a href="malaysiaTax.html">Malaysia Tax System</a>
           <a href="directTax.html">Direct Tax</a>
+          <a href="indirectTax.html">Indirect Tax</a>
           <a href="taxPlanning.html">Tax Planning</a>
           <a href="tax_audit.html">Income Tax Audit and Investigation</a>
           <a href="tax_Incentive.html">Income Tax Incentive</a>
@@ -360,48 +395,39 @@
           <a href="transferPricing.html">Transfer Pricing</a>
           <a href="withholdingTax.html">Withholding Tax</a>
           <a href="dueDiligence.html">Due Diligence</a>
-          <a href="accountingService.html" aria-current="page">Accounting Services</a>
+          <a href="accountingService.html">Accounting Services</a>
           <a href="virtualCFO.html">Virtual CFO</a>
-          
         </div>
 
         <div class="footer-col">
           <b>Company</b>
           <a href="index.html">Home</a>
           <a href="about.html">About Us</a>
-           <a href="careers.html">Careers</a>
+          <a href="careers.html">Careers</a>
           <a href="contact.html">Contact Us</a>
           <a href="contact.html#find-us">Find Us →</a>
         </div>
 
         <div class="footer-col">
           <b>Connect</b>
-          <a href="#">LinkedIn</a>
-          <a href="#">Facebook</a>
+          <a href="#" aria-label="W&C LinkedIn page">LinkedIn</a>
+          <a href="#" aria-label="W&C Facebook page">Facebook</a>
           <a href="mailto:info@wctax.com">Email Us</a>
         </div>
-
       </div>
 
-        <div class="footer-legal-section">
-        
+      <div class="footer-legal-section">
         <div class="footer-legal-top">
-          
-               <div class="footer-logo">
+          <div class="footer-logo">
             <a class="brand" href="index.html" aria-label="W&C home">
               <img class="site-logo" src="images/wclogo.svg" alt="W&C" width="180" height="53">
             </a>
           </div>
-          
-             <div class="footer-legal-text">
-            <p>
-              © <span id="year">2026</span> W&C Tax Services Sdn. Bhd. All rights reserved. 
-            </p>
+          <div class="footer-legal-text">
+            <p>© <span id="year">2026</span> W&C Tax Services Sdn. Bhd. All rights reserved.</p>
           </div>
-
         </div>
       </div>
-
     </div>
   </footer>
 

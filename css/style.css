@@ -1656,7 +1656,7 @@ h2 {
 .service-card a,
 .service-toggle {
   color: #142E87;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 800;
   display: inline-flex;
   gap: 8px;
@@ -3605,7 +3605,7 @@ header { view-transition-name: site-header; }
   padding-top: 18px;
   color: #142E87;
   font: inherit;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 800;
 }
 .home-service-link span {

@@ -1405,6 +1405,10 @@
             color: var(--lav2)
         }
 
+        body.transfer-pricing-page main .timeline-section .eyebrow {
+            color: #fff !important
+        }
+
         .timeline-section .section-head p {
             color: #d3ccdc
         }

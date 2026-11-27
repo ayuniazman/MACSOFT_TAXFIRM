@@ -1,0 +1,591 @@
+.indirect-tax-page {
+  background: #fff;
+  color: #2d2f38;
+}
+
+.indirect-tax-page .idt-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(120deg, #f3ecfc 0%, #fbf8ff 55%, #ffffff 100%);
+}
+
+.indirect-tax-page .idt-hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle clamp(90px, 11vw, 170px) at 28% 8%,
+      rgba(205, 160, 250, 0.16) 0,
+      rgba(205, 160, 250, 0.30) calc(100% - 2px),
+      rgba(190, 150, 235, 0.45) calc(100% - 2px),
+      rgba(190, 150, 235, 0.45) 100%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle clamp(150px, 20vw, 300px) at 12% 105%,
+      rgba(205, 160, 250, 0.14) 0,
+      rgba(205, 160, 250, 0.30) calc(100% - 2px),
+      rgba(190, 150, 235, 0.45) calc(100% - 2px),
+      rgba(190, 150, 235, 0.45) 100%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle clamp(220px, 32vw, 480px) at 92% 95%,
+      rgba(205, 160, 250, 0.10) 0,
+      rgba(205, 160, 250, 0.32) calc(100% - 2px),
+      rgba(190, 150, 235, 0.45) calc(100% - 2px),
+      rgba(190, 150, 235, 0.45) 100%,
+      transparent 100%
+    );
+  content: "";
+}
+
+.indirect-tax-page .idt-hero::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.07;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+  content: "";
+}
+
+.indirect-tax-page .idt-hero-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: clamp(35px, 6vw, 90px);
+  padding-top: 78px;
+  padding-bottom: 78px;
+}
+
+.indirect-tax-page .idt-eyebrow,
+.indirect-tax-page .idt-kicker {
+  margin: 0 0 17px;
+  color: #142E87;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.indirect-tax-page .idt-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.indirect-tax-page .idt-eyebrow::before {
+  width: 27px;
+  height: 2px;
+  background: #7567a8;
+  content: "";
+}
+
+.indirect-tax-page .idt-hero h1 {
+  max-width: 650px;
+  margin: 0 0 18px;
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 1.04;
+  letter-spacing: -0.065em;
+}
+
+.indirect-tax-page .idt-hero-subtitle {
+  margin-bottom: 20px;
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.04em;
+}
+
+.indirect-tax-page .idt-hero-description {
+  max-width: 545px;
+  margin-bottom: 28px;
+  color: #6a6f7b;
+}
+
+.indirect-tax-page .idt-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 14px 20px;
+  border-radius: 9px;
+  background: #7a6bb2;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.indirect-tax-page .idt-button:hover {
+  transform: translateY(-2px);
+  background: #5f548d;
+}
+
+.indirect-tax-page .idt-hero-media {
+  position: relative;
+}
+
+.indirect-tax-page .idt-hero-media::after {
+  position: absolute;
+  right: -15px;
+  bottom: -15px;
+  z-index: 0;
+  width: 42%;
+  height: 42%;
+  border: 1px solid #c9c3dc;
+  border-radius: 18px;
+  content: "";
+}
+
+.indirect-tax-page .idt-hero-media img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 440px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.indirect-tax-page .idt-image-caption {
+  position: absolute;
+  bottom: 17px;
+  left: 17px;
+  z-index: 2;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.96);
+  color: #142E87;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.indirect-tax-page .idt-local-nav {
+  position: sticky;
+  top: 82px;
+  z-index: 10;
+  border-bottom: 1px solid #e7e6ee;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+}
+
+.indirect-tax-page .idt-local-nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.indirect-tax-page .idt-local-nav a {
+  display: inline-block;
+  padding: 16px 0;
+  border-bottom: 2px solid transparent;
+  color: #6a6f7b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.indirect-tax-page .idt-local-nav a:hover,
+.indirect-tax-page .idt-local-nav a:focus-visible {
+  border-bottom-color: #7a6bb2;
+  color: #142E87;
+}
+
+.indirect-tax-page [id] {
+  scroll-margin-top: 150px;
+}
+
+.indirect-tax-page .idt-intro {
+  padding: 92px 0 88px;
+}
+
+.indirect-tax-page .idt-intro-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 90px;
+}
+
+.indirect-tax-page .idt-intro h2,
+.indirect-tax-page .idt-section-heading h2,
+.indirect-tax-page .idt-details-heading h2,
+.indirect-tax-page .idt-cta h2 {
+  margin: 0 0 20px;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.14;
+  letter-spacing: -0.055em;
+}
+
+.indirect-tax-page .idt-intro-copy {
+  max-width: 690px;
+  color: #555b66;
+  font-size: 17px;
+}
+
+.indirect-tax-page .idt-intro-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.indirect-tax-page .idt-map-section {
+  padding: 82px 0 90px;
+  background: #f3f1f7;
+}
+
+.indirect-tax-page .idt-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 32px;
+}
+
+.indirect-tax-page .idt-section-heading p:last-child {
+  max-width: 365px;
+  margin-bottom: 4px;
+  color: #6a6f7b;
+  font-size: 14px;
+}
+
+.indirect-tax-page .idt-tax-map {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.indirect-tax-page .idt-map-card {
+  display: flex;
+  min-width: 0;
+  min-height: 205px;
+  flex-direction: column;
+  padding: 18px 14px;
+  border: 1px solid #e7e6ee;
+  border-radius: 12px;
+  background: #fff;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.indirect-tax-page .idt-map-card:hover {
+  transform: translateY(-4px);
+  border-color: #bdb4d8;
+  box-shadow: 0 12px 30px rgba(77, 69, 104, 0.1);
+}
+
+.indirect-tax-page .idt-number {
+  margin-bottom: 20px;
+  color: #142E87;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+}
+
+.indirect-tax-page .idt-map-card strong {
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+}
+
+.indirect-tax-page .idt-map-desc {
+  color: #6a6f7b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.indirect-tax-page .idt-arrow {
+  align-self: flex-end;
+  margin-top: auto;
+  color: #142E87;
+}
+
+.indirect-tax-page .idt-details-section {
+  padding: 96px 0;
+}
+
+.indirect-tax-page .idt-details-heading {
+  max-width: 680px;
+  margin-bottom: 38px;
+}
+
+.indirect-tax-page .idt-details-heading p:last-child {
+  margin-bottom: 0;
+  color: #6a6f7b;
+}
+
+.indirect-tax-page .idt-tax-card {
+  display: grid;
+  grid-template-columns: 265px minmax(0, 1fr);
+  gap: 48px;
+  padding: 40px 0;
+  border-top: 1px solid #e7e6ee;
+}
+
+.indirect-tax-page .idt-tax-card:last-child {
+  border-bottom: 1px solid #e7e6ee;
+}
+
+.indirect-tax-page .idt-tax-card-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.indirect-tax-page .idt-card-index {
+  margin-bottom: 25px;
+  color: #142E87;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.indirect-tax-page .idt-card-symbol {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border-radius: 14px;
+  background: #f0eef6;
+  color: #142E87;
+  font-size: 27px;
+}
+
+.indirect-tax-page .idt-tax-card h3 {
+  margin: 0 0 9px;
+  font-size: clamp(27px, 3vw, 37px);
+  line-height: 1.17;
+  letter-spacing: -0.045em;
+}
+
+.indirect-tax-page .idt-legislation {
+  margin-bottom: 20px;
+  color: #142E87;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.indirect-tax-page .idt-card-summary {
+  max-width: 750px;
+  margin-bottom: 20px;
+  color: #555b66;
+}
+
+.indirect-tax-page .idt-figures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 21px;
+}
+
+.indirect-tax-page .idt-figures span {
+  padding: 8px 11px;
+  border-radius: 7px;
+  background: #f0eef6;
+  color: #142E87;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.indirect-tax-page .idt-key-point {
+  margin: 0 0 22px;
+  padding: 16px 19px;
+  border-left: 3px solid #7a6bb2;
+  border-radius: 0 8px 8px 0;
+  background: #f6f5f9;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.indirect-tax-page .idt-key-point strong {
+  color: #142E87;
+}
+
+.indirect-tax-page .idt-accordions {
+  border-top: 1px solid #e7e6ee;
+}
+
+.indirect-tax-page .idt-accordions details {
+  border-bottom: 1px solid #e7e6ee;
+}
+
+.indirect-tax-page .idt-accordions summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 2px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  list-style: none;
+}
+
+.indirect-tax-page .idt-accordions summary::-webkit-details-marker {
+  display: none;
+}
+
+.indirect-tax-page .idt-accordions summary::after {
+  color: #142E87;
+  content: "+";
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.indirect-tax-page .idt-accordions details[open] summary::after {
+  content: "−";
+}
+
+.indirect-tax-page .idt-accordion-body {
+  padding: 0 20px 18px 2px;
+  color: #626875;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.indirect-tax-page .idt-accordion-body p {
+  margin-bottom: 12px;
+}
+
+.indirect-tax-page .idt-accordion-body p:last-child {
+  margin-bottom: 0;
+}
+
+.indirect-tax-page .idt-cta {
+  padding: 68px 0;
+  background: #eeebf5;
+}
+
+.indirect-tax-page .idt-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.indirect-tax-page .idt-cta h2 {
+  max-width: 620px;
+  margin-bottom: 13px;
+  font-size: clamp(30px, 3.5vw, 44px);
+}
+
+.indirect-tax-page .idt-cta-inner > div > p:last-child {
+  margin-bottom: 0;
+  color: #626875;
+}
+
+.indirect-tax-page .idt-disclaimer {
+  padding: 20px 0;
+  background: #f8f8fa;
+  color: #6a6f7b;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.indirect-tax-page .idt-disclaimer strong {
+  color: #2d2f38;
+}
+
+@media (max-width: 900px) {
+  .indirect-tax-page .idt-tax-map {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .indirect-tax-page .idt-tax-card {
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .indirect-tax-page .idt-intro-grid {
+    gap: 45px;
+  }
+}
+
+@media (max-width: 680px) {
+  .indirect-tax-page .idt-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-top: 54px;
+    padding-bottom: 55px;
+  }
+
+  .indirect-tax-page .idt-hero-media img {
+    height: 320px;
+  }
+
+  .indirect-tax-page .idt-local-nav {
+    top: 68px;
+  }
+
+  .indirect-tax-page .idt-local-nav-inner {
+    gap: 23px;
+  }
+
+  .indirect-tax-page .idt-intro {
+    padding: 66px 0;
+  }
+
+  .indirect-tax-page .idt-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .indirect-tax-page .idt-map-section,
+  .indirect-tax-page .idt-details-section {
+    padding: 66px 0;
+  }
+
+  .indirect-tax-page .idt-section-heading {
+    display: block;
+  }
+
+  .indirect-tax-page .idt-tax-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px 0;
+  }
+
+  .indirect-tax-page .idt-tax-card-side {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .indirect-tax-page .idt-card-index {
+    margin-bottom: 0;
+  }
+
+  .indirect-tax-page .idt-card-symbol {
+    width: 42px;
+    height: 42px;
+    font-size: 21px;
+  }
+
+  .indirect-tax-page .idt-cta-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .indirect-tax-page .idt-tax-map {
+    grid-template-columns: 1fr;
+  }
+
+  .indirect-tax-page .idt-map-card:last-child {
+    grid-column: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .indirect-tax-page .idt-button,
+  .indirect-tax-page .idt-map-card {
+    transition: none;
+  }
+}
