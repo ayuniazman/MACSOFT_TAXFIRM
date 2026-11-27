@@ -97,7 +97,7 @@ input {
 }
 
 .nav-link:hover {
-  color: var(--orange);
+  color: #142E87;
 }
 
 .withholding-page > header {
@@ -203,7 +203,7 @@ input {
 }
 
 .eyebrow {
-  color: var(--orange-dark);
+  color: #142E87;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 12px;
@@ -367,7 +367,7 @@ h2 {
 }
 
 .definition-label {
-  color: var(--orange-dark);
+  color: #142E87;
   font-size: 11px;
   letter-spacing: 1.5px;
   font-weight: 700;
@@ -513,7 +513,7 @@ h2 {
 }
 
 .card-number {
-  color: var(--orange-dark);
+  color: #142E87;
   font-weight: 700;
   font-size: 12px;
   letter-spacing: 1px;
@@ -543,7 +543,7 @@ h2 {
   border-top: 1px solid var(--line);
   cursor: pointer;
   text-align: left;
-  color: var(--orange-dark);
+  color: #142E87;
   font-size: 13px;
   font-weight: 700;
 }
@@ -645,7 +645,7 @@ h2 {
 
 .cta .button {
     background: #d2caef;
-    color: #6c5485;
+    color: #142E87;
     border: 1px solid #d2caef;
     border-radius: 30px;
 }
@@ -781,5 +781,5 @@ footer p {
 }
 
 .footer-brand-accent {
-  color: var(--orange);
+  color: #142E87;
 }

@@ -24,7 +24,7 @@
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  color: var(--green-dark, #5f548d);
+  color: #142E87;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -92,7 +92,7 @@
   height: 44px;
   border-radius: 14px;
   background: #ece8f7;
-  color: var(--green-dark, #5f548d);
+  color: #142E87;
 }
 .co-pin svg { width: 20px; height: 20px; }
 
@@ -106,7 +106,7 @@
 .co-state {
   display: block;
   margin-top: 3px;
-  color: var(--green, #7a6bb2);
+  color: #142E87;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -133,13 +133,13 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: var(--green-dark, #5f548d);
+  color: #142E87;
   font-size: 14px;
   font-weight: 700;
   transition: color 0.2s ease;
 }
 .co-phone svg { width: 16px; height: 16px; flex-shrink: 0; }
-.co-phone:hover { color: var(--green, #7a6bb2); text-decoration: underline; }
+.co-phone:hover { color: #142E87; text-decoration: underline; }
 
 @media (max-width: 600px) {
   .co-section { padding: 56px 0; }
