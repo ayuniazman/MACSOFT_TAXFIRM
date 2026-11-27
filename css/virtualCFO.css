@@ -18,7 +18,7 @@
 
 .virtual-cfo-page .eyebrow {
     display: inline-block;
-    color: #7567a8;
+    color: #142E87;
     font-size: 12px;
     font-weight: 800;
     letter-spacing: .13em;
@@ -195,7 +195,7 @@
 }
 
 .virtual-cfo-page .virtual-cfo-card-number {
-    color: #7567a8;
+    color: #142E87;
     font-size: 11px;
     font-weight: 800;
     letter-spacing: .13em;
@@ -209,7 +209,7 @@
     place-items: center;
     border-radius: 12px;
     background: #f0edf7;
-    color: #7567a8;
+    color: #142E87;
     font-size: 25px;
     font-weight: 600;
 }
@@ -266,7 +266,7 @@
 .virtual-cfo-page .virtual-cfo-audience-card > span {
     display: inline-block;
     margin-bottom: 24px;
-    color: #7567a8;
+    color: #142E87;
     font-size: 12px;
     font-weight: 800;
     letter-spacing: .12em;
@@ -315,7 +315,7 @@
     align-items: center;
     gap: 9px;
     margin-top: 12px;
-    color: #66568f;
+    color: #142E87;
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
@@ -340,7 +340,7 @@
 
 .virtual-cfo-page .virtual-cfo-benefit-number {
     padding-top: 3px;
-    color: #7567a8;
+    color: #142E87;
     font-size: 12px;
     font-weight: 800;
     letter-spacing: .1em;
@@ -375,7 +375,7 @@
 }
 
 .virtual-cfo-page .virtual-cfo-step-number {
-    color: #7567a8;
+    color: #142E87;
     font-size: 13px;
     font-weight: 800;
     letter-spacing: .12em;
@@ -440,7 +440,7 @@
     position: absolute;
     top: 18px;
     right: 4px;
-    color: #7567a8;
+    color: #142E87;
     content: "+";
     font-size: 23px;
     font-weight: 400;

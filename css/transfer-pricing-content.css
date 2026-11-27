@@ -1,6 +1,6 @@
 .interactive-content h2 {
   max-width: 760px;
-  color: var(--deep);
+  color: #142E87;
   font-size: clamp(32px, 3vw, 36px);
   line-height: 1.2;
   letter-spacing: -0.05em;
@@ -8,7 +8,7 @@
 }
 
 .interactive-content h3 {
-  color: var(--deep);
+  color: #142E87;
   font-size: clamp(24px, 2.2vw, 28px);
   line-height: 1.25;
   letter-spacing: -0.04em;
@@ -22,7 +22,7 @@
 }
 
 .interactive-content .kicker {
-  color: var(--purple);
+  color: #142E87;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -61,7 +61,7 @@
 
 .guideline-card .date {
   margin-top: 8px;
-  color: var(--deep);
+  color: #142E87;
   font-size: 34px;
   font-weight: 850;
 }
@@ -135,7 +135,7 @@
   place-items: center;
   border-radius: 12px;
   background: var(--lav);
-  color: var(--deep);
+  color: #142E87;
   font-weight: 850;
 }
 
@@ -166,7 +166,7 @@
   padding: 20px 0;
   border: 0;
   background: transparent;
-  color: var(--deep);
+  color: #142E87;
   font: inherit;
   font-size: 15px;
   font-weight: 750;
@@ -182,7 +182,7 @@
   place-items: center;
   border-radius: 50%;
   background: var(--lav);
-  color: var(--deep);
+  color: #142E87;
   font-size: 20px;
   transition: transform 0.2s ease;
 }
@@ -225,7 +225,7 @@
 }
 
 .time-card .step {
-  color: var(--purple);
+  color: #142E87;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -271,7 +271,7 @@
 }
 
 .method-tab strong {
-  color: var(--deep);
+  color: #142E87;
   font-size: 13px;
 }
 
@@ -304,7 +304,7 @@
   padding: 6px 11px;
   border-radius: 999px;
   background: var(--lav);
-  color: var(--deep);
+  color: #142E87;
   font-size: 11px;
   font-weight: 800;
 }
@@ -339,7 +339,7 @@
 }
 
 .method-list .mini b {
-  color: var(--deep);
+  color: #142E87;
   font-size: 13px;
 }
 
@@ -497,11 +497,11 @@
 }
 
 .editorial-copy h3 {
-    color: var(--deep);
+    color: #142E87;
 }
 
 .editorial-copy .kicker {
-    color: var(--purple);
+    color: #142E87;
 }
 
 /* =========================================
@@ -563,7 +563,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            color: var(--purple);
+            color: #142E87;
             font-size: 11px;
             letter-spacing: .16em;
             font-weight: 800;
@@ -725,7 +725,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--purple)
+            color: #142E87
         }
 
         .btn {
@@ -751,13 +751,13 @@
 
         .btn.light {
             background: #fff;
-            color: var(--deep);
+            color: #142E87;
             box-shadow: none
         }
 
         .btn.outline {
             background: transparent;
-            color: var(--deep);
+            color: #142E87;
             border: 1px solid #cfc7d9;
             box-shadow: none
         }
@@ -777,7 +777,7 @@
         }
 
         .crumbs a:hover {
-            color: var(--purple)
+            color: #142E87
         }
 
         .hero {
@@ -819,7 +819,7 @@
         .hero h1 em {
             font-family: Georgia, serif;
             font-weight: 500;
-            color: var(--purple)
+            color: #142E87
         }
 
         .hero p {
@@ -935,7 +935,7 @@
         .pill {
             border-radius: 99px;
             background: #e3def9;
-            color: var(--purple);
+            color: #142E87;
             padding: 7px 10px;
             font-size: 9px;
             font-weight: 850;
@@ -976,7 +976,7 @@
         }
 
         .flow b {
-            color: var(--purple);
+            color: #142E87;
             font-size: 20px
         }
 
@@ -1057,7 +1057,7 @@
             font-size: 46px;
             line-height: 1;
             letter-spacing: -.06em;
-            color: var(--purple);
+            color: #142E87;
             margin-bottom: 10px
         }
 
@@ -1090,7 +1090,7 @@
         }
 
         .quicknav a:hover {
-            color: var(--purple);
+            color: #142E87;
             border-color: var(--coral)
         }
 
@@ -1117,7 +1117,7 @@
 
         .section-head h2 em,
         .interactive-content .intro-copy h2 em {
-            color: var(--purple);
+            color: #142E87;
             font-style: normal;
             font-weight: 500
         }
@@ -1174,7 +1174,7 @@
             font-size: 11px;
             letter-spacing: .13em;
             font-weight: 850;
-            color: var(--purple)
+            color: #142E87
         }
 
         .type-card.dark .number {
@@ -1203,7 +1203,7 @@
             right: 25px;
             top: 25px;
             font-size: 22px;
-            color: var(--purple)
+            color: #142E87
         }
 
         .dark .type-arrow {
@@ -1284,7 +1284,7 @@
         .explorer-tab.active {
             background: #e3def9;
             border-color: #d5cee9;
-            color: var(--deep)
+            color: #142E87
         }
 
         .explorer-panel {
@@ -1345,7 +1345,7 @@
         .panel-point:before {
             content: "↗";
             display: block;
-            color: var(--purple);
+            color: #142E87;
             font-size: 17px;
             margin-bottom: 8px
         }
@@ -1372,7 +1372,7 @@
             font-size: 9px;
             letter-spacing: .12em;
             text-transform: uppercase;
-            color: var(--purple);
+            color: #142E87;
             margin-bottom: 6px
         }
 
@@ -1510,7 +1510,7 @@
 
         .faq-q span:last-child {
             font-size: 20px;
-            color: var(--purple);
+            color: #142E87;
             transition: transform .2s
         }
 
@@ -1574,7 +1574,7 @@
         .cta-copy p {
             font-size: 12px;
             line-height: 1.8;
-            color: #62586f;
+            color: #142E87;
             max-width: 520px
         }
 
@@ -1606,7 +1606,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--purple)
+            color: #142E87
         }
 
         .reveal {
@@ -1832,13 +1832,13 @@
 
         .hero-lead { max-width: 540px; color: var(--muted); line-height: 1.8; font-size: 15px; }
         .small-note, .audit-note { color: var(--muted); font-size: 11px; line-height: 1.7; }
-        .text-link { display: inline-block; margin-top: 12px; color: var(--purple); font-size: 12px; font-weight: 800; }
+        .text-link { display: inline-block; margin-top: 12px; color: #142E87; font-size: 12px; font-weight: 800; }
         .framework-grid, .documentation-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 34px; }
         .framework-card, .documentation-card, .audit-card { background: #fff; border: 1px solid var(--line); border-radius: 19px; padding: 27px; box-shadow: var(--shadow); }
-        .framework-number { color: var(--purple); font-size: 11px; font-weight: 900; letter-spacing: .12em; }
+        .framework-number { color: #142E87; font-size: 11px; font-weight: 900; letter-spacing: .12em; }
         .framework-card h3, .documentation-card h3, .audit-card h3 { margin: 12px 0 9px; font-size: 20px; letter-spacing: -.04em; }
         .framework-card p, .documentation-card p, .audit-card p { color: var(--muted); font-size: 12px; line-height: 1.8; }
-        .notice-strip { margin-top: 25px; padding: 19px 22px; border-left: 3px solid var(--purple); background: #f0ebf8; color: #51465f; font-size: 12px; line-height: 1.8; border-radius: 0 12px 12px 0; }
+        .notice-strip { margin-top: 25px; padding: 19px 22px; border-left: 3px solid var(--purple); background: #f0ebf8; color: #142E87; font-size: 12px; line-height: 1.8; border-radius: 0 12px 12px 0; }
         .editorial-split { display: grid; grid-template-columns: 1.2fr .8fr; gap: 40px; align-items: center; margin: 42px 0; }
         .editorial-copy h3 { font-size: clamp(25px, 3vw, 36px); letter-spacing: -.055em; line-height: 1.1; margin: 12px 0; }
         .editorial-copy p { color: var(--muted); font-size: 13px; line-height: 1.8; }
@@ -1846,10 +1846,10 @@
         .fact-row { display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 12px; }
         .fact-row:last-child { border-bottom: 0; }
         .fact-row span { color: var(--muted); }
-        .fact-row strong { text-align: right; color: var(--deep); }
-        .method-example { margin-top: 24px; padding: 18px; background: #f0ebf8; border-radius: 13px; display: grid; gap: 8px; color: #51465f; font-size: 12px; line-height: 1.7; }
-        .method-example strong { color: var(--deep); }
-        .doc-tag { color: var(--purple); font-size: 10px; letter-spacing: .12em; font-weight: 900; }
+        .fact-row strong { text-align: right; color: #142E87; }
+        .method-example { margin-top: 24px; padding: 18px; background: #f0ebf8; border-radius: 13px; display: grid; gap: 8px; color: #142E87; font-size: 12px; line-height: 1.7; }
+        .method-example strong { color: #142E87; }
+        .doc-tag { color: #142E87; font-size: 10px; letter-spacing: .12em; font-weight: 900; }
         .audit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 35px; }
         .audit-card { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.15); box-shadow: none; }
         .audit-card > span { color: var(--lav2); font-weight: 900; font-size: 12px; }
@@ -1857,7 +1857,7 @@
         .timeline-section .audit-card p, .timeline-section .audit-note { color: #d3ccdc; }
         .updates-list { border-top: 1px solid var(--line); margin-top: 32px; }
         .update-item { display: grid; grid-template-columns: 150px 1fr; gap: 25px; padding: 25px 0; border-bottom: 1px solid var(--line); }
-        .update-date { color: var(--purple); font-size: 10px; font-weight: 900; letter-spacing: .1em; }
+        .update-date { color: #142E87; font-size: 10px; font-weight: 900; letter-spacing: .1em; }
         .update-item h3 { margin: 0 0 7px; font-size: 18px; letter-spacing: -.03em; }
         .update-item p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
         .faq-grid { align-items: start; }

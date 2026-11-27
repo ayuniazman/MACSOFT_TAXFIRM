@@ -23,7 +23,7 @@
         }
 
         .acct-eyebrow {
-            color: var(--purple);
+            color: #142E87;
             font-size: .76rem;
             font-weight: 750;
             letter-spacing: .14em;
@@ -66,7 +66,7 @@
         }
 
         .acct-hero .acct-eyebrow {
-            color: var(--purple)
+            color: #142E87
         }
 
         .acct-hero h1 {
@@ -79,7 +79,7 @@
         }
 
         .acct-hero h1 span {
-            color: var(--purple)
+            color: #142E87
         }
 
         .acct-hero p:not(.acct-eyebrow) {
@@ -123,12 +123,12 @@
 
         .acct-btn-outline {
             border: 1px solid var(--line);
-            color: var(--navy)
+            color: #142E87
         }
 
         .acct-btn-light {
             background: #fff;
-            color: var(--navy)
+            color: #142E87
         }
 
         .acct-btn-dark {
@@ -193,12 +193,12 @@
         .acct-number {
             font-size: 1.4rem;
             font-weight: 800;
-            color: #aaa8cb
+            color: #142E87
         }
 
         .acct-service h3 {
             font-size: 1.4rem;
-            color: var(--navy);
+            color: #142E87;
             margin: 0 0 10px
         }
 
@@ -225,7 +225,7 @@
         }
 
         .acct-outcome strong {
-            color: var(--navy)
+            color: #142E87
         }
 
         .acct-outcome p {
@@ -285,7 +285,7 @@
 
         .acct-industry h3 {
             margin: 0 0 7px;
-            color: var(--navy);
+            color: #142E87;
             font-size: 1.08rem
         }
 
@@ -328,7 +328,7 @@
 
         .acct-benefit b {
             display: block;
-            color: var(--navy);
+            color: #142E87;
             margin: 0 0 8px
         }
 
@@ -362,7 +362,7 @@
         }
 
         .acct-team h3 {
-            color: var(--navy);
+            color: #142E87;
             margin: 0 0 8px
         }
 
@@ -406,13 +406,13 @@
         }
 
         .acct-process span {
-            color: #aaa8cb;
+            color: #142E87;
             font-weight: 800;
             font-size: 1.4rem
         }
 
         .acct-process h3 {
-            color: var(--navy);
+            color: #142E87;
             font-size: 1.1rem;
             margin: 17px 0 8px
         }
@@ -487,7 +487,7 @@
         }
 
         .acct-link {
-            color: var(--navy);
+            color: #142E87;
             font-weight: 700;
             text-decoration: none
         }
@@ -548,7 +548,7 @@
 
         .accounting-service-page .footer-column a:hover,
         .accounting-service-page .footer-bottom a:hover {
-            color: var(--navy)
+            color: #142E87
         }
 
         .accounting-service-page .footer-bottom {

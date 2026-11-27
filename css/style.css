@@ -187,7 +187,7 @@ select {
   font-weight: 850;
 }
 .tax-planning-page .northstar-tax {
-  color: #8171bd;
+  color: #142E87;
   font-weight: 500;
   letter-spacing: -0.04em;
 }
@@ -200,7 +200,7 @@ select {
   font-weight: 600;
 }
 .nav-links a:hover {
-  color: var(--green);
+  color: #142E87;
 }
 .nav-services-menu {
   position: relative;
@@ -225,7 +225,7 @@ select {
   margin-top: -4px;
 }
 .nav-services-menu summary:hover {
-  color: var(--green);
+  color: #142E87;
 }
 .nav-services-dropdown {
   position: absolute;
@@ -248,7 +248,7 @@ select {
 }
 .nav-links .nav-services-dropdown a:hover {
   background: var(--cream);
-  color: var(--green-dark);
+  color: #142E87;
 }
 .btn {
   display: inline-flex;
@@ -276,7 +276,7 @@ select {
 }
 .btn.light {
   background: var(--paper);
-  color: var(--green);
+  color: #142E87;
   box-shadow: none;
 }
 .btn.light:hover {
@@ -383,7 +383,7 @@ select {
         font-weight: 850;
       }
       .tax-planning-page .northstar-tax {
-        color: #8171bd;
+        color: #142E87;
         font-weight: 500;
         letter-spacing: -0.04em;
       }
@@ -396,7 +396,7 @@ select {
         font-weight: 600;
       }
       .nav-links a:hover {
-        color: var(--green);
+        color: #142E87;
       }
       .nav-services-menu {
         position: relative;
@@ -412,7 +412,7 @@ select {
         display: none;
       }
       .nav-services-menu summary:hover {
-        color: var(--green);
+        color: #142E87;
       }
       .nav-services-dropdown {
         position: absolute;
@@ -435,7 +435,7 @@ select {
       }
       .nav-links .nav-services-dropdown a:hover {
         background: var(--cream);
-        color: var(--green-dark);
+        color: #142E87;
       }
       .btn {
         display: inline-flex;
@@ -463,7 +463,7 @@ select {
       }
       .btn.light {
         background: var(--paper);
-        color: var(--green);
+        color: #142E87;
         box-shadow: none;
       }
       .btn.light:hover {
@@ -1229,7 +1229,7 @@ select {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  color: var(--green);
+  color: #ffff;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.13em;
@@ -1250,7 +1250,7 @@ h1 {
   font-weight: 760;
 }
 h1 em {
-  color: var(--green);
+  color: #142E87;
   font-family: inherit;
   font-weight: 500;
 }
@@ -1303,7 +1303,7 @@ h1 em {
   margin-left: -5px;
   font-size: 11px;
   font-weight: 800;
-  color: var(--green-dark);
+  color: #142E87;
   background: #e5bd9e;
 }
 .avatar:nth-child(2) {
@@ -1479,7 +1479,7 @@ h1 em {
 .mini-value {
   font-size: 12px;
   font-weight: 800;
-  color: var(--green);
+  color: #142E87;
 }
 .float-note {
   position: absolute;
@@ -1501,7 +1501,7 @@ h1 em {
   display: grid;
   place-items: center;
   background: var(--lime);
-  color: var(--green-dark);
+  color: #142E87;
   font-size: 15px;
 }
 .float-note.one {
@@ -1556,7 +1556,7 @@ h1 em {
   font-weight: 750;
 }
 .proof-item b {
-  color: var(--green);
+  color: #142E87;
   font-size: 18px;
 }
 
@@ -1614,7 +1614,7 @@ h2 {
   height: 47px;
   border-radius: 14px;
   background: #eaf0df;
-  color: var(--green);
+  color: #142E87;
   font-size: 22px;
 }
 .service-card:nth-child(2) .service-icon {
@@ -1623,7 +1623,7 @@ h2 {
 }
 .service-card:nth-child(3) .service-icon {
   background: #e8e0f2;
-  color: #6e548a;
+  color: #142E87;
 }
 .service-card h3 {
   margin: 24px 0 10px;
@@ -1638,7 +1638,7 @@ h2 {
 }
 .service-card a,
 .service-toggle {
-  color: var(--green);
+  color: #142E87;
   font-size: 12px;
   font-weight: 800;
   display: inline-flex;
@@ -1673,10 +1673,10 @@ h2 {
 }
 .service-dropdown-menu a:hover {
   background: #f5f2fb;
-  color: var(--green-dark);
+  color: #142E87;
 }
 .service-card.open .service-toggle {
-  color: var(--green-dark);
+  color: #142E87;
 }
 
 .about {
@@ -1763,7 +1763,7 @@ h2 {
   font-weight: 750;
 }
 .benefit span {
-  color: var(--green);
+  color: #142E87;
   font-size: 16px;
 }
 
@@ -1872,7 +1872,7 @@ footer {
   margin: 10px 0;
 }
 .footer-col a:hover {
-  color: var(--green);
+  color: #142E87;
 }
 .footer-bottom {
   border-top: 1px solid #dfe2d8;
@@ -2255,7 +2255,7 @@ footer {
   box-shadow: var(--shadow);
 }
 .tax-planning-page .tax-illustration span {
-  color: var(--green);
+  color: #142E87;
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -2320,7 +2320,7 @@ footer {
   box-shadow: var(--shadow);
 }
 .tax-planning-page .info-no {
-  color: var(--green);
+  color: #142E87;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -2597,7 +2597,7 @@ footer {
         box-shadow: var(--shadow);
       }
       .tax-planning-page .info-no {
-        color: var(--green);
+        color: #142E87;
         font-size: 12px;
         font-weight: 800;
         letter-spacing: 0.1em;
@@ -2740,7 +2740,7 @@ footer {
 }
 .tax-planning-page .nav-links a:hover,
 .tax-planning-page .footer-col a:hover {
-  color: var(--green-dark);
+  color: #142E87;
 }
 .tax-planning-page .page-hero {
   background:
@@ -2779,7 +2779,7 @@ footer {
   color: var(--muted);
 }
 .tax-planning-page .dark .eyebrow {
-  color: var(--green-dark);
+  color: #142E87;
 }
 .tax-planning-page .dark .info-card {
   background: #ffffff;
@@ -2919,7 +2919,7 @@ footer {
       }
       .tax-planning-page .nav-links a:hover,
       .tax-planning-page .footer-col a:hover {
-        color: var(--green-dark);
+        color: #142E87;
       }
       .tax-planning-page .page-hero {
         background:
@@ -2954,7 +2954,7 @@ footer {
         color: var(--muted);
       }
       .tax-planning-page .dark .eyebrow {
-        color: var(--green-dark);
+        color: #142E87;
       }
       .tax-planning-page .dark .info-card {
         background: #ffffff;
@@ -3069,7 +3069,7 @@ footer {
 }
 
 .tax-planning-page .northstar-tax {
-  color: #8171BD;
+  color: #142E87;
 }
 
 /* NAVIGATION LINKS */
@@ -3092,7 +3092,7 @@ footer {
 
 .tax-planning-page .nav-links > a:hover,
 .tax-planning-page .nav-services-menu > summary:hover {
-  color: #8171BD;
+  color: #142E87;
 }
 
 /* ACTIVE HOME */
@@ -3104,7 +3104,7 @@ footer {
 
 /* DROPDOWN ARROW */
 .tax-planning-page .nav-services-menu summary::after {
-  color: #8171BD;
+  color: #142E87;
 }
 
 /* DROPDOWN MENU */
@@ -3123,7 +3123,7 @@ footer {
 }
 
 .tax-planning-page .nav-links .nav-services-dropdown a:hover {
-  color: #8171BD;
+  color: #142E87;
   background: #F2F0F6;
 }
 
@@ -3221,7 +3221,7 @@ footer {
   }
 
   .tax-planning-page .nav-links > a:first-child {
-      color: #8171BD;
+      color: #142E87;
       background: #F2F0F6;
   }
 
@@ -3263,7 +3263,7 @@ footer {
 
 .about-label {
     display: inline-block;
-    color: #76629c;
+    color: #142E87;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -3413,7 +3413,7 @@ header { view-transition-name: site-header; }
   align-self: flex-start;
   margin-top: auto;          /* pushes it to the bottom of the card */
   padding-top: 18px;
-  color: var(--green-dark);
+  color: #142E87;
   font-size: 15px;
   font-weight: 750;
   display: inline-flex;
@@ -3422,7 +3422,7 @@ header { view-transition-name: site-header; }
 }
 
 .read-more span { transition: transform 0.2s ease; }
-.read-more:hover { color: var(--green); }
+.read-more:hover { color: #142E87; }
 .read-more:hover span { transform: translateX(4px); }
 
 /* Keep the tax-evasion image within its feature column. */
@@ -3488,7 +3488,7 @@ header { view-transition-name: site-header; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--green-dark);
+  color: #142E87;
   font-size: 13px;
   font-weight: 750;
 }
@@ -3501,7 +3501,7 @@ header { view-transition-name: site-header; }
     linear-gradient(145deg, #f8f6fc, #eeebf5);
 }
 .home-panel-label {
-  color: var(--green-dark);
+  color: #142E87;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: .14em;
@@ -3522,7 +3522,7 @@ header { view-transition-name: site-header; }
   border-top: 1px solid rgba(95, 84, 141, .16);
 }
 .home-feature-panel li > span {
-  color: #8d7cba;
+  color: #142E87;
   font-size: 13px;
   font-weight: 800;
 }
@@ -3548,7 +3548,7 @@ header { view-transition-name: site-header; }
   color: #625c70;
 }
 .home-page .proof-item b {
-  color: var(--green-dark);
+  color: #142E87;
 }
 .home-services {
   background: #fbfaff;
@@ -3572,7 +3572,7 @@ header { view-transition-name: site-header; }
 .home-services .service-card:nth-child(2) .service-icon,
 .home-services .service-card:nth-child(3) .service-icon {
   background: #e9e4f4;
-  color: var(--green-dark);
+  color: #142E87;
   font-size: 14px;
   font-weight: 800;
 }
@@ -3586,7 +3586,7 @@ header { view-transition-name: site-header; }
   gap: 8px;
   margin-top: auto;
   padding-top: 18px;
-  color: var(--green-dark);
+  color: #142E87;
   font: inherit;
   font-size: 12px;
   font-weight: 800;
@@ -3595,7 +3595,7 @@ header { view-transition-name: site-header; }
   transition: transform .2s ease;
 }
 .home-service-link:hover {
-  color: var(--green);
+  color: #142E87;
 }
 .home-service-link:hover span {
   transform: translateX(4px);
@@ -3640,13 +3640,13 @@ header { view-transition-name: site-header; }
 }
 .home-page .benefit span,
 .home-page .eyebrow {
-  color: var(--green-dark);
+  color: #142E87;
 }
 .home-page .step {
   border-color: #d7d0e4;
 }
 .home-page .step-no {
-  color: #8d7cba;
+  color: #142E87;
 }
 .home-page .cta-panel {
   background: linear-gradient(120deg, #5f548d, #8171b5);
@@ -3731,7 +3731,7 @@ header { view-transition-name: site-header; }
 }
 
 .footer-col a:hover {
-  color: var(--green-dark); /* Purple hover */
+  color: #142E87; /* Purple hover */
   text-decoration: underline;
 }
 
@@ -3826,7 +3826,7 @@ header { view-transition-name: site-header; }
 }
 
 .northstar-tax {
-  color: #8171bd !important;
+  color: #142E87 !important;
   font-weight: 500;
 }
 
@@ -3840,7 +3840,7 @@ header { view-transition-name: site-header; }
 .nav-links > a:hover, 
 .nav-services-menu > summary:hover {
   background-color: rgba(129, 113, 189, 0.1) !important; /* Warna purple transparent */
-  color: #8171bd !important; 
+  color: #142E87 !important;
 }
 
 .nav-links > a[aria-current="page"] {
@@ -3958,4 +3958,473 @@ header .nav .menu-toggle {
     height: 280px;
     transform: none; /* Buang 3D effect kat mobile */
   }
+}
+
+
+/* =========================================
+   TESTIMONIALS & GOOGLE REVIEWS
+========================================= */
+
+.testimonials-section {
+    background: #f0eef7;
+    padding: 100px 0;
+}
+
+/* Section heading */
+.testimonials-heading {
+    align-items: end;
+    margin-bottom: 42px;
+}
+
+.testimonials-heading h2 {
+    color: var(--ink);
+}
+
+.testimonials-heading h2 em {
+    color: #142E87;
+    font-style: normal;
+    font-weight: 500;
+}
+
+/* Testimonials grid */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Individual card */
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 310px;
+    padding: 28px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(77, 69, 104, 0.06);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    border-color: #c9c0e5;
+}
+
+/* Card top */
+.testimonial-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.testimonial-quote {
+    color: #142E87;
+    font-family: Georgia, serif;
+    font-size: 58px;
+    line-height: 0.8;
+    height: 38px;
+}
+
+.testimonial-stars {
+    color: #d4a94f;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+/* Testimonial text */
+.testimonial-text {
+    flex: 1;
+    margin: 0 0 28px;
+    color: #555263;
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+/* Client information */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+}
+
+.testimonial-avatar {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--lime);
+    color: #142E87;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.testimonial-author h3 {
+    margin: 0;
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.testimonial-author span {
+    display: block;
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* Google Reviews panel */
+.google-review-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 32px;
+    padding: 32px 38px;
+    border: 1px solid rgba(122, 107, 178, 0.2);
+    border-radius: 20px;
+    background: #fff;
+}
+
+.google-review-content {
+    max-width: 560px;
+}
+
+.google-logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 13px;
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.google-g {
+    font-size: 24px;
+    font-weight: 900;
+    background: conic-gradient(
+        from -45deg,
+        #4285F4 0deg 90deg,
+        #34A853 90deg 180deg,
+        #FBBC05 180deg 270deg,
+        #EA4335 270deg 360deg
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.google-review-content h3 {
+    margin: 0 0 7px;
+    color: var(--ink);
+    font-size: 21px;
+    letter-spacing: -0.04em;
+}
+
+.google-review-content p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.google-review-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.google-review-action .btn {
+    min-width: 175px;
+}
+
+.google-review-note {
+    color: var(--muted);
+    font-size: 10px;
+    text-align: center;
+}
+
+/* Development disclaimer */
+.testimonial-disclaimer {
+    margin: 18px 0 0;
+    color: var(--muted);
+    font-size: 11px;
+    text-align: center;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .testimonial-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .google-review-panel {
+        align-items: flex-start;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .testimonials-section {
+        padding: 70px 0;
+    }
+
+    .testimonials-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card:last-child {
+        grid-column: auto;
+    }
+
+    .testimonial-card {
+        min-height: 270px;
+        padding: 24px;
+    }
+
+    .google-review-panel {
+        flex-direction: column;
+        padding: 26px 23px;
+        gap: 24px;
+    }
+
+    .google-review-action {
+        width: 100%;
+    }
+
+    .google-review-action .btn {
+        width: 100%;
+    }
+}
+
+/* =========================================
+   GOOGLE REVIEWS DEMONSTRATION
+========================================= */
+
+.google-reviews-demo {
+    margin-top: 55px;
+}
+
+/* Header */
+.google-demo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.google-demo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--ink);
+}
+
+.google-demo-title .google-g {
+    font-size: 27px;
+}
+
+.demo-label {
+    padding: 4px 9px;
+    border-radius: 5px;
+    background: var(--lime);
+    color: #142E87;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+}
+
+.google-demo-header h3 {
+    margin: 13px 0 4px;
+    color: var(--ink);
+    font-size: 25px;
+    letter-spacing: -0.04em;
+}
+
+.google-demo-header p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Rating summary */
+.google-demo-rating {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    flex-shrink: 0;
+}
+
+.google-demo-rating strong {
+    color: var(--ink);
+    font-size: 42px;
+    letter-spacing: -0.06em;
+}
+
+.google-demo-stars {
+    color: #d4a94f;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.google-demo-rating span {
+    display: block;
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+/* Review cards */
+.google-demo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.google-demo-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 245px;
+    padding: 23px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 17px;
+    box-shadow: 0 10px 30px rgba(77, 69, 104, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.google-demo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.google-demo-card-top {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 15px;
+}
+
+.google-demo-avatar {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--lime);
+    color: #142E87;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.google-demo-reviewer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.google-demo-reviewer strong {
+    color: var(--ink);
+    font-size: 12px;
+}
+
+.google-demo-reviewer span {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.google-small-g {
+    font-size: 19px;
+    font-weight: 900;
+    background: conic-gradient(
+        from -45deg,
+        #4285F4 0deg 90deg,
+        #34A853 90deg 180deg,
+        #FBBC05 180deg 270deg,
+        #EA4335 270deg 360deg
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.google-demo-card > p {
+    flex: 1;
+    margin: 12px 0 18px;
+    color: #555263;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.google-demo-source {
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 10px;
+}
+
+/* Disclaimer */
+.google-demo-disclaimer {
+    margin: 15px 0 0;
+    color: var(--muted);
+    font-size: 10px;
+    text-align: center;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .google-demo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .google-demo-card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .google-demo-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .google-demo-rating {
+        margin-top: 8px;
+    }
+
+    .google-demo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .google-demo-card:last-child {
+        grid-column: auto;
+    }
 }

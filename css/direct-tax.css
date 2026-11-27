@@ -20,7 +20,7 @@
 .direct-tax-page .dt-eyebrow,
 .direct-tax-page .dt-kicker {
   margin: 0 0 17px;
-  color: #7567a8;
+  color: #142E87;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.18em;
@@ -116,7 +116,7 @@
   padding: 10px 14px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.96);
-  color: #62558f;
+  color: #142E87;
   font-size: 11px;
   font-weight: 700;
 }
@@ -150,7 +150,7 @@
 .direct-tax-page .dt-local-nav a:hover,
 .direct-tax-page .dt-local-nav a:focus-visible {
   border-bottom-color: #7a6bb2;
-  color: #5f548d;
+  color: #142E87;
 }
 
 .direct-tax-page [id] {
@@ -232,7 +232,7 @@
 
 .direct-tax-page .dt-number {
   margin-bottom: 25px;
-  color: #7567a8;
+  color: #142E87;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -254,7 +254,7 @@
 .direct-tax-page .dt-arrow {
   align-self: flex-end;
   margin-top: auto;
-  color: #7567a8;
+  color: #142E87;
 }
 
 .direct-tax-page .dt-details-section {
@@ -291,7 +291,7 @@
 
 .direct-tax-page .dt-card-index {
   margin-bottom: 25px;
-  color: #7567a8;
+  color: #142E87;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.13em;
@@ -305,7 +305,7 @@
   place-items: center;
   border-radius: 14px;
   background: #f0eef6;
-  color: #7567a8;
+  color: #142E87;
   font-size: 27px;
 }
 
@@ -318,7 +318,7 @@
 
 .direct-tax-page .dt-legislation {
   margin-bottom: 20px;
-  color: #7567a8;
+  color: #142E87;
   font-size: 12px;
   font-weight: 700;
 }
@@ -340,7 +340,7 @@
   padding: 8px 11px;
   border-radius: 7px;
   background: #f0eef6;
-  color: #5f548d;
+  color: #142E87;
   font-size: 12px;
   font-weight: 700;
 }
@@ -356,7 +356,7 @@
 }
 
 .direct-tax-page .dt-key-point strong {
-  color: #5f548d;
+  color: #142E87;
 }
 
 .direct-tax-page .dt-accordions {
@@ -384,7 +384,7 @@
 }
 
 .direct-tax-page .dt-accordions summary::after {
-  color: #7567a8;
+  color: #142E87;
   content: "+";
   font-size: 22px;
   font-weight: 400;

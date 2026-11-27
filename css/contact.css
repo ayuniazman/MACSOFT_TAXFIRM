@@ -38,7 +38,7 @@
 }
 
 .contact-page .northstar-tax {
-  color: #8171bd;
+  color: #142E87;
   font-weight: 500;
 }
 
@@ -87,7 +87,7 @@
 
 .contact-page .nav-links .nav-services-dropdown a:hover {
   background: var(--cream);
-  color: var(--green-dark);
+  color: #142E87;
 }
 
 .contact-page .contact-header {
@@ -168,7 +168,7 @@
 }
 
 .contact-page .form-group label span {
-  color: var(--green);
+  color: #142E87;
 }
 
 .contact-page .form-group input,
@@ -237,7 +237,7 @@
 }
 
 .contact-page .detail-block a {
-  color: var(--green-dark);
+  color: #142E87;
   overflow-wrap: anywhere;
 }
 
