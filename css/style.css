@@ -4445,3 +4445,18 @@ header .nav .menu-toggle {
         grid-column: auto;
     }
 }
+
+main p:not([class*="eyebrow"]):not(.dt-kicker):not(.kicker):not(.dt-hero-subtitle),
+main li {
+  font-size: clamp(16px, 1rem + 0.1vw, 18px) !important;
+}
+
+[class*="eyebrow"],
+[class$="-kicker"],
+.kicker {
+  font-size: 14px !important;
+}
+
+main .eyebrow:not(.eyebrow-light) {
+  color: #142E87 !important;
+}

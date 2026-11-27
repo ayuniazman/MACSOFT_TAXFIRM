@@ -4,8 +4,54 @@
 }
 
 .direct-tax-page .dt-hero {
+  position: relative;
   overflow: hidden;
-  background: #f3f1f7;
+  isolation: isolate;
+  background: linear-gradient(120deg, #f3ecfc 0%, #fbf8ff 55%, #ffffff 100%);
+}
+
+.direct-tax-page .dt-hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle clamp(90px, 11vw, 170px) at 28% 8%,
+      rgba(205, 160, 250, 0.16) 0,
+      rgba(205, 160, 250, 0.30) calc(100% - 2px),
+      rgba(190, 150, 235, 0.45) calc(100% - 2px),
+      rgba(190, 150, 235, 0.45) 100%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle clamp(150px, 20vw, 300px) at 12% 105%,
+      rgba(205, 160, 250, 0.14) 0,
+      rgba(205, 160, 250, 0.30) calc(100% - 2px),
+      rgba(190, 150, 235, 0.45) calc(100% - 2px),
+      rgba(190, 150, 235, 0.45) 100%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle clamp(220px, 32vw, 480px) at 92% 95%,
+      rgba(205, 160, 250, 0.10) 0,
+      rgba(205, 160, 250, 0.32) calc(100% - 2px),
+      rgba(190, 150, 235, 0.45) calc(100% - 2px),
+      rgba(190, 150, 235, 0.45) 100%,
+      transparent 100%
+    );
+  content: "";
+}
+
+.direct-tax-page .dt-hero::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.07;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+  content: "";
 }
 
 .direct-tax-page .dt-hero-inner {
@@ -233,21 +279,21 @@
 .direct-tax-page .dt-number {
   margin-bottom: 25px;
   color: #142E87;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 800;
   letter-spacing: 0.1em;
 }
 
 .direct-tax-page .dt-map-card strong {
   margin-bottom: 8px;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.35;
   letter-spacing: -0.025em;
 }
 
 .direct-tax-page .dt-map-desc {
   color: #6a6f7b;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -292,7 +338,7 @@
 .direct-tax-page .dt-card-index {
   margin-bottom: 25px;
   color: #142E87;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 800;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -341,7 +387,7 @@
   border-radius: 7px;
   background: #f0eef6;
   color: #142E87;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
 }
 
@@ -351,7 +397,7 @@
   border-left: 3px solid #7a6bb2;
   border-radius: 0 8px 8px 0;
   background: #f6f5f9;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.7;
 }
 
@@ -374,7 +420,7 @@
   gap: 18px;
   padding: 16px 2px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   list-style: none;
 }
