@@ -16,6 +16,25 @@ if (menuToggle && navLinks) {
   );
 }
 
+const serviceMenus = document.querySelectorAll(".nav-services-menu");
+document.addEventListener("click", (event) => {
+  serviceMenus.forEach((menu) => {
+    if (menu.open && !menu.contains(event.target)) {
+      menu.open = false;
+    }
+  });
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return;
+
+  serviceMenus.forEach((menu) => {
+    if (menu.open) {
+      menu.open = false;
+      menu.querySelector("summary")?.focus();
+    }
+  });
+});
+
 const toast = document.querySelector(".toast");
 let toastTimeout;
 const showToast = (message) => {
@@ -314,7 +333,3 @@ if (contactForm) {
       encodeURIComponent(body);
   });
 }
-
-// Set current year in footer
-document.getElementById("current-year").textContent = new Date().getFullYear();
-

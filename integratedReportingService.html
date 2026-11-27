@@ -22,7 +22,7 @@
           <img class="site-logo" src="images/wandclogo.svg" alt="W&amp;C" width="180" height="53">
       </a>
       
-      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
       
       <nav class="nav-links" id="navLinks" aria-label="Main navigation">
         <a href="index.html">Home</a>
@@ -230,7 +230,7 @@
 
   <script>
     // Responsive mobile navigation
-    const menuToggle = document.getElementById("menuToggle");
+    const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.getElementById("navLinks");
 
     if (menuToggle && navLinks) {
@@ -250,6 +250,20 @@
         });
       });
     }
+
+    const serviceMenu = document.querySelector(".nav-services-menu");
+    document.addEventListener("click", event => {
+      if (serviceMenu?.open && !serviceMenu.contains(event.target)) {
+        serviceMenu.open = false;
+      }
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && serviceMenu?.open) {
+        serviceMenu.open = false;
+        serviceMenu.querySelector("summary")?.focus();
+      }
+    });
   </script>
 
 </body>
