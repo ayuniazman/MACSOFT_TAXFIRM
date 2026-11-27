@@ -239,6 +239,23 @@ select {
   border: 1px solid var(--line);
   border-radius: 12px;
   box-shadow: var(--shadow);
+  max-height: 70vh; 
+  overflow-y: auto;
+}
+/* Custom scrollbar untuk dropdown */
+.nav-services-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+.nav-services-dropdown::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+.nav-services-dropdown::-webkit-scrollbar-thumb {
+  background: #8d95e9;
+  border-radius: 10px;
+}
+.nav-services-dropdown::-webkit-scrollbar-thumb:hover {
+  background: #2b33d0;
 }
 .nav-links .nav-services-dropdown a {
   padding: 11px 12px;
